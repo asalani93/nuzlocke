@@ -1,0 +1,355 @@
+import { ability, abilityTable } from "../types/ability";
+
+export const Abilities = abilityTable({
+  ANGER_SHELL: ability("ANGER_SHELL", {
+    name: "Anger Shell",
+    effect:
+      "When an attack causes its HP to drop to half or less, the Pokémon gets angry. This lowers its Defense and Sp. Def stats but boosts its Attack, Sp. Atk, and Speed stats.",
+  }),
+  ANTICIPATION: ability("ANTICIPATION", {
+    name: "Anticipation",
+    effect:
+      "Notifies all trainers upon entering battle if an opponent has a super-effective move, self destruct, explosion, or a one-hit KO move.",
+  }),
+  ARMOR_TAIL: ability("ARMOR_TAIL", {
+    name: "Armor Tail",
+    effect:
+      "Armor Tail prevents the opponent from using any moves that have priority, such as Quick Attack.",
+  }),
+  CHEEK_POUCH: ability("CHEEK_POUCH", {
+    name: "Cheek Pouch",
+    effect:
+      "Restores HP upon eating a Berry, in addition to the Berry's effect.",
+  }),
+  CHLOROPHYLL: ability("CHLOROPHYLL", {
+    name: "Chlorophyll",
+    effect: "Doubles Speed during strong sunlight.",
+  }),
+  COMATOSE: ability("COMATOSE", {
+    name: "Comatose",
+    effect: "This Pokémon always  acts as though it were Asleep.",
+  }),
+  COMMANDER: ability("COMMANDER", {
+    name: "Commander",
+    effect: "Goes inside the mouth of an ally Dondozo if one is on the field. ",
+  }),
+  CUTE_CHARM: ability("CUTE_CHARM", {
+    name: "Cute Charm",
+    effect: "Has a 30% chance of infatuating attacking Pokémon on contact.",
+  }),
+  DANCER: ability("DANCER", {
+    name: "Dancer",
+    effect:
+      "Whenever another Pokémon uses a dance move, this Pokémon will use the same move immediately afterwards.",
+  }),
+  DEFIANT: ability("DEFIANT", {
+    name: "Defiant",
+    effect: "Raises Attack two stages upon having any stat lowered.",
+  }),
+  DISGUISE: ability("DISGUISE", {
+    name: "Disguise",
+    effect: "Prevents the first instance of battle damage.",
+  }),
+  DROUGHT: ability("DROUGHT", {
+    name: "Drought",
+    effect:
+      "Summons strong sunlight that lasts indefinitely upon entering battle.",
+  }),
+  EARLY_BIRD: ability("EARLY_BIRD", {
+    name: "Early Bird",
+    effect: "Makes sleep pass twice as quickly.",
+  }),
+  EARTH_EATER: ability("EARTH_EATER", {
+    name: "Earth Eater",
+    effect: "Restores HP when hit by a Ground-type move. ",
+  }),
+  EFFECT_SPORE: ability("EFFECT_SPORE", {
+    name: "Effect Spore",
+    effect:
+      "Has a 30% chance of inflcting either paralysis, poison, or sleep on attacking Pokémon on contact.",
+  }),
+  ELECTROMORPHOSIS: ability("ELECTROMORPHOSIS", {
+    name: "Electromorphosis",
+    effect:
+      "If a Pokémon with Electromorphosis is hit by an attack, the power of the next Electric-type move it uses is doubled.",
+  }),
+  FLASH_FIRE: ability("FLASH_FIRE", {
+    name: "Flash Fire",
+    effect:
+      "Protects against fire moves.  Once one has been blocked, the Pokémon's own Fire moves inflict 1.5x damage until it leaves battle.",
+  }),
+  FLOWER_VEIL: ability("FLOWER_VEIL", {
+    name: "Flower Veil",
+    effect:
+      "Protects friendly grass Pokémon from having their stats lowered by other Pokémon.",
+  }),
+  GOOEY: ability("GOOEY", {
+    name: "Gooey",
+    effect: "Lowers attacking Pokémon's Speed by one stage on contact.",
+  }),
+  HUGE_POWER: ability("HUGE_POWER", {
+    name: "Huge Power",
+    effect: "Doubles Attack in battle.",
+  }),
+  INFILTRATOR: ability("INFILTRATOR", {
+    name: "Infiltrator",
+    effect: "Bypasses light screen, reflect, and safeguard.",
+  }),
+  INNER_FOCUS: ability("INNER_FOCUS", {
+    name: "Inner Focus",
+    effect: "Prevents flinching.",
+  }),
+  INSOMNIA: ability("INSOMNIA", {
+    name: "Insomnia",
+    effect: "Prevents sleep.",
+  }),
+  INTIMIDATE: ability("INTIMIDATE", {
+    name: "Intimidate",
+    effect: "Lowers opponents' Attack one stage upon entering battle.",
+  }),
+  IRON_FIST: ability("IRON_FIST", {
+    name: "Iron Fist",
+    effect: "Strengthens punch-based moves to 1.2x their power.",
+  }),
+  LEAF_GUARD: ability("LEAF_GUARD", {
+    name: "Leaf Guard",
+    effect: "Protects against major status ailments during strong sunlight.",
+  }),
+  LEVITATE: ability("LEVITATE", {
+    name: "Levitate",
+    effect: "Evades ground moves.",
+  }),
+  HADRON_ENGINE: ability("HADRON_ENGINE", {
+    name: "Hadron Engine",
+    effect:
+      "Turns the ground into Electric Terrain when the Pokémon enters a battle. The futuristic engine within the Pokémon also boosts its Sp. Atk stat on Electric Terrain.",
+  }),
+  MAGMA_ARMOR: ability("MAGMA_ARMOR", {
+    name: "Magma Armor",
+    effect: "Prevents freezing.",
+  }),
+  MISTY_SURGE: ability("MISTY_SURGE", {
+    name: "Misty Surge",
+    effect:
+      "When this Pokémon enters battle, it changes the terrain to Misty Terrain.",
+  }),
+  MOLD_BREAKER: ability("MOLD_BREAKER", {
+    name: "Mold Breaker",
+    effect:
+      "Bypasses targets' abilities if they could hinder or prevent a move.",
+  }),
+  MYCELIUM_MIGHT: ability("MYCELIUM_MIGHT", {
+    name: "Mycelium Might",
+    effect:
+      "Status moves go last, but are not affected by the opponent's ability. ",
+  }),
+  NATURAL_CURE: ability("NATURAL_CURE", {
+    name: "Natural Cure",
+    effect: "Cures any major status ailment upon switching out.",
+  }),
+  OBLIVIOUS: ability("OBLIVIOUS", {
+    name: "Oblivious",
+    effect: "Prevents infatuation and protects against captivate.",
+  }),
+  OPPORTUNIST: ability("OPPORTUNIST", {
+    name: "Opportunist",
+    effect: "Copies stat boosts by the opponent. ",
+  }),
+  ORICHALCUM_PULSE: ability("ORICHALCUM_PULSE", {
+    name: "Orichalcum Pulse",
+    effect:
+      "Turns the sunlight harsh when the Pokémon enters a battle. The ancient pulse thrumming through the Pokémon also boosts its Attack stat in harsh sunlight.",
+  }),
+  OVERCOAT: ability("OVERCOAT", {
+    name: "Overcoat",
+    effect: "Protects against damage from weather.",
+  }),
+  OVERGROW: ability("OVERGROW", {
+    name: "Overgrow",
+    effect:
+      "Strengthens grass moves to inflict 1.5x damage at 1/3 max HP or less.",
+  }),
+  OWN_TEMPO: ability("OWN_TEMPO", {
+    name: "Own Tempo",
+    effect: "Prevents confusion.",
+  }),
+  PICKUP: ability("PICKUP", {
+    name: "Pickup",
+    effect:
+      "Picks up other Pokémon's used and Flung held items.  May also pick up an item after battle.",
+  }),
+  POISON_POINT: ability("POISON_POINT", {
+    name: "Poison Point",
+    effect: "Has a 30% chance of poisoning attacking Pokémon on contact.",
+  }),
+  PRESSURE: ability("PRESSURE", {
+    name: "Pressure",
+    effect: "Increases the PP cost of moves targetting the Pokémon by one.",
+  }),
+  PROTOSYNTHESIS: ability("PROTOSYNTHESIS", {
+    name: "Protosynthesis",
+    effect:
+      "Raises highest stat in harsh sunlight, or if holding Booster Energy. ",
+  }),
+  PUNK_ROCK: ability("PUNK_ROCK", {
+    name: "Punk Rock",
+    effect: "Boosts sound-based moves and halves damage from the same moves. ",
+  }),
+  PURIFYING_SALT: ability("PURIFYING_SALT", {
+    name: "Purifying Salt",
+    effect:
+      "Protects from status conditions and halves damage from Ghost-type moves. ",
+  }),
+  QUARK_DRIVE: ability("QUARK_DRIVE", {
+    name: "Quark Drive",
+    effect:
+      "Boosts the Pokémon's most proficient stat on Electric Terrain or if the Pokémon is holding Booster Energy.",
+  }),
+  QUICK_FEET: ability("QUICK_FEET", {
+    name: "Quick Feet",
+    effect: "Increases Speed to 1.5x with a major status ailment.",
+  }),
+  RECEIVER: ability("RECEIVER", {
+    name: "Receiver",
+    effect: "When an ally faints, this Pokémon gains its Ability.",
+  }),
+  RIPEN: ability("RIPEN", {
+    name: "Ripen",
+    effect: "Doubles the effect of berries. ",
+  }),
+  ROCKY_PAYLOAD: ability("ROCKY_PAYLOAD", {
+    name: "Rocky Payload",
+    effect:
+      "Rocky Payload increases the power of Rock-type moves used by this Pokémon by 50%.",
+  }),
+  SAND_RUSH: ability("SAND_RUSH", {
+    name: "Sand Rush",
+    effect:
+      "Doubles Speed during a sandstorm.  Protects against sandstorm damage.",
+  }),
+  SAND_VEIL: ability("SAND_VEIL", {
+    name: "Sand Veil",
+    effect:
+      "Increases evasion to 1.25x during a sandstorm.  Protects against sandstorm damage.",
+  }),
+  SAP_SIPPER: ability("SAP_SIPPER", {
+    name: "Sap Sipper",
+    effect: "Absorbs grass moves, raising Attack one stage.",
+  }),
+  SCRAPPY: ability("SCRAPPY", {
+    name: "Scrappy",
+    effect: "Lets the Pokémon's normal and fighting moves hit ghost Pokémon.",
+  }),
+  SERENE_GRACE: ability("SERENE_GRACE", {
+    name: "Serene Grace",
+    effect: "Doubles the chance of moves' extra effects occurring.",
+  }),
+  SHEER_FORCE: ability("SHEER_FORCE", {
+    name: "Sheer Force",
+    effect:
+      "Strengthens moves with extra effects to 1.3x their power, but prevents their extra effects.",
+  }),
+  SHIELD_DUST: ability("SHIELD_DUST", {
+    name: "Shield Dust",
+    effect: "Protects against incoming moves' extra effects.",
+  }),
+  SKILL_LINK: ability("SKILL_LINK", {
+    name: "Skill Link",
+    effect:
+      "Extends two-to-five-hit moves and triple kick to their full length every time.",
+  }),
+  SNOW_CLOAK: ability("SNOW_CLOAK", {
+    name: "Snow Cloak",
+    effect:
+      "Increases evasion to 1.25x during hail.  Protects against hail damage.",
+  }),
+  SNOW_WARNING: ability("SNOW_WARNING", {
+    name: "Snow Warning",
+    effect: "Summons hail that lasts indefinitely upon entering battle.",
+  }),
+  SPEED_BOOST: ability("SPEED_BOOST", {
+    name: "Speed Boost",
+    effect: "Raises Speed one stage after each turn.",
+  }),
+  STAMINA: ability("STAMINA", {
+    name: "Stamina",
+    effect:
+      "Raises this Pokémon's Defense by one stage when it takes damage from a move.",
+  }),
+  STATIC: ability("STATIC", {
+    name: "Static",
+    effect: "Has a 30% chance of paralyzing attacking Pokémon on contact.",
+  }),
+  STEADFAST: ability("STEADFAST", {
+    name: "Steadfast",
+    effect: "Raises Speed one stage upon flinching.",
+  }),
+  STENCH: ability("STENCH", {
+    name: "Stench",
+    effect: "Has a 10% chance of making target Pokémon flinch with each hit.",
+  }),
+  STURDY: ability("STURDY", {
+    name: "Sturdy",
+    effect:
+      "Prevents being KOed from full HP, leaving 1 HP instead.  Protects against the one-hit KO moves regardless of HP.",
+  }),
+  SUPREME_OVERLORD: ability("SUPREME_OVERLORD", {
+    name: "Supreme Overlord",
+    effect:
+      "Attack and Special Attack are boosted for each party Pokémon that has been defeated. ",
+  }),
+  SWARM: ability("SWARM", {
+    name: "Swarm",
+    effect:
+      "Strengthens bug moves to inflict 1.5x damage at 1/3 max HP or less.",
+  }),
+  SYNCHRONIZE: ability("SYNCHRONIZE", {
+    name: "Synchronize",
+    effect:
+      "Copies burns, paralysis, and poison received onto the Pokémon that inflicted them.",
+  }),
+  THERMAL_EXCHANGE: ability("THERMAL_EXCHANGE", {
+    name: "Thermal Exchange",
+    effect: "Raises Attack when hit by a Fire-type move. Cannot be burned. ",
+  }),
+  THICK_FAT: ability("THICK_FAT", {
+    name: "Thick Fat",
+    effect: "Halves damage from fire and ice moves.",
+  }),
+  TORRENT: ability("TORRENT", {
+    name: "Torrent",
+    effect:
+      "Strengthens water moves to inflict 1.5x damage at 1/3 max HP or less.",
+  }),
+  TOXIC_DEBRIS: ability("TOXIC_DEBRIS", {
+    name: "Toxic Debris",
+    effect:
+      "Scatters poison spikes at the feet of the opposing team when the Pokémon takes damage from physical moves. ",
+  }),
+  VITAL_SPIRIT: ability("VITAL_SPIRIT", {
+    name: "Vital Spirit",
+    effect: "Prevents sleep.",
+  }),
+  VOLT_ABSORB: ability("VOLT_ABSORB", {
+    name: "Volt Absorb",
+    effect: "Absorbs electric moves, healing for 1/4 max HP.",
+  }),
+  WATER_ABSORB: ability("WATER_ABSORB", {
+    name: "Water Absorb",
+    effect: "Absorbs water moves, healing for 1/4 max HP.",
+  }),
+  WEAK_ARMOR: ability("WEAK_ARMOR", {
+    name: "Weak Armor",
+    effect:
+      "Raises Speed and lowers Defense by one stage each upon being hit by a physical move.",
+  }),
+  WELL_BAKED_BODY: ability("WELL_BAKED_BODY", {
+    name: "Well-Baked Body",
+    effect: "Immune to Fire-type moves, and Defense is sharply boosted. ",
+  }),
+  WIND_POWER: ability("WIND_POWER", {
+    name: "Wind Power",
+    effect:
+      "If a Pokémon with Wind Power is hit by a wind move, the power of the next Electric-type move it uses is doubled.",
+  }),
+});
