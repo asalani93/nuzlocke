@@ -1,5 +1,5 @@
 import { HeroUIProvider } from "@heroui/react";
-import { useAllStepsForVersion, useEncounterTable } from "./hooks";
+import { useAllStepsForCurrentVersion, useEncounterTable } from "./hooks";
 import { Step } from "../steps/step";
 import { useEffect } from "react";
 import type { EncounterTable } from "./state";
@@ -35,12 +35,11 @@ function cool(encounters: EncounterTable) {
       output.push(`${stepBoss.name} (Cap: ${levelCap})`);
     }
   }
-  window.results = output.join("\n");
 }
 
 export function App() {
   const encounters = useEncounterTable();
-  const steps = useAllStepsForVersion();
+  const steps = useAllStepsForCurrentVersion();
 
   useEffect(() => {
     cool(encounters);

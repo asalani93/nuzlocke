@@ -1,20 +1,21 @@
 import { atom } from "jotai";
-import { StepOrder, Versions } from "../data/steps";
-import type { Version } from "../types/step";
-import type { Route, RouteId } from "../types/route";
-import type { Pokemon, PokemonId } from "../types/pokemon";
 import { Routes } from "../data/routes";
-import type { EvolutionId } from "../types/evolution";
-import { lookup } from "../types/util";
 import { Pokemons } from "../data/pokemons";
+import { StepOrder } from "../data/steps";
+import { Versions } from "../data/versions";
+import type { EvolutionId } from "../types/evolution";
+import type { Pokemon, PokemonId } from "../types/pokemon";
+import type { Route, RouteId } from "../types/route";
+import { lookup } from "../types/util";
+import type { VersionId } from "../types/version";
 
-export const versionAtom = atom<Version>(Versions.SCARLET);
+export const versionAtom = atom<VersionId>(Versions.SCARLET.id);
 
 export type EncounterTable = Record<RouteId, PokemonId | undefined>;
 
 function calculateEncounters(
   encounters: EncounterTable,
-  version: Version,
+  version: VersionId,
   from?: RouteId
 ) {
   const newEncounters = { ...encounters };
@@ -38,19 +39,16 @@ function calculateEncounters(
     let newEncounter: Pokemon;
     if (currentEncounter == null || hitStart) {
       const currentRoute = lookup<Route>(Routes, step.route);
-      const possibleEncounters =
-        version === "scarlet"
-          ? [...currentRoute.baseEncounters, ...currentRoute.scarletEncounters]
-          : [...currentRoute.baseEncounters, ...currentRoute.violetEncounters];
-      const filteredEncounters = possibleEncounters
+      const encounters = currentRoute.encounters
+        .filter((encounter) => encounter.versions.includes(version))
         .map((routeEncounter) =>
           lookup<Pokemon>(Pokemons, routeEncounter.pokemon)
         )
         .filter((encounter) => !foundEvolutions.has(encounter.line));
       const selectedEncounterIndex = Math.floor(
-        Math.random() * filteredEncounters.length
+        Math.random() * encounters.length
       );
-      newEncounter = filteredEncounters[selectedEncounterIndex]!;
+      newEncounter = encounters[selectedEncounterIndex]!;
     } else {
       newEncounter = lookup<Pokemon>(Pokemons, currentEncounter);
     }
@@ -58,8 +56,6 @@ function calculateEncounters(
     foundEvolutions.add(newEncounter.line);
     newEncounters[step.route] = newEncounter.id;
   }
-
-  window.encounters = newEncounters;
 
   return newEncounters;
 }
@@ -69,7 +65,7 @@ type EncountersReducerActions =
   | { type: "RESET_FROM"; route: RouteId };
 
 const encountersAtomInner = atom<EncounterTable>(
-  calculateEncounters({}, Versions.SCARLET)
+  calculateEncounters({}, Versions.SCARLET.id)
 );
 
 export const encountersAtom = atom<

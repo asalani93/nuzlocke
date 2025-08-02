@@ -25,11 +25,11 @@ interface _Version<T extends string> {
   name: string;
 }
 
-export type Ability = _Version<string>;
+export type Version = _Version<string>;
 
 export function version<T extends string>(
   id: T,
-  { name }: Omit<Ability, "id">
+  { name }: Omit<Version, "id">
 ): _Version<T> {
   return {
     id: versionId(id),

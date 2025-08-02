@@ -7,42 +7,52 @@ import { Moves } from "../data/moves";
 import { Pokemons } from "../data/pokemons";
 import { Routes } from "../data/routes";
 import { Steps } from "../data/steps";
-import { encountersAtom, versionAtom, type EncounterTable } from "./state";
+import { Versions } from "../data/versions";
+import {
+  encountersAtom,
+  versionAtom as currentVersionIdAtom,
+  type EncounterTable,
+} from "./state";
 import type { Ability, AbilityId } from "../types/ability";
 import type { Boss, BossId } from "../types/boss";
 import type { Location, LocationId } from "../types/location";
 import type { Move, MoveId } from "../types/move";
 import type { Pokemon, PokemonId } from "../types/pokemon";
 import type { Route, RouteId } from "../types/route";
-import type { Step, StepId, Version } from "../types/step";
+import type { Step, StepId } from "../types/step";
+import type { Version, VersionId } from "../types/version";
 import { lookup } from "../types/util";
 
-export function useAbility(id: AbilityId): Ability {
-  return useMemo(() => lookup(Abilities, id), [id]);
+export function useAbility(abilityId: AbilityId): Ability {
+  return useMemo(() => lookup(Abilities, abilityId), [abilityId]);
 }
 
-export function useBoss(id: BossId): Boss {
-  return useMemo(() => lookup(Bosses, id), [id]);
+export function useBoss(bossId: BossId): Boss {
+  return useMemo(() => lookup(Bosses, bossId), [bossId]);
 }
 
-export function useLocation(id: LocationId): Location {
-  return useMemo(() => lookup(Locations, id), [id]);
+export function useLocation(locationId: LocationId): Location {
+  return useMemo(() => lookup(Locations, locationId), [locationId]);
 }
 
-export function useMove(id: MoveId): Move {
-  return useMemo(() => lookup(Moves, id), [id]);
+export function useMove(moveId: MoveId): Move {
+  return useMemo(() => lookup(Moves, moveId), [moveId]);
 }
 
-export function usePokemon(id: PokemonId): Pokemon {
-  return useMemo(() => lookup(Pokemons, id), [id]);
+export function usePokemon(pokemonId: PokemonId): Pokemon {
+  return useMemo(() => lookup(Pokemons, pokemonId), [pokemonId]);
 }
 
-export function useRoute(id: RouteId): Route {
-  return useMemo(() => lookup(Routes, id), [id]);
+export function useRoute(routeId: RouteId): Route {
+  return useMemo(() => lookup(Routes, routeId), [routeId]);
 }
 
-export function useStep(id: StepId): Step {
-  return useMemo(() => lookup(Steps, id), [id]);
+export function useStep(stepId: StepId): Step {
+  return useMemo(() => lookup(Steps, stepId), [stepId]);
+}
+
+export function useVersion(id: VersionId): Version {
+  return useMemo(() => lookup(Versions, id), [id]);
 }
 
 export function useAllSteps(): Step[] {
@@ -53,14 +63,18 @@ export function useAllSteps(): Step[] {
   }, []);
 }
 
-export function useAllStepsForVersion(): Step[] {
-  const version = useVersion();
+export function useAllStepsForVersionId(versionId: VersionId): Step[] {
   const allSteps = useAllSteps();
   return useMemo(() => {
     return allSteps.filter(
-      (step) => step.version == null || step.version === version
+      (step) => step.version == null || step.version === versionId
     );
-  }, [allSteps, version]);
+  }, [allSteps, versionId]);
+}
+
+export function useAllStepsForCurrentVersion(): Step[] {
+  const versionId = useCurrentVersionId();
+  return useAllStepsForVersionId(versionId);
 }
 
 export function useEncounterTable(): EncounterTable {
@@ -89,18 +103,18 @@ export function useRerollEncounterCallback() {
   );
 }
 
-export function useVersion(): Version {
-  return useAtomValue(versionAtom);
+export function useCurrentVersionId(): VersionId {
+  return useAtomValue(currentVersionIdAtom);
 }
 
 export function useChangeVersionCallback() {
   const resetEncounters = useResetEncountersCallback();
-  const setVersion = useSetAtom(versionAtom);
+  const setVersionId = useSetAtom(currentVersionIdAtom);
   return useCallback(
-    (version: Version) => {
-      setVersion(version);
+    (versionId: VersionId) => {
+      setVersionId(versionId);
       resetEncounters();
     },
-    [resetEncounters, setVersion]
+    [resetEncounters, setVersionId]
   );
 }
