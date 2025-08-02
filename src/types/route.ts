@@ -1,6 +1,6 @@
 import type { LocationId } from "./location";
 import type { PokemonId } from "./pokemon";
-import type { Version } from "./step";
+import type { VersionId } from "./version";
 import {
   createId,
   createTable,
@@ -34,10 +34,9 @@ export type Route = _Route<string>;
 export interface RouteEncounter {
   pokemon: PokemonId;
   weight: number;
-  versions: Version[];
+  versions: VersionId[];
   minLevel: number;
   maxLevel: number;
-  group: boolean;
 }
 
 export function route<T extends string>(

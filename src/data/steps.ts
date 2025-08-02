@@ -1,11 +1,7 @@
 import { bossStep, routeStep, stepTable } from "../types/step";
 import { Bosses } from "./bosses";
 import { Routes } from "./routes";
-
-export const Versions = {
-  SCARLET: "scarlet",
-  VIOLET: "violet",
-} as const;
+import { Versions } from "./versions";
 
 export const Steps = stepTable({
   STARTER: routeStep("STARTER", { index: 0, route: Routes.STARTER.id }),
@@ -17,7 +13,7 @@ export const Steps = stepTable({
   POCO_PATH: routeStep("POCO_PATH", { index: 2, route: Routes.POCO_PATH.id }),
   SOUTH_PROVINCE_A1: routeStep("SOUTH_PROVINCE_A1", {
     index: 3,
-    route: Routes.SOUTH_AREA_ONE.id,
+    route: Routes.SOUTH_PROVINCE_A1.id,
   }),
   NEMONA_2: bossStep("NEMONA_2", {
     index: 4,
@@ -30,24 +26,24 @@ export const Steps = stepTable({
   }),
   SOUTH_PROVINCE_A4: routeStep("SOUTH_PROVINCE_A4", {
     index: 6,
-    route: Routes.SOUTH_AREA_FOUR.id,
+    route: Routes.SOUTH_PROVINCE_A4.id,
   }),
   SOUTH_PROVINCE_A2: routeStep("SOUTH_PROVINCE_A2", {
     index: 7,
-    route: Routes.SOUTH_AREA_TWO.id,
+    route: Routes.SOUTH_PROVINCE_A2.id,
   }),
   KATY: bossStep("KATY", { index: 8, boss: Bosses.KATY.id, blocking: true }),
   SOUTH_PROVINCE_A5: routeStep("SOUTH_PROVINCE_A5", {
     index: 9,
-    route: Routes.SOUTH_AREA_FIVE.id,
+    route: Routes.SOUTH_PROVINCE_A5.id,
   }),
   EAST_PROVINCE_A1: routeStep("EAST_PROVINCE_A1", {
     index: 10,
-    route: Routes.EAST_ONE.id,
+    route: Routes.EAST_PROVINCE_A1.id,
   }),
   SOUTH_PROVINCE_A3: routeStep("SOUTH_PROVINCE_A3", {
     index: 11,
-    route: Routes.SOUTH_AREA_THREE.id,
+    route: Routes.SOUTH_PROVINCE_A3.id,
   }),
   KLAWF: bossStep("KLAWF", {
     index: 12,
@@ -61,7 +57,7 @@ export const Steps = stepTable({
   }),
   WEST_PROVINCE_A1: routeStep("WEST_PROVINCE_A1", {
     index: 14,
-    route: Routes.WEST_ONE.id,
+    route: Routes.WEST_PROVINCE_A1.id,
   }),
   BOMBIRDIER: bossStep("BOMBIRDIER", {
     index: 15,
@@ -75,7 +71,7 @@ export const Steps = stepTable({
   }),
   EAST_PROVINCE_A2: routeStep("EAST_PROVINCE_A2", {
     index: 17,
-    route: Routes.EAST_TWO.id,
+    route: Routes.EAST_PROVINCE_A2.id,
   }),
   NEMONA_3: bossStep("NEMONA_3", {
     index: 18,
@@ -86,7 +82,7 @@ export const Steps = stepTable({
   MELA: bossStep("MELA", { index: 20, boss: Bosses.MELA.id, blocking: true }),
   EAST_PROVINCE_A3: routeStep("EAST_PROVINCE_A3", {
     index: 21,
-    route: Routes.EAST_THREE.id,
+    route: Routes.EAST_PROVINCE_A3.id,
   }),
   ORTHWORM: bossStep("ORTHWORM", {
     index: 22,
@@ -95,12 +91,12 @@ export const Steps = stepTable({
   }),
   WEST_PROVINCE_A2: routeStep("WEST_PROVINCE_A2", {
     index: 23,
-    route: Routes.WEST_TWO.id,
+    route: Routes.WEST_PROVINCE_A2.id,
   }),
   KOFU: bossStep("KOFU", { index: 24, boss: Bosses.KOFU.id, blocking: true }),
   WEST_PROVINCE_A3: routeStep("WEST_PROVINCE_A3", {
     index: 25,
-    route: Routes.WEST_THREE.id,
+    route: Routes.WEST_PROVINCE_A3.id,
   }),
   GLASEADO_MOUNTAIN_SOUTH: routeStep("GLASEADO_MOUNTAIN_SOUTH", {
     index: 26,
@@ -136,7 +132,7 @@ export const Steps = stepTable({
   RYME: bossStep("RYME", { index: 33, boss: Bosses.RYME.id, blocking: true }),
   SOUTH_PROVINCE_A6: routeStep("SOUTH_PROVINCE_A6", {
     index: 34,
-    route: Routes.SOUTH_AREA_SIX.id,
+    route: Routes.SOUTH_PROVINCE_A6.id,
   }),
   ASADO_DESERT: routeStep("ASADO_DESERT", {
     index: 35,
@@ -145,13 +141,13 @@ export const Steps = stepTable({
   GREAT_TUSK: bossStep("GREAT_TUSK", {
     index: 36,
     boss: Bosses.GREAT_TUSK.id,
-    version: Versions.SCARLET,
+    version: Versions.SCARLET.id,
     blocking: true,
   }),
   IRON_TREADS: bossStep("IRON_TREADS", {
     index: 37,
     boss: Bosses.IRON_TREADS.id,
-    version: Versions.VIOLET,
+    version: Versions.VIOLET.id,
     blocking: true,
   }),
   NEMONA_5: bossStep("NEMONA_5", {
@@ -171,7 +167,7 @@ export const Steps = stepTable({
   }),
   NORTH_PROVINCE_A3: routeStep("NORTH_PROVINCE_A3", {
     index: 41,
-    route: Routes.NORTH_THREE.id,
+    route: Routes.NORTH_PROVINCE_A3.id,
   }),
   ORTEGA: bossStep("ORTEGA", {
     index: 42,
@@ -189,11 +185,11 @@ export const Steps = stepTable({
   }),
   NORTH_PROVINCE_A1: routeStep("NORTH_PROVINCE_A1", {
     index: 45,
-    route: Routes.NORTH_ONE.id,
+    route: Routes.NORTH_PROVINCE_A1.id,
   }),
   NORTH_PROVINCE_A2: routeStep("NORTH_PROVINCE_A2", {
     index: 46,
-    route: Routes.NORTH_TWO.id,
+    route: Routes.NORTH_PROVINCE_A2.id,
   }),
   ERI: bossStep("ERI", { index: 47, boss: Bosses.ERI.id, blocking: true }),
   WEST_PALDEAN_SEA: routeStep("WEST_PALDEAN_SEA", {
@@ -249,25 +245,25 @@ export const Steps = stepTable({
   SADA_1: bossStep("SADA_1", {
     index: 64,
     boss: Bosses.SADA_1.id,
-    version: Versions.SCARLET,
+    version: Versions.SCARLET.id,
     blocking: true,
   }),
   TURO_1: bossStep("TURO_1", {
     index: 65,
     boss: Bosses.TURO_1.id,
-    version: Versions.VIOLET,
+    version: Versions.VIOLET.id,
     blocking: true,
   }),
   SADA_2: bossStep("SADA_2", {
     index: 66,
     boss: Bosses.SADA_2.id,
-    version: Versions.SCARLET,
+    version: Versions.SCARLET.id,
     blocking: true,
   }),
   TURO_2: bossStep("TURO_2", {
     index: 67,
     boss: Bosses.TURO_2.id,
-    version: Versions.VIOLET,
+    version: Versions.VIOLET.id,
     blocking: true,
   }),
 });

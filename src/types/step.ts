@@ -7,6 +7,7 @@ import {
   type IdInstance,
   type Table,
 } from "./util";
+import type { VersionId } from "./version";
 
 export type StepId = Id<"step">;
 
@@ -20,14 +21,12 @@ export function stepTable<T extends string>(table: StepTable<T>): StepTable<T> {
   return createTable<T, StepTable<T>>(table);
 }
 
-export type Version = "scarlet" | "violet";
-
 interface _BossStep<T extends string> {
   id: StepInstanceId<T>;
   index: number;
   type: "boss";
   boss: BossId;
-  version: Version | null;
+  version: VersionId | null;
   blocking: boolean;
 }
 
@@ -38,7 +37,7 @@ interface _RouteStep<T extends string> {
   index: number;
   type: "route";
   route: RouteId;
-  version: Version | null;
+  version: VersionId | null;
 }
 
 export type RouteStep = _RouteStep<string>;

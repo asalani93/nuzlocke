@@ -1,7 +1,4 @@
-import {
-  createEvolutionTable as evolutionTable,
-  evolutionId,
-} from "../types/evolution";
+import { evolutionTable, evolutionId } from "../types/evolution";
 
 export const Evolutions = evolutionTable({
   ABRA: evolutionId("ABRA"),

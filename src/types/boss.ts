@@ -18,9 +18,7 @@ export type BossTable<T extends string> = Table<T, () => _Boss<T>>;
 
 export const bossId = createId<BossId>();
 
-export function createBossTable<T extends string>(
-  table: BossTable<T>
-): BossTable<T> {
+export function bossTable<T extends string>(table: BossTable<T>): BossTable<T> {
   return createTable<T, BossTable<T>>(table);
 }
 

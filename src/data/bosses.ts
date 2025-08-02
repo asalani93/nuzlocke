@@ -1,4 +1,4 @@
-import { boss, createBossTable as bossTable } from "../types/boss";
+import { boss, bossTable as bossTable } from "../types/boss";
 import { Abilities } from "./abilities";
 import { Locations } from "./locations";
 import { Moves } from "./moves";

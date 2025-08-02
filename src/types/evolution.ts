@@ -17,7 +17,7 @@ export type EvolutionTable<T extends string> = Table<
 
 export const evolutionId = createId<EvolutionId>();
 
-export function createEvolutionTable<T extends string>(
+export function evolutionTable<T extends string>(
   table: EvolutionTable<T>
 ): EvolutionTable<T> {
   return createTable<T, EvolutionTable<T>>(table);
