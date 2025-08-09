@@ -1,4 +1,4 @@
-import { move, moveTable } from "../types/move";
+import { move, moveTable } from "../types/move"
 
 export const Moves = moveTable({
   ACCELEROCK: move("ACCELEROCK", {
@@ -62,8 +62,7 @@ export const Moves = moveTable({
     power: 60,
     type: "dark",
     damageType: "physical",
-    effect:
-      "Power is doubled if the target has already received damage this turn.",
+    effect: "Power is doubled if the target has already received damage this turn.",
   }),
   AURA_SPHERE: move("AURA_SPHERE", {
     name: "Aura Sphere",
@@ -91,8 +90,7 @@ export const Moves = moveTable({
     power: 60,
     type: "ice",
     damageType: "physical",
-    effect:
-      "Inflicts double damage if the user takes damage before attacking this turn.",
+    effect: "Inflicts double damage if the user takes damage before attacking this turn.",
   }),
   BABY_DOLL_EYES: move("BABY_DOLL_EYES", {
     name: "Baby-Doll Eyes",
@@ -148,8 +146,7 @@ export const Moves = moveTable({
     power: 85,
     type: "flying",
     damageType: "physical",
-    effect:
-      "User bounces high into the air, dodging all attacks, and hits next turn.",
+    effect: "User bounces high into the air, dodging all attacks, and hits next turn.",
   }),
   BRAVE_BIRD: move("BRAVE_BIRD", {
     name: "Brave Bird",
@@ -177,8 +174,7 @@ export const Moves = moveTable({
     power: 90,
     type: "bug",
     damageType: "special",
-    effect:
-      "Has a 10% chance to lower the target's Special Defense by one stage.",
+    effect: "Has a 10% chance to lower the target's Special Defense by one stage.",
   }),
   BULK_UP: move("BULK_UP", {
     name: "Bulk Up",
@@ -235,16 +231,14 @@ export const Moves = moveTable({
     power: 120,
     type: "fighting",
     damageType: "physical",
-    effect:
-      "Lowers the user's Defense and Special Defense by one stage after inflicting damage.",
+    effect: "Lowers the user's Defense and Special Defense by one stage after inflicting damage.",
   }),
   COIL: move("COIL", {
     name: "Coil",
     power: null,
     type: "poison",
     damageType: "status",
-    effect:
-      "Raises the user's Attack, Defense, and accuracy by one stage each.",
+    effect: "Raises the user's Attack, Defense, and accuracy by one stage each.",
   }),
   COMBAT_TORQUE: move("COMBAT_TORQUE", {
     name: "Combat Torque",
@@ -302,6 +296,13 @@ export const Moves = moveTable({
     damageType: "special",
     effect: "Has a 30% chance to paralyze the target.",
   }),
+  DOUBLE_HIT: move("DOUBLE_HIT", {
+    name: "Double Hit",
+    power: 34,
+    type: "normal",
+    damageType: "physical",
+    effect: "Hits twice in one turn.",
+  }),
   DOUBLE_KICK: move("DOUBLE_KICK", {
     name: "Double Kick",
     power: 30,
@@ -357,16 +358,14 @@ export const Moves = moveTable({
     power: 100,
     type: "psychic",
     damageType: "special",
-    effect:
-      "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
+    effect: "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
   }),
   DRILL_PECK: move("DRILL_PECK", {
     name: "Drill Peck",
     power: 80,
     type: "flying",
     damageType: "physical",
-    effect:
-      "A corkscrewing attack that strikes the target with a sharp beak acting as a drill.",
+    effect: "A corkscrewing attack that strikes the target with a sharp beak acting as a drill.",
   }),
   DRILL_RUN: move("DRILL_RUN", {
     name: "Drill Run",
@@ -380,8 +379,7 @@ export const Moves = moveTable({
     power: 90,
     type: "ground",
     damageType: "special",
-    effect:
-      "Has a 10% chance to lower the target's Special Defense by one stage.",
+    effect: "Has a 10% chance to lower the target's Special Defense by one stage.",
   }),
   EARTHQUAKE: move("EARTHQUAKE", {
     name: "Earthquake",
@@ -390,13 +388,19 @@ export const Moves = moveTable({
     damageType: "physical",
     effect: "Inflicts regular damage and can hit Dig users.",
   }),
+  EMBER: move("EMBER", {
+    name: "Ember",
+    power: 40,
+    type: "fire",
+    damageType: "special",
+    effect: "Has a 10% chance to burn the target.",
+  }),
   ENERGY_BALL: move("ENERGY_BALL", {
     name: "Energy Ball",
     power: 90,
     type: "grass",
     damageType: "special",
-    effect:
-      "Has a 10% chance to lower the target's Special Defense by one stage.",
+    effect: "Has a 10% chance to lower the target's Special Defense by one stage.",
   }),
   FACADE: move("FACADE", {
     name: "Facade",
@@ -448,8 +452,7 @@ export const Moves = moveTable({
     power: 35,
     type: "fire",
     damageType: "special",
-    effect:
-      "Prevents the target from fleeing and inflicts damage for 2-5 turns.",
+    effect: "Prevents the target from fleeing and inflicts damage for 2-5 turns.",
   }),
   FLAIL: move("FLAIL", {
     name: "Flail",
@@ -471,8 +474,7 @@ export const Moves = moveTable({
     power: 60,
     type: "fire",
     damageType: "physical",
-    effect:
-      "Has a 10% chance to burn the target.  Lets frozen Pokémon thaw themselves.",
+    effect: "Has a 10% chance to burn the target.  Lets frozen Pokémon thaw themselves.",
   }),
   FLAMETHROWER: move("FLAMETHROWER", {
     name: "Flamethrower",
@@ -486,16 +488,14 @@ export const Moves = moveTable({
     power: 120,
     type: "fire",
     damageType: "physical",
-    effect:
-      "User takes 1/3 the damage inflicted in recoil.  Has a 10% chance to burn the target.",
+    effect: "User takes 1/3 the damage inflicted in recoil.  Has a 10% chance to burn the target.",
   }),
   FLASH_CANNON: move("FLASH_CANNON", {
     name: "Flash Cannon",
     power: 80,
     type: "steel",
     damageType: "special",
-    effect:
-      "Has a 10% chance to lower the target's Special Defense by one stage.",
+    effect: "Has a 10% chance to lower the target's Special Defense by one stage.",
   }),
   FLOWER_TRICK: move("FLOWER_TRICK", {
     name: "Flower Trick",
@@ -577,13 +577,19 @@ export const Moves = moveTable({
     damageType: "status",
     effect: "Paralyzes the target.",
   }),
+  GROWL: move("GROWL", {
+    name: "Growl",
+    power: null,
+    type: "normal",
+    damageType: "status",
+    effect: "Lowers the target's Attack by one stage.",
+  }),
   GYRO_BALL: move("GYRO_BALL", {
     name: "Gyro Ball",
     power: null,
     type: "steel",
     damageType: "physical",
-    effect:
-      "Power raises when the user has lower Speed, up to a maximum of 150.",
+    effect: "Power raises when the user has lower Speed, up to a maximum of 150.",
   }),
   HEADBUTT: move("HEADBUTT", {
     name: "Headbutt",
@@ -597,8 +603,7 @@ export const Moves = moveTable({
     power: null,
     type: "steel",
     damageType: "physical",
-    effect:
-      "Power is higher when the user weighs more than the target, up to a maximum of 120.",
+    effect: "Power is higher when the user weighs more than the target, up to a maximum of 120.",
   }),
   HEX: move("HEX", {
     name: "Hex",
@@ -654,8 +659,7 @@ export const Moves = moveTable({
     power: 150,
     type: "normal",
     damageType: "special",
-    effect:
-      "The target is attacked with a powerful beam. The user can't move on the next turn.",
+    effect: "The target is attacked with a powerful beam. The user can't move on the next turn.",
   }),
   HYPER_DRILL: move("HYPER_DRILL", {
     name: "Hyper Drill",
@@ -728,6 +732,13 @@ export const Moves = moveTable({
     damageType: "special",
     effect: "Has a 100% chance to lower the target's Speed by one stage.",
   }),
+  INCINERATE: move("INCINERATE", {
+    name: "Incinerate",
+    power: 60,
+    type: "fire",
+    damageType: "special",
+    effect: "If the target is holding a Berry, it is burnt and becomes no longer usable.",
+  }),
   IRON_DEFENSE: move("IRON_DEFENSE", {
     name: "Iron Defense",
     power: null,
@@ -791,6 +802,20 @@ export const Moves = moveTable({
     type: "grass",
     damageType: "status",
     effect: "Seeds the target, stealing HP from it every turn.",
+  }),
+  LEER: move("LEER", {
+    name: "Leer",
+    power: null,
+    type: "normal",
+    damageType: "status",
+    effect: "Lowers the target's Defense by one stage.",
+  }),
+  LICK: move("LICK", {
+    name: "Lick",
+    power: 30,
+    type: "ghost",
+    damageType: "physical",
+    effect: "Has a 30% chance of paralyzing the target.",
   }),
   LIGHT_SCREEN: move("LIGHT_SCREEN", {
     name: "Light Screen",
@@ -862,16 +887,14 @@ export const Moves = moveTable({
     power: null,
     type: "steel",
     damageType: "status",
-    effect:
-      "A horrible sound like scraping metal harshly lowers the target's Sp. Def stat.",
+    effect: "A horrible sound like scraping metal harshly lowers the target's Sp. Def stat.",
   }),
   MOONBLAST: move("MOONBLAST", {
     name: "Moonblast",
     power: 95,
     type: "fairy",
     damageType: "special",
-    effect:
-      "Has a 30% chance to lower the target's Special Attack by one stage.",
+    effect: "Has a 30% chance to lower the target's Special Attack by one stage.",
   }),
   MUD_SLAP: move("MUD_SLAP", {
     name: "Mud-Slap",
@@ -922,8 +945,7 @@ export const Moves = moveTable({
     power: 130,
     type: "fire",
     damageType: "special",
-    effect:
-      "Lowers the user's Special Attack by two stages after inflicting damage.",
+    effect: "Lowers the user's Special Attack by two stages after inflicting damage.",
   }),
   PAYBACK: move("PAYBACK", {
     name: "Payback",
@@ -976,6 +998,13 @@ export const Moves = moveTable({
     damageType: "physical",
     effect: "Has a 30% chance to poison the target.",
   }),
+  POUND: move("POUND", {
+    name: "Pound",
+    power: 40,
+    type: "normal",
+    damageType: "physical",
+    effect: "null",
+  }),
   POWER_GEM: move("POWER_GEM", {
     name: "Power Gem",
     power: 80,
@@ -1009,8 +1038,7 @@ export const Moves = moveTable({
     power: 90,
     type: "psychic",
     damageType: "special",
-    effect:
-      "Has a 10% chance to lower the target's Special Defense by one stage.",
+    effect: "Has a 10% chance to lower the target's Special Defense by one stage.",
   }),
   PSYCHO_CUT: move("PSYCHO_CUT", {
     name: "Psycho Cut",
@@ -1038,8 +1066,7 @@ export const Moves = moveTable({
     power: 50,
     type: "normal",
     damageType: "physical",
-    effect:
-      "Frees the user from binding moves, removes Leech Seed, and blows away Spikes.",
+    effect: "Frees the user from binding moves, removes Leech Seed, and blows away Spikes.",
   }),
   RAZOR_LEAF: move("RAZOR_LEAF", {
     name: "Razor Leaf",
@@ -1097,6 +1124,14 @@ export const Moves = moveTable({
     damageType: "physical",
     effect: "Has a 100% chance to lower the target's Speed by one stage.",
   }),
+  ROUND: move("ROUND", {
+    name: "Round",
+    power: 60,
+    type: "normal",
+    damageType: "special",
+    effect:
+      "If multiple Pokémon on the same team use it in the same turn, the power doubles to 120 and the slower Pokémon move immediately after the fastest Pokémon uses it, regardless of their Speed.",
+  }),
   SAND_ATTACK: move("SAND_ATTACK", {
     name: "Sand Attack",
     power: null,
@@ -1137,8 +1172,7 @@ export const Moves = moveTable({
     power: 80,
     type: "ghost",
     damageType: "special",
-    effect:
-      "Has a 20% chance to lower the target's Special Defense by one stage.",
+    effect: "Has a 20% chance to lower the target's Special Defense by one stage.",
   }),
   SHADOW_CLAW: move("SHADOW_CLAW", {
     name: "Shadow Claw",
@@ -1167,8 +1201,7 @@ export const Moves = moveTable({
     power: null,
     type: "steel",
     damageType: "status",
-    effect:
-      "Raises the user's Attack by one stage and its Speed by two stages.",
+    effect: "Raises the user's Attack by one stage and its Speed by two stages.",
   }),
   SLAM: move("SLAM", {
     name: "Slam",
@@ -1224,8 +1257,7 @@ export const Moves = moveTable({
     power: 55,
     type: "dark",
     damageType: "special",
-    effect:
-      "Has a 100% chance to lower the target's Special Attack by one stage.",
+    effect: "Has a 100% chance to lower the target's Special Attack by one stage.",
   }),
   SNOWSCAPE: move("SNOWSCAPE", {
     name: "Snowscape",
@@ -1304,8 +1336,7 @@ export const Moves = moveTable({
     power: 50,
     type: "bug",
     damageType: "special",
-    effect:
-      "Has a 100% chance to lower the target's Special Attack by one stage.",
+    effect: "Has a 100% chance to lower the target's Special Attack by one stage.",
   }),
   SUCKER_PUNCH: move("SUCKER_PUNCH", {
     name: "Sucker Punch",
@@ -1434,6 +1465,13 @@ export const Moves = moveTable({
     damageType: "special",
     effect: "Has a 10% chance to paralyze the target.",
   }),
+  TORCH_SONG: move("TORCH_SONG", {
+    name: "Torch Song",
+    power: 80,
+    type: "fire",
+    damageType: "special",
+    effect: "Inflicts regular damage.  Raises the user's Special Attack by one stage.",
+  }),
   TORMENT: move("TORMENT", {
     name: "Torment",
     power: null,
@@ -1518,13 +1556,19 @@ export const Moves = moveTable({
     damageType: "physical",
     effect: "User receives 1/3 the damage inflicted in recoil.",
   }),
+  WORK_UP: move("WORK_UP", {
+    name: "Work Up",
+    power: null,
+    type: "normal",
+    damageType: "status",
+    effect: "Raises the user's Attack and Special Attack by one stage.",
+  }),
   WRAP: move("WRAP", {
     name: "Wrap",
     power: 15,
     type: "normal",
     damageType: "physical",
-    effect:
-      "Prevents the target from fleeing and inflicts damage for 2-5 turns.",
+    effect: "Prevents the target from fleeing and inflicts damage for 2-5 turns.",
   }),
   X_SCISSOR: move("X_SCISSOR", {
     name: "X-Scissor",
@@ -1547,4 +1591,4 @@ export const Moves = moveTable({
     damageType: "physical",
     effect: "Has a 20% chance to make the target flinch.",
   }),
-});
+})

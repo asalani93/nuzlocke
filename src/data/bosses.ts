@@ -621,8 +621,21 @@ export const Bosses = bossTable({
       },
     ],
   }),
-  NEMONA_1: boss("NEMONA_1", {
-    name: "Nemona 1",
+  NEMONA_1A: boss("NEMONA_1A", {
+    name: "Nemona",
+    type: BossType.RIVAL,
+    location: Locations.POCO_PATH.id,
+    team: [
+      {
+        pokemon: Pokemons.QUAXLY.id,
+        level: 5,
+        ability: Abilities.TORRENT.id,
+        moves: [Moves.POUND.id, Moves.GROWL.id, Moves.WATER_GUN.id],
+      },
+    ],
+  }),
+  NEMONA_1B: boss("NEMONA_1B", {
+    name: "Nemona",
     type: BossType.RIVAL,
     location: Locations.POCO_PATH.id,
     team: [
@@ -634,8 +647,40 @@ export const Bosses = bossTable({
       },
     ],
   }),
-  NEMONA_2: boss("NEMONA_2", {
-    name: "Nemona 2",
+  NEMONA_1C: boss("NEMONA_1C", {
+    name: "Nemona",
+    type: BossType.RIVAL,
+    location: Locations.POCO_PATH.id,
+    team: [
+      {
+        pokemon: Pokemons.FUECOCO.id,
+        level: 5,
+        ability: Abilities.BLAZE.id,
+        moves: [Moves.TACKLE.id, Moves.LEER.id, Moves.EMBER.id],
+      },
+    ],
+  }),
+  NEMONA_2A: boss("NEMONA_2A", {
+    name: "Nemona",
+    type: BossType.RIVAL,
+    location: Locations.MESAGOZA.id,
+    team: [
+      {
+        pokemon: Pokemons.QUAXLY.id,
+        level: 8,
+        ability: Abilities.TORRENT.id,
+        moves: [Moves.POUND.id, Moves.GROWL.id, Moves.WATER_GUN.id, Moves.WORK_UP.id],
+      },
+      {
+        pokemon: Pokemons.PAWMI.id,
+        level: 9,
+        ability: Abilities.STATIC.id,
+        moves: [Moves.THUNDER_SHOCK.id],
+      },
+    ],
+  }),
+  NEMONA_2B: boss("NEMONA_2B", {
+    name: "Nemona",
     type: BossType.RIVAL,
     location: Locations.MESAGOZA.id,
     team: [
@@ -653,8 +698,52 @@ export const Bosses = bossTable({
       },
     ],
   }),
-  NEMONA_3: boss("NEMONA_3", {
-    name: "Nemona 3",
+  NEMONA_2C: boss("NEMONA_2C", {
+    name: "Nemona",
+    type: BossType.RIVAL,
+    location: Locations.MESAGOZA.id,
+    team: [
+      {
+        pokemon: Pokemons.FUECOCO.id,
+        level: 8,
+        ability: Abilities.BLAZE.id,
+        moves: [Moves.TACKLE.id, Moves.LEER.id, Moves.EMBER.id, Moves.ROUND.id],
+      },
+      {
+        pokemon: Pokemons.PAWMI.id,
+        level: 9,
+        ability: Abilities.STATIC.id,
+        moves: [Moves.THUNDER_SHOCK.id],
+      },
+    ],
+  }),
+  NEMONA_3A: boss("NEMONA_3A", {
+    name: "Nemona",
+    type: BossType.RIVAL,
+    location: Locations.LEVINCIA_CITY.id,
+    team: [
+      {
+        pokemon: Pokemons.ROCKRUFF.id,
+        level: 21,
+        ability: Abilities.VITAL_SPIRIT.id,
+        moves: [Moves.DOUBLE_TEAM.id, Moves.ROCK_THROW.id, Moves.HOWL.id, Moves.BITE.id],
+      },
+      {
+        pokemon: Pokemons.PAWMI.id,
+        level: 21,
+        ability: Abilities.STATIC.id,
+        moves: [Moves.CHARGE.id, Moves.NUZZLE.id, Moves.DIG.id, Moves.BITE.id],
+      },
+      {
+        pokemon: Pokemons.QUAXWELL.id,
+        level: 22,
+        ability: Abilities.TORRENT.id,
+        moves: [Moves.DOUBLE_HIT.id, Moves.WATER_PULSE.id, Moves.WING_ATTACK.id, Moves.WORK_UP.id],
+      },
+    ],
+  }),
+  NEMONA_3B: boss("NEMONA_3B", {
+    name: "Nemona",
     type: BossType.RIVAL,
     location: Locations.LEVINCIA_CITY.id,
     team: [
@@ -678,8 +767,64 @@ export const Bosses = bossTable({
       },
     ],
   }),
-  NEMONA_4: boss("NEMONA_4", {
-    name: "Nemona 4",
+  NEMONA_3C: boss("NEMONA_3C", {
+    name: "Nemona",
+    type: BossType.RIVAL,
+    location: Locations.LEVINCIA_CITY.id,
+    team: [
+      {
+        pokemon: Pokemons.ROCKRUFF.id,
+        level: 21,
+        ability: Abilities.VITAL_SPIRIT.id,
+        moves: [Moves.DOUBLE_TEAM.id, Moves.ROCK_THROW.id, Moves.HOWL.id, Moves.BITE.id],
+      },
+      {
+        pokemon: Pokemons.PAWMI.id,
+        level: 21,
+        ability: Abilities.STATIC.id,
+        moves: [Moves.CHARGE.id, Moves.NUZZLE.id, Moves.DIG.id, Moves.BITE.id],
+      },
+      {
+        pokemon: Pokemons.CROCALOR.id,
+        level: 22,
+        ability: Abilities.BLAZE.id,
+        moves: [Moves.INCINERATE.id, Moves.YAWN.id, Moves.BITE.id, Moves.ROUND.id],
+      },
+    ],
+  }),
+  NEMONA_4A: boss("NEMONA_4A", {
+    name: "Nemona",
+    type: BossType.RIVAL,
+    location: Locations.MEDALI_CITY.id,
+    team: [
+      {
+        pokemon: Pokemons.LYCANROC.id,
+        level: 36,
+        ability: Abilities.SAND_RUSH.id,
+        moves: [Moves.QUICK_ATTACK.id, Moves.ACCELEROCK.id, Moves.BITE.id],
+      },
+      {
+        pokemon: Pokemons.GOOMY.id,
+        level: 36,
+        ability: Abilities.SAP_SIPPER.id,
+        moves: [Moves.DRAGON_PULSE.id, Moves.WATER_PULSE.id, Moves.FLAIL.id],
+      },
+      {
+        pokemon: Pokemons.PAWMO.id,
+        level: 36,
+        ability: Abilities.VOLT_ABSORB.id,
+        moves: [Moves.ARM_THRUST.id, Moves.SPARK.id, Moves.THUNDER_WAVE.id, Moves.QUICK_ATTACK.id],
+      },
+      {
+        pokemon: Pokemons.QUAQUAVAL.id,
+        level: 37,
+        ability: Abilities.TORRENT.id,
+        moves: [Moves.AIR_SLASH.id, Moves.AQUA_STEP.id, Moves.AQUA_JET.id],
+      },
+    ],
+  }),
+  NEMONA_4B: boss("NEMONA_4B", {
+    name: "Nemona",
     type: BossType.RIVAL,
     location: Locations.MEDALI_CITY.id,
     team: [
@@ -709,8 +854,70 @@ export const Bosses = bossTable({
       },
     ],
   }),
-  NEMONA_5: boss("NEMONA_5", {
-    name: "Nemona 5",
+  NEMONA_4C: boss("NEMONA_4C", {
+    name: "Nemona",
+    type: BossType.RIVAL,
+    location: Locations.MEDALI_CITY.id,
+    team: [
+      {
+        pokemon: Pokemons.LYCANROC.id,
+        level: 36,
+        ability: Abilities.SAND_RUSH.id,
+        moves: [Moves.QUICK_ATTACK.id, Moves.ACCELEROCK.id, Moves.BITE.id],
+      },
+      {
+        pokemon: Pokemons.GOOMY.id,
+        level: 36,
+        ability: Abilities.SAP_SIPPER.id,
+        moves: [Moves.DRAGON_PULSE.id, Moves.WATER_PULSE.id, Moves.FLAIL.id],
+      },
+      {
+        pokemon: Pokemons.PAWMO.id,
+        level: 36,
+        ability: Abilities.VOLT_ABSORB.id,
+        moves: [Moves.ARM_THRUST.id, Moves.SPARK.id, Moves.THUNDER_WAVE.id, Moves.QUICK_ATTACK.id],
+      },
+      {
+        pokemon: Pokemons.SKELEDIRGE.id,
+        level: 37,
+        ability: Abilities.BLAZE.id,
+        moves: [Moves.SNARL.id, Moves.TORCH_SONG.id, Moves.LICK.id],
+      },
+    ],
+  }),
+  NEMONA_5A: boss("NEMONA_5A", {
+    name: "Nemona",
+    type: BossType.RIVAL,
+    location: Locations.ALFORNADA_CITY.id,
+    team: [
+      {
+        pokemon: Pokemons.LYCANROC.id,
+        level: 42,
+        ability: Abilities.SAND_RUSH.id,
+        moves: [Moves.ACCELEROCK.id, Moves.CRUNCH.id, Moves.ROCK_SLIDE.id, Moves.SAND_ATTACK.id],
+      },
+      {
+        pokemon: Pokemons.SLIGGOO.id,
+        level: 42,
+        ability: Abilities.SAP_SIPPER.id,
+        moves: [Moves.DRAGON_PULSE.id, Moves.WATER_PULSE.id, Moves.FLAIL.id],
+      },
+      {
+        pokemon: Pokemons.PAWMOT.id,
+        level: 42,
+        ability: Abilities.VOLT_ABSORB.id,
+        moves: [Moves.ARM_THRUST.id, Moves.SPARK.id, Moves.THUNDER_WAVE.id, Moves.QUICK_ATTACK.id],
+      },
+      {
+        pokemon: Pokemons.QUAQUAVAL.id,
+        level: 43,
+        ability: Abilities.TORRENT.id,
+        moves: [Moves.AIR_SLASH.id, Moves.AQUA_STEP.id, Moves.AQUA_JET.id],
+      },
+    ],
+  }),
+  NEMONA_5B: boss("NEMONA_5B", {
+    name: "Nemona",
     type: BossType.RIVAL,
     location: Locations.ALFORNADA_CITY.id,
     team: [
@@ -740,8 +947,102 @@ export const Bosses = bossTable({
       },
     ],
   }),
-  NEMONA_6: boss("NEMONA_6", {
-    name: "Nemona 6",
+  NEMONA_5C: boss("NEMONA_5C", {
+    name: "Nemona",
+    type: BossType.RIVAL,
+    location: Locations.ALFORNADA_CITY.id,
+    team: [
+      {
+        pokemon: Pokemons.LYCANROC.id,
+        level: 42,
+        ability: Abilities.SAND_RUSH.id,
+        moves: [Moves.ACCELEROCK.id, Moves.CRUNCH.id, Moves.ROCK_SLIDE.id, Moves.SAND_ATTACK.id],
+      },
+      {
+        pokemon: Pokemons.SLIGGOO.id,
+        level: 42,
+        ability: Abilities.SAP_SIPPER.id,
+        moves: [Moves.DRAGON_PULSE.id, Moves.WATER_PULSE.id, Moves.FLAIL.id],
+      },
+      {
+        pokemon: Pokemons.PAWMOT.id,
+        level: 42,
+        ability: Abilities.VOLT_ABSORB.id,
+        moves: [Moves.ARM_THRUST.id, Moves.SPARK.id, Moves.THUNDER_WAVE.id, Moves.QUICK_ATTACK.id],
+      },
+      {
+        pokemon: Pokemons.SKELEDIRGE.id,
+        level: 43,
+        ability: Abilities.BLAZE.id,
+        moves: [Moves.SNARL.id, Moves.TORCH_SONG.id, Moves.LICK.id],
+      },
+    ],
+  }),
+  NEMONA_6A: boss("NEMONA_6A", {
+    name: "Nemona",
+    type: BossType.RIVAL,
+    location: Locations.MESAGOZA.id,
+    team: [
+      {
+        pokemon: Pokemons.LYCANROC.id,
+        level: 65,
+        ability: Abilities.SAND_RUSH.id,
+        moves: [
+          Moves.ACCELEROCK.id,
+          Moves.DRILL_RUN.id,
+          Moves.STEALTH_ROCK.id,
+          Moves.STONE_EDGE.id,
+        ],
+      },
+      {
+        pokemon: Pokemons.GOODRA.id,
+        level: 65,
+        ability: Abilities.SAP_SIPPER.id,
+        moves: [
+          Moves.DRAGON_PULSE.id,
+          Moves.MUDDY_WATER.id,
+          Moves.ICE_BEAM.id,
+          Moves.SLUDGE_BOMB.id,
+        ],
+      },
+      {
+        pokemon: Pokemons.DUDUNSPARCE.id,
+        level: 65,
+        ability: Abilities.SERENE_GRACE.id,
+        moves: [Moves.HYPER_DRILL.id, Moves.DRILL_RUN.id, Moves.DRAGON_RUSH.id, Moves.COIL.id],
+      },
+      {
+        pokemon: Pokemons.ORTHWORM.id,
+        level: 65,
+        ability: Abilities.EARTH_EATER.id,
+        moves: [Moves.IRON_TAIL.id, Moves.BODY_PRESS.id, Moves.EARTHQUAKE.id, Moves.ROCK_BLAST.id],
+      },
+      {
+        pokemon: Pokemons.PAWMOT.id,
+        level: 65,
+        ability: Abilities.VOLT_ABSORB.id,
+        moves: [
+          Moves.DOUBLE_SHOCK.id,
+          Moves.CLOSE_COMBAT.id,
+          Moves.ICE_PUNCH.id,
+          Moves.QUICK_ATTACK.id,
+        ],
+      },
+      {
+        pokemon: Pokemons.QUAQUAVAL.id,
+        level: 66,
+        ability: Abilities.TORRENT.id,
+        moves: [
+          Moves.AQUA_STEP.id,
+          Moves.BRICK_BREAK.id,
+          Moves.AERIAL_ACE.id,
+          Moves.ICE_SPINNER.id,
+        ],
+      },
+    ],
+  }),
+  NEMONA_6B: boss("NEMONA_6B", {
+    name: "Nemona",
     type: BossType.RIVAL,
     location: Locations.MESAGOZA.id,
     team: [
@@ -800,6 +1101,64 @@ export const Bosses = bossTable({
           Moves.SHADOW_CLAW.id,
           Moves.PLAY_ROUGH.id,
         ],
+      },
+    ],
+  }),
+  NEMONA_6C: boss("NEMONA_6C", {
+    name: "Nemona",
+    type: BossType.RIVAL,
+    location: Locations.MESAGOZA.id,
+    team: [
+      {
+        pokemon: Pokemons.LYCANROC.id,
+        level: 65,
+        ability: Abilities.SAND_RUSH.id,
+        moves: [
+          Moves.ACCELEROCK.id,
+          Moves.DRILL_RUN.id,
+          Moves.STEALTH_ROCK.id,
+          Moves.STONE_EDGE.id,
+        ],
+      },
+      {
+        pokemon: Pokemons.GOODRA.id,
+        level: 65,
+        ability: Abilities.SAP_SIPPER.id,
+        moves: [
+          Moves.DRAGON_PULSE.id,
+          Moves.MUDDY_WATER.id,
+          Moves.ICE_BEAM.id,
+          Moves.SLUDGE_BOMB.id,
+        ],
+      },
+      {
+        pokemon: Pokemons.DUDUNSPARCE.id,
+        level: 65,
+        ability: Abilities.SERENE_GRACE.id,
+        moves: [Moves.HYPER_DRILL.id, Moves.DRILL_RUN.id, Moves.DRAGON_RUSH.id, Moves.COIL.id],
+      },
+      {
+        pokemon: Pokemons.ORTHWORM.id,
+        level: 65,
+        ability: Abilities.EARTH_EATER.id,
+        moves: [Moves.IRON_TAIL.id, Moves.BODY_PRESS.id, Moves.EARTHQUAKE.id, Moves.ROCK_BLAST.id],
+      },
+      {
+        pokemon: Pokemons.PAWMOT.id,
+        level: 65,
+        ability: Abilities.VOLT_ABSORB.id,
+        moves: [
+          Moves.DOUBLE_SHOCK.id,
+          Moves.CLOSE_COMBAT.id,
+          Moves.ICE_PUNCH.id,
+          Moves.QUICK_ATTACK.id,
+        ],
+      },
+      {
+        pokemon: Pokemons.SKELEDIRGE.id,
+        level: 66,
+        ability: Abilities.BLAZE.id,
+        moves: [Moves.TORCH_SONG.id, Moves.EARTH_POWER.id, Moves.SHADOW_BALL.id, Moves.SNARL.id],
       },
     ],
   }),

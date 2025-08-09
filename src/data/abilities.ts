@@ -1,4 +1,4 @@
-import { ability, abilityTable } from "../types/ability";
+import { ability, abilityTable } from "../types/ability"
 
 export const Abilities = abilityTable({
   ANGER_SHELL: ability("ANGER_SHELL", {
@@ -16,10 +16,13 @@ export const Abilities = abilityTable({
     effect:
       "Armor Tail prevents the opponent from using any moves that have priority, such as Quick Attack.",
   }),
+  BLAZE: ability("BLAZE", {
+    name: "Blaze",
+    effect: "Strengthens fire moves to inflict 1.5x damage at 1/3 max HP or less.",
+  }),
   CHEEK_POUCH: ability("CHEEK_POUCH", {
     name: "Cheek Pouch",
-    effect:
-      "Restores HP upon eating a Berry, in addition to the Berry's effect.",
+    effect: "Restores HP upon eating a Berry, in addition to the Berry's effect.",
   }),
   CHLOROPHYLL: ability("CHLOROPHYLL", {
     name: "Chlorophyll",
@@ -52,8 +55,7 @@ export const Abilities = abilityTable({
   }),
   DROUGHT: ability("DROUGHT", {
     name: "Drought",
-    effect:
-      "Summons strong sunlight that lasts indefinitely upon entering battle.",
+    effect: "Summons strong sunlight that lasts indefinitely upon entering battle.",
   }),
   EARLY_BIRD: ability("EARLY_BIRD", {
     name: "Early Bird",
@@ -80,8 +82,7 @@ export const Abilities = abilityTable({
   }),
   FLOWER_VEIL: ability("FLOWER_VEIL", {
     name: "Flower Veil",
-    effect:
-      "Protects friendly grass Pokémon from having their stats lowered by other Pokémon.",
+    effect: "Protects friendly grass Pokémon from having their stats lowered by other Pokémon.",
   }),
   GOOEY: ability("GOOEY", {
     name: "Gooey",
@@ -130,18 +131,15 @@ export const Abilities = abilityTable({
   }),
   MISTY_SURGE: ability("MISTY_SURGE", {
     name: "Misty Surge",
-    effect:
-      "When this Pokémon enters battle, it changes the terrain to Misty Terrain.",
+    effect: "When this Pokémon enters battle, it changes the terrain to Misty Terrain.",
   }),
   MOLD_BREAKER: ability("MOLD_BREAKER", {
     name: "Mold Breaker",
-    effect:
-      "Bypasses targets' abilities if they could hinder or prevent a move.",
+    effect: "Bypasses targets' abilities if they could hinder or prevent a move.",
   }),
   MYCELIUM_MIGHT: ability("MYCELIUM_MIGHT", {
     name: "Mycelium Might",
-    effect:
-      "Status moves go last, but are not affected by the opponent's ability. ",
+    effect: "Status moves go last, but are not affected by the opponent's ability. ",
   }),
   NATURAL_CURE: ability("NATURAL_CURE", {
     name: "Natural Cure",
@@ -166,8 +164,7 @@ export const Abilities = abilityTable({
   }),
   OVERGROW: ability("OVERGROW", {
     name: "Overgrow",
-    effect:
-      "Strengthens grass moves to inflict 1.5x damage at 1/3 max HP or less.",
+    effect: "Strengthens grass moves to inflict 1.5x damage at 1/3 max HP or less.",
   }),
   OWN_TEMPO: ability("OWN_TEMPO", {
     name: "Own Tempo",
@@ -188,8 +185,7 @@ export const Abilities = abilityTable({
   }),
   PROTOSYNTHESIS: ability("PROTOSYNTHESIS", {
     name: "Protosynthesis",
-    effect:
-      "Raises highest stat in harsh sunlight, or if holding Booster Energy. ",
+    effect: "Raises highest stat in harsh sunlight, or if holding Booster Energy. ",
   }),
   PUNK_ROCK: ability("PUNK_ROCK", {
     name: "Punk Rock",
@@ -197,8 +193,7 @@ export const Abilities = abilityTable({
   }),
   PURIFYING_SALT: ability("PURIFYING_SALT", {
     name: "Purifying Salt",
-    effect:
-      "Protects from status conditions and halves damage from Ghost-type moves. ",
+    effect: "Protects from status conditions and halves damage from Ghost-type moves. ",
   }),
   QUARK_DRIVE: ability("QUARK_DRIVE", {
     name: "Quark Drive",
@@ -219,18 +214,15 @@ export const Abilities = abilityTable({
   }),
   ROCKY_PAYLOAD: ability("ROCKY_PAYLOAD", {
     name: "Rocky Payload",
-    effect:
-      "Rocky Payload increases the power of Rock-type moves used by this Pokémon by 50%.",
+    effect: "Rocky Payload increases the power of Rock-type moves used by this Pokémon by 50%.",
   }),
   SAND_RUSH: ability("SAND_RUSH", {
     name: "Sand Rush",
-    effect:
-      "Doubles Speed during a sandstorm.  Protects against sandstorm damage.",
+    effect: "Doubles Speed during a sandstorm.  Protects against sandstorm damage.",
   }),
   SAND_VEIL: ability("SAND_VEIL", {
     name: "Sand Veil",
-    effect:
-      "Increases evasion to 1.25x during a sandstorm.  Protects against sandstorm damage.",
+    effect: "Increases evasion to 1.25x during a sandstorm.  Protects against sandstorm damage.",
   }),
   SAP_SIPPER: ability("SAP_SIPPER", {
     name: "Sap Sipper",
@@ -255,13 +247,11 @@ export const Abilities = abilityTable({
   }),
   SKILL_LINK: ability("SKILL_LINK", {
     name: "Skill Link",
-    effect:
-      "Extends two-to-five-hit moves and triple kick to their full length every time.",
+    effect: "Extends two-to-five-hit moves and triple kick to their full length every time.",
   }),
   SNOW_CLOAK: ability("SNOW_CLOAK", {
     name: "Snow Cloak",
-    effect:
-      "Increases evasion to 1.25x during hail.  Protects against hail damage.",
+    effect: "Increases evasion to 1.25x during hail.  Protects against hail damage.",
   }),
   SNOW_WARNING: ability("SNOW_WARNING", {
     name: "Snow Warning",
@@ -273,8 +263,7 @@ export const Abilities = abilityTable({
   }),
   STAMINA: ability("STAMINA", {
     name: "Stamina",
-    effect:
-      "Raises this Pokémon's Defense by one stage when it takes damage from a move.",
+    effect: "Raises this Pokémon's Defense by one stage when it takes damage from a move.",
   }),
   STATIC: ability("STATIC", {
     name: "Static",
@@ -295,18 +284,15 @@ export const Abilities = abilityTable({
   }),
   SUPREME_OVERLORD: ability("SUPREME_OVERLORD", {
     name: "Supreme Overlord",
-    effect:
-      "Attack and Special Attack are boosted for each party Pokémon that has been defeated. ",
+    effect: "Attack and Special Attack are boosted for each party Pokémon that has been defeated. ",
   }),
   SWARM: ability("SWARM", {
     name: "Swarm",
-    effect:
-      "Strengthens bug moves to inflict 1.5x damage at 1/3 max HP or less.",
+    effect: "Strengthens bug moves to inflict 1.5x damage at 1/3 max HP or less.",
   }),
   SYNCHRONIZE: ability("SYNCHRONIZE", {
     name: "Synchronize",
-    effect:
-      "Copies burns, paralysis, and poison received onto the Pokémon that inflicted them.",
+    effect: "Copies burns, paralysis, and poison received onto the Pokémon that inflicted them.",
   }),
   THERMAL_EXCHANGE: ability("THERMAL_EXCHANGE", {
     name: "Thermal Exchange",
@@ -318,8 +304,7 @@ export const Abilities = abilityTable({
   }),
   TORRENT: ability("TORRENT", {
     name: "Torrent",
-    effect:
-      "Strengthens water moves to inflict 1.5x damage at 1/3 max HP or less.",
+    effect: "Strengthens water moves to inflict 1.5x damage at 1/3 max HP or less.",
   }),
   TOXIC_DEBRIS: ability("TOXIC_DEBRIS", {
     name: "Toxic Debris",
@@ -340,8 +325,7 @@ export const Abilities = abilityTable({
   }),
   WEAK_ARMOR: ability("WEAK_ARMOR", {
     name: "Weak Armor",
-    effect:
-      "Raises Speed and lowers Defense by one stage each upon being hit by a physical move.",
+    effect: "Raises Speed and lowers Defense by one stage each upon being hit by a physical move.",
   }),
   WELL_BAKED_BODY: ability("WELL_BAKED_BODY", {
     name: "Well-Baked Body",
@@ -352,4 +336,4 @@ export const Abilities = abilityTable({
     effect:
       "If a Pokémon with Wind Power is hit by a wind move, the power of the next Electric-type move it uses is doubled.",
   }),
-});
+})

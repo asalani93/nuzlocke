@@ -10,6 +10,7 @@ import { lookup } from "../types/util"
 import type { VersionId } from "../types/version"
 import { currentVersionIdAtom } from "./current_version"
 import { useCallback, useMemo } from "react"
+import { atomWithStorage } from "jotai/utils"
 
 type Enum<T extends { [K in keyof T]: K }> = T[keyof T]
 
@@ -149,7 +150,10 @@ function rerollEncounter(encounters: Encounters, routeId: RouteId, versionId: Ve
   return overrideEncounter(encounters, routeId, rerolledEncounter.id, versionId)
 }
 
-const encountersAtomInner = atom<Encounters>(calculateEncounters({}, Versions.SCARLET.id))
+const encountersAtomInner = atomWithStorage<Encounters>(
+  "nuzlocke_encounters",
+  calculateEncounters({}, Versions.SCARLET.id)
+)
 
 type EncountersReducerAction =
   | { type: "RESET_ALL" }

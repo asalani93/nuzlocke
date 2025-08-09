@@ -5,21 +5,41 @@ import { Versions } from "./versions"
 
 export const Steps = stepTable({
   STARTER: routeStep("STARTER", { index: 0, route: Routes.STARTER.id }),
-  NEMONA_1: bossStep("NEMONA_1", {
+  NEMONA_1A: bossStep("NEMONA_1A", {
     index: 1,
-    boss: Bosses.NEMONA_1.id,
+    boss: Bosses.NEMONA_1A.id,
     blocking: true,
   }),
+  // NEMONA_1B: bossStep("NEMONA_1B", {
+  //   index: 1,
+  //   boss: Bosses.NEMONA_1B.id,
+  //   blocking: true,
+  // }),
+  // NEMONA_1C: bossStep("NEMONA_1C", {
+  //   index: 1,
+  //   boss: Bosses.NEMONA_1C.id,
+  //   blocking: true,
+  // }),
   POCO_PATH: routeStep("POCO_PATH", { index: 2, route: Routes.POCO_PATH.id }),
   SOUTH_PROVINCE_A1: routeStep("SOUTH_PROVINCE_A1", {
     index: 3,
     route: Routes.SOUTH_PROVINCE_A1.id,
   }),
-  NEMONA_2: bossStep("NEMONA_2", {
+  NEMONA_2A: bossStep("NEMONA_2A", {
     index: 4,
-    boss: Bosses.NEMONA_2.id,
+    boss: Bosses.NEMONA_2A.id,
     blocking: true,
   }),
+  // NEMONA_2B: bossStep("NEMONA_2B", {
+  //   index: 4,
+  //   boss: Bosses.NEMONA_2B.id,
+  //   blocking: true,
+  // }),
+  // NEMONA_2C: bossStep("NEMONA_2C", {
+  //   index: 4,
+  //   boss: Bosses.NEMONA_2C.id,
+  //   blocking: true,
+  // }),
   INLET_GROTTO: routeStep("INLET_GROTTO", {
     index: 5,
     route: Routes.INLET_GROTTO.id,
@@ -73,11 +93,21 @@ export const Steps = stepTable({
     index: 17,
     route: Routes.EAST_PROVINCE_A2.id,
   }),
-  NEMONA_3: bossStep("NEMONA_3", {
+  NEMONA_3A: bossStep("NEMONA_3A", {
     index: 18,
-    boss: Bosses.NEMONA_3.id,
+    boss: Bosses.NEMONA_3A.id,
     blocking: true,
   }),
+  // NEMONA_3B: bossStep("NEMONA_3B", {
+  //   index: 18,
+  //   boss: Bosses.NEMONA_3B.id,
+  //   blocking: true,
+  // }),
+  // NEMONA_3C: bossStep("NEMONA_3C", {
+  //   index: 18,
+  //   boss: Bosses.NEMONA_3C.id,
+  //   blocking: true,
+  // }),
   IONO: bossStep("IONO", { index: 19, boss: Bosses.IONO.id, blocking: true }),
   MELA: bossStep("MELA", { index: 20, boss: Bosses.MELA.id, blocking: true }),
   EAST_PROVINCE_A3: routeStep("EAST_PROVINCE_A3", {
@@ -115,11 +145,21 @@ export const Steps = stepTable({
     boss: Bosses.ATTICUS.id,
     blocking: true,
   }),
-  NEMONA_4: bossStep("NEMONA_4", {
+  NEMONA_4A: bossStep("NEMONA_4A", {
     index: 30,
-    boss: Bosses.NEMONA_4.id,
+    boss: Bosses.NEMONA_4A.id,
     blocking: true,
   }),
+  // NEMONA_4B: bossStep("NEMONA_4B", {
+  //   index: 30,
+  //   boss: Bosses.NEMONA_4B.id,
+  //   blocking: true,
+  // }),
+  // NEMONA_4C: bossStep("NEMONA_4C", {
+  //   index: 30,
+  //   boss: Bosses.NEMONA_4C.id,
+  //   blocking: true,
+  // }),
   LARRY_1: bossStep("LARRY_1", {
     index: 31,
     boss: Bosses.LARRY_1.id,
@@ -150,11 +190,21 @@ export const Steps = stepTable({
     version: Versions.VIOLET.id,
     blocking: true,
   }),
-  NEMONA_5: bossStep("NEMONA_5", {
+  NEMONA_5A: bossStep("NEMONA_5A", {
     index: 38,
-    boss: Bosses.NEMONA_4.id,
+    boss: Bosses.NEMONA_5A.id,
     blocking: true,
   }),
+  // NEMONA_5B: bossStep("NEMONA_5B", {
+  //   index: 38,
+  //   boss: Bosses.NEMONA_5B.id,
+  //   blocking: true,
+  // }),
+  // NEMONA_5C: bossStep("NEMONA_5C", {
+  //   index: 38,
+  //   boss: Bosses.NEMONA_5C.id,
+  //   blocking: true,
+  // }),
   TULIP: bossStep("TULIP", {
     index: 39,
     boss: Bosses.TULIP.id,
@@ -237,11 +287,21 @@ export const Steps = stepTable({
     boss: Bosses.PENNY.id,
     blocking: true,
   }),
-  NEMONA_6: bossStep("NEMONA_6", {
+  NEMONA_6A: bossStep("NEMONA_6A", {
     index: 63,
-    boss: Bosses.NEMONA_6.id,
+    boss: Bosses.NEMONA_6A.id,
     blocking: true,
   }),
+  // NEMONA_6B: bossStep("NEMONA_6B", {
+  //   index: 63,
+  //   boss: Bosses.NEMONA_6B.id,
+  //   blocking: true,
+  // }),
+  // NEMONA_6C: bossStep("NEMONA_6C", {
+  //   index: 63,
+  //   boss: Bosses.NEMONA_6C.id,
+  //   blocking: true,
+  // }),
   SADA_1: bossStep("SADA_1", {
     index: 64,
     boss: Bosses.SADA_1.id,

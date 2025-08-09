@@ -5,6 +5,7 @@ import type { VersionId } from "../types/version"
 import { StepOrder } from "../data/steps"
 import { currentVersionIdAtom } from "./current_version"
 import { useCallback, useMemo } from "react"
+import { atomWithStorage } from "jotai/utils"
 
 type Enum<T extends { [K in keyof T]: K }> = T[keyof T]
 
@@ -44,7 +45,8 @@ function initializeBossProgression(versionId: VersionId) {
   return progression
 }
 
-const bossProgressionAtomInner = atom<BossProgression>(
+const bossProgressionAtomInner = atomWithStorage<BossProgression>(
+  "nuzlocke_boss_progression",
   initializeBossProgression(Versions.SCARLET.id)
 )
 

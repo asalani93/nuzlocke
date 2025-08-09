@@ -4,8 +4,12 @@ import type { VersionId } from "../types/version"
 import { useCallback } from "react"
 import { useAllStepsForVersionId, useVersion } from "../app/hooks"
 import type { Step } from "../types/step"
+import { atomWithStorage } from "jotai/utils"
 
-const currentVersionIdAtomInner = atom<VersionId>(Versions.SCARLET.id)
+const currentVersionIdAtomInner = atomWithStorage<VersionId>(
+  "nuzlocke_current_version",
+  Versions.SCARLET.id
+)
 
 export const currentVersionIdAtom = atom(
   (get) => get(currentVersionIdAtomInner),
