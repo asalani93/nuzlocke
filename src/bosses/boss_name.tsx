@@ -1,17 +1,17 @@
+import { Text } from "@mantine/core";
 import { useBoss } from "../app/hooks";
-import { Text } from "../common/text";
 import type { BossId } from "../types/boss";
 
 export interface BossNameProps {
   bossId: BossId;
   className?: string;
-  inline?: boolean;
+  span?: boolean;
 }
 
-export function BossName({ bossId, className, inline }: BossNameProps) {
+export function BossName({ bossId, className, span }: BossNameProps) {
   const boss = useBoss(bossId);
   return (
-    <Text className={className} inline={inline}>
+    <Text className={className} span={span}>
       {boss.name}
     </Text>
   );

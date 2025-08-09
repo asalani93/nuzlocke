@@ -1,7 +1,7 @@
-import { bossStep, routeStep, stepTable } from "../types/step";
-import { Bosses } from "./bosses";
-import { Routes } from "./routes";
-import { Versions } from "./versions";
+import { bossStep, routeStep, stepTable } from "../types/step"
+import { Bosses } from "./bosses"
+import { Routes } from "./routes"
+import { Versions } from "./versions"
 
 export const Steps = stepTable({
   STARTER: routeStep("STARTER", { index: 0, route: Routes.STARTER.id }),
@@ -217,7 +217,7 @@ export const Steps = stepTable({
     index: 54,
     route: Routes.POKEMON_LEAGUE.id,
   }),
-  RIKA: bossStep("RIKA", { index: 55, boss: Bosses.ERI.id }),
+  RIKA: bossStep("RIKA", { index: 55, boss: Bosses.RIKA.id }),
   POPPY: bossStep("POPPY", { index: 56, boss: Bosses.POPPY.id }),
   LARRY_2: bossStep("LARRY_2", { index: 57, boss: Bosses.LARRY_2.id }),
   HASSEL: bossStep("HASSEL", { index: 58, boss: Bosses.HASSEL.id }),
@@ -266,10 +266,10 @@ export const Steps = stepTable({
     version: Versions.VIOLET.id,
     blocking: true,
   }),
-});
+})
 
 export const StepOrder = (() => {
-  const steps = Object.values(Steps);
-  steps.sort((l, r) => l.index - r.index);
-  return steps;
-})();
+  const steps = Object.values(Steps)
+  steps.sort((l, r) => l.index - r.index)
+  return steps
+})()

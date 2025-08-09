@@ -1,5 +1,5 @@
-import { pokemon, pokemonTable } from "../types/pokemon";
-import { Evolutions } from "./evolutions";
+import { pokemon, pokemonTable } from "../types/pokemon"
+import { Evolutions } from "./evolutions"
 
 export const Pokemons = pokemonTable({
   ABOMASNOW: pokemon("ABOMASNOW", {
@@ -14702,4 +14702,69 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-});
+  SEGIN_STARMOBILE: pokemon("SEGIN_STARMOBILE", {
+    name: "Segin Starmobile",
+    line: Evolutions.VAROOM,
+    type1: "dark",
+    baseStats: {
+      hp: 80,
+      attack: 119,
+      defense: 90,
+      specialAttack: 54,
+      specialDefense: 67,
+      speed: 90,
+    },
+  }),
+  SCHEDAR_STARMOBILE: pokemon("SCHEDAR_STARMOBILE", {
+    name: "Schedar Starmobile",
+    line: Evolutions.VAROOM,
+    type1: "fire",
+    baseStats: {
+      hp: 80,
+      attack: 119,
+      defense: 90,
+      specialAttack: 54,
+      specialDefense: 67,
+      speed: 90,
+    },
+  }),
+  NAVI_STARMOBILE: pokemon("NAVI_STARMOBILE", {
+    name: "Navi Starmobile",
+    line: Evolutions.VAROOM,
+    type1: "poison",
+    baseStats: {
+      hp: 80,
+      attack: 119,
+      defense: 90,
+      specialAttack: 54,
+      specialDefense: 67,
+      speed: 90,
+    },
+  }),
+  RUCHBAH_STARMOBILE: pokemon("RUCHBAH_STARMOBILE", {
+    name: "Ruchbah Starmobile",
+    line: Evolutions.VAROOM,
+    type1: "fairy",
+    baseStats: {
+      hp: 80,
+      attack: 119,
+      defense: 90,
+      specialAttack: 54,
+      specialDefense: 67,
+      speed: 90,
+    },
+  }),
+  CAPH_STARMOBILE: pokemon("CAPH_STARMOBILE", {
+    name: "Caph Starmobile",
+    line: Evolutions.VAROOM,
+    type1: "fighting",
+    baseStats: {
+      hp: 80,
+      attack: 119,
+      defense: 90,
+      specialAttack: 54,
+      specialDefense: 67,
+      speed: 90,
+    },
+  }),
+})

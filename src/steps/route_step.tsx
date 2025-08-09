@@ -1,20 +1,34 @@
-import { Card, CardHeader } from "@heroui/react";
-import { useRoute } from "../app/hooks";
-import { LocationName } from "../locations/location_name";
-import { type RouteStep } from "../types/step";
+import { Card, Group, Stack } from "@mantine/core"
+import { useRoute } from "../app/hooks"
+import { LocationName } from "../locations/location_name"
+import { type RouteStep } from "../types/step"
+import { IconCompass } from "@tabler/icons-react"
+import { RouteDetails } from "../routes/route_details"
+import { RouteStepStatusIndicator } from "./route_step_status_indicator"
 
 export interface RouteStepProps {
-  routeStep: RouteStep;
+  routeStep: RouteStep
 }
 
 export function RouteStep({ routeStep }: RouteStepProps) {
-  const route = useRoute(routeStep.route);
+  const route = useRoute(routeStep.route)
+
   return (
-    <Card isBlurred>
-      <CardHeader>
-        <span className="font-bold">Route: </span>{" "}
-        <LocationName inline locationId={route.location} />
-      </CardHeader>
+    <Card padding="md" radius="md" shadow="sm" withBorder>
+      <Card.Section inheritPadding withBorder>
+        <Group justify="space-between" py="md">
+          <Group gap="sm">
+            <IconCompass size={24} />
+            <LocationName className="font-bold" locationId={route.location} />
+          </Group>
+          <RouteStepStatusIndicator routeId={routeStep.route} />
+        </Group>
+      </Card.Section>
+      <Card.Section inheritPadding withBorder>
+        <Stack py="md">
+          <RouteDetails routeId={route.id} />
+        </Stack>
+      </Card.Section>
     </Card>
-  );
+  )
 }

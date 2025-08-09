@@ -1,120 +1,65 @@
-import { useAtomValue, useSetAtom } from "jotai";
-import { useCallback, useMemo } from "react";
-import { Abilities } from "../data/abilities";
-import { Bosses } from "../data/bosses";
-import { Locations } from "../data/locations";
-import { Moves } from "../data/moves";
-import { Pokemons } from "../data/pokemons";
-import { Routes } from "../data/routes";
-import { Steps } from "../data/steps";
-import { Versions } from "../data/versions";
-import {
-  encountersAtom,
-  versionAtom as currentVersionIdAtom,
-  type EncounterTable,
-} from "./state";
-import type { Ability, AbilityId } from "../types/ability";
-import type { Boss, BossId } from "../types/boss";
-import type { Location, LocationId } from "../types/location";
-import type { Move, MoveId } from "../types/move";
-import type { Pokemon, PokemonId } from "../types/pokemon";
-import type { Route, RouteId } from "../types/route";
-import type { Step, StepId } from "../types/step";
-import type { Version, VersionId } from "../types/version";
-import { lookup } from "../types/util";
+import { useMemo } from "react"
+import { Abilities } from "../data/abilities"
+import { Bosses } from "../data/bosses"
+import { Locations } from "../data/locations"
+import { Moves } from "../data/moves"
+import { Pokemons } from "../data/pokemons"
+import { Routes } from "../data/routes"
+import { Steps } from "../data/steps"
+import { Versions } from "../data/versions"
+import type { Ability, AbilityId } from "../types/ability"
+import type { Boss, BossId } from "../types/boss"
+import type { Location, LocationId } from "../types/location"
+import type { Move, MoveId } from "../types/move"
+import type { Pokemon, PokemonId } from "../types/pokemon"
+import type { Route, RouteId } from "../types/route"
+import type { Step, StepId } from "../types/step"
+import type { Version, VersionId } from "../types/version"
+import { lookup } from "../types/util"
 
 export function useAbility(abilityId: AbilityId): Ability {
-  return useMemo(() => lookup(Abilities, abilityId), [abilityId]);
+  return useMemo(() => lookup(Abilities, abilityId), [abilityId])
 }
 
 export function useBoss(bossId: BossId): Boss {
-  return useMemo(() => lookup(Bosses, bossId), [bossId]);
+  return useMemo(() => lookup(Bosses, bossId), [bossId])
 }
 
 export function useLocation(locationId: LocationId): Location {
-  return useMemo(() => lookup(Locations, locationId), [locationId]);
+  return useMemo(() => lookup(Locations, locationId), [locationId])
 }
 
 export function useMove(moveId: MoveId): Move {
-  return useMemo(() => lookup(Moves, moveId), [moveId]);
+  return useMemo(() => lookup(Moves, moveId), [moveId])
 }
 
 export function usePokemon(pokemonId: PokemonId): Pokemon {
-  return useMemo(() => lookup(Pokemons, pokemonId), [pokemonId]);
+  return useMemo(() => lookup(Pokemons, pokemonId), [pokemonId])
 }
 
 export function useRoute(routeId: RouteId): Route {
-  return useMemo(() => lookup(Routes, routeId), [routeId]);
+  return useMemo(() => lookup(Routes, routeId), [routeId])
 }
 
 export function useStep(stepId: StepId): Step {
-  return useMemo(() => lookup(Steps, stepId), [stepId]);
+  return useMemo(() => lookup(Steps, stepId), [stepId])
 }
 
 export function useVersion(id: VersionId): Version {
-  return useMemo(() => lookup(Versions, id), [id]);
+  return useMemo(() => lookup(Versions, id), [id])
 }
 
 export function useAllSteps(): Step[] {
   return useMemo(() => {
-    const steps = Object.values(Steps);
-    steps.sort((l, r) => l.index - r.index);
-    return steps;
-  }, []);
+    const steps = Object.values(Steps)
+    steps.sort((l, r) => l.index - r.index)
+    return steps
+  }, [])
 }
 
 export function useAllStepsForVersionId(versionId: VersionId): Step[] {
-  const allSteps = useAllSteps();
+  const allSteps = useAllSteps()
   return useMemo(() => {
-    return allSteps.filter(
-      (step) => step.version == null || step.version === versionId
-    );
-  }, [allSteps, versionId]);
-}
-
-export function useAllStepsForCurrentVersion(): Step[] {
-  const versionId = useCurrentVersionId();
-  return useAllStepsForVersionId(versionId);
-}
-
-export function useEncounterTable(): EncounterTable {
-  return useAtomValue(encountersAtom);
-}
-
-export function useEncounterForRoute(id: RouteId): PokemonId | undefined {
-  const encounterTable = useEncounterTable();
-  return encounterTable[id];
-}
-
-export function useResetEncountersCallback() {
-  const dispatch = useSetAtom(encountersAtom);
-  return useCallback(() => {
-    dispatch({ type: "RESET_ALL" });
-  }, [dispatch]);
-}
-
-export function useRerollEncounterCallback() {
-  const dispatch = useSetAtom(encountersAtom);
-  return useCallback(
-    (id: RouteId) => {
-      dispatch({ type: "RESET_FROM", route: id });
-    },
-    [dispatch]
-  );
-}
-
-export function useCurrentVersionId(): VersionId {
-  return useAtomValue(currentVersionIdAtom);
-}
-
-export function useChangeVersionCallback() {
-  const resetEncounters = useResetEncountersCallback();
-  const setVersionId = useSetAtom(currentVersionIdAtom);
-  return useCallback(
-    (versionId: VersionId) => {
-      setVersionId(versionId);
-      resetEncounters();
-    },
-    [resetEncounters, setVersionId]
-  );
+    return allSteps.filter((step) => step.version == null || step.version === versionId)
+  }, [allSteps, versionId])
 }

@@ -1,21 +1,21 @@
+import { Text } from "@mantine/core";
 import { useLocation } from "../app/hooks";
-import { Text } from "../common/text";
 import type { LocationId } from "../types/location";
 
 export interface LocationNameProps {
   className?: string;
-  inline?: boolean;
   locationId: LocationId;
+  span?: boolean;
 }
 
 export function LocationName({
   className,
-  inline,
   locationId,
+  span,
 }: LocationNameProps) {
   const location = useLocation(locationId);
   return (
-    <Text className={className} inline={inline}>
+    <Text className={className} span={span}>
       {location.name}
     </Text>
   );

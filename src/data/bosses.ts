@@ -1,8 +1,8 @@
-import { boss, bossTable as bossTable } from "../types/boss";
-import { Abilities } from "./abilities";
-import { Locations } from "./locations";
-import { Moves } from "./moves";
-import { Pokemons } from "./pokemons";
+import { boss, bossTable as bossTable } from "../types/boss"
+import { Abilities } from "./abilities"
+import { Locations } from "./locations"
+import { Moves } from "./moves"
+import { Pokemons } from "./pokemons"
 
 export const BossType = {
   RIVAL: "rival",
@@ -10,7 +10,7 @@ export const BossType = {
   TITAN: "titan",
   TEAM_STAR: "team_star",
   ELITE_FOUR: "elite_four",
-} as const;
+} as const
 
 export const Bosses = bossTable({
   ARVEN: boss("ARVEN", {
@@ -44,23 +44,13 @@ export const Bosses = bossTable({
         pokemon: Pokemons.SCOVILLAIN.id,
         level: 60,
         ability: Abilities.CHLOROPHYLL.id,
-        moves: [
-          Moves.FIRE_BLAST.id,
-          Moves.ENERGY_BALL.id,
-          Moves.ZEN_HEADBUTT.id,
-          Moves.CRUNCH.id,
-        ],
+        moves: [Moves.FIRE_BLAST.id, Moves.ENERGY_BALL.id, Moves.ZEN_HEADBUTT.id, Moves.CRUNCH.id],
       },
       {
         pokemon: Pokemons.TOEDSCRUEL.id,
         level: 61,
         ability: Abilities.MYCELIUM_MIGHT.id,
-        moves: [
-          Moves.POWER_WHIP.id,
-          Moves.EARTH_POWER.id,
-          Moves.SPORE.id,
-          Moves.SLUDGE_BOMB.id,
-        ],
+        moves: [Moves.POWER_WHIP.id, Moves.EARTH_POWER.id, Moves.SPORE.id, Moves.SLUDGE_BOMB.id],
       },
       {
         pokemon: Pokemons.GARGANACL.id,
@@ -77,12 +67,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.MABOSSTIFF.id,
         level: 63,
         ability: Abilities.INTIMIDATE.id,
-        moves: [
-          Moves.CRUNCH.id,
-          Moves.PSYCHIC_FANGS.id,
-          Moves.FIRE_FANG.id,
-          Moves.PLAY_ROUGH.id,
-        ],
+        moves: [Moves.CRUNCH.id, Moves.PSYCHIC_FANGS.id, Moves.FIRE_FANG.id, Moves.PLAY_ROUGH.id],
       },
     ],
   }),
@@ -107,23 +92,13 @@ export const Bosses = bossTable({
         pokemon: Pokemons.REVAVROOM.id,
         level: 33,
         ability: Abilities.OVERCOAT.id,
-        moves: [
-          Moves.IRON_HEAD.id,
-          Moves.SLUDGE.id,
-          Moves.ASSURANCE.id,
-          Moves.BULLDOZE.id,
-        ],
+        moves: [Moves.IRON_HEAD.id, Moves.SLUDGE.id, Moves.ASSURANCE.id, Moves.BULLDOZE.id],
       },
       {
-        pokemon: Pokemons.REVAVROOM.id,
+        pokemon: Pokemons.NAVI_STARMOBILE.id,
         level: 32,
         ability: Abilities.TOXIC_DEBRIS.id,
-        moves: [
-          Moves.SPIN_OUT.id,
-          Moves.NOXIOUS_TORQUE.id,
-          Moves.FLAME_CHARGE.id,
-          Moves.SMOG.id,
-        ],
+        moves: [Moves.SPIN_OUT.id, Moves.NOXIOUS_TORQUE.id, Moves.FLAME_CHARGE.id, Moves.SMOG.id],
       },
     ],
   }),
@@ -136,12 +111,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.BOMBIRDIER.id,
         level: 20,
         ability: Abilities.ROCKY_PAYLOAD.id,
-        moves: [
-          Moves.ROCK_THROW.id,
-          Moves.WING_ATTACK.id,
-          Moves.PLUCK.id,
-          Moves.TORMENT.id,
-        ],
+        moves: [Moves.ROCK_THROW.id, Moves.WING_ATTACK.id, Moves.PLUCK.id, Moves.TORMENT.id],
       },
     ],
   }),
@@ -179,23 +149,13 @@ export const Bosses = bossTable({
         pokemon: Pokemons.ORANGURU.id,
         level: 60,
         ability: Abilities.INNER_FOCUS.id,
-        moves: [
-          Moves.YAWN.id,
-          Moves.DREAM_EATER.id,
-          Moves.REFLECT.id,
-          Moves.FOUL_PLAY.id,
-        ],
+        moves: [Moves.YAWN.id, Moves.DREAM_EATER.id, Moves.REFLECT.id, Moves.FOUL_PLAY.id],
       },
       {
         pokemon: Pokemons.ABOMASNOW.id,
         level: 60,
         ability: Abilities.SNOW_WARNING.id,
-        moves: [
-          Moves.AURORA_VEIL.id,
-          Moves.BLIZZARD.id,
-          Moves.WOOD_HAMMER.id,
-          Moves.ICE_SHARD.id,
-        ],
+        moves: [Moves.AURORA_VEIL.id, Moves.BLIZZARD.id, Moves.WOOD_HAMMER.id, Moves.ICE_SHARD.id],
       },
       {
         pokemon: Pokemons.POLTEAGEIST.id,
@@ -223,12 +183,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.AMOONGUSS.id,
         level: 60,
         ability: Abilities.EFFECT_SPORE.id,
-        moves: [
-          Moves.SPORE.id,
-          Moves.TOXIC.id,
-          Moves.GIGA_DRAIN.id,
-          Moves.HEX.id,
-        ],
+        moves: [Moves.SPORE.id, Moves.TOXIC.id, Moves.GIGA_DRAIN.id, Moves.HEX.id],
       },
       {
         pokemon: Pokemons.QUAQUAVAL.id,
@@ -252,11 +207,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.TOXICROAK.id,
         level: 55,
         ability: Abilities.ANTICIPATION.id,
-        moves: [
-          Moves.POISON_JAB.id,
-          Moves.BRICK_BREAK.id,
-          Moves.SUCKER_PUNCH.id,
-        ],
+        moves: [Moves.POISON_JAB.id, Moves.BRICK_BREAK.id, Moves.SUCKER_PUNCH.id],
       },
       {
         pokemon: Pokemons.PASSIMIAN.id,
@@ -268,25 +219,16 @@ export const Bosses = bossTable({
         pokemon: Pokemons.LUCARIO.id,
         level: 55,
         ability: Abilities.STEADFAST.id,
-        moves: [
-          Moves.DRAGON_PULSE.id,
-          Moves.AURA_SPHERE.id,
-          Moves.DARK_PULSE.id,
-        ],
+        moves: [Moves.DRAGON_PULSE.id, Moves.AURA_SPHERE.id, Moves.DARK_PULSE.id],
       },
       {
         pokemon: Pokemons.ANNIHILAPE.id,
         level: 56,
         ability: Abilities.VITAL_SPIRIT.id,
-        moves: [
-          Moves.RAGE_FIST.id,
-          Moves.CLOSE_COMBAT.id,
-          Moves.ICE_PUNCH.id,
-          Moves.FIRE_PUNCH.id,
-        ],
+        moves: [Moves.RAGE_FIST.id, Moves.CLOSE_COMBAT.id, Moves.ICE_PUNCH.id, Moves.FIRE_PUNCH.id],
       },
       {
-        pokemon: Pokemons.REVAVROOM.id,
+        pokemon: Pokemons.CAPH_STARMOBILE.id,
         level: 56,
         ability: Abilities.STAMINA.id,
         moves: [
@@ -318,34 +260,19 @@ export const Bosses = bossTable({
         pokemon: Pokemons.GOGOAT.id,
         level: 61,
         ability: Abilities.SAP_SIPPER.id,
-        moves: [
-          Moves.HORN_LEECH.id,
-          Moves.ZEN_HEADBUTT.id,
-          Moves.PLAY_ROUGH.id,
-          Moves.BULK_UP.id,
-        ],
+        moves: [Moves.HORN_LEECH.id, Moves.ZEN_HEADBUTT.id, Moves.PLAY_ROUGH.id, Moves.BULK_UP.id],
       },
       {
         pokemon: Pokemons.VELUZA.id,
         level: 61,
         ability: Abilities.MOLD_BREAKER.id,
-        moves: [
-          Moves.AQUA_JET.id,
-          Moves.LIQUIDATION.id,
-          Moves.PSYCHO_CUT.id,
-          Moves.ICE_FANG.id,
-        ],
+        moves: [Moves.AQUA_JET.id, Moves.LIQUIDATION.id, Moves.PSYCHO_CUT.id, Moves.ICE_FANG.id],
       },
       {
         pokemon: Pokemons.AVALUGG.id,
         level: 61,
         ability: Abilities.OWN_TEMPO.id,
-        moves: [
-          Moves.AVALANCHE.id,
-          Moves.CRUNCH.id,
-          Moves.EARTHQUAKE.id,
-          Moves.BODY_PRESS.id,
-        ],
+        moves: [Moves.AVALANCHE.id, Moves.CRUNCH.id, Moves.EARTHQUAKE.id, Moves.BODY_PRESS.id],
       },
       {
         pokemon: Pokemons.KINGAMBIT.id,
@@ -383,15 +310,10 @@ export const Bosses = bossTable({
         moves: [Moves.METAL_CLAW.id, Moves.FURY_CUTTER.id, Moves.AERIAL_ACE.id],
       },
       {
-        pokemon: Pokemons.REVAVROOM.id,
+        pokemon: Pokemons.SEGIN_STARMOBILE.id,
         level: 20,
         ability: Abilities.INTIMIDATE.id,
-        moves: [
-          Moves.WICKED_TORQUE.id,
-          Moves.SNARL.id,
-          Moves.METAL_SOUND.id,
-          Moves.SWIFT.id,
-        ],
+        moves: [Moves.WICKED_TORQUE.id, Moves.SNARL.id, Moves.METAL_SOUND.id, Moves.SWIFT.id],
       },
     ],
   }),
@@ -440,12 +362,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.ALTARIA.id,
         level: 48,
         ability: Abilities.NATURAL_CURE.id,
-        moves: [
-          Moves.ICE_BEAM.id,
-          Moves.DRAGON_PULSE.id,
-          Moves.MOONBLAST.id,
-          Moves.HURRICANE.id,
-        ],
+        moves: [Moves.ICE_BEAM.id, Moves.DRAGON_PULSE.id, Moves.MOONBLAST.id, Moves.HURRICANE.id],
       },
     ],
   }),
@@ -469,12 +386,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.HAXORUS.id,
         level: 60,
         ability: Abilities.MOLD_BREAKER.id,
-        moves: [
-          Moves.DRAGON_CLAW.id,
-          Moves.CRUNCH.id,
-          Moves.IRON_HEAD.id,
-          Moves.ROCK_TOMB.id,
-        ],
+        moves: [Moves.DRAGON_CLAW.id, Moves.CRUNCH.id, Moves.IRON_HEAD.id, Moves.ROCK_TOMB.id],
       },
       {
         pokemon: Pokemons.DRAGALGE.id,
@@ -491,22 +403,13 @@ export const Bosses = bossTable({
         pokemon: Pokemons.FLAPPLE.id,
         level: 60,
         ability: Abilities.RIPEN.id,
-        moves: [
-          Moves.DRAGON_RUSH.id,
-          Moves.SEED_BOMB.id,
-          Moves.AERIAL_ACE.id,
-          Moves.LEECH_SEED.id,
-        ],
+        moves: [Moves.DRAGON_RUSH.id, Moves.SEED_BOMB.id, Moves.AERIAL_ACE.id, Moves.LEECH_SEED.id],
       },
       {
         pokemon: Pokemons.BAXCALIBUR.id,
         level: 61,
         ability: Abilities.THERMAL_EXCHANGE.id,
-        moves: [
-          Moves.ICICLE_CRASH.id,
-          Moves.BRICK_BREAK.id,
-          Moves.GLAIVE_RUSH.id,
-        ],
+        moves: [Moves.ICICLE_CRASH.id, Moves.BRICK_BREAK.id, Moves.GLAIVE_RUSH.id],
       },
     ],
   }),
@@ -593,12 +496,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.KLAWF.id,
         level: 16,
         ability: Abilities.ANGER_SHELL.id,
-        moves: [
-          Moves.VISE_GRIP.id,
-          Moves.ROCK_SMASH.id,
-          Moves.BLOCK.id,
-          Moves.ROCK_TOMB.id,
-        ],
+        moves: [Moves.VISE_GRIP.id, Moves.ROCK_SMASH.id, Moves.BLOCK.id, Moves.ROCK_TOMB.id],
       },
     ],
   }),
@@ -661,12 +559,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.TROPIUS.id,
         level: 59,
         ability: Abilities.CHLOROPHYLL.id,
-        moves: [
-          Moves.AIR_SLASH.id,
-          Moves.SOLAR_BEAM.id,
-          Moves.DRAGON_PULSE.id,
-          Moves.SUNNY_DAY.id,
-        ],
+        moves: [Moves.AIR_SLASH.id, Moves.SOLAR_BEAM.id, Moves.DRAGON_PULSE.id, Moves.SUNNY_DAY.id],
       },
       {
         pokemon: Pokemons.ORICORIO.id,
@@ -694,12 +587,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.STARAPTOR.id,
         level: 59,
         ability: Abilities.INTIMIDATE.id,
-        moves: [
-          Moves.FACADE.id,
-          Moves.BRAVE_BIRD.id,
-          Moves.CLOSE_COMBAT.id,
-          Moves.THIEF.id,
-        ],
+        moves: [Moves.FACADE.id, Moves.BRAVE_BIRD.id, Moves.CLOSE_COMBAT.id, Moves.THIEF.id],
       },
       {
         pokemon: Pokemons.FLAMIGO.id,
@@ -726,15 +614,10 @@ export const Bosses = bossTable({
         moves: [Moves.FLAME_WHEEL.id, Moves.CLEAR_SMOG.id],
       },
       {
-        pokemon: Pokemons.REVAVROOM.id,
+        pokemon: Pokemons.SCHEDAR_STARMOBILE.id,
         level: 26,
         ability: Abilities.SPEED_BOOST.id,
-        moves: [
-          Moves.OVERHEAT.id,
-          Moves.BLAZING_TORQUE.id,
-          Moves.SCREECH.id,
-          Moves.SWIFT.id,
-        ],
+        moves: [Moves.OVERHEAT.id, Moves.BLAZING_TORQUE.id, Moves.SCREECH.id, Moves.SWIFT.id],
       },
     ],
   }),
@@ -760,12 +643,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.SPRIGATITO.id,
         level: 8,
         ability: Abilities.OVERGROW.id,
-        moves: [
-          Moves.SCRATCH.id,
-          Moves.TAIL_WHIP.id,
-          Moves.LEAFAGE.id,
-          Moves.BITE.id,
-        ],
+        moves: [Moves.SCRATCH.id, Moves.TAIL_WHIP.id, Moves.LEAFAGE.id, Moves.BITE.id],
       },
       {
         pokemon: Pokemons.PAWMI.id,
@@ -784,12 +662,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.ROCKRUFF.id,
         level: 21,
         ability: Abilities.VITAL_SPIRIT.id,
-        moves: [
-          Moves.DOUBLE_TEAM.id,
-          Moves.ROCK_THROW.id,
-          Moves.HOWL.id,
-          Moves.BITE.id,
-        ],
+        moves: [Moves.DOUBLE_TEAM.id, Moves.ROCK_THROW.id, Moves.HOWL.id, Moves.BITE.id],
       },
       {
         pokemon: Pokemons.PAWMI.id,
@@ -801,12 +674,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.FLORAGATO.id,
         level: 22,
         ability: Abilities.OVERGROW.id,
-        moves: [
-          Moves.QUICK_ATTACK.id,
-          Moves.MAGICAL_LEAF.id,
-          Moves.HONE_CLAWS.id,
-          Moves.BITE.id,
-        ],
+        moves: [Moves.QUICK_ATTACK.id, Moves.MAGICAL_LEAF.id, Moves.HONE_CLAWS.id, Moves.BITE.id],
       },
     ],
   }),
@@ -831,12 +699,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.PAWMO.id,
         level: 36,
         ability: Abilities.VOLT_ABSORB.id,
-        moves: [
-          Moves.ARM_THRUST.id,
-          Moves.SPARK.id,
-          Moves.THUNDER_WAVE.id,
-          Moves.QUICK_ATTACK.id,
-        ],
+        moves: [Moves.ARM_THRUST.id, Moves.SPARK.id, Moves.THUNDER_WAVE.id, Moves.QUICK_ATTACK.id],
       },
       {
         pokemon: Pokemons.MEOWSCARADA.id,
@@ -855,12 +718,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.LYCANROC.id,
         level: 42,
         ability: Abilities.SAND_RUSH.id,
-        moves: [
-          Moves.ACCELEROCK.id,
-          Moves.CRUNCH.id,
-          Moves.ROCK_SLIDE.id,
-          Moves.SAND_ATTACK.id,
-        ],
+        moves: [Moves.ACCELEROCK.id, Moves.CRUNCH.id, Moves.ROCK_SLIDE.id, Moves.SAND_ATTACK.id],
       },
       {
         pokemon: Pokemons.SLIGGOO.id,
@@ -872,12 +730,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.PAWMOT.id,
         level: 42,
         ability: Abilities.VOLT_ABSORB.id,
-        moves: [
-          Moves.ARM_THRUST.id,
-          Moves.SPARK.id,
-          Moves.THUNDER_WAVE.id,
-          Moves.QUICK_ATTACK.id,
-        ],
+        moves: [Moves.ARM_THRUST.id, Moves.SPARK.id, Moves.THUNDER_WAVE.id, Moves.QUICK_ATTACK.id],
       },
       {
         pokemon: Pokemons.MEOWSCARADA.id,
@@ -918,23 +771,13 @@ export const Bosses = bossTable({
         pokemon: Pokemons.DUDUNSPARCE.id,
         level: 65,
         ability: Abilities.SERENE_GRACE.id,
-        moves: [
-          Moves.HYPER_DRILL.id,
-          Moves.DRILL_RUN.id,
-          Moves.DRAGON_RUSH.id,
-          Moves.COIL.id,
-        ],
+        moves: [Moves.HYPER_DRILL.id, Moves.DRILL_RUN.id, Moves.DRAGON_RUSH.id, Moves.COIL.id],
       },
       {
         pokemon: Pokemons.ORTHWORM.id,
         level: 65,
         ability: Abilities.EARTH_EATER.id,
-        moves: [
-          Moves.IRON_TAIL.id,
-          Moves.BODY_PRESS.id,
-          Moves.EARTHQUAKE.id,
-          Moves.ROCK_BLAST.id,
-        ],
+        moves: [Moves.IRON_TAIL.id, Moves.BODY_PRESS.id, Moves.EARTHQUAKE.id, Moves.ROCK_BLAST.id],
       },
       {
         pokemon: Pokemons.PAWMOT.id,
@@ -969,37 +812,22 @@ export const Bosses = bossTable({
         pokemon: Pokemons.AZUMARILL.id,
         level: 50,
         ability: Abilities.HUGE_POWER.id,
-        moves: [
-          Moves.AQUA_TAIL.id,
-          Moves.PLAY_ROUGH.id,
-          Moves.BOUNCE.id,
-          Moves.CHARM.id,
-        ],
+        moves: [Moves.AQUA_TAIL.id, Moves.PLAY_ROUGH.id, Moves.BOUNCE.id, Moves.CHARM.id],
       },
       {
         pokemon: Pokemons.WIGGLYTUFF.id,
         level: 50,
         ability: Abilities.CUTE_CHARM.id,
-        moves: [
-          Moves.BODY_SLAM.id,
-          Moves.PLAY_ROUGH.id,
-          Moves.GYRO_BALL.id,
-          Moves.CHARM.id,
-        ],
+        moves: [Moves.BODY_SLAM.id, Moves.PLAY_ROUGH.id, Moves.GYRO_BALL.id, Moves.CHARM.id],
       },
       {
         pokemon: Pokemons.DACHSBUN.id,
         level: 51,
         ability: Abilities.WELL_BAKED_BODY.id,
-        moves: [
-          Moves.CRUNCH.id,
-          Moves.PLAY_ROUGH.id,
-          Moves.BABY_DOLL_EYES.id,
-          Moves.MUD_SLAP.id,
-        ],
+        moves: [Moves.CRUNCH.id, Moves.PLAY_ROUGH.id, Moves.BABY_DOLL_EYES.id, Moves.MUD_SLAP.id],
       },
       {
-        pokemon: Pokemons.REVAVROOM.id,
+        pokemon: Pokemons.RUCHBAH_STARMOBILE.id,
         level: 50,
         ability: Abilities.MISTY_SURGE.id,
         moves: [
@@ -1020,12 +848,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.ORTHWORM.id,
         level: 29,
         ability: Abilities.EARTH_EATER.id,
-        moves: [
-          Moves.IRON_TAIL.id,
-          Moves.HEADBUTT.id,
-          Moves.WRAP.id,
-          Moves.SANDSTORM.id,
-        ],
+        moves: [Moves.IRON_TAIL.id, Moves.HEADBUTT.id, Moves.WRAP.id, Moves.SANDSTORM.id],
       },
     ],
   }),
@@ -1184,23 +1007,13 @@ export const Bosses = bossTable({
         pokemon: Pokemons.CAMERUPT.id,
         level: 57,
         ability: Abilities.MAGMA_ARMOR.id,
-        moves: [
-          Moves.EARTH_POWER.id,
-          Moves.FIRE_BLAST.id,
-          Moves.FLASH_CANNON.id,
-          Moves.YAWN.id,
-        ],
+        moves: [Moves.EARTH_POWER.id, Moves.FIRE_BLAST.id, Moves.FLASH_CANNON.id, Moves.YAWN.id],
       },
       {
         pokemon: Pokemons.DONPHAN.id,
         level: 57,
         ability: Abilities.STURDY.id,
-        moves: [
-          Moves.EARTHQUAKE.id,
-          Moves.STONE_EDGE.id,
-          Moves.IRON_HEAD.id,
-          Moves.POISON_JAB.id,
-        ],
+        moves: [Moves.EARTHQUAKE.id, Moves.STONE_EDGE.id, Moves.IRON_HEAD.id, Moves.POISON_JAB.id],
       },
       {
         pokemon: Pokemons.DUGTRIO.id,
@@ -1217,12 +1030,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.CLODSIRE.id,
         level: 58,
         ability: Abilities.WATER_ABSORB.id,
-        moves: [
-          Moves.EARTHQUAKE.id,
-          Moves.LIQUIDATION.id,
-          Moves.TOXIC.id,
-          Moves.PROTECT.id,
-        ],
+        moves: [Moves.EARTHQUAKE.id, Moves.LIQUIDATION.id, Moves.TOXIC.id, Moves.PROTECT.id],
       },
     ],
   }),
@@ -1235,11 +1043,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.BANETTE.id,
         level: 41,
         ability: Abilities.INSOMNIA.id,
-        moves: [
-          Moves.ICY_WIND.id,
-          Moves.SUCKER_PUNCH.id,
-          Moves.SHADOW_SNEAK.id,
-        ],
+        moves: [Moves.ICY_WIND.id, Moves.SUCKER_PUNCH.id, Moves.SHADOW_SNEAK.id],
       },
       {
         pokemon: Pokemons.MIMIKYU.id,
@@ -1270,12 +1074,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.SLITHER_WING.id,
         level: 66,
         ability: Abilities.PROTOSYNTHESIS.id,
-        moves: [
-          Moves.LUNGE.id,
-          Moves.LEECH_LIFE.id,
-          Moves.LOW_SWEEP.id,
-          Moves.ZEN_HEADBUTT.id,
-        ],
+        moves: [Moves.LUNGE.id, Moves.LEECH_LIFE.id, Moves.LOW_SWEEP.id, Moves.ZEN_HEADBUTT.id],
       },
       {
         pokemon: Pokemons.SCREAM_TAIL.id,
@@ -1292,12 +1091,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.BRUTE_BONNET.id,
         level: 66,
         ability: Abilities.PROTOSYNTHESIS.id,
-        moves: [
-          Moves.EARTH_POWER.id,
-          Moves.GIGA_DRAIN.id,
-          Moves.PAYBACK.id,
-          Moves.SUCKER_PUNCH.id,
-        ],
+        moves: [Moves.EARTH_POWER.id, Moves.GIGA_DRAIN.id, Moves.PAYBACK.id, Moves.SUCKER_PUNCH.id],
       },
       {
         pokemon: Pokemons.FLUTTER_MANE.id,
@@ -1343,12 +1137,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.KORAIDON.id,
         level: 72,
         ability: Abilities.ORICHALCUM_PULSE.id,
-        moves: [
-          Moves.GIGA_IMPACT.id,
-          Moves.BULK_UP.id,
-          Moves.TAUNT.id,
-          Moves.FLAMETHROWER.id,
-        ],
+        moves: [Moves.GIGA_IMPACT.id, Moves.BULK_UP.id, Moves.TAUNT.id, Moves.FLAMETHROWER.id],
       },
     ],
   }),
@@ -1361,12 +1150,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.TATSUGIRI.id,
         level: 57,
         ability: Abilities.COMMANDER.id,
-        moves: [
-          Moves.MUDDY_WATER.id,
-          Moves.ICY_WIND.id,
-          Moves.TAUNT.id,
-          Moves.DRAGON_PULSE.id,
-        ],
+        moves: [Moves.MUDDY_WATER.id, Moves.ICY_WIND.id, Moves.TAUNT.id, Moves.DRAGON_PULSE.id],
       },
     ],
   }),
@@ -1385,11 +1169,7 @@ export const Bosses = bossTable({
         pokemon: Pokemons.GARDEVOIR.id,
         level: 44,
         ability: Abilities.SYNCHRONIZE.id,
-        moves: [
-          Moves.PSYCHIC.id,
-          Moves.DAZZLING_GLEAM.id,
-          Moves.ENERGY_BALL.id,
-        ],
+        moves: [Moves.PSYCHIC.id, Moves.DAZZLING_GLEAM.id, Moves.ENERGY_BALL.id],
       },
       {
         pokemon: Pokemons.ESPATHRA.id,
@@ -1414,23 +1194,13 @@ export const Bosses = bossTable({
         pokemon: Pokemons.IRON_MOTH.id,
         level: 66,
         ability: Abilities.QUARK_DRIVE.id,
-        moves: [
-          Moves.SLUDGE_WAVE.id,
-          Moves.FIERY_DANCE.id,
-          Moves.DISCHARGE.id,
-          Moves.AIR_SLASH.id,
-        ],
+        moves: [Moves.SLUDGE_WAVE.id, Moves.FIERY_DANCE.id, Moves.DISCHARGE.id, Moves.AIR_SLASH.id],
       },
       {
         pokemon: Pokemons.IRON_BUNDLE.id,
         level: 66,
         ability: Abilities.QUARK_DRIVE.id,
-        moves: [
-          Moves.DRILL_PECK.id,
-          Moves.WATER_PULSE.id,
-          Moves.FREEZE_DRY.id,
-          Moves.SNOWSCAPE.id,
-        ],
+        moves: [Moves.DRILL_PECK.id, Moves.WATER_PULSE.id, Moves.FREEZE_DRY.id, Moves.SNOWSCAPE.id],
       },
       {
         pokemon: Pokemons.IRON_HANDS.id,
@@ -1487,13 +1257,8 @@ export const Bosses = bossTable({
         pokemon: Pokemons.MIRAIDON.id,
         level: 72,
         ability: Abilities.HADRON_ENGINE.id,
-        moves: [
-          Moves.HYPER_BEAM.id,
-          Moves.CHARGE.id,
-          Moves.TAUNT.id,
-          Moves.POWER_GEM.id,
-        ],
+        moves: [Moves.HYPER_BEAM.id, Moves.CHARGE.id, Moves.TAUNT.id, Moves.POWER_GEM.id],
       },
     ],
   }),
-});
+})

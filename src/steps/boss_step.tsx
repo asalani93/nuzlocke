@@ -1,22 +1,49 @@
-import { Card, CardHeader } from "@heroui/react";
-import { useBoss } from "../app/hooks";
-import { type BossStep } from "../types/step";
-import { BossName } from "../bosses/boss_name";
-import { BattleIcon } from "../common/battle_icon";
+import { Card, Group, Stack, Text } from "@mantine/core"
+import { IconBoom } from "@tabler/icons-react"
+import { useBoss } from "../app/hooks"
+import { type BossStep } from "../types/step"
+import { BossName } from "../bosses/boss_name"
+import { BossStepStatusIndicator } from "./boss_step_status_indicator"
+import { BossDetails } from "../bosses/boss_details"
+import { useMemo } from "react"
 
 export interface BossStepProps {
-  bossStep: BossStep;
+  bossStep: BossStep
 }
 
 export function BossStep({ bossStep }: BossStepProps) {
-  const boss = useBoss(bossStep.boss);
+  const boss = useBoss(bossStep.boss)
+
+  const maxLevel = useMemo(
+    () => Math.max(...boss.team.map((teamMember) => teamMember.level)),
+    [boss]
+  )
+
+  const levelCap = bossStep.blocking ? (
+    <Text c="gray.4" fw="bold" inherit span>
+      Level Cap: {maxLevel}
+    </Text>
+  ) : null
+
   return (
-    <Card>
-      <CardHeader className="flex flex-row justify-start items-center gap-1">
-        <BattleIcon />
-        <span className="font-bold">Boss:</span>{" "}
-        <BossName bossId={boss.id} inline />
-      </CardHeader>
+    <Card padding="md" radius="md" shadow="sm" withBorder>
+      <Card.Section inheritPadding withBorder>
+        <Group justify="space-between" py="md">
+          <Group gap="sm">
+            <IconBoom size={24} />
+            <BossName bossId={boss.id} span />
+          </Group>
+          <Group gap="sm">
+            {levelCap}
+            <BossStepStatusIndicator bossId={bossStep.boss} />
+          </Group>
+        </Group>
+      </Card.Section>
+      <Card.Section inheritPadding withBorder>
+        <Stack py="md">
+          <BossDetails bossId={boss.id} />
+        </Stack>
+      </Card.Section>
     </Card>
-  );
+  )
 }
