@@ -23,17 +23,15 @@ export function BossDetailsTeamMember({ bossPokemon }: BossDetailsTeamMemberProp
 
   return (
     <Stack gap="xs" mb="lg">
-      <Group gap="xs" align="center">
+      <Group gap="xs" align="center" px="xs">
         <Group gap="xs" align="baseline">
           <LevelDisplay level={bossPokemon.level} short />
           {pokemonDisplay}
         </Group>
         <TypeDisplay type1={pokemon.type1} type2={pokemon.type2 ?? undefined} />
       </Group>
-      <Stack>
-        <AbilityDisplay abilityId={bossPokemon.ability} />
-        <MoveTable moveIds={bossPokemon.moves} />
-      </Stack>
+      <AbilityDisplay abilityId={bossPokemon.ability} />
+      <MoveTable moveIds={bossPokemon.moves} />
     </Stack>
   )
 }

@@ -10,7 +10,7 @@ export function AbilityDisplay({ abilityId }: AbilityDisplayProps) {
   const ability = useAbility(abilityId)
 
   return (
-    <Stack gap={0}>
+    <Stack gap={0} px="xs">
       <Text>{ability.name}</Text>
       <Text size="xs">{ability.effect}</Text>
     </Stack>

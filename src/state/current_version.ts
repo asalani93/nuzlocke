@@ -8,7 +8,9 @@ import { atomWithStorage } from "jotai/utils"
 
 const currentVersionIdAtomInner = atomWithStorage<VersionId>(
   "nuzlocke_current_version",
-  Versions.SCARLET.id
+  Versions.SCARLET.id,
+  undefined,
+  { getOnInit: true }
 )
 
 export const currentVersionIdAtom = atom(

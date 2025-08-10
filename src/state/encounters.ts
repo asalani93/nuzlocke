@@ -152,7 +152,9 @@ function rerollEncounter(encounters: Encounters, routeId: RouteId, versionId: Ve
 
 const encountersAtomInner = atomWithStorage<Encounters>(
   "nuzlocke_encounters",
-  calculateEncounters({}, Versions.SCARLET.id)
+  calculateEncounters({}, Versions.SCARLET.id),
+  undefined,
+  { getOnInit: true }
 )
 
 type EncountersReducerAction =

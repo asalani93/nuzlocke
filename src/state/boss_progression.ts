@@ -47,7 +47,9 @@ function initializeBossProgression(versionId: VersionId) {
 
 const bossProgressionAtomInner = atomWithStorage<BossProgression>(
   "nuzlocke_boss_progression",
-  initializeBossProgression(Versions.SCARLET.id)
+  initializeBossProgression(Versions.SCARLET.id),
+  undefined,
+  { getOnInit: true }
 )
 
 type BossProgressionReducerAction =
