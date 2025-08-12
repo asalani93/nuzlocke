@@ -1,55 +1,29 @@
-import type { AbilityId } from "./ability";
-import type { LocationId } from "./location";
-import type { MoveId } from "./move";
-import type { PokemonId } from "./pokemon";
-import {
-  createTable,
-  createId,
-  type Id,
-  type IdInstance,
-  type Table,
-} from "./util";
+import z from "zod"
+import { abilityId } from "./ability"
+import { locationId } from "./location"
+import { moveId } from "./move"
+import { pokemonId } from "./pokemon"
 
-export type BossId = Id<"boss">;
+export const bossId = z.string().brand("boss")
+export type BossId = z.infer<typeof bossId>
 
-export type BossIdInstance<T extends string> = IdInstance<BossId, T>;
+export const bossType = z.enum(["RIVAL", "GYM", "TITAN", "TEAM_STAR", "ELITE_FOUR"])
+export type BossType = z.infer<typeof bossType>
+export const BossTypes = bossType.enum
 
-export type BossTable<T extends string> = Table<T, () => _Boss<T>>;
+export const bossPokemon = z.object({
+  pokemonId: pokemonId,
+  level: z.number(),
+  abilityId: abilityId,
+  moveIds: z.array(moveId),
+})
+export type BossPokemon = z.infer<typeof bossPokemon>
 
-export const bossId = createId<BossId>();
-
-export function bossTable<T extends string>(table: BossTable<T>): BossTable<T> {
-  return createTable<T, BossTable<T>>(table);
-}
-
-interface _Boss<T extends string> {
-  id: BossIdInstance<T>;
-  name: string;
-  type: BossType;
-  location: LocationId;
-  team: BossPokemon[];
-}
-
-export type Boss = _Boss<string>;
-
-export type BossType = "rival" | "gym" | "titan" | "team_star" | "elite_four";
-
-export interface BossPokemon {
-  pokemon: PokemonId;
-  level: number;
-  ability: AbilityId;
-  moves: MoveId[];
-}
-
-export function boss<T extends string>(
-  id: T,
-  { name, type, location, team }: Omit<Boss, "id">
-): _Boss<T> {
-  return {
-    id: bossId(id),
-    name,
-    type,
-    location,
-    team,
-  };
-}
+export const boss = z.object({
+  id: bossId,
+  name: z.string(),
+  type: bossType,
+  locationId: locationId,
+  team: z.array(bossPokemon),
+})
+export type Boss = z.infer<typeof boss>

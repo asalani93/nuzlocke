@@ -1,9 +1,10 @@
 import { Button, Combobox, Group, InputBase, Modal, Stack, Text, useCombobox } from "@mantine/core"
-import type { RouteEncounter, RouteId } from "../types/route"
-import { usePokemon, useRoute } from "../app/hooks"
-import { useCallback, useMemo, useState } from "react"
-import { useEncounterForRoute, useOverrideEncounter } from "../state/encounters"
 import { IconCheck } from "@tabler/icons-react"
+import { useCallback, useMemo, useState } from "react"
+
+import { useEncounterForRoute, useOverrideEncounter } from "../state/encounters_hooks"
+import { useRoute, usePokemon } from "../state/game_data_hooks"
+import type { RouteEncounter, RouteId } from "../types/route"
 
 export interface RouteOverrideModalProps {
   onClose: () => void
@@ -14,17 +15,17 @@ export interface RouteOverrideModalProps {
 export function RouteOverrideModal({ onClose, opened, routeId }: RouteOverrideModalProps) {
   const combobox = useCombobox()
 
-  const route = useRoute(routeId)
+  const route = useRoute(routeId)!
   const routeEncounter = useEncounterForRoute(routeId)
   if (routeEncounter == null) {
     throw new Error("fuck")
   }
 
   const [selectedEncounter, setSelectedEncounter] = useState(routeEncounter.pokemonId)
-  const selectedPokemon = usePokemon(selectedEncounter)
+  const selectedPokemon = usePokemon(selectedEncounter)!
   const handleSelectOverride = useCallback(
     (routeEncounter: RouteEncounter) => {
-      setSelectedEncounter(routeEncounter.pokemon)
+      setSelectedEncounter(routeEncounter.pokemonId)
       combobox.closeDropdown()
     },
     [combobox, setSelectedEncounter]
@@ -42,10 +43,10 @@ export function RouteOverrideModal({ onClose, opened, routeId }: RouteOverrideMo
 
   const sortedEncounters = useMemo(() => {
     return [...route.encounters].sort((left, right) => {
-      if (left.pokemon < right.pokemon) {
+      if (left.pokemonId < right.pokemonId) {
         return -1
       }
-      if (left.pokemon > right.pokemon) {
+      if (left.pokemonId > right.pokemonId) {
         return 1
       }
       return 0
@@ -54,8 +55,8 @@ export function RouteOverrideModal({ onClose, opened, routeId }: RouteOverrideMo
   const menuItems = sortedEncounters.map((routeEncounter) => {
     return (
       <RouteOverrideMenuItem
-        active={routeEncounter.pokemon === selectedEncounter}
-        key={routeEncounter.pokemon}
+        active={routeEncounter.pokemonId === selectedEncounter}
+        key={routeEncounter.pokemonId}
         onClick={handleSelectOverride}
         routeEncounter={routeEncounter}
       />
@@ -102,14 +103,14 @@ interface RouteOverrideMenuItemProps {
 }
 
 function RouteOverrideMenuItem({ active, onClick, routeEncounter }: RouteOverrideMenuItemProps) {
-  const pokemon = usePokemon(routeEncounter.pokemon)
+  const pokemon = usePokemon(routeEncounter.pokemonId)!
 
   const handleClick = useCallback(() => {
     onClick(routeEncounter)
   }, [onClick, routeEncounter])
 
   return (
-    <Combobox.Option active={active} onClick={handleClick} value={routeEncounter.pokemon}>
+    <Combobox.Option active={active} onClick={handleClick} value={routeEncounter.pokemonId}>
       <Group justify="space-between">
         <Text>{pokemon.name}</Text>
         {active ? <IconCheck size={12} /> : null}

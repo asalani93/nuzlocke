@@ -1,40 +1,11 @@
-import {
-  createId,
-  createTable,
-  type Id,
-  type IdInstance,
-  type Table,
-} from "./util";
+import z from "zod"
 
-export type AbilityId = Id<"ability">;
+export const abilityId = z.string().brand("ability")
+export type AbilityId = z.infer<typeof abilityId>
 
-type AbilityIdInstance<T extends string> = IdInstance<AbilityId, T>;
-
-export type AbilityTable<T extends string> = Table<T, () => _Ability<T>>;
-
-export const abilityId = createId<AbilityId>();
-
-export function abilityTable<T extends string>(
-  table: AbilityTable<T>
-): AbilityTable<T> {
-  return createTable<T, AbilityTable<T>>(table);
-}
-
-interface _Ability<T extends string> {
-  id: AbilityIdInstance<T>;
-  name: string;
-  effect: string;
-}
-
-export type Ability = _Ability<string>;
-
-export function ability<T extends string>(
-  id: T,
-  { name, effect }: Omit<Ability, "id">
-): _Ability<T> {
-  return {
-    id: abilityId(id),
-    name,
-    effect,
-  };
-}
+export const ability = z.object({
+  id: abilityId,
+  name: z.string(),
+  effect: z.string(),
+})
+export type Ability = z.infer<typeof ability>

@@ -1,118 +1,42 @@
-import type { PokemonType } from "./pokemon";
-import {
-  createId,
-  createTable,
-  type Id,
-  type IdInstance,
-  type Table,
-} from "./util";
+import z from "zod"
+import { pokemonType } from "./pokemon_type"
 
-export type MoveId = Id<"move">;
+export const moveId = z.string().brand("move")
+export type MoveId = z.infer<typeof moveId>
 
-export type MoveIdInstance<T extends string> = IdInstance<MoveId, T>;
+export const damageType = z.enum(["PHYSICAL", "SPECIAL", "STATUS"])
+export type DamageType = z.infer<typeof damageType>
+export const DamageTypes = damageType.enum
 
-export type MoveTable<T extends string> = Table<T, () => _Move<T>>;
+export const physicalMove = z.object({
+  id: moveId,
+  name: z.string(),
+  power: z.union([z.number(), z.null()]),
+  type: pokemonType,
+  damageType: z.literal(DamageTypes.PHYSICAL),
+  effect: z.string(),
+})
+export type PhysicalMove = z.infer<typeof physicalMove>
 
-export const moveId = createId<MoveId>();
+export const specialMove = z.object({
+  id: moveId,
+  name: z.string(),
+  power: z.union([z.number(), z.null()]),
+  type: pokemonType,
+  damageType: z.literal(DamageTypes.SPECIAL),
+  effect: z.string(),
+})
+export type SpecialMove = z.infer<typeof specialMove>
 
-export function moveTable<T extends string>(table: MoveTable<T>): MoveTable<T> {
-  return createTable<T, MoveTable<T>>(table);
-}
+export const statusMove = z.object({
+  id: moveId,
+  name: z.string(),
+  power: z.null(),
+  type: pokemonType,
+  damageType: z.literal(DamageTypes.STATUS),
+  effect: z.string(),
+})
+export type StatusMove = z.infer<typeof statusMove>
 
-interface _PhysicalMove<T extends string> {
-  id: MoveIdInstance<T>;
-  name: string;
-  power: number;
-  type: PokemonType;
-  damageType: "physical";
-  effect: string;
-}
-
-export type PhysicalMove = _PhysicalMove<string>;
-
-interface _SpecialMove<T extends string> {
-  id: MoveIdInstance<T>;
-  name: string;
-  power: number;
-  type: PokemonType;
-  damageType: "special";
-  effect: string;
-}
-
-export type SpecialMove = _SpecialMove<string>;
-
-interface _StatusMove<T extends string> {
-  id: MoveIdInstance<T>;
-  name: string;
-  power: null;
-  type: PokemonType;
-  damageType: "status";
-  effect: string;
-}
-
-export type StatusMove = _StatusMove<string>;
-
-type _Move<T extends string> =
-  | _PhysicalMove<T>
-  | _SpecialMove<T>
-  | _StatusMove<T>;
-
-export type Move = PhysicalMove | SpecialMove | StatusMove;
-
-export type DamageType = "physical" | "special" | "status";
-
-export function physicalMove<T extends string>(
-  id: T,
-  { name, power, type, damageType, effect }: Omit<PhysicalMove, "id">
-): _PhysicalMove<T> {
-  return {
-    id: moveId(id),
-    name: name,
-    power: power,
-    type: type,
-    damageType: damageType,
-    effect: effect,
-  };
-}
-
-export function specialMove<T extends string>(
-  id: T,
-  { name, power, type, damageType, effect }: Omit<SpecialMove, "id">
-): _SpecialMove<T> {
-  return {
-    id: moveId(id),
-    name: name,
-    power: power,
-    type: type,
-    damageType: damageType,
-    effect: effect,
-  };
-}
-
-export function statusMove<T extends string>(
-  id: T,
-  { name, type, damageType, effect }: Omit<StatusMove, "id" | "power">
-): _StatusMove<T> {
-  return {
-    id: moveId(id),
-    name: name,
-    power: null,
-    type: type,
-    damageType: damageType,
-    effect: effect,
-  };
-}
-
-export function move<T extends string>(
-  id: T,
-  move: Omit<Move, "id">
-): _Move<T> {
-  switch (move.damageType) {
-    case "physical":
-      return physicalMove(id, move as Omit<PhysicalMove, "id">);
-    case "special":
-      return specialMove(id, move as Omit<SpecialMove, "id">);
-    case "status":
-      return statusMove(id, move as Omit<StatusMove, "id">);
-  }
-}
+export const move = z.discriminatedUnion("damageType", [physicalMove, specialMove, statusMove])
+export type Move = z.infer<typeof move>

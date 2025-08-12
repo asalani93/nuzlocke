@@ -1,15 +1,16 @@
 import { Table, Tooltip } from "@mantine/core"
-import { useMove } from "../app/hooks"
-import type { MoveId } from "../types/move"
-import { TypeBadge } from "../common/type_badge"
+
 import { DamageTypeBadge } from "../common/damage_type_badge"
+import { TypeBadge } from "../common/type_badge"
+import { useMove } from "../state/game_data_hooks"
+import type { MoveId } from "../types/move"
 
 export interface MoveTableRowProps {
   moveId: MoveId
 }
 
 export function MoveTableRow({ moveId }: MoveTableRowProps) {
-  const move = useMove(moveId)
+  const move = useMove(moveId)!
 
   const moveEffect = move.effect === "null" ? "No additional effect." : move.effect
 

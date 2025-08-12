@@ -1,21 +1,24 @@
 import { Button } from "@mantine/core"
 import { useClipboard } from "@mantine/hooks"
 import { useCallback } from "react"
-import { Bosses } from "../data/bosses"
-import { Locations } from "../data/locations"
-import { Pokemons } from "../data/pokemons"
-import { Routes } from "../data/routes"
-import { StepOrder } from "../data/steps"
-import { useCurrentVersionId } from "../state/current_version"
-import { useEncounters } from "../state/encounters"
-import type { Boss } from "../types/boss"
-import type { Location } from "../types/location"
-import type { Route } from "../types/route"
-import type { Pokemon } from "../types/pokemon"
-import { lookup } from "../types/util"
+
+import { useOrderedStepsForCurrentVersion } from "../state/current_version_hooks"
+import { useEncounters } from "../state/encounters_hooks"
+import {
+  useBossLookup,
+  useLocationLookup,
+  usePokemonLookup,
+  useRouteLookup,
+} from "../state/game_data_hooks"
+import { StepTypes } from "../types/step"
 
 export function ExportButton() {
-  const currentVersionId = useCurrentVersionId()
+  const bossLookup = useBossLookup()
+  const locationLookup = useLocationLookup()
+  const pokemonLookup = usePokemonLookup()
+  const routeLookup = useRouteLookup()
+
+  const stepOrder = useOrderedStepsForCurrentVersion()
   const encounters = useEncounters()
   const { copy } = useClipboard()
 
@@ -26,29 +29,25 @@ export function ExportButton() {
       return
     }
 
-    for (const step of StepOrder) {
-      if (step.version != null && step.version !== currentVersionId) {
-        continue
-      }
-
-      if (step.type === "boss") {
-        const boss = lookup<Boss>(Bosses, step.boss)
+    for (const step of stepOrder) {
+      if (step.type === StepTypes.BOSS) {
+        const boss = bossLookup(step.bossId)!
         const levelCap = Math.max(...boss.team.map((teamMember) => teamMember.level))
         lines.push(`${boss.name} (CAP: ${levelCap})`)
       }
 
-      if (step.type === "route") {
-        const route = lookup<Route>(Routes, step.route)
-        const location = lookup<Location>(Locations, route.location)
+      if (step.type === StepTypes.ROUTE) {
+        const route = routeLookup(step.routeId)!
+        const location = locationLookup(route.locationId)!
 
-        const encounter = encounters[step.route]
+        const encounter = encounters[step.routeId]
         if (encounter == null) {
           lines.push(`${location.name}: Unknown`)
           continue
         }
 
-        const pokemon = lookup<Pokemon>(Pokemons, encounter.pokemonId)
-        const routeEncounter = route.encounters.find((x) => x.pokemon === encounter.pokemonId)
+        const pokemon = pokemonLookup(encounter.pokemonId)!
+        const routeEncounter = route.encounters.find((x) => x.pokemonId === encounter.pokemonId)
         if (routeEncounter == null) {
           lines.push(`${location.name}: Unknown`)
           continue
@@ -63,7 +62,7 @@ export function ExportButton() {
     }
 
     copy(lines.join("\n"))
-  }, [copy, currentVersionId, encounters])
+  }, [bossLookup, copy, encounters, locationLookup, pokemonLookup, routeLookup, stepOrder])
 
   return <Button onClick={handleClick}>Export for Discord</Button>
 }

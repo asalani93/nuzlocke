@@ -1,38 +1,10 @@
-import {
-  createTable,
-  createId,
-  type Id,
-  type IdInstance,
-  type Table,
-} from "./util";
+import z from "zod"
 
-export type VersionId = Id<"version">;
+export const versionId = z.string().brand("version")
+export type VersionId = z.infer<typeof versionId>
 
-export type VersionIdInstance<T extends string> = IdInstance<VersionId, T>;
-
-export type VersionTable<T extends string> = Table<T, () => _Version<T>>;
-
-export const versionId = createId<VersionId>();
-
-export function createVersionTable<T extends string>(
-  table: VersionTable<T>
-): VersionTable<T> {
-  return createTable<T, VersionTable<T>>(table);
-}
-
-interface _Version<T extends string> {
-  id: VersionIdInstance<T>;
-  name: string;
-}
-
-export type Version = _Version<string>;
-
-export function version<T extends string>(
-  id: T,
-  { name }: Omit<Version, "id">
-): _Version<T> {
-  return {
-    id: versionId(id),
-    name,
-  };
-}
+export const version = z.object({
+  id: versionId,
+  name: z.string(),
+})
+export type Version = z.infer<typeof version>

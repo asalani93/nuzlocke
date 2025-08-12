@@ -1,5 +1,7 @@
 import { Stack } from "@mantine/core"
+
 import type { BossId } from "../types/boss"
+
 import { BossDetailsActions } from "./boss_details_actions"
 import { BossDetailsTeam } from "./boss_details_team"
 

@@ -1,5 +1,6 @@
 import { useMantineTheme } from "@mantine/core"
 import { IconCircleCheck, IconCircleX, IconLock } from "@tabler/icons-react"
+
 import { StepStatus } from "../state/step_status"
 
 export interface StepStatusIndicatorProps {

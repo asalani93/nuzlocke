@@ -1,8 +1,9 @@
 import { Button, Group, Modal, Text } from "@mantine/core"
-import { useCallback } from "react"
-import { useResetAllBossProgression } from "../state/boss_progression"
-import { useResetAllEncounters } from "../state/encounters"
 import { useDisclosure } from "@mantine/hooks"
+import { useCallback } from "react"
+
+import { useResetAllBossProgression } from "../state/boss_progression_hooks"
+import { useResetAllEncounters } from "../state/encounters_hooks"
 
 export function ResetButton() {
   const [modalOpened, { open: openModal, close: closeModal }] = useDisclosure()

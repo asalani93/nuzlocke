@@ -1,1594 +1,1372 @@
-import { move, moveTable } from "../types/move"
+import { PokemonTypes } from "@/src/types/pokemon_type"
 
-export const Moves = moveTable({
-  ACCELEROCK: move("ACCELEROCK", {
+import { createMoveTable, createPhysicalMove, createSpecialMove, createStatusMove } from "../utils"
+
+export const Move = createMoveTable({
+  ACCELEROCK: createPhysicalMove("ACCELEROCK", {
     name: "Accelerock",
     power: 40,
-    type: "rock",
-    damageType: "physical",
+    type: PokemonTypes.ROCK,
     effect: "null",
   }),
-  AERIAL_ACE: move("AERIAL_ACE", {
+  AERIAL_ACE: createPhysicalMove("AERIAL_ACE", {
     name: "Aerial Ace",
     power: 60,
-    type: "flying",
-    damageType: "physical",
+    type: PokemonTypes.FLYING,
     effect: "Never misses.",
   }),
-  AIR_SLASH: move("AIR_SLASH", {
+  AIR_SLASH: createSpecialMove("AIR_SLASH", {
     name: "Air Slash",
     power: 75,
-    type: "flying",
-    damageType: "special",
+    type: PokemonTypes.FLYING,
     effect: "Has a 30% chance to make the target flinch.",
   }),
-  AQUA_CUTTER: move("AQUA_CUTTER", {
+  AQUA_CUTTER: createPhysicalMove("AQUA_CUTTER", {
     name: "Aqua Cutter",
     power: 70,
-    type: "water",
-    damageType: "physical",
+    type: PokemonTypes.WATER,
     effect: "null",
   }),
-  AQUA_JET: move("AQUA_JET", {
+  AQUA_JET: createPhysicalMove("AQUA_JET", {
     name: "Aqua Jet",
     power: 40,
-    type: "water",
-    damageType: "physical",
+    type: PokemonTypes.WATER,
     effect: "null",
   }),
-  AQUA_STEP: move("AQUA_STEP", {
+  AQUA_STEP: createPhysicalMove("AQUA_STEP", {
     name: "Aqua Step",
     power: 80,
-    type: "water",
-    damageType: "physical",
+    type: PokemonTypes.WATER,
     effect: "null",
   }),
-  AQUA_TAIL: move("AQUA_TAIL", {
+  AQUA_TAIL: createPhysicalMove("AQUA_TAIL", {
     name: "Aqua Tail",
     power: 90,
-    type: "water",
-    damageType: "physical",
+    type: PokemonTypes.WATER,
     effect: "null",
   }),
-  ARM_THRUST: move("ARM_THRUST", {
+  ARM_THRUST: createPhysicalMove("ARM_THRUST", {
     name: "Arm Thrust",
     power: 15,
-    type: "fighting",
-    damageType: "physical",
+    type: PokemonTypes.FIGHTING,
     effect: "Hits 2-5 times in one turn.",
   }),
-  ASSURANCE: move("ASSURANCE", {
+  ASSURANCE: createPhysicalMove("ASSURANCE", {
     name: "Assurance",
     power: 60,
-    type: "dark",
-    damageType: "physical",
+    type: PokemonTypes.DARK,
     effect: "Power is doubled if the target has already received damage this turn.",
   }),
-  AURA_SPHERE: move("AURA_SPHERE", {
+  AURA_SPHERE: createSpecialMove("AURA_SPHERE", {
     name: "Aura Sphere",
     power: 80,
-    type: "fighting",
-    damageType: "special",
+    type: PokemonTypes.FIGHTING,
     effect: "Never misses.",
   }),
-  AURORA_BEAM: move("AURORA_BEAM", {
+  AURORA_BEAM: createSpecialMove("AURORA_BEAM", {
     name: "Aurora Beam",
     power: 65,
-    type: "ice",
-    damageType: "special",
+    type: PokemonTypes.ICE,
     effect: "Has a 10% chance to lower the target's Attack by one stage.",
   }),
-  AURORA_VEIL: move("AURORA_VEIL", {
+  AURORA_VEIL: createStatusMove("AURORA_VEIL", {
     name: "Aurora Veil",
     power: null,
-    type: "ice",
-    damageType: "status",
+    type: PokemonTypes.ICE,
     effect: "Reduces damage five turns, but must be used during hail.",
   }),
-  AVALANCHE: move("AVALANCHE", {
+  AVALANCHE: createPhysicalMove("AVALANCHE", {
     name: "Avalanche",
     power: 60,
-    type: "ice",
-    damageType: "physical",
+    type: PokemonTypes.ICE,
     effect: "Inflicts double damage if the user takes damage before attacking this turn.",
   }),
-  BABY_DOLL_EYES: move("BABY_DOLL_EYES", {
+  BABY_DOLL_EYES: createStatusMove("BABY_DOLL_EYES", {
     name: "Baby-Doll Eyes",
     power: null,
-    type: "fairy",
-    damageType: "status",
+    type: PokemonTypes.FAIRY,
     effect: "Lowers the target's Attack by one stage.",
   }),
-  BITE: move("BITE", {
+  BITE: createPhysicalMove("BITE", {
     name: "Bite",
     power: 60,
-    type: "dark",
-    damageType: "physical",
+    type: PokemonTypes.DARK,
     effect: "Has a 30% chance to make the target flinch.",
   }),
-  BLAZING_TORQUE: move("BLAZING_TORQUE", {
+  BLAZING_TORQUE: createPhysicalMove("BLAZING_TORQUE", {
     name: "Blazing Torque",
     power: 80,
-    type: "fire",
-    damageType: "physical",
+    type: PokemonTypes.FIRE,
     effect: "null",
   }),
-  BLIZZARD: move("BLIZZARD", {
+  BLIZZARD: createSpecialMove("BLIZZARD", {
     name: "Blizzard",
     power: 110,
-    type: "ice",
-    damageType: "special",
+    type: PokemonTypes.ICE,
     effect: "Has a 10% chance to freeze the target.",
   }),
-  BLOCK: move("BLOCK", {
+  BLOCK: createStatusMove("BLOCK", {
     name: "Block",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect: "Prevents the target from leaving battle.",
   }),
-  BODY_PRESS: move("BODY_PRESS", {
+  BODY_PRESS: createPhysicalMove("BODY_PRESS", {
     name: "Body Press",
     power: 80,
-    type: "fighting",
-    damageType: "physical",
+    type: PokemonTypes.FIGHTING,
     effect: "null",
   }),
-  BODY_SLAM: move("BODY_SLAM", {
+  BODY_SLAM: createPhysicalMove("BODY_SLAM", {
     name: "Body Slam",
     power: 85,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "Has a 30% chance to paralyze the target.",
   }),
-  BOUNCE: move("BOUNCE", {
+  BOUNCE: createPhysicalMove("BOUNCE", {
     name: "Bounce",
     power: 85,
-    type: "flying",
-    damageType: "physical",
+    type: PokemonTypes.FLYING,
     effect: "User bounces high into the air, dodging all attacks, and hits next turn.",
   }),
-  BRAVE_BIRD: move("BRAVE_BIRD", {
+  BRAVE_BIRD: createPhysicalMove("BRAVE_BIRD", {
     name: "Brave Bird",
     power: 120,
-    type: "flying",
-    damageType: "physical",
+    type: PokemonTypes.FLYING,
     effect: "User receives 1/3 the damage inflicted in recoil.",
   }),
-  BRICK_BREAK: move("BRICK_BREAK", {
+  BRICK_BREAK: createPhysicalMove("BRICK_BREAK", {
     name: "Brick Break",
     power: 75,
-    type: "fighting",
-    damageType: "physical",
+    type: PokemonTypes.FIGHTING,
     effect: "Destroys Reflect and Light Screen.",
   }),
-  BUG_BITE: move("BUG_BITE", {
+  BUG_BITE: createPhysicalMove("BUG_BITE", {
     name: "Bug Bite",
     power: 60,
-    type: "bug",
-    damageType: "physical",
+    type: PokemonTypes.BUG,
     effect: "If target has a berry, inflicts double damage and uses the berry.",
   }),
-  BUG_BUZZ: move("BUG_BUZZ", {
+  BUG_BUZZ: createSpecialMove("BUG_BUZZ", {
     name: "Bug Buzz",
     power: 90,
-    type: "bug",
-    damageType: "special",
+    type: PokemonTypes.BUG,
     effect: "Has a 10% chance to lower the target's Special Defense by one stage.",
   }),
-  BULK_UP: move("BULK_UP", {
+  BULK_UP: createStatusMove("BULK_UP", {
     name: "Bulk Up",
     power: null,
-    type: "fighting",
-    damageType: "status",
+    type: PokemonTypes.FIGHTING,
     effect: "Raises the user's Attack and Defense by one stage.",
   }),
-  BULLDOZE: move("BULLDOZE", {
+  BULLDOZE: createPhysicalMove("BULLDOZE", {
     name: "Bulldoze",
     power: 60,
-    type: "ground",
-    damageType: "physical",
+    type: PokemonTypes.GROUND,
     effect: "Has a 100% chance to lower the target's Speed by one stage.",
   }),
-  BULLET_SEED: move("BULLET_SEED", {
+  BULLET_SEED: createPhysicalMove("BULLET_SEED", {
     name: "Bullet Seed",
     power: 25,
-    type: "grass",
-    damageType: "physical",
+    type: PokemonTypes.GRASS,
     effect: "Hits 2-5 times in one turn.",
   }),
-  CHARGE_BEAM: move("CHARGE_BEAM", {
+  CHARGE_BEAM: createSpecialMove("CHARGE_BEAM", {
     name: "Charge Beam",
     power: 50,
-    type: "electric",
-    damageType: "special",
+    type: PokemonTypes.ELECTRIC,
     effect: "Has a 70% chance to raise the user's Special Attack by one stage.",
   }),
-  CHARGE: move("CHARGE", {
+  CHARGE: createStatusMove("CHARGE", {
     name: "Charge",
     power: null,
-    type: "electric",
-    damageType: "status",
+    type: PokemonTypes.ELECTRIC,
     effect:
       "Raises the user's Special Defense by one stage.  User's Electric moves have doubled power next turn.",
   }),
-  CHARM: move("CHARM", {
+  CHARM: createStatusMove("CHARM", {
     name: "Charm",
     power: null,
-    type: "fairy",
-    damageType: "status",
+    type: PokemonTypes.FAIRY,
     effect: "Lowers the target's Attack by two stages.",
   }),
-  CLEAR_SMOG: move("CLEAR_SMOG", {
+  CLEAR_SMOG: createSpecialMove("CLEAR_SMOG", {
     name: "Clear Smog",
     power: 50,
-    type: "poison",
-    damageType: "special",
+    type: PokemonTypes.POISON,
     effect: "Removes all of the target's stat modifiers.",
   }),
-  CLOSE_COMBAT: move("CLOSE_COMBAT", {
+  CLOSE_COMBAT: createPhysicalMove("CLOSE_COMBAT", {
     name: "Close Combat",
     power: 120,
-    type: "fighting",
-    damageType: "physical",
+    type: PokemonTypes.FIGHTING,
     effect: "Lowers the user's Defense and Special Defense by one stage after inflicting damage.",
   }),
-  COIL: move("COIL", {
+  COIL: createStatusMove("COIL", {
     name: "Coil",
     power: null,
-    type: "poison",
-    damageType: "status",
+    type: PokemonTypes.POISON,
     effect: "Raises the user's Attack, Defense, and accuracy by one stage each.",
   }),
-  COMBAT_TORQUE: move("COMBAT_TORQUE", {
+  COMBAT_TORQUE: createPhysicalMove("COMBAT_TORQUE", {
     name: "Combat Torque",
     power: 100,
-    type: "fighting",
-    damageType: "physical",
+    type: PokemonTypes.FIGHTING,
     effect: "null",
   }),
-  CONFUSE_RAY: move("CONFUSE_RAY", {
+  CONFUSE_RAY: createStatusMove("CONFUSE_RAY", {
     name: "Confuse Ray",
     power: null,
-    type: "ghost",
-    damageType: "status",
+    type: PokemonTypes.GHOST,
     effect: "Confuses the target.",
   }),
-  CRABHAMMER: move("CRABHAMMER", {
+  CRABHAMMER: createPhysicalMove("CRABHAMMER", {
     name: "Crabhammer",
     power: 100,
-    type: "water",
-    damageType: "physical",
+    type: PokemonTypes.WATER,
     effect: "Has an increased chance for a critical hit.",
   }),
-  CRUNCH: move("CRUNCH", {
+  CRUNCH: createPhysicalMove("CRUNCH", {
     name: "Crunch",
     power: 80,
-    type: "dark",
-    damageType: "physical",
+    type: PokemonTypes.DARK,
     effect: "Has a 20% chance to lower the target's Defense by one stage.",
   }),
-  DARK_PULSE: move("DARK_PULSE", {
+  DARK_PULSE: createSpecialMove("DARK_PULSE", {
     name: "Dark Pulse",
     power: 80,
-    type: "dark",
-    damageType: "special",
+    type: PokemonTypes.DARK,
     effect: "Has a 20% chance to make the target flinch.",
   }),
-  DAZZLING_GLEAM: move("DAZZLING_GLEAM", {
+  DAZZLING_GLEAM: createSpecialMove("DAZZLING_GLEAM", {
     name: "Dazzling Gleam",
     power: 80,
-    type: "fairy",
-    damageType: "special",
+    type: PokemonTypes.FAIRY,
     effect: "null",
   }),
-  DIG: move("DIG", {
+  DIG: createPhysicalMove("DIG", {
     name: "Dig",
     power: 80,
-    type: "ground",
-    damageType: "physical",
+    type: PokemonTypes.GROUND,
     effect: "User digs underground, dodging all attacks, and hits next turn.",
   }),
-  DISCHARGE: move("DISCHARGE", {
+  DISCHARGE: createSpecialMove("DISCHARGE", {
     name: "Discharge",
     power: 80,
-    type: "electric",
-    damageType: "special",
+    type: PokemonTypes.ELECTRIC,
     effect: "Has a 30% chance to paralyze the target.",
   }),
-  DOUBLE_HIT: move("DOUBLE_HIT", {
+  DOUBLE_HIT: createPhysicalMove("DOUBLE_HIT", {
     name: "Double Hit",
     power: 34,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "Hits twice in one turn.",
   }),
-  DOUBLE_KICK: move("DOUBLE_KICK", {
+  DOUBLE_KICK: createPhysicalMove("DOUBLE_KICK", {
     name: "Double Kick",
     power: 30,
-    type: "fighting",
-    damageType: "physical",
+    type: PokemonTypes.FIGHTING,
     effect: "Hits twice in one turn.",
   }),
-  DOUBLE_SHOCK: move("DOUBLE_SHOCK", {
+  DOUBLE_SHOCK: createPhysicalMove("DOUBLE_SHOCK", {
     name: "Double Shock",
     power: 120,
-    type: "electric",
-    damageType: "physical",
+    type: PokemonTypes.ELECTRIC,
     effect: "null",
   }),
-  DOUBLE_TEAM: move("DOUBLE_TEAM", {
+  DOUBLE_TEAM: createStatusMove("DOUBLE_TEAM", {
     name: "Double Team",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect: "Raises the user's evasion by one stage.",
   }),
-  DRAGON_CLAW: move("DRAGON_CLAW", {
+  DRAGON_CLAW: createPhysicalMove("DRAGON_CLAW", {
     name: "Dragon Claw",
     power: 80,
-    type: "dragon",
-    damageType: "physical",
+    type: PokemonTypes.DRAGON,
     effect: "null",
   }),
-  DRAGON_PULSE: move("DRAGON_PULSE", {
+  DRAGON_PULSE: createSpecialMove("DRAGON_PULSE", {
     name: "Dragon Pulse",
     power: 85,
-    type: "dragon",
-    damageType: "special",
+    type: PokemonTypes.DRAGON,
     effect: "null",
   }),
-  DRAGON_RUSH: move("DRAGON_RUSH", {
+  DRAGON_RUSH: createPhysicalMove("DRAGON_RUSH", {
     name: "Dragon Rush",
     power: 100,
-    type: "dragon",
-    damageType: "physical",
+    type: PokemonTypes.DRAGON,
     effect: "Has a 20% chance to make the target flinch.",
   }),
-  DRAIN_PUNCH: move("DRAIN_PUNCH", {
+  DRAIN_PUNCH: createPhysicalMove("DRAIN_PUNCH", {
     name: "Drain Punch",
     power: 75,
-    type: "fighting",
-    damageType: "physical",
+    type: PokemonTypes.FIGHTING,
     effect:
       "The user attacks with an energy-draining punch. The user's HP is restored by up to half the damage taken by the target.",
   }),
-  DREAM_EATER: move("DREAM_EATER", {
+  DREAM_EATER: createSpecialMove("DREAM_EATER", {
     name: "Dream Eater",
     power: 100,
-    type: "psychic",
-    damageType: "special",
+    type: PokemonTypes.PSYCHIC,
     effect: "Only works on sleeping Pokémon. Drains half the damage inflicted to heal the user.",
   }),
-  DRILL_PECK: move("DRILL_PECK", {
+  DRILL_PECK: createPhysicalMove("DRILL_PECK", {
     name: "Drill Peck",
     power: 80,
-    type: "flying",
-    damageType: "physical",
+    type: PokemonTypes.FLYING,
     effect: "A corkscrewing attack that strikes the target with a sharp beak acting as a drill.",
   }),
-  DRILL_RUN: move("DRILL_RUN", {
+  DRILL_RUN: createPhysicalMove("DRILL_RUN", {
     name: "Drill Run",
     power: 80,
-    type: "ground",
-    damageType: "physical",
+    type: PokemonTypes.GROUND,
     effect: "Has an increased chance for a critical hit.",
   }),
-  EARTH_POWER: move("EARTH_POWER", {
+  EARTH_POWER: createSpecialMove("EARTH_POWER", {
     name: "Earth Power",
     power: 90,
-    type: "ground",
-    damageType: "special",
+    type: PokemonTypes.GROUND,
     effect: "Has a 10% chance to lower the target's Special Defense by one stage.",
   }),
-  EARTHQUAKE: move("EARTHQUAKE", {
+  EARTHQUAKE: createPhysicalMove("EARTHQUAKE", {
     name: "Earthquake",
     power: 100,
-    type: "ground",
-    damageType: "physical",
+    type: PokemonTypes.GROUND,
     effect: "Inflicts regular damage and can hit Dig users.",
   }),
-  EMBER: move("EMBER", {
+  EMBER: createSpecialMove("EMBER", {
     name: "Ember",
     power: 40,
-    type: "fire",
-    damageType: "special",
+    type: PokemonTypes.FIRE,
     effect: "Has a 10% chance to burn the target.",
   }),
-  ENERGY_BALL: move("ENERGY_BALL", {
+  ENERGY_BALL: createSpecialMove("ENERGY_BALL", {
     name: "Energy Ball",
     power: 90,
-    type: "grass",
-    damageType: "special",
+    type: PokemonTypes.GRASS,
     effect: "Has a 10% chance to lower the target's Special Defense by one stage.",
   }),
-  FACADE: move("FACADE", {
+  FACADE: createPhysicalMove("FACADE", {
     name: "Facade",
     power: 70,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "Power doubles if user is burned, paralyzed, or poisoned.",
   }),
-  FAKE_OUT: move("FAKE_OUT", {
+  FAKE_OUT: createPhysicalMove("FAKE_OUT", {
     name: "Fake Out",
     power: 40,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect:
       "This attack hits first and makes the target flinch. It works only on the first turn each time the user enters battle. ",
   }),
-  FIERY_DANCE: move("FIERY_DANCE", {
+  FIERY_DANCE: createSpecialMove("FIERY_DANCE", {
     name: "Fiery Dance",
     power: 80,
-    type: "fire",
-    damageType: "special",
+    type: PokemonTypes.FIRE,
     effect:
       "Cloaked in flames, the user attacks the target by dancing and flapping its wings. This may also boost the user's Sp. Atk stat.",
   }),
-  FIRE_BLAST: move("FIRE_BLAST", {
+  FIRE_BLAST: createSpecialMove("FIRE_BLAST", {
     name: "Fire Blast",
     power: 110,
-    type: "fire",
-    damageType: "special",
+    type: PokemonTypes.FIRE,
     effect: "Has a 10% chance to burn the target.",
   }),
-  FIRE_FANG: move("FIRE_FANG", {
+  FIRE_FANG: createPhysicalMove("FIRE_FANG", {
     name: "Fire Fang",
     power: 65,
-    type: "fire",
-    damageType: "physical",
+    type: PokemonTypes.FIRE,
     effect:
       "Has a 10% chance to burn the target and a $effect_chance% chance to make the target flinch.",
   }),
-  FIRE_PUNCH: move("FIRE_PUNCH", {
+  FIRE_PUNCH: createPhysicalMove("FIRE_PUNCH", {
     name: "Fire Punch",
     power: 75,
-    type: "fire",
-    damageType: "physical",
+    type: PokemonTypes.FIRE,
     effect: "Has a 10% chance to burn the target.",
   }),
-  FIRE_SPIN: move("FIRE_SPIN", {
+  FIRE_SPIN: createSpecialMove("FIRE_SPIN", {
     name: "Fire Spin",
     power: 35,
-    type: "fire",
-    damageType: "special",
+    type: PokemonTypes.FIRE,
     effect: "Prevents the target from fleeing and inflicts damage for 2-5 turns.",
   }),
-  FLAIL: move("FLAIL", {
+  FLAIL: createPhysicalMove("FLAIL", {
     name: "Flail",
     power: null,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect:
       "Inflicts more damage when the user has less HP remaining, with a maximum of 200 power.",
   }),
-  FLAME_CHARGE: move("FLAME_CHARGE", {
+  FLAME_CHARGE: createPhysicalMove("FLAME_CHARGE", {
     name: "Flame Charge",
     power: 50,
-    type: "fire",
-    damageType: "physical",
+    type: PokemonTypes.FIRE,
     effect: "Inflicts regular damage.  Raises the user's Speed by one stage.",
   }),
-  FLAME_WHEEL: move("FLAME_WHEEL", {
+  FLAME_WHEEL: createPhysicalMove("FLAME_WHEEL", {
     name: "Flame Wheel",
     power: 60,
-    type: "fire",
-    damageType: "physical",
+    type: PokemonTypes.FIRE,
     effect: "Has a 10% chance to burn the target.  Lets frozen Pokémon thaw themselves.",
   }),
-  FLAMETHROWER: move("FLAMETHROWER", {
+  FLAMETHROWER: createSpecialMove("FLAMETHROWER", {
     name: "Flamethrower",
     power: 90,
-    type: "fire",
-    damageType: "special",
+    type: PokemonTypes.FIRE,
     effect: "Has a 10% chance to burn the target.",
   }),
-  FLARE_BLITZ: move("FLARE_BLITZ", {
+  FLARE_BLITZ: createPhysicalMove("FLARE_BLITZ", {
     name: "Flare Blitz",
     power: 120,
-    type: "fire",
-    damageType: "physical",
+    type: PokemonTypes.FIRE,
     effect: "User takes 1/3 the damage inflicted in recoil.  Has a 10% chance to burn the target.",
   }),
-  FLASH_CANNON: move("FLASH_CANNON", {
+  FLASH_CANNON: createSpecialMove("FLASH_CANNON", {
     name: "Flash Cannon",
     power: 80,
-    type: "steel",
-    damageType: "special",
+    type: PokemonTypes.STEEL,
     effect: "Has a 10% chance to lower the target's Special Defense by one stage.",
   }),
-  FLOWER_TRICK: move("FLOWER_TRICK", {
+  FLOWER_TRICK: createPhysicalMove("FLOWER_TRICK", {
     name: "Flower Trick",
     power: 70,
-    type: "grass",
-    damageType: "physical",
+    type: PokemonTypes.GRASS,
     effect: "null",
   }),
-  FOUL_PLAY: move("FOUL_PLAY", {
+  FOUL_PLAY: createPhysicalMove("FOUL_PLAY", {
     name: "Foul Play",
     power: 95,
-    type: "dark",
-    damageType: "physical",
+    type: PokemonTypes.DARK,
     effect: "Calculates damage with the target's attacking stat.",
   }),
-  FREEZE_DRY: move("FREEZE_DRY", {
+  FREEZE_DRY: createSpecialMove("FREEZE_DRY", {
     name: "Freeze-Dry",
     power: 70,
-    type: "ice",
-    damageType: "special",
+    type: PokemonTypes.ICE,
     effect:
       "The user rapidly cools the target. This may also leave the target frozen. This move is super effective on Water types.",
   }),
-  FURY_CUTTER: move("FURY_CUTTER", {
+  FURY_CUTTER: createPhysicalMove("FURY_CUTTER", {
     name: "Fury Cutter",
     power: 40,
-    type: "bug",
-    damageType: "physical",
+    type: PokemonTypes.BUG,
     effect:
       "Power doubles every turn this move is used in succession after the first, maxing out after five turns.",
   }),
-  FURY_SWIPES: move("FURY_SWIPES", {
+  FURY_SWIPES: createPhysicalMove("FURY_SWIPES", {
     name: "Fury Swipes",
     power: 18,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "Hits 2-5 times in one turn.",
   }),
-  FUTURE_SIGHT: move("FUTURE_SIGHT", {
+  FUTURE_SIGHT: createSpecialMove("FUTURE_SIGHT", {
     name: "Future Sight",
     power: 120,
-    type: "psychic",
-    damageType: "special",
+    type: PokemonTypes.PSYCHIC,
     effect: "Hits the target two turns later.",
   }),
-  GIGA_DRAIN: move("GIGA_DRAIN", {
+  GIGA_DRAIN: createSpecialMove("GIGA_DRAIN", {
     name: "Giga Drain",
     power: 75,
-    type: "grass",
-    damageType: "special",
+    type: PokemonTypes.GRASS,
     effect: "Drains half the damage inflicted to heal the user.",
   }),
-  GIGA_IMPACT: move("GIGA_IMPACT", {
+  GIGA_IMPACT: createPhysicalMove("GIGA_IMPACT", {
     name: "Giga Impact",
     power: 150,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect:
       "The user charges at the target using every bit of its power. The user can't move on the next turn.",
   }),
-  GIGATON_HAMMER: move("GIGATON_HAMMER", {
+  GIGATON_HAMMER: createPhysicalMove("GIGATON_HAMMER", {
     name: "Gigaton Hammer",
     power: 160,
-    type: "steel",
-    damageType: "physical",
+    type: PokemonTypes.STEEL,
     effect: "null",
   }),
-  GLAIVE_RUSH: move("GLAIVE_RUSH", {
+  GLAIVE_RUSH: createPhysicalMove("GLAIVE_RUSH", {
     name: "Glaive Rush",
     power: 120,
-    type: "dragon",
-    damageType: "physical",
+    type: PokemonTypes.DRAGON,
     effect: "null",
   }),
-  GLARE: move("GLARE", {
+  GLARE: createStatusMove("GLARE", {
     name: "Glare",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect: "Paralyzes the target.",
   }),
-  GROWL: move("GROWL", {
+  GROWL: createStatusMove("GROWL", {
     name: "Growl",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect: "Lowers the target's Attack by one stage.",
   }),
-  GYRO_BALL: move("GYRO_BALL", {
+  GYRO_BALL: createPhysicalMove("GYRO_BALL", {
     name: "Gyro Ball",
     power: null,
-    type: "steel",
-    damageType: "physical",
+    type: PokemonTypes.STEEL,
     effect: "Power raises when the user has lower Speed, up to a maximum of 150.",
   }),
-  HEADBUTT: move("HEADBUTT", {
+  HEADBUTT: createPhysicalMove("HEADBUTT", {
     name: "Headbutt",
     power: 70,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "Has a 30% chance to make the target flinch.",
   }),
-  HEAVY_SLAM: move("HEAVY_SLAM", {
+  HEAVY_SLAM: createPhysicalMove("HEAVY_SLAM", {
     name: "Heavy Slam",
     power: null,
-    type: "steel",
-    damageType: "physical",
+    type: PokemonTypes.STEEL,
     effect: "Power is higher when the user weighs more than the target, up to a maximum of 120.",
   }),
-  HEX: move("HEX", {
+  HEX: createSpecialMove("HEX", {
     name: "Hex",
     power: 65,
-    type: "ghost",
-    damageType: "special",
+    type: PokemonTypes.GHOST,
     effect: "Has double power if the target has a major status ailment.",
   }),
-  HIGH_HORSEPOWER: move("HIGH_HORSEPOWER", {
+  HIGH_HORSEPOWER: createPhysicalMove("HIGH_HORSEPOWER", {
     name: "High Horsepower",
     power: 95,
-    type: "ground",
-    damageType: "physical",
+    type: PokemonTypes.GROUND,
     effect: "null",
   }),
-  HONE_CLAWS: move("HONE_CLAWS", {
+  HONE_CLAWS: createStatusMove("HONE_CLAWS", {
     name: "Hone Claws",
     power: null,
-    type: "dark",
-    damageType: "status",
+    type: PokemonTypes.DARK,
     effect: "Raises the user's Attack and accuracy by one stage.",
   }),
-  HORN_LEECH: move("HORN_LEECH", {
+  HORN_LEECH: createPhysicalMove("HORN_LEECH", {
     name: "Horn Leech",
     power: 75,
-    type: "grass",
-    damageType: "physical",
+    type: PokemonTypes.GRASS,
     effect: "Drains half the damage inflicted to heal the user.",
   }),
-  HOWL: move("HOWL", {
+  HOWL: createStatusMove("HOWL", {
     name: "Howl",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect: "Raises the user's Attack by one stage.",
   }),
-  HURRICANE: move("HURRICANE", {
+  HURRICANE: createSpecialMove("HURRICANE", {
     name: "Hurricane",
     power: 110,
-    type: "flying",
-    damageType: "special",
+    type: PokemonTypes.FLYING,
     effect: "Has a 30% chance to confuse the target.",
   }),
-  HYDRO_PUMP: move("HYDRO_PUMP", {
+  HYDRO_PUMP: createSpecialMove("HYDRO_PUMP", {
     name: "Hydro Pump",
     power: 110,
-    type: "water",
-    damageType: "special",
+    type: PokemonTypes.WATER,
     effect: "null",
   }),
-  HYPER_BEAM: move("HYPER_BEAM", {
+  HYPER_BEAM: createSpecialMove("HYPER_BEAM", {
     name: "Hyper beam",
     power: 150,
-    type: "normal",
-    damageType: "special",
+    type: PokemonTypes.NORMAL,
     effect: "The target is attacked with a powerful beam. The user can't move on the next turn.",
   }),
-  HYPER_DRILL: move("HYPER_DRILL", {
+  HYPER_DRILL: createPhysicalMove("HYPER_DRILL", {
     name: "Hyper Drill",
     power: 100,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "null",
   }),
-  HYPER_VOICE: move("HYPER_VOICE", {
+  HYPER_VOICE: createSpecialMove("HYPER_VOICE", {
     name: "Hyper Voice",
     power: 90,
-    type: "normal",
-    damageType: "special",
+    type: PokemonTypes.NORMAL,
     effect: "null",
   }),
-  ICE_BEAM: move("ICE_BEAM", {
+  ICE_BEAM: createSpecialMove("ICE_BEAM", {
     name: "Ice Beam",
     power: 90,
-    type: "ice",
-    damageType: "special",
+    type: PokemonTypes.ICE,
     effect: "Has a 10% chance to freeze the target.",
   }),
-  ICE_FANG: move("ICE_FANG", {
+  ICE_FANG: createPhysicalMove("ICE_FANG", {
     name: "Ice Fang",
     power: 65,
-    type: "ice",
-    damageType: "physical",
+    type: PokemonTypes.ICE,
     effect:
       "Has a 10% chance to freeze the target and a $effect_chance% chance to make the target flinch.",
   }),
-  ICE_PUNCH: move("ICE_PUNCH", {
+  ICE_PUNCH: createPhysicalMove("ICE_PUNCH", {
     name: "Ice Punch",
     power: 75,
-    type: "ice",
-    damageType: "physical",
+    type: PokemonTypes.ICE,
     effect: "Has a 10% chance to freeze the target.",
   }),
-  ICE_SHARD: move("ICE_SHARD", {
+  ICE_SHARD: createPhysicalMove("ICE_SHARD", {
     name: "Ice Shard",
     power: 40,
-    type: "ice",
-    damageType: "physical",
+    type: PokemonTypes.ICE,
     effect: "null",
   }),
-  ICE_SPINNER: move("ICE_SPINNER", {
+  ICE_SPINNER: createPhysicalMove("ICE_SPINNER", {
     name: "Ice Spinner",
     power: 80,
-    type: "ice",
-    damageType: "physical",
+    type: PokemonTypes.ICE,
     effect: "null",
   }),
-  ICICLE_CRASH: move("ICICLE_CRASH", {
+  ICICLE_CRASH: createPhysicalMove("ICICLE_CRASH", {
     name: "Icicle Crash",
     power: 85,
-    type: "ice",
-    damageType: "physical",
+    type: PokemonTypes.ICE,
     effect: "Has a 30% chance to make the target flinch.",
   }),
-  ICICLE_SPEAR: move("ICICLE_SPEAR", {
+  ICICLE_SPEAR: createPhysicalMove("ICICLE_SPEAR", {
     name: "Icicle Spear",
     power: 25,
-    type: "ice",
-    damageType: "physical",
+    type: PokemonTypes.ICE,
     effect: "Hits 2-5 times in one turn.",
   }),
-  ICY_WIND: move("ICY_WIND", {
+  ICY_WIND: createSpecialMove("ICY_WIND", {
     name: "Icy Wind",
     power: 55,
-    type: "ice",
-    damageType: "special",
+    type: PokemonTypes.ICE,
     effect: "Has a 100% chance to lower the target's Speed by one stage.",
   }),
-  INCINERATE: move("INCINERATE", {
+  INCINERATE: createSpecialMove("INCINERATE", {
     name: "Incinerate",
     power: 60,
-    type: "fire",
-    damageType: "special",
+    type: PokemonTypes.FIRE,
     effect: "If the target is holding a Berry, it is burnt and becomes no longer usable.",
   }),
-  IRON_DEFENSE: move("IRON_DEFENSE", {
+  IRON_DEFENSE: createStatusMove("IRON_DEFENSE", {
     name: "Iron Defense",
     power: null,
-    type: "steel",
-    damageType: "status",
+    type: PokemonTypes.STEEL,
     effect: "Raises the user's Defense by two stages.",
   }),
-  IRON_HEAD: move("IRON_HEAD", {
+  IRON_HEAD: createPhysicalMove("IRON_HEAD", {
     name: "Iron Head",
     power: 80,
-    type: "steel",
-    damageType: "physical",
+    type: PokemonTypes.STEEL,
     effect: "Has a 30% chance to make the target flinch.",
   }),
-  IRON_TAIL: move("IRON_TAIL", {
+  IRON_TAIL: createPhysicalMove("IRON_TAIL", {
     name: "Iron Tail",
     power: 100,
-    type: "steel",
-    damageType: "physical",
+    type: PokemonTypes.STEEL,
     effect: "Has a 30% chance to lower the target's Defense by one stage.",
   }),
-  KNOCK_OFF: move("KNOCK_OFF", {
+  KNOCK_OFF: createPhysicalMove("KNOCK_OFF", {
     name: "Knock Off",
     power: 65,
-    type: "dark",
-    damageType: "physical",
+    type: PokemonTypes.DARK,
     effect: "Target drops its held item.",
   }),
-  KOWTOW_CLEAVE: move("KOWTOW_CLEAVE", {
+  KOWTOW_CLEAVE: createPhysicalMove("KOWTOW_CLEAVE", {
     name: "Kowtow Cleave",
     power: 85,
-    type: "dark",
-    damageType: "physical",
+    type: PokemonTypes.DARK,
     effect: "null",
   }),
-  LEAF_BLADE: move("LEAF_BLADE", {
+  LEAF_BLADE: createPhysicalMove("LEAF_BLADE", {
     name: "Leaf Blade",
     power: 90,
-    type: "grass",
-    damageType: "physical",
+    type: PokemonTypes.GRASS,
     effect: "Has an increased chance for a critical hit.",
   }),
-  LEAFAGE: move("LEAFAGE", {
+  LEAFAGE: createPhysicalMove("LEAFAGE", {
     name: "Leafage",
     power: 40,
-    type: "grass",
-    damageType: "physical",
+    type: PokemonTypes.GRASS,
     effect: "null",
   }),
-  LEECH_LIFE: move("LEECH_LIFE", {
+  LEECH_LIFE: createPhysicalMove("LEECH_LIFE", {
     name: "Leech Life",
     power: 80,
-    type: "bug",
-    damageType: "physical",
+    type: PokemonTypes.BUG,
     effect:
       "The user drains the target's blood. The user's HP is restored by up to half the damage taken by the target.",
   }),
-  LEECH_SEED: move("LEECH_SEED", {
+  LEECH_SEED: createStatusMove("LEECH_SEED", {
     name: "Leech Seed",
     power: null,
-    type: "grass",
-    damageType: "status",
+    type: PokemonTypes.GRASS,
     effect: "Seeds the target, stealing HP from it every turn.",
   }),
-  LEER: move("LEER", {
+  LEER: createStatusMove("LEER", {
     name: "Leer",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect: "Lowers the target's Defense by one stage.",
   }),
-  LICK: move("LICK", {
+  LICK: createPhysicalMove("LICK", {
     name: "Lick",
     power: 30,
-    type: "ghost",
-    damageType: "physical",
+    type: PokemonTypes.GHOST,
     effect: "Has a 30% chance of paralyzing the target.",
   }),
-  LIGHT_SCREEN: move("LIGHT_SCREEN", {
+  LIGHT_SCREEN: createStatusMove("LIGHT_SCREEN", {
     name: "Light Screen",
     power: null,
-    type: "psychic",
-    damageType: "status",
+    type: PokemonTypes.PSYCHIC,
     effect: "Reduces damage from special attacks by 50% for five turns.",
   }),
-  LIQUIDATION: move("LIQUIDATION", {
+  LIQUIDATION: createPhysicalMove("LIQUIDATION", {
     name: "Liquidation",
     power: 85,
-    type: "water",
-    damageType: "physical",
+    type: PokemonTypes.WATER,
     effect: "Has a 20% chance to lower the target's Defense by one stage.",
   }),
-  LOW_SWEEP: move("LOW_SWEEP", {
+  LOW_SWEEP: createPhysicalMove("LOW_SWEEP", {
     name: "Low Sweep",
     power: 65,
-    type: "fighting",
-    damageType: "physical",
+    type: PokemonTypes.FIGHTING,
     effect:
       "The user makes a swift attack on the target's legs, which lowers the target's Speed stat.",
   }),
-  LUMINA_CRASH: move("LUMINA_CRASH", {
+  LUMINA_CRASH: createSpecialMove("LUMINA_CRASH", {
     name: "Lumina Crash",
     power: 80,
-    type: "psychic",
-    damageType: "special",
+    type: PokemonTypes.PSYCHIC,
     effect: "null",
   }),
-  LUNGE: move("LUNGE", {
+  LUNGE: createPhysicalMove("LUNGE", {
     name: "Lunge",
     power: 80,
-    type: "bug",
-    damageType: "physical",
+    type: PokemonTypes.BUG,
     effect:
       "The user makes a lunge at the target, attacking with full force. This also lowers the target's Attack stat. ",
   }),
-  MAGICAL_LEAF: move("MAGICAL_LEAF", {
+  MAGICAL_LEAF: createSpecialMove("MAGICAL_LEAF", {
     name: "Magical Leaf",
     power: 60,
-    type: "grass",
-    damageType: "special",
+    type: PokemonTypes.GRASS,
     effect: "Never misses.",
   }),
-  MAGICAL_TORQUE: move("MAGICAL_TORQUE", {
+  MAGICAL_TORQUE: createPhysicalMove("MAGICAL_TORQUE", {
     name: "Magical Torque",
     power: 100,
-    type: "fairy",
-    damageType: "physical",
+    type: PokemonTypes.FAIRY,
     effect: "null",
   }),
-  MEGA_DRAIN: move("MEGA_DRAIN", {
+  MEGA_DRAIN: createSpecialMove("MEGA_DRAIN", {
     name: "Mega Drain",
     power: 40,
-    type: "grass",
-    damageType: "special",
+    type: PokemonTypes.GRASS,
     effect: "Drains half the damage inflicted to heal the user.",
   }),
-  METAL_CLAW: move("METAL_CLAW", {
+  METAL_CLAW: createPhysicalMove("METAL_CLAW", {
     name: "Metal Claw",
     power: 50,
-    type: "steel",
-    damageType: "physical",
+    type: PokemonTypes.STEEL,
     effect: "Has a 10% chance to raise the user's Attack by one stage.",
   }),
-  METAL_SOUND: move("METAL_SOUND", {
+  METAL_SOUND: createStatusMove("METAL_SOUND", {
     name: "Metal Sound",
     power: null,
-    type: "steel",
-    damageType: "status",
+    type: PokemonTypes.STEEL,
     effect: "A horrible sound like scraping metal harshly lowers the target's Sp. Def stat.",
   }),
-  MOONBLAST: move("MOONBLAST", {
+  MOONBLAST: createSpecialMove("MOONBLAST", {
     name: "Moonblast",
     power: 95,
-    type: "fairy",
-    damageType: "special",
+    type: PokemonTypes.FAIRY,
     effect: "Has a 30% chance to lower the target's Special Attack by one stage.",
   }),
-  MUD_SLAP: move("MUD_SLAP", {
+  MUD_SLAP: createSpecialMove("MUD_SLAP", {
     name: "Mud-Slap",
     power: 20,
-    type: "ground",
-    damageType: "special",
+    type: PokemonTypes.GROUND,
     effect: "Has a 100% chance to lower the target's accuracy by one stage.",
   }),
-  MUDDY_WATER: move("MUDDY_WATER", {
+  MUDDY_WATER: createSpecialMove("MUDDY_WATER", {
     name: "Muddy Water",
     power: 90,
-    type: "water",
-    damageType: "special",
+    type: PokemonTypes.WATER,
     effect: "Has a 30% chance to lower the target's accuracy by one stage.",
   }),
-  MYSTICAL_FIRE: move("MYSTICAL_FIRE", {
+  MYSTICAL_FIRE: createSpecialMove("MYSTICAL_FIRE", {
     name: "Mystical Fire",
     power: 75,
-    type: "fire",
-    damageType: "special",
+    type: PokemonTypes.FIRE,
     effect:
       "The user attacks by breathing a special, hot fire. This also lowers the target's Sp. Atk stat. ",
   }),
-  NIGHT_SLASH: move("NIGHT_SLASH", {
+  NIGHT_SLASH: createPhysicalMove("NIGHT_SLASH", {
     name: "Night Slash",
     power: 70,
-    type: "dark",
-    damageType: "physical",
+    type: PokemonTypes.DARK,
     effect:
       "The user slashes the target the instant an opportunity arises. This move has a heightened chance of landing a critical hit. ",
   }),
-  NOXIOUS_TORQUE: move("NOXIOUS_TORQUE", {
+  NOXIOUS_TORQUE: createPhysicalMove("NOXIOUS_TORQUE", {
     name: "Noxious Torque",
     power: 100,
-    type: "poison",
-    damageType: "physical",
+    type: PokemonTypes.POISON,
     effect: "null",
   }),
-  NUZZLE: move("NUZZLE", {
+  NUZZLE: createPhysicalMove("NUZZLE", {
     name: "Nuzzle",
     power: 20,
-    type: "electric",
-    damageType: "physical",
+    type: PokemonTypes.ELECTRIC,
     effect: "Has a 100% chance to paralyze the target.",
   }),
-  OVERHEAT: move("OVERHEAT", {
+  OVERHEAT: createSpecialMove("OVERHEAT", {
     name: "Overheat",
     power: 130,
-    type: "fire",
-    damageType: "special",
+    type: PokemonTypes.FIRE,
     effect: "Lowers the user's Special Attack by two stages after inflicting damage.",
   }),
-  PAYBACK: move("PAYBACK", {
+  PAYBACK: createPhysicalMove("PAYBACK", {
     name: "Payback",
     power: 50,
-    type: "dark",
-    damageType: "physical",
+    type: PokemonTypes.DARK,
     effect:
       "The user stores power, then attacks. This move's power is doubled if the user moves after the target.",
   }),
-  PETAL_BLIZZARD: move("PETAL_BLIZZARD", {
+  PETAL_BLIZZARD: createPhysicalMove("PETAL_BLIZZARD", {
     name: "Petal Blizzard",
     power: 90,
-    type: "grass",
-    damageType: "physical",
+    type: PokemonTypes.GRASS,
     effect: "null",
   }),
-  PHANTOM_FORCE: move("PHANTOM_FORCE", {
+  PHANTOM_FORCE: createPhysicalMove("PHANTOM_FORCE", {
     name: "Phantom Force",
     power: 90,
-    type: "ghost",
-    damageType: "physical",
+    type: PokemonTypes.GHOST,
     effect:
       "User vanishes, dodging all attacks, and hits next turn.  Hits through Protect and Detect.",
   }),
-  PIN_MISSILE: move("PIN_MISSILE", {
+  PIN_MISSILE: createPhysicalMove("PIN_MISSILE", {
     name: "Pin Missile",
     power: 25,
-    type: "bug",
-    damageType: "physical",
+    type: PokemonTypes.BUG,
     effect: "Hits 2-5 times in one turn.",
   }),
-  PLAY_ROUGH: move("PLAY_ROUGH", {
+  PLAY_ROUGH: createPhysicalMove("PLAY_ROUGH", {
     name: "Play Rough",
     power: 90,
-    type: "fairy",
-    damageType: "physical",
+    type: PokemonTypes.FAIRY,
     effect: "Has a 10% chance to lower the target's Attack by one stage.",
   }),
-  PLUCK: move("PLUCK", {
+  PLUCK: createPhysicalMove("PLUCK", {
     name: "Pluck",
     power: 60,
-    type: "flying",
-    damageType: "physical",
+    type: PokemonTypes.FLYING,
     effect: "If target has a berry, inflicts double damage and uses the berry.",
   }),
-  POISON_JAB: move("POISON_JAB", {
+  POISON_JAB: createPhysicalMove("POISON_JAB", {
     name: "Poison Jab",
     power: 80,
-    type: "poison",
-    damageType: "physical",
+    type: PokemonTypes.POISON,
     effect: "Has a 30% chance to poison the target.",
   }),
-  POUND: move("POUND", {
+  POUND: createPhysicalMove("POUND", {
     name: "Pound",
     power: 40,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "null",
   }),
-  POWER_GEM: move("POWER_GEM", {
+  POWER_GEM: createSpecialMove("POWER_GEM", {
     name: "Power Gem",
     power: 80,
-    type: "rock",
-    damageType: "special",
+    type: PokemonTypes.ROCK,
     effect: "null",
   }),
-  POWER_WHIP: move("POWER_WHIP", {
+  POWER_WHIP: createPhysicalMove("POWER_WHIP", {
     name: "Power Whip",
     power: 120,
-    type: "grass",
-    damageType: "physical",
+    type: PokemonTypes.GRASS,
     effect: "null",
   }),
-  PROTECT: move("PROTECT", {
+  PROTECT: createStatusMove("PROTECT", {
     name: "Protect",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect: "Prevents any moves from hitting the user this turn.",
   }),
-  PSYCHIC_FANGS: move("PSYCHIC_FANGS", {
+  PSYCHIC_FANGS: createPhysicalMove("PSYCHIC_FANGS", {
     name: "Psychic Fangs",
     power: 85,
-    type: "psychic",
-    damageType: "physical",
+    type: PokemonTypes.PSYCHIC,
     effect: "Destroys Reflect and Light Screen.",
   }),
-  PSYCHIC: move("PSYCHIC", {
-    name: "Psychic",
+  PSYCHIC: createSpecialMove(PokemonTypes.PSYCHIC, {
+    name: PokemonTypes.PSYCHIC,
     power: 90,
-    type: "psychic",
-    damageType: "special",
+    type: PokemonTypes.PSYCHIC,
     effect: "Has a 10% chance to lower the target's Special Defense by one stage.",
   }),
-  PSYCHO_CUT: move("PSYCHO_CUT", {
+  PSYCHO_CUT: createPhysicalMove("PSYCHO_CUT", {
     name: "Psycho Cut",
     power: 70,
-    type: "psychic",
-    damageType: "physical",
+    type: PokemonTypes.PSYCHIC,
     effect: "Has an increased chance for a critical hit.",
   }),
-  QUICK_ATTACK: move("QUICK_ATTACK", {
+  QUICK_ATTACK: createPhysicalMove("QUICK_ATTACK", {
     name: "Quick Attack",
     power: 40,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "null",
   }),
-  RAGE_FIST: move("RAGE_FIST", {
+  RAGE_FIST: createPhysicalMove("RAGE_FIST", {
     name: "Rage Fist",
     power: 50,
-    type: "ghost",
-    damageType: "physical",
+    type: PokemonTypes.GHOST,
     effect: "null",
   }),
-  RAPID_SPIN: move("RAPID_SPIN", {
+  RAPID_SPIN: createPhysicalMove("RAPID_SPIN", {
     name: "Rapid Spin",
     power: 50,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "Frees the user from binding moves, removes Leech Seed, and blows away Spikes.",
   }),
-  RAZOR_LEAF: move("RAZOR_LEAF", {
+  RAZOR_LEAF: createPhysicalMove("RAZOR_LEAF", {
     name: "Razor Leaf",
     power: 55,
-    type: "grass",
-    damageType: "physical",
+    type: PokemonTypes.GRASS,
     effect: "Has an increased chance for a critical hit.",
   }),
-  REFLECT: move("REFLECT", {
+  REFLECT: createStatusMove("REFLECT", {
     name: "Reflect",
     power: null,
-    type: "psychic",
-    damageType: "status",
+    type: PokemonTypes.PSYCHIC,
     effect: "Reduces damage from physical attacks by half.",
   }),
-  REVELATION_DANCE: move("REVELATION_DANCE", {
+  REVELATION_DANCE: createSpecialMove("REVELATION_DANCE", {
     name: "Revelation Dance",
     power: 90,
-    type: "normal",
-    damageType: "special",
+    type: PokemonTypes.NORMAL,
     effect: "Has the same type as the user.",
   }),
-  ROCK_BLAST: move("ROCK_BLAST", {
+  ROCK_BLAST: createPhysicalMove("ROCK_BLAST", {
     name: "Rock Blast",
     power: 25,
-    type: "rock",
-    damageType: "physical",
+    type: PokemonTypes.ROCK,
     effect: "Hits 2-5 times in one turn.",
   }),
-  ROCK_SLIDE: move("ROCK_SLIDE", {
+  ROCK_SLIDE: createPhysicalMove("ROCK_SLIDE", {
     name: "Rock Slide",
     power: 75,
-    type: "rock",
-    damageType: "physical",
+    type: PokemonTypes.ROCK,
     effect: "Has a 30% chance to make the target flinch.",
   }),
-  ROCK_SMASH: move("ROCK_SMASH", {
+  ROCK_SMASH: createPhysicalMove("ROCK_SMASH", {
     name: "Rock Smash",
     power: 40,
-    type: "fighting",
-    damageType: "physical",
+    type: PokemonTypes.FIGHTING,
     effect: "Has a 50% chance to lower the target's Defense by one stage.",
   }),
-  ROCK_THROW: move("ROCK_THROW", {
+  ROCK_THROW: createPhysicalMove("ROCK_THROW", {
     name: "Rock Throw",
     power: 50,
-    type: "rock",
-    damageType: "physical",
+    type: PokemonTypes.ROCK,
     effect: "null",
   }),
-  ROCK_TOMB: move("ROCK_TOMB", {
+  ROCK_TOMB: createPhysicalMove("ROCK_TOMB", {
     name: "Rock Tomb",
     power: 60,
-    type: "rock",
-    damageType: "physical",
+    type: PokemonTypes.ROCK,
     effect: "Has a 100% chance to lower the target's Speed by one stage.",
   }),
-  ROUND: move("ROUND", {
+  ROUND: createSpecialMove("ROUND", {
     name: "Round",
     power: 60,
-    type: "normal",
-    damageType: "special",
+    type: PokemonTypes.NORMAL,
     effect:
       "If multiple Pokémon on the same team use it in the same turn, the power doubles to 120 and the slower Pokémon move immediately after the fastest Pokémon uses it, regardless of their Speed.",
   }),
-  SAND_ATTACK: move("SAND_ATTACK", {
+  SAND_ATTACK: createStatusMove("SAND_ATTACK", {
     name: "Sand Attack",
     power: null,
-    type: "ground",
-    damageType: "status",
+    type: PokemonTypes.GROUND,
     effect: "Lowers the target's accuracy by one stage.",
   }),
-  SANDSTORM: move("SANDSTORM", {
+  SANDSTORM: createStatusMove("SANDSTORM", {
     name: "Sandstorm",
     power: null,
-    type: "rock",
-    damageType: "status",
+    type: PokemonTypes.ROCK,
     effect: "Changes the weather to a sandstorm for five turns.",
   }),
-  SCRATCH: move("SCRATCH", {
+  SCRATCH: createPhysicalMove("SCRATCH", {
     name: "Scratch",
     power: 40,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "null",
   }),
-  SCREECH: move("SCREECH", {
+  SCREECH: createStatusMove("SCREECH", {
     name: "Screech",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect: "Lowers the target's Defense by two stages.",
   }),
-  SEED_BOMB: move("SEED_BOMB", {
+  SEED_BOMB: createPhysicalMove("SEED_BOMB", {
     name: "Seed Bomb",
     power: 80,
-    type: "grass",
-    damageType: "physical",
+    type: PokemonTypes.GRASS,
     effect: "null",
   }),
-  SHADOW_BALL: move("SHADOW_BALL", {
+  SHADOW_BALL: createSpecialMove("SHADOW_BALL", {
     name: "Shadow Ball",
     power: 80,
-    type: "ghost",
-    damageType: "special",
+    type: PokemonTypes.GHOST,
     effect: "Has a 20% chance to lower the target's Special Defense by one stage.",
   }),
-  SHADOW_CLAW: move("SHADOW_CLAW", {
+  SHADOW_CLAW: createPhysicalMove("SHADOW_CLAW", {
     name: "Shadow Claw",
     power: 70,
-    type: "ghost",
-    damageType: "physical",
+    type: PokemonTypes.GHOST,
     effect: "Has an increased chance for a critical hit.",
   }),
-  SHADOW_SNEAK: move("SHADOW_SNEAK", {
+  SHADOW_SNEAK: createPhysicalMove("SHADOW_SNEAK", {
     name: "Shadow Sneak",
     power: 40,
-    type: "ghost",
-    damageType: "physical",
+    type: PokemonTypes.GHOST,
     effect: "null",
   }),
-  SHELL_SMASH: move("SHELL_SMASH", {
+  SHELL_SMASH: createStatusMove("SHELL_SMASH", {
     name: "Shell Smash",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect:
       "Raises user's Attack, Special Attack, and Speed by two stages.  Lower user's Defense and Special Defense by one stage.",
   }),
-  SHIFT_GEAR: move("SHIFT_GEAR", {
+  SHIFT_GEAR: createStatusMove("SHIFT_GEAR", {
     name: "Shift Gear",
     power: null,
-    type: "steel",
-    damageType: "status",
+    type: PokemonTypes.STEEL,
     effect: "Raises the user's Attack by one stage and its Speed by two stages.",
   }),
-  SLAM: move("SLAM", {
+  SLAM: createPhysicalMove("SLAM", {
     name: "Slam",
     power: 80,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "null",
   }),
-  SLASH: move("SLASH", {
+  SLASH: createPhysicalMove("SLASH", {
     name: "Slash",
     power: 70,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "Has an increased chance for a critical hit.",
   }),
-  SLEEP_POWDER: move("SLEEP_POWDER", {
+  SLEEP_POWDER: createStatusMove("SLEEP_POWDER", {
     name: "Sleep Powder",
     power: null,
-    type: "grass",
-    damageType: "status",
+    type: PokemonTypes.GRASS,
     effect: "Puts the target to sleep.",
   }),
-  SLUDGE_BOMB: move("SLUDGE_BOMB", {
+  SLUDGE_BOMB: createSpecialMove("SLUDGE_BOMB", {
     name: "Sludge Bomb",
     power: 90,
-    type: "poison",
-    damageType: "special",
+    type: PokemonTypes.POISON,
     effect: "Has a 30% chance to poison the target.",
   }),
-  SLUDGE_WAVE: move("SLUDGE_WAVE", {
+  SLUDGE_WAVE: createSpecialMove("SLUDGE_WAVE", {
     name: "Sludge Wave",
     power: 95,
-    type: "poison",
-    damageType: "special",
+    type: PokemonTypes.POISON,
     effect: "Has a 10% chance to poison the target.",
   }),
-  SLUDGE: move("SLUDGE", {
+  SLUDGE: createSpecialMove("SLUDGE", {
     name: "Sludge",
     power: 65,
-    type: "poison",
-    damageType: "special",
+    type: PokemonTypes.POISON,
     effect: "Has a 30% chance to poison the target.",
   }),
-  SMOG: move("SMOG", {
+  SMOG: createSpecialMove("SMOG", {
     name: "Smog",
     power: 30,
-    type: "poison",
-    damageType: "special",
+    type: PokemonTypes.POISON,
     effect: "Has a 40% chance to poison the target.",
   }),
-  SNARL: move("SNARL", {
+  SNARL: createSpecialMove("SNARL", {
     name: "Snarl",
     power: 55,
-    type: "dark",
-    damageType: "special",
+    type: PokemonTypes.DARK,
     effect: "Has a 100% chance to lower the target's Special Attack by one stage.",
   }),
-  SNOWSCAPE: move("SNOWSCAPE", {
+  SNOWSCAPE: createStatusMove("SNOWSCAPE", {
     name: "Snowscape",
     power: null,
-    type: "ice",
-    damageType: "status",
+    type: PokemonTypes.ICE,
     effect:
       "The user summons a snowstorm lasting five turns. This boosts the Defense stats of Ice types.",
   }),
-  SOLAR_BEAM: move("SOLAR_BEAM", {
+  SOLAR_BEAM: createSpecialMove("SOLAR_BEAM", {
     name: "Solar Beam",
     power: 120,
-    type: "grass",
-    damageType: "special",
+    type: PokemonTypes.GRASS,
     effect: "Requires a turn to charge before attacking.",
   }),
-  SPARK: move("SPARK", {
+  SPARK: createPhysicalMove("SPARK", {
     name: "Spark",
     power: 65,
-    type: "electric",
-    damageType: "physical",
+    type: PokemonTypes.ELECTRIC,
     effect: "Has a 30% chance to paralyze the target.",
   }),
-  SPIN_OUT: move("SPIN_OUT", {
+  SPIN_OUT: createPhysicalMove("SPIN_OUT", {
     name: "Spin Out",
     power: 100,
-    type: "steel",
-    damageType: "physical",
+    type: PokemonTypes.STEEL,
     effect: "null",
   }),
-  SPIRIT_BREAK: move("SPIRIT_BREAK", {
+  SPIRIT_BREAK: createPhysicalMove("SPIRIT_BREAK", {
     name: "Spirit Break",
     power: 75,
-    type: "fairy",
-    damageType: "physical",
+    type: PokemonTypes.FAIRY,
     effect:
       "The user attacks the target with so much force that it could break the target's spirit. This also lowers the target's Sp. Atk stat.",
   }),
-  SPORE: move("SPORE", {
+  SPORE: createStatusMove("SPORE", {
     name: "Spore",
     power: null,
-    type: "grass",
-    damageType: "status",
+    type: PokemonTypes.GRASS,
     effect: "Puts the target to sleep.",
   }),
-  STEALTH_ROCK: move("STEALTH_ROCK", {
+  STEALTH_ROCK: createStatusMove("STEALTH_ROCK", {
     name: "Stealth Rock",
     power: null,
-    type: "rock",
-    damageType: "status",
+    type: PokemonTypes.ROCK,
     effect: "Causes damage when opposing Pokémon switch in.",
   }),
-  STEEL_ROLLER: move("STEEL_ROLLER", {
+  STEEL_ROLLER: createPhysicalMove("STEEL_ROLLER", {
     name: "Steel Roller",
     power: 130,
-    type: "steel",
-    damageType: "physical",
+    type: PokemonTypes.STEEL,
     effect: "null",
   }),
-  STOMPING_TANTRUM: move("STOMPING_TANTRUM", {
+  STOMPING_TANTRUM: createPhysicalMove("STOMPING_TANTRUM", {
     name: "Stomping Tantrum",
     power: 75,
-    type: "ground",
-    damageType: "physical",
+    type: PokemonTypes.GROUND,
     effect: "Has double power if the user's last move failed.",
   }),
-  STONE_EDGE: move("STONE_EDGE", {
+  STONE_EDGE: createPhysicalMove("STONE_EDGE", {
     name: "Stone Edge",
     power: 100,
-    type: "rock",
-    damageType: "physical",
+    type: PokemonTypes.ROCK,
     effect: "Has an increased chance for a critical hit.",
   }),
-  STRUGGLE_BUG: move("STRUGGLE_BUG", {
+  STRUGGLE_BUG: createSpecialMove("STRUGGLE_BUG", {
     name: "Struggle Bug",
     power: 50,
-    type: "bug",
-    damageType: "special",
+    type: PokemonTypes.BUG,
     effect: "Has a 100% chance to lower the target's Special Attack by one stage.",
   }),
-  SUCKER_PUNCH: move("SUCKER_PUNCH", {
+  SUCKER_PUNCH: createPhysicalMove("SUCKER_PUNCH", {
     name: "Sucker Punch",
     power: 70,
-    type: "dark",
-    damageType: "physical",
+    type: PokemonTypes.DARK,
     effect: "Only works if the target is about to use a damaging move.",
   }),
-  SUNNY_DAY: move("SUNNY_DAY", {
+  SUNNY_DAY: createStatusMove("SUNNY_DAY", {
     name: "Sunny Day",
     power: null,
-    type: "fire",
-    damageType: "status",
+    type: PokemonTypes.FIRE,
     effect: "Changes the weather to sunny for five turns.",
   }),
-  SUPER_FANG: move("SUPER_FANG", {
+  SUPER_FANG: createPhysicalMove("SUPER_FANG", {
     name: "Super Fang",
     power: null,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "Inflicts damage equal to half the target's HP.",
   }),
-  SWIFT: move("SWIFT", {
+  SWIFT: createSpecialMove("SWIFT", {
     name: "Swift",
     power: 60,
-    type: "normal",
-    damageType: "special",
+    type: PokemonTypes.NORMAL,
     effect: "Never misses.",
   }),
-  TACKLE: move("TACKLE", {
+  TACKLE: createPhysicalMove("TACKLE", {
     name: "Tackle",
     power: 40,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "null",
   }),
-  TAIL_WHIP: move("TAIL_WHIP", {
+  TAIL_WHIP: createStatusMove("TAIL_WHIP", {
     name: "Tail Whip",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect: "Lowers the target's Defense by one stage.",
   }),
-  TAILWIND: move("TAILWIND", {
+  TAILWIND: createStatusMove("TAILWIND", {
     name: "Tailwind",
     power: null,
-    type: "flying",
-    damageType: "status",
+    type: PokemonTypes.FLYING,
     effect: "For three turns, friendly Pokémon have doubled Speed.",
   }),
-  TAUNT: move("TAUNT", {
+  TAUNT: createStatusMove("TAUNT", {
     name: "Taunt",
     power: null,
-    type: "dark",
-    damageType: "status",
+    type: PokemonTypes.DARK,
     effect: "For the next few turns, the target can only use damaging moves.",
   }),
-  TEETER_DANCE: move("TEETER_DANCE", {
+  TEETER_DANCE: createStatusMove("TEETER_DANCE", {
     name: "Teeter Dance",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect: "Confuses the target.",
   }),
-  TERA_BLAST: move("TERA_BLAST", {
+  TERA_BLAST: createSpecialMove("TERA_BLAST", {
     name: "Tera Blast",
     power: 80,
-    type: "normal",
-    damageType: "special",
+    type: PokemonTypes.NORMAL,
     effect: "null",
   }),
-  THIEF: move("THIEF", {
+  THIEF: createPhysicalMove("THIEF", {
     name: "Thief",
     power: 60,
-    type: "dark",
-    damageType: "physical",
+    type: PokemonTypes.DARK,
     effect: "Takes the target's item.",
   }),
-  THROAT_CHOP: move("THROAT_CHOP", {
+  THROAT_CHOP: createPhysicalMove("THROAT_CHOP", {
     name: "Throat Chop",
     power: 80,
-    type: "dark",
-    damageType: "physical",
+    type: PokemonTypes.DARK,
     effect: "Prevents the target from using sound-based moves for two turns.",
   }),
-  THUNDER_FANG: move("THUNDER_FANG", {
+  THUNDER_FANG: createPhysicalMove("THUNDER_FANG", {
     name: "Thunder Fang",
     power: 65,
-    type: "electric",
-    damageType: "physical",
+    type: PokemonTypes.ELECTRIC,
     effect:
       "Has a 10% chance to paralyze the target and a $effect_chance% chance to make the target flinch.",
   }),
-  THUNDER_PUNCH: move("THUNDER_PUNCH", {
+  THUNDER_PUNCH: createPhysicalMove("THUNDER_PUNCH", {
     name: "Thunder Punch",
     power: 75,
-    type: "electric",
-    damageType: "physical",
+    type: PokemonTypes.ELECTRIC,
     effect: "Has a 10% chance to paralyze the target.",
   }),
-  THUNDER_SHOCK: move("THUNDER_SHOCK", {
+  THUNDER_SHOCK: createSpecialMove("THUNDER_SHOCK", {
     name: "Thunder Shock",
     power: 40,
-    type: "electric",
-    damageType: "special",
+    type: PokemonTypes.ELECTRIC,
     effect: "Has a 10% chance to paralyze the target.",
   }),
-  THUNDER_WAVE: move("THUNDER_WAVE", {
+  THUNDER_WAVE: createStatusMove("THUNDER_WAVE", {
     name: "Thunder Wave",
     power: null,
-    type: "electric",
-    damageType: "status",
+    type: PokemonTypes.ELECTRIC,
     effect: "Paralyzes the target.",
   }),
-  THUNDER: move("THUNDER", {
+  THUNDER: createSpecialMove("THUNDER", {
     name: "Thunder",
     power: 110,
-    type: "electric",
-    damageType: "special",
+    type: PokemonTypes.ELECTRIC,
     effect: "Has a 30% chance to paralyze the target.",
   }),
-  THUNDERBOLT: move("THUNDERBOLT", {
+  THUNDERBOLT: createSpecialMove("THUNDERBOLT", {
     name: "Thunderbolt",
     power: 90,
-    type: "electric",
-    damageType: "special",
+    type: PokemonTypes.ELECTRIC,
     effect: "Has a 10% chance to paralyze the target.",
   }),
-  TORCH_SONG: move("TORCH_SONG", {
+  TORCH_SONG: createSpecialMove("TORCH_SONG", {
     name: "Torch Song",
     power: 80,
-    type: "fire",
-    damageType: "special",
+    type: PokemonTypes.FIRE,
     effect: "Inflicts regular damage.  Raises the user's Special Attack by one stage.",
   }),
-  TORMENT: move("TORMENT", {
+  TORMENT: createStatusMove("TORMENT", {
     name: "Torment",
     power: null,
-    type: "dark",
-    damageType: "status",
+    type: PokemonTypes.DARK,
     effect: "Prevents the target from using the same move twice in a row.",
   }),
-  TOXIC: move("TOXIC", {
+  TOXIC: createStatusMove("TOXIC", {
     name: "Toxic",
     power: null,
-    type: "poison",
-    damageType: "status",
+    type: PokemonTypes.POISON,
     effect: "Badly poisons the target, inflicting more damage every turn.",
   }),
-  TRAILBLAZE: move("TRAILBLAZE", {
+  TRAILBLAZE: createPhysicalMove("TRAILBLAZE", {
     name: "Trailblaze",
     power: 50,
-    type: "grass",
-    damageType: "physical",
+    type: PokemonTypes.GRASS,
     effect: "null",
   }),
-  TRI_ATTACK: move("TRI_ATTACK", {
+  TRI_ATTACK: createSpecialMove("TRI_ATTACK", {
     name: "Tri Attack",
     power: 80,
-    type: "normal",
-    damageType: "special",
+    type: PokemonTypes.NORMAL,
     effect: "Has a 20% chance to burn, freeze, or paralyze the target.",
   }),
-  VENOSHOCK: move("VENOSHOCK", {
+  VENOSHOCK: createSpecialMove("VENOSHOCK", {
     name: "Venoshock",
     power: 65,
-    type: "poison",
-    damageType: "special",
+    type: PokemonTypes.POISON,
     effect: "Inflicts double damage if the target is Poisoned.",
   }),
-  VISE_GRIP: move("VISE_GRIP", {
+  VISE_GRIP: createPhysicalMove("VISE_GRIP", {
     name: "Vise Grip",
     power: 55,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "null",
   }),
-  WATER_GUN: move("WATER_GUN", {
+  WATER_GUN: createSpecialMove("WATER_GUN", {
     name: "Water Gun",
     power: 40,
-    type: "water",
-    damageType: "special",
+    type: PokemonTypes.WATER,
     effect: "null",
   }),
-  WATER_PULSE: move("WATER_PULSE", {
+  WATER_PULSE: createSpecialMove("WATER_PULSE", {
     name: "Water Pulse",
     power: 60,
-    type: "water",
-    damageType: "special",
+    type: PokemonTypes.WATER,
     effect: "Has a 20% chance to confuse the target.",
   }),
-  WICKED_TORQUE: move("WICKED_TORQUE", {
+  WICKED_TORQUE: createPhysicalMove("WICKED_TORQUE", {
     name: "Wicked Torque",
     power: 80,
-    type: "dark",
-    damageType: "physical",
+    type: PokemonTypes.DARK,
     effect: "null",
   }),
-  WILL_O_WISP: move("WILL_O_WISP", {
+  WILL_O_WISP: createStatusMove("WILL_O_WISP", {
     name: "Will-O-Wisp",
     power: null,
-    type: "fire",
-    damageType: "status",
+    type: PokemonTypes.FIRE,
     effect: "Burns the target.",
   }),
-  WING_ATTACK: move("WING_ATTACK", {
+  WING_ATTACK: createPhysicalMove("WING_ATTACK", {
     name: "Wing Attack",
     power: 60,
-    type: "flying",
-    damageType: "physical",
+    type: PokemonTypes.FLYING,
     effect: "null",
   }),
-  WOOD_HAMMER: move("WOOD_HAMMER", {
+  WOOD_HAMMER: createPhysicalMove("WOOD_HAMMER", {
     name: "Wood Hammer",
     power: 120,
-    type: "grass",
-    damageType: "physical",
+    type: PokemonTypes.GRASS,
     effect: "User receives 1/3 the damage inflicted in recoil.",
   }),
-  WORK_UP: move("WORK_UP", {
+  WORK_UP: createStatusMove("WORK_UP", {
     name: "Work Up",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect: "Raises the user's Attack and Special Attack by one stage.",
   }),
-  WRAP: move("WRAP", {
+  WRAP: createPhysicalMove("WRAP", {
     name: "Wrap",
     power: 15,
-    type: "normal",
-    damageType: "physical",
+    type: PokemonTypes.NORMAL,
     effect: "Prevents the target from fleeing and inflicts damage for 2-5 turns.",
   }),
-  X_SCISSOR: move("X_SCISSOR", {
+  X_SCISSOR: createPhysicalMove("X_SCISSOR", {
     name: "X-Scissor",
     power: 80,
-    type: "bug",
-    damageType: "physical",
+    type: PokemonTypes.BUG,
     effect: "null",
   }),
-  YAWN: move("YAWN", {
+  YAWN: createStatusMove("YAWN", {
     name: "Yawn",
     power: null,
-    type: "normal",
-    damageType: "status",
+    type: PokemonTypes.NORMAL,
     effect: "Target sleeps at the end of the next turn.",
   }),
-  ZEN_HEADBUTT: move("ZEN_HEADBUTT", {
+  ZEN_HEADBUTT: createPhysicalMove("ZEN_HEADBUTT", {
     name: "Zen Headbutt",
     power: 80,
-    type: "psychic",
-    damageType: "physical",
+    type: PokemonTypes.PSYCHIC,
     effect: "Has a 20% chance to make the target flinch.",
   }),
 })

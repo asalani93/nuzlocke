@@ -1,11 +1,12 @@
 import { Text, type MantineStyleProps } from "@mantine/core"
+
 import { damageTypeColors } from "../app/colors"
-import type { DamageType } from "../types/move"
+import { DamageTypes, type DamageType } from "../types/move"
 
 const damageLabels: Record<DamageType, string> = {
-  physical: "Physical",
-  special: "Special",
-  status: "Status",
+  [DamageTypes.PHYSICAL]: "Physical",
+  [DamageTypes.SPECIAL]: "Special",
+  [DamageTypes.STATUS]: "Status",
 }
 
 export interface DamageTypeBadgePropsBase {

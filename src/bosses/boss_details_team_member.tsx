@@ -1,17 +1,18 @@
 import { Group, Stack, Text } from "@mantine/core"
-import type { BossPokemon } from "../types/boss"
-import { usePokemon } from "../app/hooks"
-import { TypeDisplay } from "../common/type_display"
-import { LevelDisplay } from "../common/level_display"
+
 import { AbilityDisplay } from "../common/ability_display"
+import { LevelDisplay } from "../common/level_display"
+import { TypeDisplay } from "../common/type_display"
 import { MoveTable } from "../moves/move_table"
+import { usePokemon } from "../state/game_data_hooks"
+import type { BossPokemon } from "../types/boss"
 
 export interface BossDetailsTeamMemberProps {
   bossPokemon: BossPokemon
 }
 
 export function BossDetailsTeamMember({ bossPokemon }: BossDetailsTeamMemberProps) {
-  const pokemon = usePokemon(bossPokemon.pokemon)
+  const pokemon = usePokemon(bossPokemon.pokemonId)!
 
   const pokemonDisplay = (
     <Stack gap={0}>
@@ -30,8 +31,8 @@ export function BossDetailsTeamMember({ bossPokemon }: BossDetailsTeamMemberProp
         </Group>
         <TypeDisplay type1={pokemon.type1} type2={pokemon.type2 ?? undefined} />
       </Group>
-      <AbilityDisplay abilityId={bossPokemon.ability} />
-      <MoveTable moveIds={bossPokemon.moves} />
+      <AbilityDisplay abilityId={bossPokemon.abilityId} />
+      <MoveTable moveIds={bossPokemon.moveIds} />
     </Stack>
   )
 }

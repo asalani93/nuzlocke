@@ -1,5 +1,7 @@
 import { Stack } from "@mantine/core"
+
 import type { RouteId } from "../types/route"
+
 import { RouteDetailsActions } from "./route_details_actions"
 import { RouteDetailsEncounter } from "./route_details_encounter"
 

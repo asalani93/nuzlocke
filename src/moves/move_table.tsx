@@ -1,5 +1,7 @@
 import { Table, type MantineStyleProps } from "@mantine/core"
+
 import type { MoveId } from "../types/move"
+
 import { MoveTableRow } from "./move_table_row"
 
 export interface MoveTablePropsBase {

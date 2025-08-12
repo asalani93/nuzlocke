@@ -1,5 +1,6 @@
 import { Stack, Text } from "@mantine/core"
-import { useAbility } from "../app/hooks"
+
+import { useAbility } from "../state/game_data_hooks"
 import type { AbilityId } from "../types/ability"
 
 export interface AbilityDisplayProps {
@@ -7,7 +8,7 @@ export interface AbilityDisplayProps {
 }
 
 export function AbilityDisplay({ abilityId }: AbilityDisplayProps) {
-  const ability = useAbility(abilityId)
+  const ability = useAbility(abilityId)!
 
   return (
     <Stack gap={0} px="xs">

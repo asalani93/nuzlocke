@@ -1,45 +1,16 @@
-import { atom, useAtomValue, useSetAtom } from "jotai"
-import { Versions } from "../data/versions"
-import type { VersionId } from "../types/version"
-import { useCallback } from "react"
-import { useAllStepsForVersionId, useVersion } from "../app/hooks"
-import type { Step } from "../types/step"
-import { atomWithStorage } from "jotai/utils"
+import type { WritableAtom } from "jotai"
+import z from "zod"
 
-const currentVersionIdAtomInner = atomWithStorage<VersionId>(
-  "nuzlocke_current_version",
-  Versions.SCARLET.id,
-  undefined,
-  { getOnInit: true }
-)
+import { versionId, type VersionId } from "../types/version"
 
-export const currentVersionIdAtom = atom(
-  (get) => get(currentVersionIdAtomInner),
-  (_get, set, newCurrentVersionId: VersionId) => {
-    set(currentVersionIdAtomInner, newCurrentVersionId)
-  }
-)
+import { versionedState } from "./state_utils"
 
-export function useCurrentVersionId() {
-  return useAtomValue(currentVersionIdAtom)
-}
+export const currentVersionId = z.object({
+  versionId: versionId,
+})
+export type CurrentVersionId = z.infer<typeof currentVersionId>
 
-export function useCurrentVersion() {
-  const currentVersionId = useCurrentVersionId()
-  return useVersion(currentVersionId)
-}
+export const serializedCurrentVersionId = versionedState(1, currentVersionId)
+export type SerializedCurrentVersionId = z.infer<typeof serializedCurrentVersionId>
 
-export function useSetCurrentVersion() {
-  const setVersionId = useSetAtom(currentVersionIdAtom)
-  return useCallback(
-    (versionId: VersionId) => {
-      setVersionId(versionId)
-    },
-    [setVersionId]
-  )
-}
-
-export function useAllStepsForCurrentVersion(): Step[] {
-  const versionId = useCurrentVersionId()
-  return useAllStepsForVersionId(versionId)
-}
+export type CurrentVersionIdAtom = WritableAtom<CurrentVersionId, [VersionId], void>

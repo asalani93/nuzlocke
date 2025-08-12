@@ -1,12 +1,15 @@
-import { pokemon, pokemonTable } from "../types/pokemon"
-import { Evolutions } from "./evolutions"
+import { PokemonTypes } from "@/src/types/pokemon_type"
 
-export const Pokemons = pokemonTable({
-  ABOMASNOW: pokemon("ABOMASNOW", {
+import { createPokemon, createPokemonTable } from "../utils"
+
+import { Evolution } from "./evolutions"
+
+export const Pokemon = createPokemonTable({
+  ABOMASNOW: createPokemon("ABOMASNOW", {
     name: "Abomasnow",
-    line: Evolutions.SNOVER,
-    type1: "grass",
-    type2: "ice",
+    evolutionId: Evolution.SNOVER.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 90,
       attack: 92,
@@ -16,10 +19,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  ABRA: pokemon("ABRA", {
+  ABRA: createPokemon("ABRA", {
     name: "Abra",
-    line: Evolutions.ABRA,
-    type1: "psychic",
+    evolutionId: Evolution.ABRA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 25,
       attack: 20,
@@ -29,10 +32,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  ABSOL: pokemon("ABSOL", {
+  ABSOL: createPokemon("ABSOL", {
     name: "Absol",
-    line: Evolutions.ABSOL,
-    type1: "dark",
+    evolutionId: Evolution.ABSOL.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 65,
       attack: 130,
@@ -42,10 +45,10 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  ACCELGOR: pokemon("ACCELGOR", {
+  ACCELGOR: createPokemon("ACCELGOR", {
     name: "Accelgor",
-    line: Evolutions.SHELMET,
-    type1: "bug",
+    evolutionId: Evolution.SHELMET.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 80,
       attack: 70,
@@ -55,11 +58,11 @@ export const Pokemons = pokemonTable({
       speed: 145,
     },
   }),
-  AEGISLASH: pokemon("AEGISLASH", {
+  AEGISLASH: createPokemon("AEGISLASH", {
     name: "Aegislash",
-    line: Evolutions.HONEDGE,
-    type1: "steel",
-    type2: "ghost",
+    evolutionId: Evolution.HONEDGE.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 60,
       attack: 50,
@@ -69,11 +72,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  AERODACTYL: pokemon("AERODACTYL", {
+  AERODACTYL: createPokemon("AERODACTYL", {
     name: "Aerodactyl",
-    line: Evolutions.AERODACTYL,
-    type1: "rock",
-    type2: "flying",
+    evolutionId: Evolution.AERODACTYL.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 80,
       attack: 105,
@@ -83,11 +86,11 @@ export const Pokemons = pokemonTable({
       speed: 130,
     },
   }),
-  AGGRON: pokemon("AGGRON", {
+  AGGRON: createPokemon("AGGRON", {
     name: "Aggron",
-    line: Evolutions.ARON,
-    type1: "steel",
-    type2: "rock",
+    evolutionId: Evolution.ARON.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 70,
       attack: 110,
@@ -97,10 +100,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  AIPOM: pokemon("AIPOM", {
+  AIPOM: createPokemon("AIPOM", {
     name: "Aipom",
-    line: Evolutions.AIPOM,
-    type1: "normal",
+    evolutionId: Evolution.AIPOM.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 55,
       attack: 70,
@@ -110,10 +113,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  ALAKAZAM: pokemon("ALAKAZAM", {
+  ALAKAZAM: createPokemon("ALAKAZAM", {
     name: "Alakazam",
-    line: Evolutions.ABRA,
-    type1: "psychic",
+    evolutionId: Evolution.ABRA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 55,
       attack: 50,
@@ -123,10 +126,10 @@ export const Pokemons = pokemonTable({
       speed: 120,
     },
   }),
-  ALCREMIE: pokemon("ALCREMIE", {
+  ALCREMIE: createPokemon("ALCREMIE", {
     name: "Alcremie",
-    line: Evolutions.MILCERY,
-    type1: "fairy",
+    evolutionId: Evolution.MILCERY.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 65,
       attack: 60,
@@ -136,10 +139,10 @@ export const Pokemons = pokemonTable({
       speed: 64,
     },
   }),
-  ALOMOMOLA: pokemon("ALOMOMOLA", {
+  ALOMOMOLA: createPokemon("ALOMOMOLA", {
     name: "Alomomola",
-    line: Evolutions.ALOMOMOLA,
-    type1: "water",
+    evolutionId: Evolution.ALOMOMOLA.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 165,
       attack: 75,
@@ -149,11 +152,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  ALTARIA: pokemon("ALTARIA", {
+  ALTARIA: createPokemon("ALTARIA", {
     name: "Altaria",
-    line: Evolutions.SWABLU,
-    type1: "dragon",
-    type2: "flying",
+    evolutionId: Evolution.SWABLU.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 75,
       attack: 70,
@@ -163,11 +166,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  AMAURA: pokemon("AMAURA", {
+  AMAURA: createPokemon("AMAURA", {
     name: "Amaura",
-    line: Evolutions.AMAURA,
-    type1: "rock",
-    type2: "ice",
+    evolutionId: Evolution.AMAURA.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 77,
       attack: 59,
@@ -177,10 +180,10 @@ export const Pokemons = pokemonTable({
       speed: 46,
     },
   }),
-  AMBIPOM: pokemon("AMBIPOM", {
+  AMBIPOM: createPokemon("AMBIPOM", {
     name: "Ambipom",
-    line: Evolutions.AIPOM,
-    type1: "normal",
+    evolutionId: Evolution.AIPOM.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 75,
       attack: 100,
@@ -190,11 +193,11 @@ export const Pokemons = pokemonTable({
       speed: 115,
     },
   }),
-  AMOONGUSS: pokemon("AMOONGUSS", {
+  AMOONGUSS: createPokemon("AMOONGUSS", {
     name: "Amoonguss",
-    line: Evolutions.FOONGUS,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.FOONGUS.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 114,
       attack: 85,
@@ -204,10 +207,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  AMPHAROS: pokemon("AMPHAROS", {
+  AMPHAROS: createPokemon("AMPHAROS", {
     name: "Ampharos",
-    line: Evolutions.MAREEP,
-    type1: "electric",
+    evolutionId: Evolution.MAREEP.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 90,
       attack: 75,
@@ -217,11 +220,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  ANNIHILAPE: pokemon("ANNIHILAPE", {
+  ANNIHILAPE: createPokemon("ANNIHILAPE", {
     name: "Annihilape",
-    line: Evolutions.MANKEY,
-    type1: "fighting",
-    type2: "ghost",
+    evolutionId: Evolution.MANKEY.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 110,
       attack: 115,
@@ -231,11 +234,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  ANORITH: pokemon("ANORITH", {
+  ANORITH: createPokemon("ANORITH", {
     name: "Anorith",
-    line: Evolutions.ANORITH,
-    type1: "rock",
-    type2: "bug",
+    evolutionId: Evolution.ANORITH.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.BUG,
     baseStats: {
       hp: 45,
       attack: 95,
@@ -245,11 +248,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  APPLETUN: pokemon("APPLETUN", {
+  APPLETUN: createPokemon("APPLETUN", {
     name: "Appletun",
-    line: Evolutions.APPLIN,
-    type1: "grass",
-    type2: "dragon",
+    evolutionId: Evolution.APPLIN.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 110,
       attack: 85,
@@ -259,11 +262,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  APPLIN: pokemon("APPLIN", {
+  APPLIN: createPokemon("APPLIN", {
     name: "Applin",
-    line: Evolutions.APPLIN,
-    type1: "grass",
-    type2: "dragon",
+    evolutionId: Evolution.APPLIN.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 40,
       attack: 40,
@@ -273,11 +276,11 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  ARAQUANID: pokemon("ARAQUANID", {
+  ARAQUANID: createPokemon("ARAQUANID", {
     name: "Araquanid",
-    line: Evolutions.DEWPIDER,
-    type1: "water",
-    type2: "bug",
+    evolutionId: Evolution.DEWPIDER.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.BUG,
     baseStats: {
       hp: 68,
       attack: 70,
@@ -287,10 +290,10 @@ export const Pokemons = pokemonTable({
       speed: 42,
     },
   }),
-  ARBOK: pokemon("ARBOK", {
+  ARBOK: createPokemon("ARBOK", {
     name: "Arbok",
-    line: Evolutions.EKANS,
-    type1: "poison",
+    evolutionId: Evolution.EKANS.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 60,
       attack: 95,
@@ -300,11 +303,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  ARBOLIVA: pokemon("ARBOLIVA", {
+  ARBOLIVA: createPokemon("ARBOLIVA", {
     name: "Arboliva",
-    line: Evolutions.SMOLIV,
-    type1: "grass",
-    type2: "normal",
+    evolutionId: Evolution.SMOLIV.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 78,
       attack: 69,
@@ -314,11 +317,11 @@ export const Pokemons = pokemonTable({
       speed: 39,
     },
   }),
-  ARCANINE_HISUI: pokemon("ARCANINE_HISUI", {
+  ARCANINE_HISUI: createPokemon("ARCANINE_HISUI", {
     name: "Hisuian Arcanine",
-    line: Evolutions.GROWLITHE,
-    type1: "fire",
-    type2: "rock",
+    evolutionId: Evolution.GROWLITHE.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 95,
       attack: 115,
@@ -328,10 +331,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  ARCANINE: pokemon("ARCANINE", {
+  ARCANINE: createPokemon("ARCANINE", {
     name: "Arcanine",
-    line: Evolutions.GROWLITHE,
-    type1: "fire",
+    evolutionId: Evolution.GROWLITHE.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 90,
       attack: 110,
@@ -341,10 +344,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  ARCEUS: pokemon("ARCEUS", {
+  ARCEUS: createPokemon("ARCEUS", {
     name: "Arceus",
-    line: Evolutions.ARCEUS,
-    type1: "normal",
+    evolutionId: Evolution.ARCEUS.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 120,
       attack: 120,
@@ -354,11 +357,11 @@ export const Pokemons = pokemonTable({
       speed: 120,
     },
   }),
-  ARCHEN: pokemon("ARCHEN", {
+  ARCHEN: createPokemon("ARCHEN", {
     name: "Archen",
-    line: Evolutions.ARCHEN,
-    type1: "rock",
-    type2: "flying",
+    evolutionId: Evolution.ARCHEN.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 55,
       attack: 112,
@@ -368,11 +371,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  ARCHEOPS: pokemon("ARCHEOPS", {
+  ARCHEOPS: createPokemon("ARCHEOPS", {
     name: "Archeops",
-    line: Evolutions.ARCHEN,
-    type1: "rock",
-    type2: "flying",
+    evolutionId: Evolution.ARCHEN.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 75,
       attack: 140,
@@ -382,11 +385,11 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  ARCTIBAX: pokemon("ARCTIBAX", {
+  ARCTIBAX: createPokemon("ARCTIBAX", {
     name: "Arctibax",
-    line: Evolutions.FRIGIBAX,
-    type1: "dragon",
-    type2: "ice",
+    evolutionId: Evolution.FRIGIBAX.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 90,
       attack: 95,
@@ -396,11 +399,11 @@ export const Pokemons = pokemonTable({
       speed: 62,
     },
   }),
-  ARCTOVISH: pokemon("ARCTOVISH", {
+  ARCTOVISH: createPokemon("ARCTOVISH", {
     name: "Arctovish",
-    line: Evolutions.ARCTOVISH,
-    type1: "water",
-    type2: "ice",
+    evolutionId: Evolution.ARCTOVISH.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 90,
       attack: 90,
@@ -410,11 +413,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  ARCTOZOLT: pokemon("ARCTOZOLT", {
+  ARCTOZOLT: createPokemon("ARCTOZOLT", {
     name: "Arctozolt",
-    line: Evolutions.ARCTOZOLT,
-    type1: "electric",
-    type2: "ice",
+    evolutionId: Evolution.ARCTOZOLT.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 90,
       attack: 100,
@@ -424,11 +427,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  ARIADOS: pokemon("ARIADOS", {
+  ARIADOS: createPokemon("ARIADOS", {
     name: "Ariados",
-    line: Evolutions.SPINARAK,
-    type1: "bug",
-    type2: "poison",
+    evolutionId: Evolution.SPINARAK.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 70,
       attack: 90,
@@ -438,11 +441,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  ARMALDO: pokemon("ARMALDO", {
+  ARMALDO: createPokemon("ARMALDO", {
     name: "Armaldo",
-    line: Evolutions.ANORITH,
-    type1: "rock",
-    type2: "bug",
+    evolutionId: Evolution.ANORITH.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.BUG,
     baseStats: {
       hp: 75,
       attack: 125,
@@ -452,11 +455,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  ARMAROUGE: pokemon("ARMAROUGE", {
+  ARMAROUGE: createPokemon("ARMAROUGE", {
     name: "Armarouge",
-    line: Evolutions.CHARCADET,
-    type1: "fire",
-    type2: "psychic",
+    evolutionId: Evolution.CHARCADET.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 85,
       attack: 60,
@@ -466,10 +469,10 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  AROMATISSE: pokemon("AROMATISSE", {
+  AROMATISSE: createPokemon("AROMATISSE", {
     name: "Aromatisse",
-    line: Evolutions.SPRITZEE,
-    type1: "fairy",
+    evolutionId: Evolution.SPRITZEE.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 101,
       attack: 72,
@@ -479,11 +482,11 @@ export const Pokemons = pokemonTable({
       speed: 29,
     },
   }),
-  ARON: pokemon("ARON", {
+  ARON: createPokemon("ARON", {
     name: "Aron",
-    line: Evolutions.ARON,
-    type1: "steel",
-    type2: "rock",
+    evolutionId: Evolution.ARON.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 50,
       attack: 70,
@@ -493,10 +496,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  ARROKUDA: pokemon("ARROKUDA", {
+  ARROKUDA: createPokemon("ARROKUDA", {
     name: "Arrokuda",
-    line: Evolutions.ARROKUDA,
-    type1: "water",
+    evolutionId: Evolution.ARROKUDA.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 41,
       attack: 63,
@@ -506,11 +509,11 @@ export const Pokemons = pokemonTable({
       speed: 66,
     },
   }),
-  ARTICUNO_GALAR: pokemon("ARTICUNO_GALAR", {
+  ARTICUNO_GALAR: createPokemon("ARTICUNO_GALAR", {
     name: "Galarian Articuno",
-    line: Evolutions.ARTICUNO,
-    type1: "psychic",
-    type2: "flying",
+    evolutionId: Evolution.ARTICUNO.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 90,
       attack: 85,
@@ -520,11 +523,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  ARTICUNO: pokemon("ARTICUNO", {
+  ARTICUNO: createPokemon("ARTICUNO", {
     name: "Articuno",
-    line: Evolutions.ARTICUNO,
-    type1: "ice",
-    type2: "flying",
+    evolutionId: Evolution.ARTICUNO.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 90,
       attack: 85,
@@ -534,10 +537,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  AUDINO: pokemon("AUDINO", {
+  AUDINO: createPokemon("AUDINO", {
     name: "Audino",
-    line: Evolutions.AUDINO,
-    type1: "normal",
+    evolutionId: Evolution.AUDINO.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 103,
       attack: 60,
@@ -547,11 +550,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  AURORUS: pokemon("AURORUS", {
+  AURORUS: createPokemon("AURORUS", {
     name: "Aurorus",
-    line: Evolutions.AMAURA,
-    type1: "rock",
-    type2: "ice",
+    evolutionId: Evolution.AMAURA.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 123,
       attack: 77,
@@ -561,11 +564,11 @@ export const Pokemons = pokemonTable({
       speed: 58,
     },
   }),
-  AVALUGG_HISUI: pokemon("AVALUGG_HISUI", {
+  AVALUGG_HISUI: createPokemon("AVALUGG_HISUI", {
     name: "Hisuian Avalugg",
-    line: Evolutions.BERGMITE,
-    type1: "ice",
-    type2: "rock",
+    evolutionId: Evolution.BERGMITE.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 95,
       attack: 127,
@@ -575,10 +578,10 @@ export const Pokemons = pokemonTable({
       speed: 38,
     },
   }),
-  AVALUGG: pokemon("AVALUGG", {
+  AVALUGG: createPokemon("AVALUGG", {
     name: "Avalugg",
-    line: Evolutions.BERGMITE,
-    type1: "ice",
+    evolutionId: Evolution.BERGMITE.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 95,
       attack: 117,
@@ -588,10 +591,10 @@ export const Pokemons = pokemonTable({
       speed: 28,
     },
   }),
-  AXEW: pokemon("AXEW", {
+  AXEW: createPokemon("AXEW", {
     name: "Axew",
-    line: Evolutions.AXEW,
-    type1: "dragon",
+    evolutionId: Evolution.AXEW.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 46,
       attack: 87,
@@ -601,10 +604,10 @@ export const Pokemons = pokemonTable({
       speed: 57,
     },
   }),
-  AZELF: pokemon("AZELF", {
+  AZELF: createPokemon("AZELF", {
     name: "Azelf",
-    line: Evolutions.AZELF,
-    type1: "psychic",
+    evolutionId: Evolution.AZELF.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 75,
       attack: 125,
@@ -614,11 +617,11 @@ export const Pokemons = pokemonTable({
       speed: 115,
     },
   }),
-  AZUMARILL: pokemon("AZUMARILL", {
+  AZUMARILL: createPokemon("AZUMARILL", {
     name: "Azumarill",
-    line: Evolutions.AZURILL,
-    type1: "water",
-    type2: "fairy",
+    evolutionId: Evolution.AZURILL.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 100,
       attack: 50,
@@ -628,11 +631,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  AZURILL: pokemon("AZURILL", {
+  AZURILL: createPokemon("AZURILL", {
     name: "Azurill",
-    line: Evolutions.AZURILL,
-    type1: "normal",
-    type2: "fairy",
+    evolutionId: Evolution.AZURILL.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 50,
       attack: 20,
@@ -642,10 +645,10 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  BAGON: pokemon("BAGON", {
+  BAGON: createPokemon("BAGON", {
     name: "Bagon",
-    line: Evolutions.BAGON,
-    type1: "dragon",
+    evolutionId: Evolution.BAGON.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 45,
       attack: 75,
@@ -655,11 +658,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  BALTOY: pokemon("BALTOY", {
+  BALTOY: createPokemon("BALTOY", {
     name: "Baltoy",
-    line: Evolutions.BALTOY,
-    type1: "ground",
-    type2: "psychic",
+    evolutionId: Evolution.BALTOY.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 40,
       attack: 40,
@@ -669,10 +672,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  BANETTE: pokemon("BANETTE", {
+  BANETTE: createPokemon("BANETTE", {
     name: "Banette",
-    line: Evolutions.SHUPPET,
-    type1: "ghost",
+    evolutionId: Evolution.SHUPPET.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 64,
       attack: 115,
@@ -682,11 +685,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  BARBARACLE: pokemon("BARBARACLE", {
+  BARBARACLE: createPokemon("BARBARACLE", {
     name: "Barbaracle",
-    line: Evolutions.BINACLE,
-    type1: "rock",
-    type2: "water",
+    evolutionId: Evolution.BINACLE.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 72,
       attack: 105,
@@ -696,11 +699,11 @@ export const Pokemons = pokemonTable({
       speed: 68,
     },
   }),
-  BARBOACH: pokemon("BARBOACH", {
+  BARBOACH: createPokemon("BARBOACH", {
     name: "Barboach",
-    line: Evolutions.BARBOACH,
-    type1: "water",
-    type2: "ground",
+    evolutionId: Evolution.BARBOACH.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 50,
       attack: 48,
@@ -710,10 +713,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  BARRASKEWDA: pokemon("BARRASKEWDA", {
+  BARRASKEWDA: createPokemon("BARRASKEWDA", {
     name: "Barraskewda",
-    line: Evolutions.ARROKUDA,
-    type1: "water",
+    evolutionId: Evolution.ARROKUDA.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 61,
       attack: 123,
@@ -723,11 +726,11 @@ export const Pokemons = pokemonTable({
       speed: 136,
     },
   }),
-  BASCULEGION_MALE: pokemon("BASCULEGION_MALE", {
+  BASCULEGION_MALE: createPokemon("BASCULEGION_MALE", {
     name: "Basculegion",
-    line: Evolutions.BASCULIN,
-    type1: "water",
-    type2: "ghost",
+    evolutionId: Evolution.BASCULIN.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 120,
       attack: 112,
@@ -737,10 +740,10 @@ export const Pokemons = pokemonTable({
       speed: 78,
     },
   }),
-  BASCULIN: pokemon("BASCULIN", {
+  BASCULIN: createPokemon("BASCULIN", {
     name: "Basculin",
-    line: Evolutions.BASCULIN,
-    type1: "water",
+    evolutionId: Evolution.BASCULIN.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 70,
       attack: 92,
@@ -750,11 +753,11 @@ export const Pokemons = pokemonTable({
       speed: 98,
     },
   }),
-  BASTIODON: pokemon("BASTIODON", {
+  BASTIODON: createPokemon("BASTIODON", {
     name: "Bastiodon",
-    line: Evolutions.SHIELDON,
-    type1: "rock",
-    type2: "steel",
+    evolutionId: Evolution.SHIELDON.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 60,
       attack: 52,
@@ -764,11 +767,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  BAXCALIBUR: pokemon("BAXCALIBUR", {
+  BAXCALIBUR: createPokemon("BAXCALIBUR", {
     name: "Baxcalibur",
-    line: Evolutions.FRIGIBAX,
-    type1: "dragon",
-    type2: "ice",
+    evolutionId: Evolution.FRIGIBAX.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 115,
       attack: 145,
@@ -778,10 +781,10 @@ export const Pokemons = pokemonTable({
       speed: 87,
     },
   }),
-  BAYLEEF: pokemon("BAYLEEF", {
+  BAYLEEF: createPokemon("BAYLEEF", {
     name: "Bayleef",
-    line: Evolutions.CHIKORITA,
-    type1: "grass",
+    evolutionId: Evolution.CHIKORITA.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 60,
       attack: 62,
@@ -791,10 +794,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  BEARTIC: pokemon("BEARTIC", {
+  BEARTIC: createPokemon("BEARTIC", {
     name: "Beartic",
-    line: Evolutions.CUBCHOO,
-    type1: "ice",
+    evolutionId: Evolution.CUBCHOO.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 95,
       attack: 130,
@@ -804,11 +807,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  BEAUTIFLY: pokemon("BEAUTIFLY", {
+  BEAUTIFLY: createPokemon("BEAUTIFLY", {
     name: "Beautifly",
-    line: Evolutions.WURMPLE,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.WURMPLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 60,
       attack: 70,
@@ -818,11 +821,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  BEEDRILL: pokemon("BEEDRILL", {
+  BEEDRILL: createPokemon("BEEDRILL", {
     name: "Beedrill",
-    line: Evolutions.WEEDLE,
-    type1: "bug",
-    type2: "poison",
+    evolutionId: Evolution.WEEDLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 65,
       attack: 90,
@@ -832,10 +835,10 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  BEHEEYEM: pokemon("BEHEEYEM", {
+  BEHEEYEM: createPokemon("BEHEEYEM", {
     name: "Beheeyem",
-    line: Evolutions.ELGYEM,
-    type1: "psychic",
+    evolutionId: Evolution.ELGYEM.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 75,
       attack: 75,
@@ -845,11 +848,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  BELDUM: pokemon("BELDUM", {
+  BELDUM: createPokemon("BELDUM", {
     name: "Beldum",
-    line: Evolutions.BELDUM,
-    type1: "steel",
-    type2: "psychic",
+    evolutionId: Evolution.BELDUM.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 40,
       attack: 55,
@@ -859,10 +862,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  BELLIBOLT: pokemon("BELLIBOLT", {
+  BELLIBOLT: createPokemon("BELLIBOLT", {
     name: "Bellibolt",
-    line: Evolutions.TADBULB,
-    type1: "electric",
+    evolutionId: Evolution.TADBULB.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 109,
       attack: 64,
@@ -872,10 +875,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  BELLOSSOM: pokemon("BELLOSSOM", {
+  BELLOSSOM: createPokemon("BELLOSSOM", {
     name: "Bellossom",
-    line: Evolutions.ODDISH,
-    type1: "grass",
+    evolutionId: Evolution.ODDISH.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 75,
       attack: 80,
@@ -885,11 +888,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  BELLSPROUT: pokemon("BELLSPROUT", {
+  BELLSPROUT: createPokemon("BELLSPROUT", {
     name: "Bellsprout",
-    line: Evolutions.BELLSPROUT,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.BELLSPROUT.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 50,
       attack: 75,
@@ -899,10 +902,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  BERGMITE: pokemon("BERGMITE", {
+  BERGMITE: createPokemon("BERGMITE", {
     name: "Bergmite",
-    line: Evolutions.BERGMITE,
-    type1: "ice",
+    evolutionId: Evolution.BERGMITE.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 55,
       attack: 69,
@@ -912,11 +915,11 @@ export const Pokemons = pokemonTable({
       speed: 28,
     },
   }),
-  BEWEAR: pokemon("BEWEAR", {
+  BEWEAR: createPokemon("BEWEAR", {
     name: "Bewear",
-    line: Evolutions.STUFFUL,
-    type1: "normal",
-    type2: "fighting",
+    evolutionId: Evolution.STUFFUL.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 120,
       attack: 125,
@@ -926,11 +929,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  BIBAREL: pokemon("BIBAREL", {
+  BIBAREL: createPokemon("BIBAREL", {
     name: "Bibarel",
-    line: Evolutions.BIDOOF,
-    type1: "normal",
-    type2: "water",
+    evolutionId: Evolution.BIDOOF.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 79,
       attack: 85,
@@ -940,10 +943,10 @@ export const Pokemons = pokemonTable({
       speed: 71,
     },
   }),
-  BIDOOF: pokemon("BIDOOF", {
+  BIDOOF: createPokemon("BIDOOF", {
     name: "Bidoof",
-    line: Evolutions.BIDOOF,
-    type1: "normal",
+    evolutionId: Evolution.BIDOOF.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 59,
       attack: 45,
@@ -953,11 +956,11 @@ export const Pokemons = pokemonTable({
       speed: 31,
     },
   }),
-  BINACLE: pokemon("BINACLE", {
+  BINACLE: createPokemon("BINACLE", {
     name: "Binacle",
-    line: Evolutions.BINACLE,
-    type1: "rock",
-    type2: "water",
+    evolutionId: Evolution.BINACLE.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 42,
       attack: 52,
@@ -967,11 +970,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  BISHARP: pokemon("BISHARP", {
+  BISHARP: createPokemon("BISHARP", {
     name: "Bisharp",
-    line: Evolutions.PAWNIARD,
-    type1: "dark",
-    type2: "steel",
+    evolutionId: Evolution.PAWNIARD.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 65,
       attack: 125,
@@ -981,11 +984,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  BLACEPHALON: pokemon("BLACEPHALON", {
+  BLACEPHALON: createPokemon("BLACEPHALON", {
     name: "Blacephalon",
-    line: Evolutions.BLACEPHALON,
-    type1: "fire",
-    type2: "ghost",
+    evolutionId: Evolution.BLACEPHALON.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 53,
       attack: 127,
@@ -995,10 +998,10 @@ export const Pokemons = pokemonTable({
       speed: 107,
     },
   }),
-  BLASTOISE: pokemon("BLASTOISE", {
+  BLASTOISE: createPokemon("BLASTOISE", {
     name: "Blastoise",
-    line: Evolutions.SQUIRTLE,
-    type1: "water",
+    evolutionId: Evolution.SQUIRTLE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 79,
       attack: 83,
@@ -1008,11 +1011,11 @@ export const Pokemons = pokemonTable({
       speed: 78,
     },
   }),
-  BLAZIKEN: pokemon("BLAZIKEN", {
+  BLAZIKEN: createPokemon("BLAZIKEN", {
     name: "Blaziken",
-    line: Evolutions.TORCHIC,
-    type1: "fire",
-    type2: "fighting",
+    evolutionId: Evolution.TORCHIC.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 80,
       attack: 120,
@@ -1022,10 +1025,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  BLIPBUG: pokemon("BLIPBUG", {
+  BLIPBUG: createPokemon("BLIPBUG", {
     name: "Blipbug",
-    line: Evolutions.BLIPBUG,
-    type1: "bug",
+    evolutionId: Evolution.BLIPBUG.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 25,
       attack: 20,
@@ -1035,10 +1038,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  BLISSEY: pokemon("BLISSEY", {
+  BLISSEY: createPokemon("BLISSEY", {
     name: "Blissey",
-    line: Evolutions.HAPPINY,
-    type1: "normal",
+    evolutionId: Evolution.HAPPINY.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 255,
       attack: 10,
@@ -1048,10 +1051,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  BLITZLE: pokemon("BLITZLE", {
+  BLITZLE: createPokemon("BLITZLE", {
     name: "Blitzle",
-    line: Evolutions.BLITZLE,
-    type1: "electric",
+    evolutionId: Evolution.BLITZLE.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 45,
       attack: 60,
@@ -1061,10 +1064,10 @@ export const Pokemons = pokemonTable({
       speed: 76,
     },
   }),
-  BOLDORE: pokemon("BOLDORE", {
+  BOLDORE: createPokemon("BOLDORE", {
     name: "Boldore",
-    line: Evolutions.ROGGENROLA,
-    type1: "rock",
+    evolutionId: Evolution.ROGGENROLA.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 70,
       attack: 105,
@@ -1074,10 +1077,10 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  BOLTUND: pokemon("BOLTUND", {
+  BOLTUND: createPokemon("BOLTUND", {
     name: "Boltund",
-    line: Evolutions.YAMPER,
-    type1: "electric",
+    evolutionId: Evolution.YAMPER.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 69,
       attack: 90,
@@ -1087,11 +1090,11 @@ export const Pokemons = pokemonTable({
       speed: 121,
     },
   }),
-  BOMBIRDIER: pokemon("BOMBIRDIER", {
+  BOMBIRDIER: createPokemon("BOMBIRDIER", {
     name: "Bombirdier",
-    line: Evolutions.BOMBIRDIER,
-    type1: "flying",
-    type2: "dark",
+    evolutionId: Evolution.BOMBIRDIER.id,
+    type1: PokemonTypes.FLYING,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 70,
       attack: 103,
@@ -1101,10 +1104,10 @@ export const Pokemons = pokemonTable({
       speed: 82,
     },
   }),
-  BONSLY: pokemon("BONSLY", {
+  BONSLY: createPokemon("BONSLY", {
     name: "Bonsly",
-    line: Evolutions.BONSLY,
-    type1: "rock",
+    evolutionId: Evolution.BONSLY.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 50,
       attack: 80,
@@ -1114,10 +1117,10 @@ export const Pokemons = pokemonTable({
       speed: 10,
     },
   }),
-  BOUFFALANT: pokemon("BOUFFALANT", {
+  BOUFFALANT: createPokemon("BOUFFALANT", {
     name: "Bouffalant",
-    line: Evolutions.BOUFFALANT,
-    type1: "normal",
+    evolutionId: Evolution.BOUFFALANT.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 95,
       attack: 110,
@@ -1127,10 +1130,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  BOUNSWEET: pokemon("BOUNSWEET", {
+  BOUNSWEET: createPokemon("BOUNSWEET", {
     name: "Bounsweet",
-    line: Evolutions.BOUNSWEET,
-    type1: "grass",
+    evolutionId: Evolution.BOUNSWEET.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 42,
       attack: 30,
@@ -1140,10 +1143,10 @@ export const Pokemons = pokemonTable({
       speed: 32,
     },
   }),
-  BRAIXEN: pokemon("BRAIXEN", {
+  BRAIXEN: createPokemon("BRAIXEN", {
     name: "Braixen",
-    line: Evolutions.FENNEKIN,
-    type1: "fire",
+    evolutionId: Evolution.FENNEKIN.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 59,
       attack: 59,
@@ -1153,11 +1156,11 @@ export const Pokemons = pokemonTable({
       speed: 73,
     },
   }),
-  BRAMBLEGHAST: pokemon("BRAMBLEGHAST", {
+  BRAMBLEGHAST: createPokemon("BRAMBLEGHAST", {
     name: "Brambleghast",
-    line: Evolutions.BRAMBLIN,
-    type1: "grass",
-    type2: "ghost",
+    evolutionId: Evolution.BRAMBLIN.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 55,
       attack: 115,
@@ -1167,11 +1170,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  BRAMBLIN: pokemon("BRAMBLIN", {
+  BRAMBLIN: createPokemon("BRAMBLIN", {
     name: "Bramblin",
-    line: Evolutions.BRAMBLIN,
-    type1: "grass",
-    type2: "ghost",
+    evolutionId: Evolution.BRAMBLIN.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 40,
       attack: 65,
@@ -1181,11 +1184,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  BRAVIARY_HISUI: pokemon("BRAVIARY_HISUI", {
+  BRAVIARY_HISUI: createPokemon("BRAVIARY_HISUI", {
     name: "Hisuian Braviary",
-    line: Evolutions.RUFFLET,
-    type1: "psychic",
-    type2: "flying",
+    evolutionId: Evolution.RUFFLET.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 110,
       attack: 83,
@@ -1195,11 +1198,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  BRAVIARY: pokemon("BRAVIARY", {
+  BRAVIARY: createPokemon("BRAVIARY", {
     name: "Braviary",
-    line: Evolutions.RUFFLET,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.RUFFLET.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 100,
       attack: 123,
@@ -1209,11 +1212,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  BRELOOM: pokemon("BRELOOM", {
+  BRELOOM: createPokemon("BRELOOM", {
     name: "Breloom",
-    line: Evolutions.SHROOMISH,
-    type1: "grass",
-    type2: "fighting",
+    evolutionId: Evolution.SHROOMISH.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 60,
       attack: 130,
@@ -1223,10 +1226,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  BRIONNE: pokemon("BRIONNE", {
+  BRIONNE: createPokemon("BRIONNE", {
     name: "Brionne",
-    line: Evolutions.POPPLIO,
-    type1: "water",
+    evolutionId: Evolution.POPPLIO.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 60,
       attack: 69,
@@ -1236,11 +1239,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  BRONZONG: pokemon("BRONZONG", {
+  BRONZONG: createPokemon("BRONZONG", {
     name: "Bronzong",
-    line: Evolutions.BRONZOR,
-    type1: "steel",
-    type2: "psychic",
+    evolutionId: Evolution.BRONZOR.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 67,
       attack: 89,
@@ -1250,11 +1253,11 @@ export const Pokemons = pokemonTable({
       speed: 33,
     },
   }),
-  BRONZOR: pokemon("BRONZOR", {
+  BRONZOR: createPokemon("BRONZOR", {
     name: "Bronzor",
-    line: Evolutions.BRONZOR,
-    type1: "steel",
-    type2: "psychic",
+    evolutionId: Evolution.BRONZOR.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 57,
       attack: 24,
@@ -1264,11 +1267,11 @@ export const Pokemons = pokemonTable({
       speed: 23,
     },
   }),
-  BRUTE_BONNET: pokemon("BRUTE_BONNET", {
+  BRUTE_BONNET: createPokemon("BRUTE_BONNET", {
     name: "Brute Bonnet",
-    line: Evolutions.BRUTE_BONNET,
-    type1: "grass",
-    type2: "dark",
+    evolutionId: Evolution.BRUTE_BONNET.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 111,
       attack: 127,
@@ -1278,11 +1281,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  BRUXISH: pokemon("BRUXISH", {
+  BRUXISH: createPokemon("BRUXISH", {
     name: "Bruxish",
-    line: Evolutions.BRUXISH,
-    type1: "water",
-    type2: "psychic",
+    evolutionId: Evolution.BRUXISH.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 68,
       attack: 105,
@@ -1292,11 +1295,11 @@ export const Pokemons = pokemonTable({
       speed: 92,
     },
   }),
-  BUDEW: pokemon("BUDEW", {
+  BUDEW: createPokemon("BUDEW", {
     name: "Budew",
-    line: Evolutions.BUDEW,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.BUDEW.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 40,
       attack: 30,
@@ -1306,10 +1309,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  BUIZEL: pokemon("BUIZEL", {
+  BUIZEL: createPokemon("BUIZEL", {
     name: "Buizel",
-    line: Evolutions.BUIZEL,
-    type1: "water",
+    evolutionId: Evolution.BUIZEL.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 55,
       attack: 65,
@@ -1319,11 +1322,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  BULBASAUR: pokemon("BULBASAUR", {
+  BULBASAUR: createPokemon("BULBASAUR", {
     name: "Bulbasaur",
-    line: Evolutions.BULBASAUR,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.BULBASAUR.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 45,
       attack: 49,
@@ -1333,10 +1336,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  BUNEARY: pokemon("BUNEARY", {
+  BUNEARY: createPokemon("BUNEARY", {
     name: "Buneary",
-    line: Evolutions.BUNEARY,
-    type1: "normal",
+    evolutionId: Evolution.BUNEARY.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 55,
       attack: 66,
@@ -1346,10 +1349,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  BUNNELBY: pokemon("BUNNELBY", {
+  BUNNELBY: createPokemon("BUNNELBY", {
     name: "Bunnelby",
-    line: Evolutions.BUNNELBY,
-    type1: "normal",
+    evolutionId: Evolution.BUNNELBY.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 38,
       attack: 36,
@@ -1359,10 +1362,10 @@ export const Pokemons = pokemonTable({
       speed: 57,
     },
   }),
-  BURMY_SANDY: pokemon("BURMY_SANDY", {
+  BURMY_SANDY: createPokemon("BURMY_SANDY", {
     name: "Burmy",
-    line: Evolutions.BURMY,
-    type1: "bug",
+    evolutionId: Evolution.BURMY.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 40,
       attack: 29,
@@ -1372,10 +1375,10 @@ export const Pokemons = pokemonTable({
       speed: 36,
     },
   }),
-  BURMY_TRASH: pokemon("BURMY_TRASH", {
+  BURMY_TRASH: createPokemon("BURMY_TRASH", {
     name: "Burmy",
-    line: Evolutions.BURMY,
-    type1: "bug",
+    evolutionId: Evolution.BURMY.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 40,
       attack: 29,
@@ -1385,10 +1388,10 @@ export const Pokemons = pokemonTable({
       speed: 36,
     },
   }),
-  BURMY: pokemon("BURMY", {
+  BURMY: createPokemon("BURMY", {
     name: "Burmy",
-    line: Evolutions.BURMY,
-    type1: "bug",
+    evolutionId: Evolution.BURMY.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 40,
       attack: 29,
@@ -1398,11 +1401,11 @@ export const Pokemons = pokemonTable({
       speed: 36,
     },
   }),
-  BUTTERFREE: pokemon("BUTTERFREE", {
+  BUTTERFREE: createPokemon("BUTTERFREE", {
     name: "Butterfree",
-    line: Evolutions.CATERPIE,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.CATERPIE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 60,
       attack: 45,
@@ -1412,11 +1415,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  BUZZWOLE: pokemon("BUZZWOLE", {
+  BUZZWOLE: createPokemon("BUZZWOLE", {
     name: "Buzzwole",
-    line: Evolutions.BUZZWOLE,
-    type1: "bug",
-    type2: "fighting",
+    evolutionId: Evolution.BUZZWOLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 107,
       attack: 139,
@@ -1426,10 +1429,10 @@ export const Pokemons = pokemonTable({
       speed: 79,
     },
   }),
-  CACNEA: pokemon("CACNEA", {
+  CACNEA: createPokemon("CACNEA", {
     name: "Cacnea",
-    line: Evolutions.CACNEA,
-    type1: "grass",
+    evolutionId: Evolution.CACNEA.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 50,
       attack: 85,
@@ -1439,11 +1442,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  CACTURNE: pokemon("CACTURNE", {
+  CACTURNE: createPokemon("CACTURNE", {
     name: "Cacturne",
-    line: Evolutions.CACNEA,
-    type1: "grass",
-    type2: "dark",
+    evolutionId: Evolution.CACNEA.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 70,
       attack: 115,
@@ -1453,11 +1456,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  CALYREX: pokemon("CALYREX", {
+  CALYREX: createPokemon("CALYREX", {
     name: "Calyrex",
-    line: Evolutions.CALYREX,
-    type1: "psychic",
-    type2: "grass",
+    evolutionId: Evolution.CALYREX.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 100,
       attack: 80,
@@ -1467,11 +1470,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  CAMERUPT: pokemon("CAMERUPT", {
+  CAMERUPT: createPokemon("CAMERUPT", {
     name: "Camerupt",
-    line: Evolutions.NUMEL,
-    type1: "fire",
-    type2: "ground",
+    evolutionId: Evolution.NUMEL.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 70,
       attack: 100,
@@ -1481,10 +1484,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  CAPSAKID: pokemon("CAPSAKID", {
+  CAPSAKID: createPokemon("CAPSAKID", {
     name: "Capsakid",
-    line: Evolutions.CAPSAKID,
-    type1: "grass",
+    evolutionId: Evolution.CAPSAKID.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 50,
       attack: 62,
@@ -1494,11 +1497,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  CARBINK: pokemon("CARBINK", {
+  CARBINK: createPokemon("CARBINK", {
     name: "Carbink",
-    line: Evolutions.CARBINK,
-    type1: "rock",
-    type2: "fairy",
+    evolutionId: Evolution.CARBINK.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 50,
       attack: 50,
@@ -1508,11 +1511,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  CARKOL: pokemon("CARKOL", {
+  CARKOL: createPokemon("CARKOL", {
     name: "Carkol",
-    line: Evolutions.ROLYCOLY,
-    type1: "rock",
-    type2: "fire",
+    evolutionId: Evolution.ROLYCOLY.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 80,
       attack: 60,
@@ -1522,10 +1525,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  CARNIVINE: pokemon("CARNIVINE", {
+  CARNIVINE: createPokemon("CARNIVINE", {
     name: "Carnivine",
-    line: Evolutions.CARNIVINE,
-    type1: "grass",
+    evolutionId: Evolution.CARNIVINE.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 74,
       attack: 100,
@@ -1535,11 +1538,11 @@ export const Pokemons = pokemonTable({
       speed: 46,
     },
   }),
-  CARRACOSTA: pokemon("CARRACOSTA", {
+  CARRACOSTA: createPokemon("CARRACOSTA", {
     name: "Carracosta",
-    line: Evolutions.TIRTOUGA,
-    type1: "water",
-    type2: "rock",
+    evolutionId: Evolution.TIRTOUGA.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 74,
       attack: 108,
@@ -1549,11 +1552,11 @@ export const Pokemons = pokemonTable({
       speed: 32,
     },
   }),
-  CARVANHA: pokemon("CARVANHA", {
+  CARVANHA: createPokemon("CARVANHA", {
     name: "Carvanha",
-    line: Evolutions.CARVANHA,
-    type1: "water",
-    type2: "dark",
+    evolutionId: Evolution.CARVANHA.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 45,
       attack: 90,
@@ -1563,10 +1566,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  CASCOON: pokemon("CASCOON", {
+  CASCOON: createPokemon("CASCOON", {
     name: "Cascoon",
-    line: Evolutions.WURMPLE,
-    type1: "bug",
+    evolutionId: Evolution.WURMPLE.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 50,
       attack: 35,
@@ -1576,10 +1579,10 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  CASTFORM: pokemon("CASTFORM", {
+  CASTFORM: createPokemon("CASTFORM", {
     name: "Castform",
-    line: Evolutions.CASTFORM,
-    type1: "normal",
+    evolutionId: Evolution.CASTFORM.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 70,
       attack: 70,
@@ -1589,10 +1592,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  CATERPIE: pokemon("CATERPIE", {
+  CATERPIE: createPokemon("CATERPIE", {
     name: "Caterpie",
-    line: Evolutions.CATERPIE,
-    type1: "bug",
+    evolutionId: Evolution.CATERPIE.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 45,
       attack: 30,
@@ -1602,11 +1605,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  CELEBI: pokemon("CELEBI", {
+  CELEBI: createPokemon("CELEBI", {
     name: "Celebi",
-    line: Evolutions.CELEBI,
-    type1: "psychic",
-    type2: "grass",
+    evolutionId: Evolution.CELEBI.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 100,
       attack: 100,
@@ -1616,11 +1619,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  CELESTEELA: pokemon("CELESTEELA", {
+  CELESTEELA: createPokemon("CELESTEELA", {
     name: "Celesteela",
-    line: Evolutions.CELESTEELA,
-    type1: "steel",
-    type2: "flying",
+    evolutionId: Evolution.CELESTEELA.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 97,
       attack: 101,
@@ -1630,11 +1633,11 @@ export const Pokemons = pokemonTable({
       speed: 61,
     },
   }),
-  CENTISKORCH: pokemon("CENTISKORCH", {
+  CENTISKORCH: createPokemon("CENTISKORCH", {
     name: "Centiskorch",
-    line: Evolutions.SIZZLIPEDE,
-    type1: "fire",
-    type2: "bug",
+    evolutionId: Evolution.SIZZLIPEDE.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.BUG,
     baseStats: {
       hp: 100,
       attack: 115,
@@ -1644,11 +1647,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  CERULEDGE: pokemon("CERULEDGE", {
+  CERULEDGE: createPokemon("CERULEDGE", {
     name: "Ceruledge",
-    line: Evolutions.CHARCADET,
-    type1: "fire",
-    type2: "ghost",
+    evolutionId: Evolution.CHARCADET.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 75,
       attack: 125,
@@ -1658,10 +1661,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  CETITAN: pokemon("CETITAN", {
+  CETITAN: createPokemon("CETITAN", {
     name: "Cetitan",
-    line: Evolutions.CETODDLE,
-    type1: "ice",
+    evolutionId: Evolution.CETODDLE.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 170,
       attack: 113,
@@ -1671,10 +1674,10 @@ export const Pokemons = pokemonTable({
       speed: 73,
     },
   }),
-  CETODDLE: pokemon("CETODDLE", {
+  CETODDLE: createPokemon("CETODDLE", {
     name: "Cetoddle",
-    line: Evolutions.CETODDLE,
-    type1: "ice",
+    evolutionId: Evolution.CETODDLE.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 108,
       attack: 68,
@@ -1684,11 +1687,11 @@ export const Pokemons = pokemonTable({
       speed: 43,
     },
   }),
-  CHANDELURE: pokemon("CHANDELURE", {
+  CHANDELURE: createPokemon("CHANDELURE", {
     name: "Chandelure",
-    line: Evolutions.LITWICK,
-    type1: "ghost",
-    type2: "fire",
+    evolutionId: Evolution.LITWICK.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 60,
       attack: 55,
@@ -1698,10 +1701,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  CHANSEY: pokemon("CHANSEY", {
+  CHANSEY: createPokemon("CHANSEY", {
     name: "Chansey",
-    line: Evolutions.HAPPINY,
-    type1: "normal",
+    evolutionId: Evolution.HAPPINY.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 250,
       attack: 5,
@@ -1711,10 +1714,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  CHARCADET: pokemon("CHARCADET", {
+  CHARCADET: createPokemon("CHARCADET", {
     name: "Charcadet",
-    line: Evolutions.CHARCADET,
-    type1: "fire",
+    evolutionId: Evolution.CHARCADET.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 40,
       attack: 50,
@@ -1724,11 +1727,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  CHARIZARD: pokemon("CHARIZARD", {
+  CHARIZARD: createPokemon("CHARIZARD", {
     name: "Charizard",
-    line: Evolutions.CHARMANDER,
-    type1: "fire",
-    type2: "flying",
+    evolutionId: Evolution.CHARMANDER.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 78,
       attack: 84,
@@ -1738,11 +1741,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  CHARJABUG: pokemon("CHARJABUG", {
+  CHARJABUG: createPokemon("CHARJABUG", {
     name: "Charjabug",
-    line: Evolutions.GRUBBIN,
-    type1: "bug",
-    type2: "electric",
+    evolutionId: Evolution.GRUBBIN.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 57,
       attack: 82,
@@ -1752,10 +1755,10 @@ export const Pokemons = pokemonTable({
       speed: 36,
     },
   }),
-  CHARMANDER: pokemon("CHARMANDER", {
+  CHARMANDER: createPokemon("CHARMANDER", {
     name: "Charmander",
-    line: Evolutions.CHARMANDER,
-    type1: "fire",
+    evolutionId: Evolution.CHARMANDER.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 39,
       attack: 52,
@@ -1765,10 +1768,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  CHARMELEON: pokemon("CHARMELEON", {
+  CHARMELEON: createPokemon("CHARMELEON", {
     name: "Charmeleon",
-    line: Evolutions.CHARMANDER,
-    type1: "fire",
+    evolutionId: Evolution.CHARMANDER.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 58,
       attack: 64,
@@ -1778,11 +1781,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  CHATOT: pokemon("CHATOT", {
+  CHATOT: createPokemon("CHATOT", {
     name: "Chatot",
-    line: Evolutions.CHATOT,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.CHATOT.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 76,
       attack: 65,
@@ -1792,10 +1795,10 @@ export const Pokemons = pokemonTable({
       speed: 91,
     },
   }),
-  CHERRIM: pokemon("CHERRIM", {
+  CHERRIM: createPokemon("CHERRIM", {
     name: "Cherrim",
-    line: Evolutions.CHERUBI,
-    type1: "grass",
+    evolutionId: Evolution.CHERUBI.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 70,
       attack: 60,
@@ -1805,10 +1808,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  CHERUBI: pokemon("CHERUBI", {
+  CHERUBI: createPokemon("CHERUBI", {
     name: "Cherubi",
-    line: Evolutions.CHERUBI,
-    type1: "grass",
+    evolutionId: Evolution.CHERUBI.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 45,
       attack: 35,
@@ -1818,11 +1821,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  CHESNAUGHT: pokemon("CHESNAUGHT", {
+  CHESNAUGHT: createPokemon("CHESNAUGHT", {
     name: "Chesnaught",
-    line: Evolutions.CHESPIN,
-    type1: "grass",
-    type2: "fighting",
+    evolutionId: Evolution.CHESPIN.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 88,
       attack: 107,
@@ -1832,10 +1835,10 @@ export const Pokemons = pokemonTable({
       speed: 64,
     },
   }),
-  CHESPIN: pokemon("CHESPIN", {
+  CHESPIN: createPokemon("CHESPIN", {
     name: "Chespin",
-    line: Evolutions.CHESPIN,
-    type1: "grass",
+    evolutionId: Evolution.CHESPIN.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 56,
       attack: 61,
@@ -1845,10 +1848,10 @@ export const Pokemons = pokemonTable({
       speed: 38,
     },
   }),
-  CHEWTLE: pokemon("CHEWTLE", {
+  CHEWTLE: createPokemon("CHEWTLE", {
     name: "Chewtle",
-    line: Evolutions.CHEWTLE,
-    type1: "water",
+    evolutionId: Evolution.CHEWTLE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 64,
@@ -1858,11 +1861,11 @@ export const Pokemons = pokemonTable({
       speed: 44,
     },
   }),
-  CHI_YU: pokemon("CHI_YU", {
+  CHI_YU: createPokemon("CHI_YU", {
     name: "Chi-Yu",
-    line: Evolutions.CHI_YU,
-    type1: "dark",
-    type2: "fire",
+    evolutionId: Evolution.CHI_YU.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 55,
       attack: 80,
@@ -1872,11 +1875,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  CHIEN_PAO: pokemon("CHIEN_PAO", {
+  CHIEN_PAO: createPokemon("CHIEN_PAO", {
     name: "Chien-Pao",
-    line: Evolutions.CHIEN_PAO,
-    type1: "dark",
-    type2: "ice",
+    evolutionId: Evolution.CHIEN_PAO.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 80,
       attack: 120,
@@ -1886,10 +1889,10 @@ export const Pokemons = pokemonTable({
       speed: 135,
     },
   }),
-  CHIKORITA: pokemon("CHIKORITA", {
+  CHIKORITA: createPokemon("CHIKORITA", {
     name: "Chikorita",
-    line: Evolutions.CHIKORITA,
-    type1: "grass",
+    evolutionId: Evolution.CHIKORITA.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 45,
       attack: 49,
@@ -1899,10 +1902,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  CHIMCHAR: pokemon("CHIMCHAR", {
+  CHIMCHAR: createPokemon("CHIMCHAR", {
     name: "Chimchar",
-    line: Evolutions.CHIMCHAR,
-    type1: "fire",
+    evolutionId: Evolution.CHIMCHAR.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 44,
       attack: 58,
@@ -1912,10 +1915,10 @@ export const Pokemons = pokemonTable({
       speed: 61,
     },
   }),
-  CHIMECHO: pokemon("CHIMECHO", {
+  CHIMECHO: createPokemon("CHIMECHO", {
     name: "Chimecho",
-    line: Evolutions.CHINGLING,
-    type1: "psychic",
+    evolutionId: Evolution.CHINGLING.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 75,
       attack: 50,
@@ -1925,11 +1928,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  CHINCHOU: pokemon("CHINCHOU", {
+  CHINCHOU: createPokemon("CHINCHOU", {
     name: "Chinchou",
-    line: Evolutions.CHINCHOU,
-    type1: "water",
-    type2: "electric",
+    evolutionId: Evolution.CHINCHOU.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 75,
       attack: 38,
@@ -1939,10 +1942,10 @@ export const Pokemons = pokemonTable({
       speed: 67,
     },
   }),
-  CHINGLING: pokemon("CHINGLING", {
+  CHINGLING: createPokemon("CHINGLING", {
     name: "Chingling",
-    line: Evolutions.CHINGLING,
-    type1: "psychic",
+    evolutionId: Evolution.CHINGLING.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 45,
       attack: 30,
@@ -1952,10 +1955,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  CINCCINO: pokemon("CINCCINO", {
+  CINCCINO: createPokemon("CINCCINO", {
     name: "Cinccino",
-    line: Evolutions.MINCCINO,
-    type1: "normal",
+    evolutionId: Evolution.MINCCINO.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 75,
       attack: 95,
@@ -1965,10 +1968,10 @@ export const Pokemons = pokemonTable({
       speed: 115,
     },
   }),
-  CINDERACE: pokemon("CINDERACE", {
+  CINDERACE: createPokemon("CINDERACE", {
     name: "Cinderace",
-    line: Evolutions.SCORBUNNY,
-    type1: "fire",
+    evolutionId: Evolution.SCORBUNNY.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 80,
       attack: 116,
@@ -1978,10 +1981,10 @@ export const Pokemons = pokemonTable({
       speed: 119,
     },
   }),
-  CLAMPERL: pokemon("CLAMPERL", {
+  CLAMPERL: createPokemon("CLAMPERL", {
     name: "Clamperl",
-    line: Evolutions.CLAMPERL,
-    type1: "water",
+    evolutionId: Evolution.CLAMPERL.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 35,
       attack: 64,
@@ -1991,10 +1994,10 @@ export const Pokemons = pokemonTable({
       speed: 32,
     },
   }),
-  CLAUNCHER: pokemon("CLAUNCHER", {
+  CLAUNCHER: createPokemon("CLAUNCHER", {
     name: "Clauncher",
-    line: Evolutions.CLAUNCHER,
-    type1: "water",
+    evolutionId: Evolution.CLAUNCHER.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 53,
@@ -2004,10 +2007,10 @@ export const Pokemons = pokemonTable({
       speed: 44,
     },
   }),
-  CLAWITZER: pokemon("CLAWITZER", {
+  CLAWITZER: createPokemon("CLAWITZER", {
     name: "Clawitzer",
-    line: Evolutions.CLAUNCHER,
-    type1: "water",
+    evolutionId: Evolution.CLAUNCHER.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 71,
       attack: 73,
@@ -2017,11 +2020,11 @@ export const Pokemons = pokemonTable({
       speed: 59,
     },
   }),
-  CLAYDOL: pokemon("CLAYDOL", {
+  CLAYDOL: createPokemon("CLAYDOL", {
     name: "Claydol",
-    line: Evolutions.BALTOY,
-    type1: "ground",
-    type2: "psychic",
+    evolutionId: Evolution.BALTOY.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 60,
       attack: 70,
@@ -2031,10 +2034,10 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  CLEFABLE: pokemon("CLEFABLE", {
+  CLEFABLE: createPokemon("CLEFABLE", {
     name: "Clefable",
-    line: Evolutions.CLEFFA,
-    type1: "fairy",
+    evolutionId: Evolution.CLEFFA.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 95,
       attack: 70,
@@ -2044,10 +2047,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  CLEFAIRY: pokemon("CLEFAIRY", {
+  CLEFAIRY: createPokemon("CLEFAIRY", {
     name: "Clefairy",
-    line: Evolutions.CLEFFA,
-    type1: "fairy",
+    evolutionId: Evolution.CLEFFA.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 70,
       attack: 45,
@@ -2057,10 +2060,10 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  CLEFFA: pokemon("CLEFFA", {
+  CLEFFA: createPokemon("CLEFFA", {
     name: "Cleffa",
-    line: Evolutions.CLEFFA,
-    type1: "fairy",
+    evolutionId: Evolution.CLEFFA.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 50,
       attack: 25,
@@ -2070,10 +2073,10 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  CLOBBOPUS: pokemon("CLOBBOPUS", {
+  CLOBBOPUS: createPokemon("CLOBBOPUS", {
     name: "Clobbopus",
-    line: Evolutions.CLOBBOPUS,
-    type1: "fighting",
+    evolutionId: Evolution.CLOBBOPUS.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 50,
       attack: 68,
@@ -2083,11 +2086,11 @@ export const Pokemons = pokemonTable({
       speed: 32,
     },
   }),
-  CLODSIRE: pokemon("CLODSIRE", {
+  CLODSIRE: createPokemon("CLODSIRE", {
     name: "Clodsire",
-    line: Evolutions.WOOPER,
-    type1: "poison",
-    type2: "ground",
+    evolutionId: Evolution.WOOPER.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 130,
       attack: 75,
@@ -2097,11 +2100,11 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  CLOYSTER: pokemon("CLOYSTER", {
+  CLOYSTER: createPokemon("CLOYSTER", {
     name: "Cloyster",
-    line: Evolutions.SHELLDER,
-    type1: "water",
-    type2: "ice",
+    evolutionId: Evolution.SHELLDER.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 50,
       attack: 95,
@@ -2111,11 +2114,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  COALOSSAL: pokemon("COALOSSAL", {
+  COALOSSAL: createPokemon("COALOSSAL", {
     name: "Coalossal",
-    line: Evolutions.ROLYCOLY,
-    type1: "rock",
-    type2: "fire",
+    evolutionId: Evolution.ROLYCOLY.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 110,
       attack: 80,
@@ -2125,11 +2128,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  COBALION: pokemon("COBALION", {
+  COBALION: createPokemon("COBALION", {
     name: "Cobalion",
-    line: Evolutions.COBALION,
-    type1: "steel",
-    type2: "fighting",
+    evolutionId: Evolution.COBALION.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 91,
       attack: 90,
@@ -2139,10 +2142,10 @@ export const Pokemons = pokemonTable({
       speed: 108,
     },
   }),
-  COFAGRIGUS: pokemon("COFAGRIGUS", {
+  COFAGRIGUS: createPokemon("COFAGRIGUS", {
     name: "Cofagrigus",
-    line: Evolutions.YAMASK,
-    type1: "ghost",
+    evolutionId: Evolution.YAMASK.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 58,
       attack: 50,
@@ -2152,11 +2155,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  COMBEE: pokemon("COMBEE", {
+  COMBEE: createPokemon("COMBEE", {
     name: "Combee",
-    line: Evolutions.COMBEE,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.COMBEE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 30,
       attack: 30,
@@ -2166,11 +2169,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  COMBUSKEN: pokemon("COMBUSKEN", {
+  COMBUSKEN: createPokemon("COMBUSKEN", {
     name: "Combusken",
-    line: Evolutions.TORCHIC,
-    type1: "fire",
-    type2: "fighting",
+    evolutionId: Evolution.TORCHIC.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 60,
       attack: 85,
@@ -2180,10 +2183,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  COMFEY: pokemon("COMFEY", {
+  COMFEY: createPokemon("COMFEY", {
     name: "Comfey",
-    line: Evolutions.COMFEY,
-    type1: "fairy",
+    evolutionId: Evolution.COMFEY.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 51,
       attack: 52,
@@ -2193,10 +2196,10 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  CONKELDURR: pokemon("CONKELDURR", {
+  CONKELDURR: createPokemon("CONKELDURR", {
     name: "Conkeldurr",
-    line: Evolutions.TIMBURR,
-    type1: "fighting",
+    evolutionId: Evolution.TIMBURR.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 105,
       attack: 140,
@@ -2206,10 +2209,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  COPPERAJAH: pokemon("COPPERAJAH", {
+  COPPERAJAH: createPokemon("COPPERAJAH", {
     name: "Copperajah",
-    line: Evolutions.CUFANT,
-    type1: "steel",
+    evolutionId: Evolution.CUFANT.id,
+    type1: PokemonTypes.STEEL,
     baseStats: {
       hp: 122,
       attack: 130,
@@ -2219,10 +2222,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  CORPHISH: pokemon("CORPHISH", {
+  CORPHISH: createPokemon("CORPHISH", {
     name: "Corphish",
-    line: Evolutions.CORPHISH,
-    type1: "water",
+    evolutionId: Evolution.CORPHISH.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 43,
       attack: 80,
@@ -2232,10 +2235,10 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  CORSOLA_GALAR: pokemon("CORSOLA_GALAR", {
+  CORSOLA_GALAR: createPokemon("CORSOLA_GALAR", {
     name: "Galarian Corsola",
-    line: Evolutions.CORSOLA,
-    type1: "ghost",
+    evolutionId: Evolution.CORSOLA.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 60,
       attack: 55,
@@ -2245,11 +2248,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  CORSOLA: pokemon("CORSOLA", {
+  CORSOLA: createPokemon("CORSOLA", {
     name: "Corsola",
-    line: Evolutions.CORSOLA,
-    type1: "water",
-    type2: "rock",
+    evolutionId: Evolution.CORSOLA.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 65,
       attack: 55,
@@ -2259,11 +2262,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  CORVIKNIGHT: pokemon("CORVIKNIGHT", {
+  CORVIKNIGHT: createPokemon("CORVIKNIGHT", {
     name: "Corviknight",
-    line: Evolutions.ROOKIDEE,
-    type1: "flying",
-    type2: "steel",
+    evolutionId: Evolution.ROOKIDEE.id,
+    type1: PokemonTypes.FLYING,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 98,
       attack: 87,
@@ -2273,10 +2276,10 @@ export const Pokemons = pokemonTable({
       speed: 67,
     },
   }),
-  CORVISQUIRE: pokemon("CORVISQUIRE", {
+  CORVISQUIRE: createPokemon("CORVISQUIRE", {
     name: "Corvisquire",
-    line: Evolutions.ROOKIDEE,
-    type1: "flying",
+    evolutionId: Evolution.ROOKIDEE.id,
+    type1: PokemonTypes.FLYING,
     baseStats: {
       hp: 68,
       attack: 67,
@@ -2286,10 +2289,10 @@ export const Pokemons = pokemonTable({
       speed: 77,
     },
   }),
-  COSMOEM: pokemon("COSMOEM", {
+  COSMOEM: createPokemon("COSMOEM", {
     name: "Cosmoem",
-    line: Evolutions.COSMOG,
-    type1: "psychic",
+    evolutionId: Evolution.COSMOG.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 43,
       attack: 29,
@@ -2299,10 +2302,10 @@ export const Pokemons = pokemonTable({
       speed: 37,
     },
   }),
-  COSMOG: pokemon("COSMOG", {
+  COSMOG: createPokemon("COSMOG", {
     name: "Cosmog",
-    line: Evolutions.COSMOG,
-    type1: "psychic",
+    evolutionId: Evolution.COSMOG.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 43,
       attack: 29,
@@ -2312,11 +2315,11 @@ export const Pokemons = pokemonTable({
       speed: 37,
     },
   }),
-  COTTONEE: pokemon("COTTONEE", {
+  COTTONEE: createPokemon("COTTONEE", {
     name: "Cottonee",
-    line: Evolutions.COTTONEE,
-    type1: "grass",
-    type2: "fairy",
+    evolutionId: Evolution.COTTONEE.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 40,
       attack: 27,
@@ -2326,11 +2329,11 @@ export const Pokemons = pokemonTable({
       speed: 66,
     },
   }),
-  CRABOMINABLE: pokemon("CRABOMINABLE", {
+  CRABOMINABLE: createPokemon("CRABOMINABLE", {
     name: "Crabominable",
-    line: Evolutions.CRABRAWLER,
-    type1: "fighting",
-    type2: "ice",
+    evolutionId: Evolution.CRABRAWLER.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 97,
       attack: 132,
@@ -2340,10 +2343,10 @@ export const Pokemons = pokemonTable({
       speed: 43,
     },
   }),
-  CRABRAWLER: pokemon("CRABRAWLER", {
+  CRABRAWLER: createPokemon("CRABRAWLER", {
     name: "Crabrawler",
-    line: Evolutions.CRABRAWLER,
-    type1: "fighting",
+    evolutionId: Evolution.CRABRAWLER.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 47,
       attack: 82,
@@ -2353,11 +2356,11 @@ export const Pokemons = pokemonTable({
       speed: 63,
     },
   }),
-  CRADILY: pokemon("CRADILY", {
+  CRADILY: createPokemon("CRADILY", {
     name: "Cradily",
-    line: Evolutions.LILEEP,
-    type1: "rock",
-    type2: "grass",
+    evolutionId: Evolution.LILEEP.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 86,
       attack: 81,
@@ -2367,11 +2370,11 @@ export const Pokemons = pokemonTable({
       speed: 43,
     },
   }),
-  CRAMORANT: pokemon("CRAMORANT", {
+  CRAMORANT: createPokemon("CRAMORANT", {
     name: "Cramorant",
-    line: Evolutions.CRAMORANT,
-    type1: "flying",
-    type2: "water",
+    evolutionId: Evolution.CRAMORANT.id,
+    type1: PokemonTypes.FLYING,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 70,
       attack: 85,
@@ -2381,10 +2384,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  CRANIDOS: pokemon("CRANIDOS", {
+  CRANIDOS: createPokemon("CRANIDOS", {
     name: "Cranidos",
-    line: Evolutions.CRANIDOS,
-    type1: "rock",
+    evolutionId: Evolution.CRANIDOS.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 67,
       attack: 125,
@@ -2394,11 +2397,11 @@ export const Pokemons = pokemonTable({
       speed: 58,
     },
   }),
-  CRAWDAUNT: pokemon("CRAWDAUNT", {
+  CRAWDAUNT: createPokemon("CRAWDAUNT", {
     name: "Crawdaunt",
-    line: Evolutions.CORPHISH,
-    type1: "water",
-    type2: "dark",
+    evolutionId: Evolution.CORPHISH.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 63,
       attack: 120,
@@ -2408,10 +2411,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  CRESSELIA: pokemon("CRESSELIA", {
+  CRESSELIA: createPokemon("CRESSELIA", {
     name: "Cresselia",
-    line: Evolutions.CRESSELIA,
-    type1: "psychic",
+    evolutionId: Evolution.CRESSELIA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 120,
       attack: 70,
@@ -2421,11 +2424,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  CROAGUNK: pokemon("CROAGUNK", {
+  CROAGUNK: createPokemon("CROAGUNK", {
     name: "Croagunk",
-    line: Evolutions.CROAGUNK,
-    type1: "poison",
-    type2: "fighting",
+    evolutionId: Evolution.CROAGUNK.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 48,
       attack: 61,
@@ -2435,11 +2438,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  CROBAT: pokemon("CROBAT", {
+  CROBAT: createPokemon("CROBAT", {
     name: "Crobat",
-    line: Evolutions.ZUBAT,
-    type1: "poison",
-    type2: "flying",
+    evolutionId: Evolution.ZUBAT.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 85,
       attack: 90,
@@ -2449,10 +2452,10 @@ export const Pokemons = pokemonTable({
       speed: 130,
     },
   }),
-  CROCALOR: pokemon("CROCALOR", {
+  CROCALOR: createPokemon("CROCALOR", {
     name: "Crocalor",
-    line: Evolutions.FUECOCO,
-    type1: "fire",
+    evolutionId: Evolution.FUECOCO.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 81,
       attack: 55,
@@ -2462,10 +2465,10 @@ export const Pokemons = pokemonTable({
       speed: 49,
     },
   }),
-  CROCONAW: pokemon("CROCONAW", {
+  CROCONAW: createPokemon("CROCONAW", {
     name: "Croconaw",
-    line: Evolutions.TOTODILE,
-    type1: "water",
+    evolutionId: Evolution.TOTODILE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 65,
       attack: 80,
@@ -2475,11 +2478,11 @@ export const Pokemons = pokemonTable({
       speed: 58,
     },
   }),
-  CRUSTLE: pokemon("CRUSTLE", {
+  CRUSTLE: createPokemon("CRUSTLE", {
     name: "Crustle",
-    line: Evolutions.DWEBBLE,
-    type1: "bug",
-    type2: "rock",
+    evolutionId: Evolution.DWEBBLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 70,
       attack: 105,
@@ -2489,10 +2492,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  CRYOGONAL: pokemon("CRYOGONAL", {
+  CRYOGONAL: createPokemon("CRYOGONAL", {
     name: "Cryogonal",
-    line: Evolutions.CRYOGONAL,
-    type1: "ice",
+    evolutionId: Evolution.CRYOGONAL.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 80,
       attack: 50,
@@ -2502,10 +2505,10 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  CUBCHOO: pokemon("CUBCHOO", {
+  CUBCHOO: createPokemon("CUBCHOO", {
     name: "Cubchoo",
-    line: Evolutions.CUBCHOO,
-    type1: "ice",
+    evolutionId: Evolution.CUBCHOO.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 55,
       attack: 70,
@@ -2515,10 +2518,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  CUBONE: pokemon("CUBONE", {
+  CUBONE: createPokemon("CUBONE", {
     name: "Cubone",
-    line: Evolutions.CUBONE,
-    type1: "ground",
+    evolutionId: Evolution.CUBONE.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 50,
       attack: 50,
@@ -2528,10 +2531,10 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  CUFANT: pokemon("CUFANT", {
+  CUFANT: createPokemon("CUFANT", {
     name: "Cufant",
-    line: Evolutions.CUFANT,
-    type1: "steel",
+    evolutionId: Evolution.CUFANT.id,
+    type1: PokemonTypes.STEEL,
     baseStats: {
       hp: 72,
       attack: 80,
@@ -2541,10 +2544,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  CURSOLA: pokemon("CURSOLA", {
+  CURSOLA: createPokemon("CURSOLA", {
     name: "Cursola",
-    line: Evolutions.CORSOLA,
-    type1: "ghost",
+    evolutionId: Evolution.CORSOLA.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 60,
       attack: 95,
@@ -2554,11 +2557,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  CUTIEFLY: pokemon("CUTIEFLY", {
+  CUTIEFLY: createPokemon("CUTIEFLY", {
     name: "Cutiefly",
-    line: Evolutions.CUTIEFLY,
-    type1: "bug",
-    type2: "fairy",
+    evolutionId: Evolution.CUTIEFLY.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 40,
       attack: 45,
@@ -2568,11 +2571,11 @@ export const Pokemons = pokemonTable({
       speed: 84,
     },
   }),
-  CYCLIZAR: pokemon("CYCLIZAR", {
+  CYCLIZAR: createPokemon("CYCLIZAR", {
     name: "Cyclizar",
-    line: Evolutions.CYCLIZAR,
-    type1: "dragon",
-    type2: "normal",
+    evolutionId: Evolution.CYCLIZAR.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 70,
       attack: 95,
@@ -2582,10 +2585,10 @@ export const Pokemons = pokemonTable({
       speed: 121,
     },
   }),
-  CYNDAQUIL: pokemon("CYNDAQUIL", {
+  CYNDAQUIL: createPokemon("CYNDAQUIL", {
     name: "Cyndaquil",
-    line: Evolutions.CYNDAQUIL,
-    type1: "fire",
+    evolutionId: Evolution.CYNDAQUIL.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 39,
       attack: 52,
@@ -2595,10 +2598,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  DACHSBUN: pokemon("DACHSBUN", {
+  DACHSBUN: createPokemon("DACHSBUN", {
     name: "Dachsbun",
-    line: Evolutions.FIDOUGH,
-    type1: "fairy",
+    evolutionId: Evolution.FIDOUGH.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 57,
       attack: 80,
@@ -2608,10 +2611,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  DARKRAI: pokemon("DARKRAI", {
+  DARKRAI: createPokemon("DARKRAI", {
     name: "Darkrai",
-    line: Evolutions.DARKRAI,
-    type1: "dark",
+    evolutionId: Evolution.DARKRAI.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 70,
       attack: 90,
@@ -2621,10 +2624,10 @@ export const Pokemons = pokemonTable({
       speed: 125,
     },
   }),
-  DARMANITAN_GALAR: pokemon("DARMANITAN_GALAR", {
+  DARMANITAN_GALAR: createPokemon("DARMANITAN_GALAR", {
     name: "Galarian Darmanitan",
-    line: Evolutions.DARUMAKA,
-    type1: "ice",
+    evolutionId: Evolution.DARUMAKA.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 105,
       attack: 140,
@@ -2634,10 +2637,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  DARMANITAN: pokemon("DARMANITAN", {
+  DARMANITAN: createPokemon("DARMANITAN", {
     name: "Darmanitan",
-    line: Evolutions.DARUMAKA,
-    type1: "fire",
+    evolutionId: Evolution.DARUMAKA.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 105,
       attack: 140,
@@ -2647,11 +2650,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  DARTRIX: pokemon("DARTRIX", {
+  DARTRIX: createPokemon("DARTRIX", {
     name: "Dartrix",
-    line: Evolutions.ROWLET,
-    type1: "grass",
-    type2: "flying",
+    evolutionId: Evolution.ROWLET.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 78,
       attack: 75,
@@ -2661,10 +2664,10 @@ export const Pokemons = pokemonTable({
       speed: 52,
     },
   }),
-  DARUMAKA_GALAR: pokemon("DARUMAKA_GALAR", {
+  DARUMAKA_GALAR: createPokemon("DARUMAKA_GALAR", {
     name: "Galarian Darumaka",
-    line: Evolutions.DARUMAKA,
-    type1: "ice",
+    evolutionId: Evolution.DARUMAKA.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 70,
       attack: 90,
@@ -2674,10 +2677,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  DARUMAKA: pokemon("DARUMAKA", {
+  DARUMAKA: createPokemon("DARUMAKA", {
     name: "Darumaka",
-    line: Evolutions.DARUMAKA,
-    type1: "fire",
+    evolutionId: Evolution.DARUMAKA.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 70,
       attack: 90,
@@ -2687,11 +2690,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  DECIDUEYE_HISUI: pokemon("DECIDUEYE_HISUI", {
+  DECIDUEYE_HISUI: createPokemon("DECIDUEYE_HISUI", {
     name: "Hisuian Decidueye",
-    line: Evolutions.ROWLET,
-    type1: "grass",
-    type2: "fighting",
+    evolutionId: Evolution.ROWLET.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 88,
       attack: 112,
@@ -2701,11 +2704,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  DECIDUEYE: pokemon("DECIDUEYE", {
+  DECIDUEYE: createPokemon("DECIDUEYE", {
     name: "Decidueye",
-    line: Evolutions.ROWLET,
-    type1: "grass",
-    type2: "ghost",
+    evolutionId: Evolution.ROWLET.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 78,
       attack: 107,
@@ -2715,11 +2718,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  DEDENNE: pokemon("DEDENNE", {
+  DEDENNE: createPokemon("DEDENNE", {
     name: "Dedenne",
-    line: Evolutions.DEDENNE,
-    type1: "electric",
-    type2: "fairy",
+    evolutionId: Evolution.DEDENNE.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 67,
       attack: 58,
@@ -2729,11 +2732,11 @@ export const Pokemons = pokemonTable({
       speed: 101,
     },
   }),
-  DEERLING: pokemon("DEERLING", {
+  DEERLING: createPokemon("DEERLING", {
     name: "Deerling",
-    line: Evolutions.DEERLING,
-    type1: "normal",
-    type2: "grass",
+    evolutionId: Evolution.DEERLING.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 60,
       attack: 60,
@@ -2743,11 +2746,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  DEINO: pokemon("DEINO", {
+  DEINO: createPokemon("DEINO", {
     name: "Deino",
-    line: Evolutions.DEINO,
-    type1: "dark",
-    type2: "dragon",
+    evolutionId: Evolution.DEINO.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 52,
       attack: 65,
@@ -2757,10 +2760,10 @@ export const Pokemons = pokemonTable({
       speed: 38,
     },
   }),
-  DELCATTY: pokemon("DELCATTY", {
+  DELCATTY: createPokemon("DELCATTY", {
     name: "Delcatty",
-    line: Evolutions.SKITTY,
-    type1: "normal",
+    evolutionId: Evolution.SKITTY.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 70,
       attack: 65,
@@ -2770,11 +2773,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  DELIBIRD: pokemon("DELIBIRD", {
+  DELIBIRD: createPokemon("DELIBIRD", {
     name: "Delibird",
-    line: Evolutions.DELIBIRD,
-    type1: "ice",
-    type2: "flying",
+    evolutionId: Evolution.DELIBIRD.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 45,
       attack: 55,
@@ -2784,11 +2787,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  DELPHOX: pokemon("DELPHOX", {
+  DELPHOX: createPokemon("DELPHOX", {
     name: "Delphox",
-    line: Evolutions.FENNEKIN,
-    type1: "fire",
-    type2: "psychic",
+    evolutionId: Evolution.FENNEKIN.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 75,
       attack: 69,
@@ -2798,10 +2801,10 @@ export const Pokemons = pokemonTable({
       speed: 104,
     },
   }),
-  DEOXYS: pokemon("DEOXYS", {
+  DEOXYS: createPokemon("DEOXYS", {
     name: "Deoxys",
-    line: Evolutions.DEOXYS,
-    type1: "psychic",
+    evolutionId: Evolution.DEOXYS.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 50,
       attack: 150,
@@ -2811,11 +2814,11 @@ export const Pokemons = pokemonTable({
       speed: 150,
     },
   }),
-  DEWGONG: pokemon("DEWGONG", {
+  DEWGONG: createPokemon("DEWGONG", {
     name: "Dewgong",
-    line: Evolutions.SEEL,
-    type1: "water",
-    type2: "ice",
+    evolutionId: Evolution.SEEL.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 90,
       attack: 70,
@@ -2825,10 +2828,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  DEWOTT: pokemon("DEWOTT", {
+  DEWOTT: createPokemon("DEWOTT", {
     name: "Dewott",
-    line: Evolutions.OSHAWOTT,
-    type1: "water",
+    evolutionId: Evolution.OSHAWOTT.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 75,
       attack: 75,
@@ -2838,11 +2841,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  DEWPIDER: pokemon("DEWPIDER", {
+  DEWPIDER: createPokemon("DEWPIDER", {
     name: "Dewpider",
-    line: Evolutions.DEWPIDER,
-    type1: "water",
-    type2: "bug",
+    evolutionId: Evolution.DEWPIDER.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.BUG,
     baseStats: {
       hp: 38,
       attack: 40,
@@ -2852,11 +2855,11 @@ export const Pokemons = pokemonTable({
       speed: 27,
     },
   }),
-  DHELMISE: pokemon("DHELMISE", {
+  DHELMISE: createPokemon("DHELMISE", {
     name: "Dhelmise",
-    line: Evolutions.DHELMISE,
-    type1: "ghost",
-    type2: "grass",
+    evolutionId: Evolution.DHELMISE.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 70,
       attack: 131,
@@ -2866,11 +2869,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  DIALGA: pokemon("DIALGA", {
+  DIALGA: createPokemon("DIALGA", {
     name: "Dialga",
-    line: Evolutions.DIALGA,
-    type1: "steel",
-    type2: "dragon",
+    evolutionId: Evolution.DIALGA.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 100,
       attack: 120,
@@ -2880,11 +2883,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  DIANCIE: pokemon("DIANCIE", {
+  DIANCIE: createPokemon("DIANCIE", {
     name: "Diancie",
-    line: Evolutions.DIANCIE,
-    type1: "rock",
-    type2: "fairy",
+    evolutionId: Evolution.DIANCIE.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 50,
       attack: 100,
@@ -2894,11 +2897,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  DIGGERSBY: pokemon("DIGGERSBY", {
+  DIGGERSBY: createPokemon("DIGGERSBY", {
     name: "Diggersby",
-    line: Evolutions.BUNNELBY,
-    type1: "normal",
-    type2: "ground",
+    evolutionId: Evolution.BUNNELBY.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 85,
       attack: 56,
@@ -2908,11 +2911,11 @@ export const Pokemons = pokemonTable({
       speed: 78,
     },
   }),
-  DIGLETT_ALOLA: pokemon("DIGLETT_ALOLA", {
+  DIGLETT_ALOLA: createPokemon("DIGLETT_ALOLA", {
     name: "Alolan Diglett",
-    line: Evolutions.DIGLETT,
-    type1: "ground",
-    type2: "steel",
+    evolutionId: Evolution.DIGLETT.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 10,
       attack: 55,
@@ -2922,10 +2925,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  DIGLETT: pokemon("DIGLETT", {
+  DIGLETT: createPokemon("DIGLETT", {
     name: "Diglett",
-    line: Evolutions.DIGLETT,
-    type1: "ground",
+    evolutionId: Evolution.DIGLETT.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 10,
       attack: 55,
@@ -2935,10 +2938,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  DITTO: pokemon("DITTO", {
+  DITTO: createPokemon("DITTO", {
     name: "Ditto",
-    line: Evolutions.DITTO,
-    type1: "normal",
+    evolutionId: Evolution.DITTO.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 48,
       attack: 48,
@@ -2948,11 +2951,11 @@ export const Pokemons = pokemonTable({
       speed: 48,
     },
   }),
-  DODRIO: pokemon("DODRIO", {
+  DODRIO: createPokemon("DODRIO", {
     name: "Dodrio",
-    line: Evolutions.DODUO,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.DODUO.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 60,
       attack: 110,
@@ -2962,11 +2965,11 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  DODUO: pokemon("DODUO", {
+  DODUO: createPokemon("DODUO", {
     name: "Doduo",
-    line: Evolutions.DODUO,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.DODUO.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 35,
       attack: 85,
@@ -2976,11 +2979,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  DOLLIV: pokemon("DOLLIV", {
+  DOLLIV: createPokemon("DOLLIV", {
     name: "Dolliv",
-    line: Evolutions.SMOLIV,
-    type1: "grass",
-    type2: "normal",
+    evolutionId: Evolution.SMOLIV.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 52,
       attack: 53,
@@ -2990,10 +2993,10 @@ export const Pokemons = pokemonTable({
       speed: 33,
     },
   }),
-  DONDOZO: pokemon("DONDOZO", {
+  DONDOZO: createPokemon("DONDOZO", {
     name: "Dondozo",
-    line: Evolutions.DONDOZO,
-    type1: "water",
+    evolutionId: Evolution.DONDOZO.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 150,
       attack: 100,
@@ -3003,10 +3006,10 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  DONPHAN: pokemon("DONPHAN", {
+  DONPHAN: createPokemon("DONPHAN", {
     name: "Donphan",
-    line: Evolutions.PHANPY,
-    type1: "ground",
+    evolutionId: Evolution.PHANPY.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 90,
       attack: 120,
@@ -3016,11 +3019,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  DOTTLER: pokemon("DOTTLER", {
+  DOTTLER: createPokemon("DOTTLER", {
     name: "Dottler",
-    line: Evolutions.BLIPBUG,
-    type1: "bug",
-    type2: "psychic",
+    evolutionId: Evolution.BLIPBUG.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 50,
       attack: 35,
@@ -3030,11 +3033,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  DOUBLADE: pokemon("DOUBLADE", {
+  DOUBLADE: createPokemon("DOUBLADE", {
     name: "Doublade",
-    line: Evolutions.HONEDGE,
-    type1: "steel",
-    type2: "ghost",
+    evolutionId: Evolution.HONEDGE.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 59,
       attack: 110,
@@ -3044,11 +3047,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  DRACOVISH: pokemon("DRACOVISH", {
+  DRACOVISH: createPokemon("DRACOVISH", {
     name: "Dracovish",
-    line: Evolutions.DRACOVISH,
-    type1: "water",
-    type2: "dragon",
+    evolutionId: Evolution.DRACOVISH.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 90,
       attack: 90,
@@ -3058,11 +3061,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  DRACOZOLT: pokemon("DRACOZOLT", {
+  DRACOZOLT: createPokemon("DRACOZOLT", {
     name: "Dracozolt",
-    line: Evolutions.DRACOZOLT,
-    type1: "electric",
-    type2: "dragon",
+    evolutionId: Evolution.DRACOZOLT.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 90,
       attack: 100,
@@ -3072,11 +3075,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  DRAGALGE: pokemon("DRAGALGE", {
+  DRAGALGE: createPokemon("DRAGALGE", {
     name: "Dragalge",
-    line: Evolutions.SKRELP,
-    type1: "poison",
-    type2: "dragon",
+    evolutionId: Evolution.SKRELP.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 65,
       attack: 75,
@@ -3086,11 +3089,11 @@ export const Pokemons = pokemonTable({
       speed: 44,
     },
   }),
-  DRAGAPULT: pokemon("DRAGAPULT", {
+  DRAGAPULT: createPokemon("DRAGAPULT", {
     name: "Dragapult",
-    line: Evolutions.DREEPY,
-    type1: "dragon",
-    type2: "ghost",
+    evolutionId: Evolution.DREEPY.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 88,
       attack: 120,
@@ -3100,10 +3103,10 @@ export const Pokemons = pokemonTable({
       speed: 142,
     },
   }),
-  DRAGONAIR: pokemon("DRAGONAIR", {
+  DRAGONAIR: createPokemon("DRAGONAIR", {
     name: "Dragonair",
-    line: Evolutions.DRATINI,
-    type1: "dragon",
+    evolutionId: Evolution.DRATINI.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 61,
       attack: 84,
@@ -3113,11 +3116,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  DRAGONITE: pokemon("DRAGONITE", {
+  DRAGONITE: createPokemon("DRAGONITE", {
     name: "Dragonite",
-    line: Evolutions.DRATINI,
-    type1: "dragon",
-    type2: "flying",
+    evolutionId: Evolution.DRATINI.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 91,
       attack: 134,
@@ -3127,11 +3130,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  DRAKLOAK: pokemon("DRAKLOAK", {
+  DRAKLOAK: createPokemon("DRAKLOAK", {
     name: "Drakloak",
-    line: Evolutions.DREEPY,
-    type1: "dragon",
-    type2: "ghost",
+    evolutionId: Evolution.DREEPY.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 68,
       attack: 80,
@@ -3141,11 +3144,11 @@ export const Pokemons = pokemonTable({
       speed: 102,
     },
   }),
-  DRAMPA: pokemon("DRAMPA", {
+  DRAMPA: createPokemon("DRAMPA", {
     name: "Drampa",
-    line: Evolutions.DRAMPA,
-    type1: "normal",
-    type2: "dragon",
+    evolutionId: Evolution.DRAMPA.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 78,
       attack: 60,
@@ -3155,11 +3158,11 @@ export const Pokemons = pokemonTable({
       speed: 36,
     },
   }),
-  DRAPION: pokemon("DRAPION", {
+  DRAPION: createPokemon("DRAPION", {
     name: "Drapion",
-    line: Evolutions.SKORUPI,
-    type1: "poison",
-    type2: "dark",
+    evolutionId: Evolution.SKORUPI.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 70,
       attack: 90,
@@ -3169,10 +3172,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  DRATINI: pokemon("DRATINI", {
+  DRATINI: createPokemon("DRATINI", {
     name: "Dratini",
-    line: Evolutions.DRATINI,
-    type1: "dragon",
+    evolutionId: Evolution.DRATINI.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 41,
       attack: 64,
@@ -3182,11 +3185,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  DREDNAW: pokemon("DREDNAW", {
+  DREDNAW: createPokemon("DREDNAW", {
     name: "Drednaw",
-    line: Evolutions.CHEWTLE,
-    type1: "water",
-    type2: "rock",
+    evolutionId: Evolution.CHEWTLE.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 90,
       attack: 115,
@@ -3196,11 +3199,11 @@ export const Pokemons = pokemonTable({
       speed: 74,
     },
   }),
-  DREEPY: pokemon("DREEPY", {
+  DREEPY: createPokemon("DREEPY", {
     name: "Dreepy",
-    line: Evolutions.DREEPY,
-    type1: "dragon",
-    type2: "ghost",
+    evolutionId: Evolution.DREEPY.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 28,
       attack: 60,
@@ -3210,11 +3213,11 @@ export const Pokemons = pokemonTable({
       speed: 82,
     },
   }),
-  DRIFBLIM: pokemon("DRIFBLIM", {
+  DRIFBLIM: createPokemon("DRIFBLIM", {
     name: "Drifblim",
-    line: Evolutions.DRIFLOON,
-    type1: "ghost",
-    type2: "flying",
+    evolutionId: Evolution.DRIFLOON.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 150,
       attack: 80,
@@ -3224,11 +3227,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  DRIFLOON: pokemon("DRIFLOON", {
+  DRIFLOON: createPokemon("DRIFLOON", {
     name: "Drifloon",
-    line: Evolutions.DRIFLOON,
-    type1: "ghost",
-    type2: "flying",
+    evolutionId: Evolution.DRIFLOON.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 90,
       attack: 50,
@@ -3238,10 +3241,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  DRILBUR: pokemon("DRILBUR", {
+  DRILBUR: createPokemon("DRILBUR", {
     name: "Drilbur",
-    line: Evolutions.DRILBUR,
-    type1: "ground",
+    evolutionId: Evolution.DRILBUR.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 60,
       attack: 85,
@@ -3251,10 +3254,10 @@ export const Pokemons = pokemonTable({
       speed: 68,
     },
   }),
-  DRIZZILE: pokemon("DRIZZILE", {
+  DRIZZILE: createPokemon("DRIZZILE", {
     name: "Drizzile",
-    line: Evolutions.SOBBLE,
-    type1: "water",
+    evolutionId: Evolution.SOBBLE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 65,
       attack: 60,
@@ -3264,10 +3267,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  DROWZEE: pokemon("DROWZEE", {
+  DROWZEE: createPokemon("DROWZEE", {
     name: "Drowzee",
-    line: Evolutions.DROWZEE,
-    type1: "psychic",
+    evolutionId: Evolution.DROWZEE.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 60,
       attack: 48,
@@ -3277,10 +3280,10 @@ export const Pokemons = pokemonTable({
       speed: 42,
     },
   }),
-  DRUDDIGON: pokemon("DRUDDIGON", {
+  DRUDDIGON: createPokemon("DRUDDIGON", {
     name: "Druddigon",
-    line: Evolutions.DRUDDIGON,
-    type1: "dragon",
+    evolutionId: Evolution.DRUDDIGON.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 77,
       attack: 120,
@@ -3290,10 +3293,10 @@ export const Pokemons = pokemonTable({
       speed: 48,
     },
   }),
-  DUBWOOL: pokemon("DUBWOOL", {
+  DUBWOOL: createPokemon("DUBWOOL", {
     name: "Dubwool",
-    line: Evolutions.WOOLOO,
-    type1: "normal",
+    evolutionId: Evolution.WOOLOO.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 72,
       attack: 80,
@@ -3303,11 +3306,11 @@ export const Pokemons = pokemonTable({
       speed: 88,
     },
   }),
-  DUCKLETT: pokemon("DUCKLETT", {
+  DUCKLETT: createPokemon("DUCKLETT", {
     name: "Ducklett",
-    line: Evolutions.DUCKLETT,
-    type1: "water",
-    type2: "flying",
+    evolutionId: Evolution.DUCKLETT.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 62,
       attack: 44,
@@ -3317,10 +3320,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  DUDUNSPARCE: pokemon("DUDUNSPARCE", {
+  DUDUNSPARCE: createPokemon("DUDUNSPARCE", {
     name: "Dudunsparce",
-    line: Evolutions.DUNSPARCE,
-    type1: "normal",
+    evolutionId: Evolution.DUNSPARCE.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 125,
       attack: 100,
@@ -3330,11 +3333,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  DUGTRIO_ALOLA: pokemon("DUGTRIO_ALOLA", {
+  DUGTRIO_ALOLA: createPokemon("DUGTRIO_ALOLA", {
     name: "Alolan Dugtrio",
-    line: Evolutions.DIGLETT,
-    type1: "ground",
-    type2: "steel",
+    evolutionId: Evolution.DIGLETT.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 35,
       attack: 100,
@@ -3344,10 +3347,10 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  DUGTRIO: pokemon("DUGTRIO", {
+  DUGTRIO: createPokemon("DUGTRIO", {
     name: "Dugtrio",
-    line: Evolutions.DIGLETT,
-    type1: "ground",
+    evolutionId: Evolution.DIGLETT.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 35,
       attack: 100,
@@ -3357,10 +3360,10 @@ export const Pokemons = pokemonTable({
       speed: 120,
     },
   }),
-  DUNSPARCE: pokemon("DUNSPARCE", {
+  DUNSPARCE: createPokemon("DUNSPARCE", {
     name: "Dunsparce",
-    line: Evolutions.DUNSPARCE,
-    type1: "normal",
+    evolutionId: Evolution.DUNSPARCE.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 100,
       attack: 70,
@@ -3370,10 +3373,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  DUOSION: pokemon("DUOSION", {
+  DUOSION: createPokemon("DUOSION", {
     name: "Duosion",
-    line: Evolutions.SOLOSIS,
-    type1: "psychic",
+    evolutionId: Evolution.SOLOSIS.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 65,
       attack: 40,
@@ -3383,11 +3386,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  DURALUDON: pokemon("DURALUDON", {
+  DURALUDON: createPokemon("DURALUDON", {
     name: "Duraludon",
-    line: Evolutions.DURALUDON,
-    type1: "steel",
-    type2: "dragon",
+    evolutionId: Evolution.DURALUDON.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 70,
       attack: 95,
@@ -3397,11 +3400,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  DURANT: pokemon("DURANT", {
+  DURANT: createPokemon("DURANT", {
     name: "Durant",
-    line: Evolutions.DURANT,
-    type1: "bug",
-    type2: "steel",
+    evolutionId: Evolution.DURANT.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 58,
       attack: 109,
@@ -3411,10 +3414,10 @@ export const Pokemons = pokemonTable({
       speed: 109,
     },
   }),
-  DUSCLOPS: pokemon("DUSCLOPS", {
+  DUSCLOPS: createPokemon("DUSCLOPS", {
     name: "Dusclops",
-    line: Evolutions.DUSKULL,
-    type1: "ghost",
+    evolutionId: Evolution.DUSKULL.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 40,
       attack: 70,
@@ -3424,10 +3427,10 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  DUSKNOIR: pokemon("DUSKNOIR", {
+  DUSKNOIR: createPokemon("DUSKNOIR", {
     name: "Dusknoir",
-    line: Evolutions.DUSKULL,
-    type1: "ghost",
+    evolutionId: Evolution.DUSKULL.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 45,
       attack: 100,
@@ -3437,10 +3440,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  DUSKULL: pokemon("DUSKULL", {
+  DUSKULL: createPokemon("DUSKULL", {
     name: "Duskull",
-    line: Evolutions.DUSKULL,
-    type1: "ghost",
+    evolutionId: Evolution.DUSKULL.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 20,
       attack: 40,
@@ -3450,11 +3453,11 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  DUSTOX: pokemon("DUSTOX", {
+  DUSTOX: createPokemon("DUSTOX", {
     name: "Dustox",
-    line: Evolutions.WURMPLE,
-    type1: "bug",
-    type2: "poison",
+    evolutionId: Evolution.WURMPLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 60,
       attack: 50,
@@ -3464,11 +3467,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  DWEBBLE: pokemon("DWEBBLE", {
+  DWEBBLE: createPokemon("DWEBBLE", {
     name: "Dwebble",
-    line: Evolutions.DWEBBLE,
-    type1: "bug",
-    type2: "rock",
+    evolutionId: Evolution.DWEBBLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -3478,10 +3481,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  EELEKTRIK: pokemon("EELEKTRIK", {
+  EELEKTRIK: createPokemon("EELEKTRIK", {
     name: "Eelektrik",
-    line: Evolutions.TYNAMO,
-    type1: "electric",
+    evolutionId: Evolution.TYNAMO.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 65,
       attack: 85,
@@ -3491,10 +3494,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  EELEKTROSS: pokemon("EELEKTROSS", {
+  EELEKTROSS: createPokemon("EELEKTROSS", {
     name: "Eelektross",
-    line: Evolutions.TYNAMO,
-    type1: "electric",
+    evolutionId: Evolution.TYNAMO.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 85,
       attack: 115,
@@ -3504,10 +3507,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  EEVEE: pokemon("EEVEE", {
+  EEVEE: createPokemon("EEVEE", {
     name: "Eevee",
-    line: Evolutions.EEVEE,
-    type1: "normal",
+    evolutionId: Evolution.EEVEE.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 55,
       attack: 55,
@@ -3517,10 +3520,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  EISCUE: pokemon("EISCUE", {
+  EISCUE: createPokemon("EISCUE", {
     name: "Eiscue",
-    line: Evolutions.EISCUE,
-    type1: "ice",
+    evolutionId: Evolution.EISCUE.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 75,
       attack: 80,
@@ -3530,10 +3533,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  EKANS: pokemon("EKANS", {
+  EKANS: createPokemon("EKANS", {
     name: "Ekans",
-    line: Evolutions.EKANS,
-    type1: "poison",
+    evolutionId: Evolution.EKANS.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 35,
       attack: 60,
@@ -3543,10 +3546,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  ELDEGOSS: pokemon("ELDEGOSS", {
+  ELDEGOSS: createPokemon("ELDEGOSS", {
     name: "Eldegoss",
-    line: Evolutions.GOSSIFLEUR,
-    type1: "grass",
+    evolutionId: Evolution.GOSSIFLEUR.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 60,
       attack: 50,
@@ -3556,10 +3559,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  ELECTABUZZ: pokemon("ELECTABUZZ", {
+  ELECTABUZZ: createPokemon("ELECTABUZZ", {
     name: "Electabuzz",
-    line: Evolutions.ELEKID,
-    type1: "electric",
+    evolutionId: Evolution.ELEKID.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 65,
       attack: 83,
@@ -3569,10 +3572,10 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  ELECTIVIRE: pokemon("ELECTIVIRE", {
+  ELECTIVIRE: createPokemon("ELECTIVIRE", {
     name: "Electivire",
-    line: Evolutions.ELEKID,
-    type1: "electric",
+    evolutionId: Evolution.ELEKID.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 75,
       attack: 123,
@@ -3582,10 +3585,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  ELECTRIKE: pokemon("ELECTRIKE", {
+  ELECTRIKE: createPokemon("ELECTRIKE", {
     name: "Electrike",
-    line: Evolutions.ELECTRIKE,
-    type1: "electric",
+    evolutionId: Evolution.ELECTRIKE.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 40,
       attack: 45,
@@ -3595,11 +3598,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  ELECTRODE_HISUI: pokemon("ELECTRODE_HISUI", {
+  ELECTRODE_HISUI: createPokemon("ELECTRODE_HISUI", {
     name: "Hisuian Electrode",
-    line: Evolutions.VOLTORB,
-    type1: "electric",
-    type2: "grass",
+    evolutionId: Evolution.VOLTORB.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 60,
       attack: 50,
@@ -3609,10 +3612,10 @@ export const Pokemons = pokemonTable({
       speed: 150,
     },
   }),
-  ELECTRODE: pokemon("ELECTRODE", {
+  ELECTRODE: createPokemon("ELECTRODE", {
     name: "Electrode",
-    line: Evolutions.VOLTORB,
-    type1: "electric",
+    evolutionId: Evolution.VOLTORB.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 60,
       attack: 50,
@@ -3622,10 +3625,10 @@ export const Pokemons = pokemonTable({
       speed: 150,
     },
   }),
-  ELEKID: pokemon("ELEKID", {
+  ELEKID: createPokemon("ELEKID", {
     name: "Elekid",
-    line: Evolutions.ELEKID,
-    type1: "electric",
+    evolutionId: Evolution.ELEKID.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 45,
       attack: 63,
@@ -3635,10 +3638,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  ELGYEM: pokemon("ELGYEM", {
+  ELGYEM: createPokemon("ELGYEM", {
     name: "Elgyem",
-    line: Evolutions.ELGYEM,
-    type1: "psychic",
+    evolutionId: Evolution.ELGYEM.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 55,
       attack: 55,
@@ -3648,11 +3651,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  EMBOAR: pokemon("EMBOAR", {
+  EMBOAR: createPokemon("EMBOAR", {
     name: "Emboar",
-    line: Evolutions.TEPIG,
-    type1: "fire",
-    type2: "fighting",
+    evolutionId: Evolution.TEPIG.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 110,
       attack: 123,
@@ -3662,11 +3665,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  EMOLGA: pokemon("EMOLGA", {
+  EMOLGA: createPokemon("EMOLGA", {
     name: "Emolga",
-    line: Evolutions.EMOLGA,
-    type1: "electric",
-    type2: "flying",
+    evolutionId: Evolution.EMOLGA.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 55,
       attack: 75,
@@ -3676,11 +3679,11 @@ export const Pokemons = pokemonTable({
       speed: 103,
     },
   }),
-  EMPOLEON: pokemon("EMPOLEON", {
+  EMPOLEON: createPokemon("EMPOLEON", {
     name: "Empoleon",
-    line: Evolutions.PIPLUP,
-    type1: "water",
-    type2: "steel",
+    evolutionId: Evolution.PIPLUP.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 84,
       attack: 86,
@@ -3690,11 +3693,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  ENAMORUS_INCARNATE: pokemon("ENAMORUS_INCARNATE", {
+  ENAMORUS_INCARNATE: createPokemon("ENAMORUS_INCARNATE", {
     name: "Enamorus",
-    line: Evolutions.ENAMORUS,
-    type1: "fairy",
-    type2: "flying",
+    evolutionId: Evolution.ENAMORUS.id,
+    type1: PokemonTypes.FAIRY,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 74,
       attack: 115,
@@ -3704,10 +3707,10 @@ export const Pokemons = pokemonTable({
       speed: 106,
     },
   }),
-  ENTEI: pokemon("ENTEI", {
+  ENTEI: createPokemon("ENTEI", {
     name: "Entei",
-    line: Evolutions.ENTEI,
-    type1: "fire",
+    evolutionId: Evolution.ENTEI.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 115,
       attack: 115,
@@ -3717,11 +3720,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  ESCAVALIER: pokemon("ESCAVALIER", {
+  ESCAVALIER: createPokemon("ESCAVALIER", {
     name: "Escavalier",
-    line: Evolutions.KARRABLAST,
-    type1: "bug",
-    type2: "steel",
+    evolutionId: Evolution.KARRABLAST.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 70,
       attack: 135,
@@ -3731,10 +3734,10 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  ESPATHRA: pokemon("ESPATHRA", {
+  ESPATHRA: createPokemon("ESPATHRA", {
     name: "Espathra",
-    line: Evolutions.FLITTLE,
-    type1: "psychic",
+    evolutionId: Evolution.FLITTLE.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 95,
       attack: 60,
@@ -3744,10 +3747,10 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  ESPEON: pokemon("ESPEON", {
+  ESPEON: createPokemon("ESPEON", {
     name: "Espeon",
-    line: Evolutions.EEVEE,
-    type1: "psychic",
+    evolutionId: Evolution.EEVEE.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 65,
       attack: 65,
@@ -3757,10 +3760,10 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  ESPURR: pokemon("ESPURR", {
+  ESPURR: createPokemon("ESPURR", {
     name: "Espurr",
-    line: Evolutions.ESPURR,
-    type1: "psychic",
+    evolutionId: Evolution.ESPURR.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 62,
       attack: 48,
@@ -3770,11 +3773,11 @@ export const Pokemons = pokemonTable({
       speed: 68,
     },
   }),
-  ETERNATUS: pokemon("ETERNATUS", {
+  ETERNATUS: createPokemon("ETERNATUS", {
     name: "Eternatus",
-    line: Evolutions.ETERNATUS,
-    type1: "poison",
-    type2: "dragon",
+    evolutionId: Evolution.ETERNATUS.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 140,
       attack: 85,
@@ -3784,11 +3787,11 @@ export const Pokemons = pokemonTable({
       speed: 130,
     },
   }),
-  EXCADRILL: pokemon("EXCADRILL", {
+  EXCADRILL: createPokemon("EXCADRILL", {
     name: "Excadrill",
-    line: Evolutions.DRILBUR,
-    type1: "ground",
-    type2: "steel",
+    evolutionId: Evolution.DRILBUR.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 110,
       attack: 135,
@@ -3798,11 +3801,11 @@ export const Pokemons = pokemonTable({
       speed: 88,
     },
   }),
-  EXEGGCUTE: pokemon("EXEGGCUTE", {
+  EXEGGCUTE: createPokemon("EXEGGCUTE", {
     name: "Exeggcute",
-    line: Evolutions.EXEGGCUTE,
-    type1: "grass",
-    type2: "psychic",
+    evolutionId: Evolution.EXEGGCUTE.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 60,
       attack: 40,
@@ -3812,11 +3815,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  EXEGGUTOR_ALOLA: pokemon("EXEGGUTOR_ALOLA", {
+  EXEGGUTOR_ALOLA: createPokemon("EXEGGUTOR_ALOLA", {
     name: "Alolan Exeggutor",
-    line: Evolutions.EXEGGCUTE,
-    type1: "grass",
-    type2: "dragon",
+    evolutionId: Evolution.EXEGGCUTE.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 95,
       attack: 105,
@@ -3826,11 +3829,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  EXEGGUTOR: pokemon("EXEGGUTOR", {
+  EXEGGUTOR: createPokemon("EXEGGUTOR", {
     name: "Exeggutor",
-    line: Evolutions.EXEGGCUTE,
-    type1: "grass",
-    type2: "psychic",
+    evolutionId: Evolution.EXEGGCUTE.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 95,
       attack: 95,
@@ -3840,10 +3843,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  EXPLOUD: pokemon("EXPLOUD", {
+  EXPLOUD: createPokemon("EXPLOUD", {
     name: "Exploud",
-    line: Evolutions.WHISMUR,
-    type1: "normal",
+    evolutionId: Evolution.WHISMUR.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 104,
       attack: 91,
@@ -3853,10 +3856,10 @@ export const Pokemons = pokemonTable({
       speed: 68,
     },
   }),
-  FALINKS: pokemon("FALINKS", {
+  FALINKS: createPokemon("FALINKS", {
     name: "Falinks",
-    line: Evolutions.FALINKS,
-    type1: "fighting",
+    evolutionId: Evolution.FALINKS.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 65,
       attack: 100,
@@ -3866,10 +3869,10 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  FARFETCHD_GALAR: pokemon("FARFETCHD_GALAR", {
+  FARFETCHD_GALAR: createPokemon("FARFETCHD_GALAR", {
     name: "Galarian Farfetch’d",
-    line: Evolutions.FARFETCHD,
-    type1: "fighting",
+    evolutionId: Evolution.FARFETCHD.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 52,
       attack: 95,
@@ -3879,11 +3882,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  FARFETCHD: pokemon("FARFETCHD", {
+  FARFETCHD: createPokemon("FARFETCHD", {
     name: "Farfetch’d",
-    line: Evolutions.FARFETCHD,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.FARFETCHD.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 52,
       attack: 90,
@@ -3893,11 +3896,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  FARIGIRAF: pokemon("FARIGIRAF", {
+  FARIGIRAF: createPokemon("FARIGIRAF", {
     name: "Farigiraf",
-    line: Evolutions.GIRAFARIG,
-    type1: "normal",
-    type2: "psychic",
+    evolutionId: Evolution.GIRAFARIG.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 120,
       attack: 90,
@@ -3907,11 +3910,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  FEAROW: pokemon("FEAROW", {
+  FEAROW: createPokemon("FEAROW", {
     name: "Fearow",
-    line: Evolutions.SPEAROW,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.SPEAROW.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 65,
       attack: 90,
@@ -3921,10 +3924,10 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  FEEBAS: pokemon("FEEBAS", {
+  FEEBAS: createPokemon("FEEBAS", {
     name: "Feebas",
-    line: Evolutions.FEEBAS,
-    type1: "water",
+    evolutionId: Evolution.FEEBAS.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 20,
       attack: 15,
@@ -3934,10 +3937,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  FENNEKIN: pokemon("FENNEKIN", {
+  FENNEKIN: createPokemon("FENNEKIN", {
     name: "Fennekin",
-    line: Evolutions.FENNEKIN,
-    type1: "fire",
+    evolutionId: Evolution.FENNEKIN.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 40,
       attack: 45,
@@ -3947,10 +3950,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  FERALIGATR: pokemon("FERALIGATR", {
+  FERALIGATR: createPokemon("FERALIGATR", {
     name: "Feraligatr",
-    line: Evolutions.TOTODILE,
-    type1: "water",
+    evolutionId: Evolution.TOTODILE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 85,
       attack: 105,
@@ -3960,11 +3963,11 @@ export const Pokemons = pokemonTable({
       speed: 78,
     },
   }),
-  FERROSEED: pokemon("FERROSEED", {
+  FERROSEED: createPokemon("FERROSEED", {
     name: "Ferroseed",
-    line: Evolutions.FERROSEED,
-    type1: "grass",
-    type2: "steel",
+    evolutionId: Evolution.FERROSEED.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 44,
       attack: 50,
@@ -3974,11 +3977,11 @@ export const Pokemons = pokemonTable({
       speed: 10,
     },
   }),
-  FERROTHORN: pokemon("FERROTHORN", {
+  FERROTHORN: createPokemon("FERROTHORN", {
     name: "Ferrothorn",
-    line: Evolutions.FERROSEED,
-    type1: "grass",
-    type2: "steel",
+    evolutionId: Evolution.FERROSEED.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 74,
       attack: 94,
@@ -3988,10 +3991,10 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  FIDOUGH: pokemon("FIDOUGH", {
+  FIDOUGH: createPokemon("FIDOUGH", {
     name: "Fidough",
-    line: Evolutions.FIDOUGH,
-    type1: "fairy",
+    evolutionId: Evolution.FIDOUGH.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 37,
       attack: 55,
@@ -4001,10 +4004,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  FINIZEN: pokemon("FINIZEN", {
+  FINIZEN: createPokemon("FINIZEN", {
     name: "Finizen",
-    line: Evolutions.FINIZEN,
-    type1: "water",
+    evolutionId: Evolution.FINIZEN.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 70,
       attack: 45,
@@ -4014,10 +4017,10 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  FINNEON: pokemon("FINNEON", {
+  FINNEON: createPokemon("FINNEON", {
     name: "Finneon",
-    line: Evolutions.FINNEON,
-    type1: "water",
+    evolutionId: Evolution.FINNEON.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 49,
       attack: 49,
@@ -4027,10 +4030,10 @@ export const Pokemons = pokemonTable({
       speed: 66,
     },
   }),
-  FLAAFFY: pokemon("FLAAFFY", {
+  FLAAFFY: createPokemon("FLAAFFY", {
     name: "Flaaffy",
-    line: Evolutions.MAREEP,
-    type1: "electric",
+    evolutionId: Evolution.MAREEP.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 70,
       attack: 55,
@@ -4040,10 +4043,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  FLABEBE: pokemon("FLABEBE", {
+  FLABEBE: createPokemon("FLABEBE", {
     name: "Flabébé",
-    line: Evolutions.FLABEBE,
-    type1: "fairy",
+    evolutionId: Evolution.FLABEBE.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 44,
       attack: 38,
@@ -4053,11 +4056,11 @@ export const Pokemons = pokemonTable({
       speed: 42,
     },
   }),
-  FLAMIGO: pokemon("FLAMIGO", {
+  FLAMIGO: createPokemon("FLAMIGO", {
     name: "Flamigo",
-    line: Evolutions.FLAMIGO,
-    type1: "flying",
-    type2: "fighting",
+    evolutionId: Evolution.FLAMIGO.id,
+    type1: PokemonTypes.FLYING,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 82,
       attack: 115,
@@ -4067,11 +4070,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  FLAPPLE: pokemon("FLAPPLE", {
+  FLAPPLE: createPokemon("FLAPPLE", {
     name: "Flapple",
-    line: Evolutions.APPLIN,
-    type1: "grass",
-    type2: "dragon",
+    evolutionId: Evolution.APPLIN.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 70,
       attack: 110,
@@ -4081,10 +4084,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  FLAREON: pokemon("FLAREON", {
+  FLAREON: createPokemon("FLAREON", {
     name: "Flareon",
-    line: Evolutions.EEVEE,
-    type1: "fire",
+    evolutionId: Evolution.EEVEE.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 65,
       attack: 130,
@@ -4094,11 +4097,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  FLETCHINDER: pokemon("FLETCHINDER", {
+  FLETCHINDER: createPokemon("FLETCHINDER", {
     name: "Fletchinder",
-    line: Evolutions.FLETCHLING,
-    type1: "fire",
-    type2: "flying",
+    evolutionId: Evolution.FLETCHLING.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 62,
       attack: 73,
@@ -4108,11 +4111,11 @@ export const Pokemons = pokemonTable({
       speed: 84,
     },
   }),
-  FLETCHLING: pokemon("FLETCHLING", {
+  FLETCHLING: createPokemon("FLETCHLING", {
     name: "Fletchling",
-    line: Evolutions.FLETCHLING,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.FLETCHLING.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 45,
       attack: 50,
@@ -4122,10 +4125,10 @@ export const Pokemons = pokemonTable({
       speed: 62,
     },
   }),
-  FLITTLE: pokemon("FLITTLE", {
+  FLITTLE: createPokemon("FLITTLE", {
     name: "Flittle",
-    line: Evolutions.FLITTLE,
-    type1: "psychic",
+    evolutionId: Evolution.FLITTLE.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 30,
       attack: 35,
@@ -4135,10 +4138,10 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  FLOATZEL: pokemon("FLOATZEL", {
+  FLOATZEL: createPokemon("FLOATZEL", {
     name: "Floatzel",
-    line: Evolutions.BUIZEL,
-    type1: "water",
+    evolutionId: Evolution.BUIZEL.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 85,
       attack: 105,
@@ -4148,10 +4151,10 @@ export const Pokemons = pokemonTable({
       speed: 115,
     },
   }),
-  FLOETTE_ETERNAL: pokemon("FLOETTE_ETERNAL", {
+  FLOETTE_ETERNAL: createPokemon("FLOETTE_ETERNAL", {
     name: "Floette",
-    line: Evolutions.FLABEBE,
-    type1: "fairy",
+    evolutionId: Evolution.FLABEBE.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 74,
       attack: 65,
@@ -4161,10 +4164,10 @@ export const Pokemons = pokemonTable({
       speed: 92,
     },
   }),
-  FLOETTE: pokemon("FLOETTE", {
+  FLOETTE: createPokemon("FLOETTE", {
     name: "Floette",
-    line: Evolutions.FLABEBE,
-    type1: "fairy",
+    evolutionId: Evolution.FLABEBE.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 54,
       attack: 45,
@@ -4174,10 +4177,10 @@ export const Pokemons = pokemonTable({
       speed: 52,
     },
   }),
-  FLORAGATO: pokemon("FLORAGATO", {
+  FLORAGATO: createPokemon("FLORAGATO", {
     name: "Floragato",
-    line: Evolutions.SPRIGATITO,
-    type1: "grass",
+    evolutionId: Evolution.SPRIGATITO.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 61,
       attack: 80,
@@ -4187,10 +4190,10 @@ export const Pokemons = pokemonTable({
       speed: 83,
     },
   }),
-  FLORGES: pokemon("FLORGES", {
+  FLORGES: createPokemon("FLORGES", {
     name: "Florges",
-    line: Evolutions.FLABEBE,
-    type1: "fairy",
+    evolutionId: Evolution.FLABEBE.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 78,
       attack: 65,
@@ -4200,11 +4203,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  FLUTTER_MANE: pokemon("FLUTTER_MANE", {
+  FLUTTER_MANE: createPokemon("FLUTTER_MANE", {
     name: "Flutter Mane",
-    line: Evolutions.FLUTTER_MANE,
-    type1: "ghost",
-    type2: "fairy",
+    evolutionId: Evolution.FLUTTER_MANE.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 55,
       attack: 55,
@@ -4214,11 +4217,11 @@ export const Pokemons = pokemonTable({
       speed: 135,
     },
   }),
-  FLYGON: pokemon("FLYGON", {
+  FLYGON: createPokemon("FLYGON", {
     name: "Flygon",
-    line: Evolutions.TRAPINCH,
-    type1: "ground",
-    type2: "dragon",
+    evolutionId: Evolution.TRAPINCH.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 80,
       attack: 100,
@@ -4228,10 +4231,10 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  FOMANTIS: pokemon("FOMANTIS", {
+  FOMANTIS: createPokemon("FOMANTIS", {
     name: "Fomantis",
-    line: Evolutions.FOMANTIS,
-    type1: "grass",
+    evolutionId: Evolution.FOMANTIS.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 40,
       attack: 55,
@@ -4241,11 +4244,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  FOONGUS: pokemon("FOONGUS", {
+  FOONGUS: createPokemon("FOONGUS", {
     name: "Foongus",
-    line: Evolutions.FOONGUS,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.FOONGUS.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 69,
       attack: 55,
@@ -4255,11 +4258,11 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  FORRETRESS: pokemon("FORRETRESS", {
+  FORRETRESS: createPokemon("FORRETRESS", {
     name: "Forretress",
-    line: Evolutions.PINECO,
-    type1: "bug",
-    type2: "steel",
+    evolutionId: Evolution.PINECO.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 75,
       attack: 90,
@@ -4269,10 +4272,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  FRAXURE: pokemon("FRAXURE", {
+  FRAXURE: createPokemon("FRAXURE", {
     name: "Fraxure",
-    line: Evolutions.AXEW,
-    type1: "dragon",
+    evolutionId: Evolution.AXEW.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 66,
       attack: 117,
@@ -4282,11 +4285,11 @@ export const Pokemons = pokemonTable({
       speed: 67,
     },
   }),
-  FRIGIBAX: pokemon("FRIGIBAX", {
+  FRIGIBAX: createPokemon("FRIGIBAX", {
     name: "Frigibax",
-    line: Evolutions.FRIGIBAX,
-    type1: "dragon",
-    type2: "ice",
+    evolutionId: Evolution.FRIGIBAX.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 65,
       attack: 75,
@@ -4296,11 +4299,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  FRILLISH: pokemon("FRILLISH", {
+  FRILLISH: createPokemon("FRILLISH", {
     name: "Frillish",
-    line: Evolutions.FRILLISH,
-    type1: "water",
-    type2: "ghost",
+    evolutionId: Evolution.FRILLISH.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 55,
       attack: 40,
@@ -4310,10 +4313,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  FROAKIE: pokemon("FROAKIE", {
+  FROAKIE: createPokemon("FROAKIE", {
     name: "Froakie",
-    line: Evolutions.FROAKIE,
-    type1: "water",
+    evolutionId: Evolution.FROAKIE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 41,
       attack: 56,
@@ -4323,10 +4326,10 @@ export const Pokemons = pokemonTable({
       speed: 71,
     },
   }),
-  FROGADIER: pokemon("FROGADIER", {
+  FROGADIER: createPokemon("FROGADIER", {
     name: "Frogadier",
-    line: Evolutions.FROAKIE,
-    type1: "water",
+    evolutionId: Evolution.FROAKIE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 54,
       attack: 63,
@@ -4336,11 +4339,11 @@ export const Pokemons = pokemonTable({
       speed: 97,
     },
   }),
-  FROSLASS: pokemon("FROSLASS", {
+  FROSLASS: createPokemon("FROSLASS", {
     name: "Froslass",
-    line: Evolutions.SNORUNT,
-    type1: "ice",
-    type2: "ghost",
+    evolutionId: Evolution.SNORUNT.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 70,
       attack: 80,
@@ -4350,11 +4353,11 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  FROSMOTH: pokemon("FROSMOTH", {
+  FROSMOTH: createPokemon("FROSMOTH", {
     name: "Frosmoth",
-    line: Evolutions.SNOM,
-    type1: "ice",
-    type2: "bug",
+    evolutionId: Evolution.SNOM.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.BUG,
     baseStats: {
       hp: 70,
       attack: 65,
@@ -4364,10 +4367,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  FUECOCO: pokemon("FUECOCO", {
+  FUECOCO: createPokemon("FUECOCO", {
     name: "Fuecoco",
-    line: Evolutions.FUECOCO,
-    type1: "fire",
+    evolutionId: Evolution.FUECOCO.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 67,
       attack: 45,
@@ -4377,10 +4380,10 @@ export const Pokemons = pokemonTable({
       speed: 36,
     },
   }),
-  FURFROU: pokemon("FURFROU", {
+  FURFROU: createPokemon("FURFROU", {
     name: "Furfrou",
-    line: Evolutions.FURFROU,
-    type1: "normal",
+    evolutionId: Evolution.FURFROU.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 75,
       attack: 80,
@@ -4390,10 +4393,10 @@ export const Pokemons = pokemonTable({
       speed: 102,
     },
   }),
-  FURRET: pokemon("FURRET", {
+  FURRET: createPokemon("FURRET", {
     name: "Furret",
-    line: Evolutions.SENTRET,
-    type1: "normal",
+    evolutionId: Evolution.SENTRET.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 85,
       attack: 76,
@@ -4403,11 +4406,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  GABITE: pokemon("GABITE", {
+  GABITE: createPokemon("GABITE", {
     name: "Gabite",
-    line: Evolutions.GIBLE,
-    type1: "dragon",
-    type2: "ground",
+    evolutionId: Evolution.GIBLE.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 68,
       attack: 90,
@@ -4417,11 +4420,11 @@ export const Pokemons = pokemonTable({
       speed: 82,
     },
   }),
-  GALLADE: pokemon("GALLADE", {
+  GALLADE: createPokemon("GALLADE", {
     name: "Gallade",
-    line: Evolutions.RALTS,
-    type1: "psychic",
-    type2: "fighting",
+    evolutionId: Evolution.RALTS.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 68,
       attack: 125,
@@ -4431,11 +4434,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  GALVANTULA: pokemon("GALVANTULA", {
+  GALVANTULA: createPokemon("GALVANTULA", {
     name: "Galvantula",
-    line: Evolutions.JOLTIK,
-    type1: "bug",
-    type2: "electric",
+    evolutionId: Evolution.JOLTIK.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 70,
       attack: 77,
@@ -4445,10 +4448,10 @@ export const Pokemons = pokemonTable({
       speed: 108,
     },
   }),
-  GARBODOR: pokemon("GARBODOR", {
+  GARBODOR: createPokemon("GARBODOR", {
     name: "Garbodor",
-    line: Evolutions.TRUBBISH,
-    type1: "poison",
+    evolutionId: Evolution.TRUBBISH.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 80,
       attack: 95,
@@ -4458,11 +4461,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  GARCHOMP: pokemon("GARCHOMP", {
+  GARCHOMP: createPokemon("GARCHOMP", {
     name: "Garchomp",
-    line: Evolutions.GIBLE,
-    type1: "dragon",
-    type2: "ground",
+    evolutionId: Evolution.GIBLE.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 108,
       attack: 130,
@@ -4472,11 +4475,11 @@ export const Pokemons = pokemonTable({
       speed: 102,
     },
   }),
-  GARDEVOIR: pokemon("GARDEVOIR", {
+  GARDEVOIR: createPokemon("GARDEVOIR", {
     name: "Gardevoir",
-    line: Evolutions.RALTS,
-    type1: "psychic",
-    type2: "fairy",
+    evolutionId: Evolution.RALTS.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 68,
       attack: 65,
@@ -4486,10 +4489,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  GARGANACL: pokemon("GARGANACL", {
+  GARGANACL: createPokemon("GARGANACL", {
     name: "Garganacl",
-    line: Evolutions.NACLI,
-    type1: "rock",
+    evolutionId: Evolution.NACLI.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 100,
       attack: 100,
@@ -4499,11 +4502,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  GASTLY: pokemon("GASTLY", {
+  GASTLY: createPokemon("GASTLY", {
     name: "Gastly",
-    line: Evolutions.GASTLY,
-    type1: "ghost",
-    type2: "poison",
+    evolutionId: Evolution.GASTLY.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 30,
       attack: 35,
@@ -4513,11 +4516,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  GASTRODON: pokemon("GASTRODON", {
+  GASTRODON: createPokemon("GASTRODON", {
     name: "Gastrodon",
-    line: Evolutions.SHELLOS,
-    type1: "water",
-    type2: "ground",
+    evolutionId: Evolution.SHELLOS.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 111,
       attack: 83,
@@ -4527,11 +4530,11 @@ export const Pokemons = pokemonTable({
       speed: 39,
     },
   }),
-  GENESECT: pokemon("GENESECT", {
+  GENESECT: createPokemon("GENESECT", {
     name: "Genesect",
-    line: Evolutions.GENESECT,
-    type1: "bug",
-    type2: "steel",
+    evolutionId: Evolution.GENESECT.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 71,
       attack: 120,
@@ -4541,11 +4544,11 @@ export const Pokemons = pokemonTable({
       speed: 99,
     },
   }),
-  GENGAR: pokemon("GENGAR", {
+  GENGAR: createPokemon("GENGAR", {
     name: "Gengar",
-    line: Evolutions.GASTLY,
-    type1: "ghost",
-    type2: "poison",
+    evolutionId: Evolution.GASTLY.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 60,
       attack: 65,
@@ -4555,11 +4558,11 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  GEODUDE_ALOLA: pokemon("GEODUDE_ALOLA", {
+  GEODUDE_ALOLA: createPokemon("GEODUDE_ALOLA", {
     name: "Alolan Geodude",
-    line: Evolutions.GEODUDE,
-    type1: "rock",
-    type2: "electric",
+    evolutionId: Evolution.GEODUDE.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 40,
       attack: 80,
@@ -4569,11 +4572,11 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  GEODUDE: pokemon("GEODUDE", {
+  GEODUDE: createPokemon("GEODUDE", {
     name: "Geodude",
-    line: Evolutions.GEODUDE,
-    type1: "rock",
-    type2: "ground",
+    evolutionId: Evolution.GEODUDE.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 40,
       attack: 80,
@@ -4583,11 +4586,11 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  GHOLDENGO: pokemon("GHOLDENGO", {
+  GHOLDENGO: createPokemon("GHOLDENGO", {
     name: "Gholdengo",
-    line: Evolutions.GIMMIGHOUL,
-    type1: "steel",
-    type2: "ghost",
+    evolutionId: Evolution.GIMMIGHOUL.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 87,
       attack: 60,
@@ -4597,11 +4600,11 @@ export const Pokemons = pokemonTable({
       speed: 84,
     },
   }),
-  GIBLE: pokemon("GIBLE", {
+  GIBLE: createPokemon("GIBLE", {
     name: "Gible",
-    line: Evolutions.GIBLE,
-    type1: "dragon",
-    type2: "ground",
+    evolutionId: Evolution.GIBLE.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 58,
       attack: 70,
@@ -4611,10 +4614,10 @@ export const Pokemons = pokemonTable({
       speed: 42,
     },
   }),
-  GIGALITH: pokemon("GIGALITH", {
+  GIGALITH: createPokemon("GIGALITH", {
     name: "Gigalith",
-    line: Evolutions.ROGGENROLA,
-    type1: "rock",
+    evolutionId: Evolution.ROGGENROLA.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 85,
       attack: 135,
@@ -4624,10 +4627,10 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  GIMMIGHOUL: pokemon("GIMMIGHOUL", {
+  GIMMIGHOUL: createPokemon("GIMMIGHOUL", {
     name: "Gimmighoul",
-    line: Evolutions.GIMMIGHOUL,
-    type1: "ghost",
+    evolutionId: Evolution.GIMMIGHOUL.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 45,
       attack: 30,
@@ -4637,11 +4640,11 @@ export const Pokemons = pokemonTable({
       speed: 10,
     },
   }),
-  GIRAFARIG: pokemon("GIRAFARIG", {
+  GIRAFARIG: createPokemon("GIRAFARIG", {
     name: "Girafarig",
-    line: Evolutions.GIRAFARIG,
-    type1: "normal",
-    type2: "psychic",
+    evolutionId: Evolution.GIRAFARIG.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 70,
       attack: 80,
@@ -4651,11 +4654,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  GIRATINA: pokemon("GIRATINA", {
+  GIRATINA: createPokemon("GIRATINA", {
     name: "Giratina",
-    line: Evolutions.GIRATINA,
-    type1: "ghost",
-    type2: "dragon",
+    evolutionId: Evolution.GIRATINA.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 150,
       attack: 100,
@@ -4665,10 +4668,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  GLACEON: pokemon("GLACEON", {
+  GLACEON: createPokemon("GLACEON", {
     name: "Glaceon",
-    line: Evolutions.EEVEE,
-    type1: "ice",
+    evolutionId: Evolution.EEVEE.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 65,
       attack: 60,
@@ -4678,10 +4681,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  GLALIE: pokemon("GLALIE", {
+  GLALIE: createPokemon("GLALIE", {
     name: "Glalie",
-    line: Evolutions.SNORUNT,
-    type1: "ice",
+    evolutionId: Evolution.SNORUNT.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 80,
       attack: 80,
@@ -4691,10 +4694,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  GLAMEOW: pokemon("GLAMEOW", {
+  GLAMEOW: createPokemon("GLAMEOW", {
     name: "Glameow",
-    line: Evolutions.GLAMEOW,
-    type1: "normal",
+    evolutionId: Evolution.GLAMEOW.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 49,
       attack: 55,
@@ -4704,10 +4707,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  GLASTRIER: pokemon("GLASTRIER", {
+  GLASTRIER: createPokemon("GLASTRIER", {
     name: "Glastrier",
-    line: Evolutions.GLASTRIER,
-    type1: "ice",
+    evolutionId: Evolution.GLASTRIER.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 100,
       attack: 145,
@@ -4717,11 +4720,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  GLIGAR: pokemon("GLIGAR", {
+  GLIGAR: createPokemon("GLIGAR", {
     name: "Gligar",
-    line: Evolutions.GLIGAR,
-    type1: "ground",
-    type2: "flying",
+    evolutionId: Evolution.GLIGAR.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 65,
       attack: 75,
@@ -4731,11 +4734,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  GLIMMET: pokemon("GLIMMET", {
+  GLIMMET: createPokemon("GLIMMET", {
     name: "Glimmet",
-    line: Evolutions.GLIMMET,
-    type1: "rock",
-    type2: "poison",
+    evolutionId: Evolution.GLIMMET.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 48,
       attack: 35,
@@ -4745,11 +4748,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  GLIMMORA: pokemon("GLIMMORA", {
+  GLIMMORA: createPokemon("GLIMMORA", {
     name: "Glimmora",
-    line: Evolutions.GLIMMET,
-    type1: "rock",
-    type2: "poison",
+    evolutionId: Evolution.GLIMMET.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 83,
       attack: 55,
@@ -4759,11 +4762,11 @@ export const Pokemons = pokemonTable({
       speed: 86,
     },
   }),
-  GLISCOR: pokemon("GLISCOR", {
+  GLISCOR: createPokemon("GLISCOR", {
     name: "Gliscor",
-    line: Evolutions.GLIGAR,
-    type1: "ground",
-    type2: "flying",
+    evolutionId: Evolution.GLIGAR.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 75,
       attack: 95,
@@ -4773,11 +4776,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  GLOOM: pokemon("GLOOM", {
+  GLOOM: createPokemon("GLOOM", {
     name: "Gloom",
-    line: Evolutions.ODDISH,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.ODDISH.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 60,
       attack: 65,
@@ -4787,10 +4790,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  GOGOAT: pokemon("GOGOAT", {
+  GOGOAT: createPokemon("GOGOAT", {
     name: "Gogoat",
-    line: Evolutions.SKIDDO,
-    type1: "grass",
+    evolutionId: Evolution.SKIDDO.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 123,
       attack: 100,
@@ -4800,11 +4803,11 @@ export const Pokemons = pokemonTable({
       speed: 68,
     },
   }),
-  GOLBAT: pokemon("GOLBAT", {
+  GOLBAT: createPokemon("GOLBAT", {
     name: "Golbat",
-    line: Evolutions.ZUBAT,
-    type1: "poison",
-    type2: "flying",
+    evolutionId: Evolution.ZUBAT.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 75,
       attack: 80,
@@ -4814,10 +4817,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  GOLDEEN: pokemon("GOLDEEN", {
+  GOLDEEN: createPokemon("GOLDEEN", {
     name: "Goldeen",
-    line: Evolutions.GOLDEEN,
-    type1: "water",
+    evolutionId: Evolution.GOLDEEN.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 45,
       attack: 67,
@@ -4827,10 +4830,10 @@ export const Pokemons = pokemonTable({
       speed: 63,
     },
   }),
-  GOLDUCK: pokemon("GOLDUCK", {
+  GOLDUCK: createPokemon("GOLDUCK", {
     name: "Golduck",
-    line: Evolutions.PSYDUCK,
-    type1: "water",
+    evolutionId: Evolution.PSYDUCK.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 80,
       attack: 82,
@@ -4840,11 +4843,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  GOLEM_ALOLA: pokemon("GOLEM_ALOLA", {
+  GOLEM_ALOLA: createPokemon("GOLEM_ALOLA", {
     name: "Alolan Golem",
-    line: Evolutions.GEODUDE,
-    type1: "rock",
-    type2: "electric",
+    evolutionId: Evolution.GEODUDE.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 80,
       attack: 120,
@@ -4854,11 +4857,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  GOLEM: pokemon("GOLEM", {
+  GOLEM: createPokemon("GOLEM", {
     name: "Golem",
-    line: Evolutions.GEODUDE,
-    type1: "rock",
-    type2: "ground",
+    evolutionId: Evolution.GEODUDE.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 80,
       attack: 120,
@@ -4868,11 +4871,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  GOLETT: pokemon("GOLETT", {
+  GOLETT: createPokemon("GOLETT", {
     name: "Golett",
-    line: Evolutions.GOLETT,
-    type1: "ground",
-    type2: "ghost",
+    evolutionId: Evolution.GOLETT.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 59,
       attack: 74,
@@ -4882,11 +4885,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  GOLISOPOD: pokemon("GOLISOPOD", {
+  GOLISOPOD: createPokemon("GOLISOPOD", {
     name: "Golisopod",
-    line: Evolutions.WIMPOD,
-    type1: "bug",
-    type2: "water",
+    evolutionId: Evolution.WIMPOD.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 75,
       attack: 125,
@@ -4896,11 +4899,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  GOLURK: pokemon("GOLURK", {
+  GOLURK: createPokemon("GOLURK", {
     name: "Golurk",
-    line: Evolutions.GOLETT,
-    type1: "ground",
-    type2: "ghost",
+    evolutionId: Evolution.GOLETT.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 89,
       attack: 124,
@@ -4910,11 +4913,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  GOODRA_HISUI: pokemon("GOODRA_HISUI", {
+  GOODRA_HISUI: createPokemon("GOODRA_HISUI", {
     name: "Hisuian Goodra",
-    line: Evolutions.GOOMY,
-    type1: "steel",
-    type2: "dragon",
+    evolutionId: Evolution.GOOMY.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 80,
       attack: 100,
@@ -4924,10 +4927,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  GOODRA: pokemon("GOODRA", {
+  GOODRA: createPokemon("GOODRA", {
     name: "Goodra",
-    line: Evolutions.GOOMY,
-    type1: "dragon",
+    evolutionId: Evolution.GOOMY.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 90,
       attack: 100,
@@ -4937,10 +4940,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  GOOMY: pokemon("GOOMY", {
+  GOOMY: createPokemon("GOOMY", {
     name: "Goomy",
-    line: Evolutions.GOOMY,
-    type1: "dragon",
+    evolutionId: Evolution.GOOMY.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 45,
       attack: 50,
@@ -4950,10 +4953,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  GOREBYSS: pokemon("GOREBYSS", {
+  GOREBYSS: createPokemon("GOREBYSS", {
     name: "Gorebyss",
-    line: Evolutions.CLAMPERL,
-    type1: "water",
+    evolutionId: Evolution.CLAMPERL.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 55,
       attack: 84,
@@ -4963,10 +4966,10 @@ export const Pokemons = pokemonTable({
       speed: 52,
     },
   }),
-  GOSSIFLEUR: pokemon("GOSSIFLEUR", {
+  GOSSIFLEUR: createPokemon("GOSSIFLEUR", {
     name: "Gossifleur",
-    line: Evolutions.GOSSIFLEUR,
-    type1: "grass",
+    evolutionId: Evolution.GOSSIFLEUR.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 40,
       attack: 40,
@@ -4976,10 +4979,10 @@ export const Pokemons = pokemonTable({
       speed: 10,
     },
   }),
-  GOTHITA: pokemon("GOTHITA", {
+  GOTHITA: createPokemon("GOTHITA", {
     name: "Gothita",
-    line: Evolutions.GOTHITA,
-    type1: "psychic",
+    evolutionId: Evolution.GOTHITA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 45,
       attack: 30,
@@ -4989,10 +4992,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  GOTHITELLE: pokemon("GOTHITELLE", {
+  GOTHITELLE: createPokemon("GOTHITELLE", {
     name: "Gothitelle",
-    line: Evolutions.GOTHITA,
-    type1: "psychic",
+    evolutionId: Evolution.GOTHITA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 70,
       attack: 55,
@@ -5002,10 +5005,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  GOTHORITA: pokemon("GOTHORITA", {
+  GOTHORITA: createPokemon("GOTHORITA", {
     name: "Gothorita",
-    line: Evolutions.GOTHITA,
-    type1: "psychic",
+    evolutionId: Evolution.GOTHITA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 60,
       attack: 45,
@@ -5015,11 +5018,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  GOURGEIST: pokemon("GOURGEIST", {
+  GOURGEIST: createPokemon("GOURGEIST", {
     name: "Gourgeist",
-    line: Evolutions.PUMPKABOO,
-    type1: "ghost",
-    type2: "grass",
+    evolutionId: Evolution.PUMPKABOO.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 65,
       attack: 90,
@@ -5029,11 +5032,11 @@ export const Pokemons = pokemonTable({
       speed: 84,
     },
   }),
-  GRAFAIAI: pokemon("GRAFAIAI", {
+  GRAFAIAI: createPokemon("GRAFAIAI", {
     name: "Grafaiai",
-    line: Evolutions.SHROODLE,
-    type1: "poison",
-    type2: "normal",
+    evolutionId: Evolution.SHROODLE.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 63,
       attack: 95,
@@ -5043,10 +5046,10 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  GRANBULL: pokemon("GRANBULL", {
+  GRANBULL: createPokemon("GRANBULL", {
     name: "Granbull",
-    line: Evolutions.SNUBBULL,
-    type1: "fairy",
+    evolutionId: Evolution.SNUBBULL.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 90,
       attack: 120,
@@ -5056,10 +5059,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  GRAPPLOCT: pokemon("GRAPPLOCT", {
+  GRAPPLOCT: createPokemon("GRAPPLOCT", {
     name: "Grapploct",
-    line: Evolutions.CLOBBOPUS,
-    type1: "fighting",
+    evolutionId: Evolution.CLOBBOPUS.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 80,
       attack: 118,
@@ -5069,11 +5072,11 @@ export const Pokemons = pokemonTable({
       speed: 42,
     },
   }),
-  GRAVELER_ALOLA: pokemon("GRAVELER_ALOLA", {
+  GRAVELER_ALOLA: createPokemon("GRAVELER_ALOLA", {
     name: "Alolan Graveler",
-    line: Evolutions.GEODUDE,
-    type1: "rock",
-    type2: "electric",
+    evolutionId: Evolution.GEODUDE.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 55,
       attack: 95,
@@ -5083,11 +5086,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  GRAVELER: pokemon("GRAVELER", {
+  GRAVELER: createPokemon("GRAVELER", {
     name: "Graveler",
-    line: Evolutions.GEODUDE,
-    type1: "rock",
-    type2: "ground",
+    evolutionId: Evolution.GEODUDE.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 55,
       attack: 95,
@@ -5097,11 +5100,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  GREAT_TUSK: pokemon("GREAT_TUSK", {
+  GREAT_TUSK: createPokemon("GREAT_TUSK", {
     name: "Great Tusk",
-    line: Evolutions.GREAT_TUSK,
-    type1: "ground",
-    type2: "fighting",
+    evolutionId: Evolution.GREAT_TUSK.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 115,
       attack: 131,
@@ -5111,10 +5114,10 @@ export const Pokemons = pokemonTable({
       speed: 87,
     },
   }),
-  GREAVARD: pokemon("GREAVARD", {
+  GREAVARD: createPokemon("GREAVARD", {
     name: "Greavard",
-    line: Evolutions.GREAVARD,
-    type1: "ghost",
+    evolutionId: Evolution.GREAVARD.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 50,
       attack: 61,
@@ -5124,10 +5127,10 @@ export const Pokemons = pokemonTable({
       speed: 34,
     },
   }),
-  GREEDENT: pokemon("GREEDENT", {
+  GREEDENT: createPokemon("GREEDENT", {
     name: "Greedent",
-    line: Evolutions.SKWOVET,
-    type1: "normal",
+    evolutionId: Evolution.SKWOVET.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 120,
       attack: 95,
@@ -5137,11 +5140,11 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  GRENINJA: pokemon("GRENINJA", {
+  GRENINJA: createPokemon("GRENINJA", {
     name: "Greninja",
-    line: Evolutions.FROAKIE,
-    type1: "water",
-    type2: "dark",
+    evolutionId: Evolution.FROAKIE.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 72,
       attack: 95,
@@ -5151,11 +5154,11 @@ export const Pokemons = pokemonTable({
       speed: 122,
     },
   }),
-  GRIMER_ALOLA: pokemon("GRIMER_ALOLA", {
+  GRIMER_ALOLA: createPokemon("GRIMER_ALOLA", {
     name: "Alolan Grimer",
-    line: Evolutions.GRIMER,
-    type1: "poison",
-    type2: "dark",
+    evolutionId: Evolution.GRIMER.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 80,
       attack: 80,
@@ -5165,10 +5168,10 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  GRIMER: pokemon("GRIMER", {
+  GRIMER: createPokemon("GRIMER", {
     name: "Grimer",
-    line: Evolutions.GRIMER,
-    type1: "poison",
+    evolutionId: Evolution.GRIMER.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 80,
       attack: 80,
@@ -5178,11 +5181,11 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  GRIMMSNARL: pokemon("GRIMMSNARL", {
+  GRIMMSNARL: createPokemon("GRIMMSNARL", {
     name: "Grimmsnarl",
-    line: Evolutions.IMPIDIMP,
-    type1: "dark",
-    type2: "fairy",
+    evolutionId: Evolution.IMPIDIMP.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 95,
       attack: 120,
@@ -5192,10 +5195,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  GROOKEY: pokemon("GROOKEY", {
+  GROOKEY: createPokemon("GROOKEY", {
     name: "Grookey",
-    line: Evolutions.GROOKEY,
-    type1: "grass",
+    evolutionId: Evolution.GROOKEY.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -5205,10 +5208,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  GROTLE: pokemon("GROTLE", {
+  GROTLE: createPokemon("GROTLE", {
     name: "Grotle",
-    line: Evolutions.TURTWIG,
-    type1: "grass",
+    evolutionId: Evolution.TURTWIG.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 75,
       attack: 89,
@@ -5218,10 +5221,10 @@ export const Pokemons = pokemonTable({
       speed: 36,
     },
   }),
-  GROUDON: pokemon("GROUDON", {
+  GROUDON: createPokemon("GROUDON", {
     name: "Groudon",
-    line: Evolutions.GROUDON,
-    type1: "ground",
+    evolutionId: Evolution.GROUDON.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 100,
       attack: 150,
@@ -5231,10 +5234,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  GROVYLE: pokemon("GROVYLE", {
+  GROVYLE: createPokemon("GROVYLE", {
     name: "Grovyle",
-    line: Evolutions.TREECKO,
-    type1: "grass",
+    evolutionId: Evolution.TREECKO.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -5244,11 +5247,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  GROWLITHE_HISUI: pokemon("GROWLITHE_HISUI", {
+  GROWLITHE_HISUI: createPokemon("GROWLITHE_HISUI", {
     name: "Hisuian Growlithe",
-    line: Evolutions.GROWLITHE,
-    type1: "fire",
-    type2: "rock",
+    evolutionId: Evolution.GROWLITHE.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 60,
       attack: 75,
@@ -5258,10 +5261,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  GROWLITHE: pokemon("GROWLITHE", {
+  GROWLITHE: createPokemon("GROWLITHE", {
     name: "Growlithe",
-    line: Evolutions.GROWLITHE,
-    type1: "fire",
+    evolutionId: Evolution.GROWLITHE.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 55,
       attack: 70,
@@ -5271,10 +5274,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  GRUBBIN: pokemon("GRUBBIN", {
+  GRUBBIN: createPokemon("GRUBBIN", {
     name: "Grubbin",
-    line: Evolutions.GRUBBIN,
-    type1: "bug",
+    evolutionId: Evolution.GRUBBIN.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 47,
       attack: 62,
@@ -5284,10 +5287,10 @@ export const Pokemons = pokemonTable({
       speed: 46,
     },
   }),
-  GRUMPIG: pokemon("GRUMPIG", {
+  GRUMPIG: createPokemon("GRUMPIG", {
     name: "Grumpig",
-    line: Evolutions.SPOINK,
-    type1: "psychic",
+    evolutionId: Evolution.SPOINK.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 80,
       attack: 45,
@@ -5297,10 +5300,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  GULPIN: pokemon("GULPIN", {
+  GULPIN: createPokemon("GULPIN", {
     name: "Gulpin",
-    line: Evolutions.GULPIN,
-    type1: "poison",
+    evolutionId: Evolution.GULPIN.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 70,
       attack: 43,
@@ -5310,10 +5313,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  GUMSHOOS: pokemon("GUMSHOOS", {
+  GUMSHOOS: createPokemon("GUMSHOOS", {
     name: "Gumshoos",
-    line: Evolutions.YUNGOOS,
-    type1: "normal",
+    evolutionId: Evolution.YUNGOOS.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 88,
       attack: 110,
@@ -5323,10 +5326,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  GURDURR: pokemon("GURDURR", {
+  GURDURR: createPokemon("GURDURR", {
     name: "Gurdurr",
-    line: Evolutions.TIMBURR,
-    type1: "fighting",
+    evolutionId: Evolution.TIMBURR.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 85,
       attack: 105,
@@ -5336,11 +5339,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  GUZZLORD: pokemon("GUZZLORD", {
+  GUZZLORD: createPokemon("GUZZLORD", {
     name: "Guzzlord",
-    line: Evolutions.GUZZLORD,
-    type1: "dark",
-    type2: "dragon",
+    evolutionId: Evolution.GUZZLORD.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 223,
       attack: 101,
@@ -5350,11 +5353,11 @@ export const Pokemons = pokemonTable({
       speed: 43,
     },
   }),
-  GYARADOS: pokemon("GYARADOS", {
+  GYARADOS: createPokemon("GYARADOS", {
     name: "Gyarados",
-    line: Evolutions.MAGIKARP,
-    type1: "water",
-    type2: "flying",
+    evolutionId: Evolution.MAGIKARP.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 95,
       attack: 125,
@@ -5364,11 +5367,11 @@ export const Pokemons = pokemonTable({
       speed: 81,
     },
   }),
-  HAKAMO_O: pokemon("HAKAMO_O", {
+  HAKAMO_O: createPokemon("HAKAMO_O", {
     name: "Hakamo-o",
-    line: Evolutions.JANGMO_O,
-    type1: "dragon",
-    type2: "fighting",
+    evolutionId: Evolution.JANGMO_O.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 55,
       attack: 75,
@@ -5378,10 +5381,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  HAPPINY: pokemon("HAPPINY", {
+  HAPPINY: createPokemon("HAPPINY", {
     name: "Happiny",
-    line: Evolutions.HAPPINY,
-    type1: "normal",
+    evolutionId: Evolution.HAPPINY.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 100,
       attack: 5,
@@ -5391,10 +5394,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  HARIYAMA: pokemon("HARIYAMA", {
+  HARIYAMA: createPokemon("HARIYAMA", {
     name: "Hariyama",
-    line: Evolutions.MAKUHITA,
-    type1: "fighting",
+    evolutionId: Evolution.MAKUHITA.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 144,
       attack: 120,
@@ -5404,10 +5407,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  HATENNA: pokemon("HATENNA", {
+  HATENNA: createPokemon("HATENNA", {
     name: "Hatenna",
-    line: Evolutions.HATENNA,
-    type1: "psychic",
+    evolutionId: Evolution.HATENNA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 42,
       attack: 30,
@@ -5417,11 +5420,11 @@ export const Pokemons = pokemonTable({
       speed: 39,
     },
   }),
-  HATTERENE: pokemon("HATTERENE", {
+  HATTERENE: createPokemon("HATTERENE", {
     name: "Hatterene",
-    line: Evolutions.HATENNA,
-    type1: "psychic",
-    type2: "fairy",
+    evolutionId: Evolution.HATENNA.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 57,
       attack: 90,
@@ -5431,10 +5434,10 @@ export const Pokemons = pokemonTable({
       speed: 29,
     },
   }),
-  HATTREM: pokemon("HATTREM", {
+  HATTREM: createPokemon("HATTREM", {
     name: "Hattrem",
-    line: Evolutions.HATENNA,
-    type1: "psychic",
+    evolutionId: Evolution.HATENNA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 57,
       attack: 40,
@@ -5444,11 +5447,11 @@ export const Pokemons = pokemonTable({
       speed: 49,
     },
   }),
-  HAUNTER: pokemon("HAUNTER", {
+  HAUNTER: createPokemon("HAUNTER", {
     name: "Haunter",
-    line: Evolutions.GASTLY,
-    type1: "ghost",
-    type2: "poison",
+    evolutionId: Evolution.GASTLY.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 45,
       attack: 50,
@@ -5458,11 +5461,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  HAWLUCHA: pokemon("HAWLUCHA", {
+  HAWLUCHA: createPokemon("HAWLUCHA", {
     name: "Hawlucha",
-    line: Evolutions.HAWLUCHA,
-    type1: "fighting",
-    type2: "flying",
+    evolutionId: Evolution.HAWLUCHA.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 78,
       attack: 92,
@@ -5472,10 +5475,10 @@ export const Pokemons = pokemonTable({
       speed: 118,
     },
   }),
-  HAXORUS: pokemon("HAXORUS", {
+  HAXORUS: createPokemon("HAXORUS", {
     name: "Haxorus",
-    line: Evolutions.AXEW,
-    type1: "dragon",
+    evolutionId: Evolution.AXEW.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 76,
       attack: 147,
@@ -5485,10 +5488,10 @@ export const Pokemons = pokemonTable({
       speed: 97,
     },
   }),
-  HEATMOR: pokemon("HEATMOR", {
+  HEATMOR: createPokemon("HEATMOR", {
     name: "Heatmor",
-    line: Evolutions.HEATMOR,
-    type1: "fire",
+    evolutionId: Evolution.HEATMOR.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 85,
       attack: 97,
@@ -5498,11 +5501,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  HEATRAN: pokemon("HEATRAN", {
+  HEATRAN: createPokemon("HEATRAN", {
     name: "Heatran",
-    line: Evolutions.HEATRAN,
-    type1: "fire",
-    type2: "steel",
+    evolutionId: Evolution.HEATRAN.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 91,
       attack: 90,
@@ -5512,11 +5515,11 @@ export const Pokemons = pokemonTable({
       speed: 77,
     },
   }),
-  HELIOLISK: pokemon("HELIOLISK", {
+  HELIOLISK: createPokemon("HELIOLISK", {
     name: "Heliolisk",
-    line: Evolutions.HELIOPTILE,
-    type1: "electric",
-    type2: "normal",
+    evolutionId: Evolution.HELIOPTILE.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 62,
       attack: 55,
@@ -5526,11 +5529,11 @@ export const Pokemons = pokemonTable({
       speed: 109,
     },
   }),
-  HELIOPTILE: pokemon("HELIOPTILE", {
+  HELIOPTILE: createPokemon("HELIOPTILE", {
     name: "Helioptile",
-    line: Evolutions.HELIOPTILE,
-    type1: "electric",
-    type2: "normal",
+    evolutionId: Evolution.HELIOPTILE.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 44,
       attack: 38,
@@ -5540,11 +5543,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  HERACROSS: pokemon("HERACROSS", {
+  HERACROSS: createPokemon("HERACROSS", {
     name: "Heracross",
-    line: Evolutions.HERACROSS,
-    type1: "bug",
-    type2: "fighting",
+    evolutionId: Evolution.HERACROSS.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 80,
       attack: 125,
@@ -5554,10 +5557,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  HERDIER: pokemon("HERDIER", {
+  HERDIER: createPokemon("HERDIER", {
     name: "Herdier",
-    line: Evolutions.LILLIPUP,
-    type1: "normal",
+    evolutionId: Evolution.LILLIPUP.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 65,
       attack: 80,
@@ -5567,10 +5570,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  HIPPOPOTAS: pokemon("HIPPOPOTAS", {
+  HIPPOPOTAS: createPokemon("HIPPOPOTAS", {
     name: "Hippopotas",
-    line: Evolutions.HIPPOPOTAS,
-    type1: "ground",
+    evolutionId: Evolution.HIPPOPOTAS.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 68,
       attack: 72,
@@ -5580,10 +5583,10 @@ export const Pokemons = pokemonTable({
       speed: 32,
     },
   }),
-  HIPPOWDON: pokemon("HIPPOWDON", {
+  HIPPOWDON: createPokemon("HIPPOWDON", {
     name: "Hippowdon",
-    line: Evolutions.HIPPOPOTAS,
-    type1: "ground",
+    evolutionId: Evolution.HIPPOPOTAS.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 108,
       attack: 112,
@@ -5593,10 +5596,10 @@ export const Pokemons = pokemonTable({
       speed: 47,
     },
   }),
-  HITMONCHAN: pokemon("HITMONCHAN", {
+  HITMONCHAN: createPokemon("HITMONCHAN", {
     name: "Hitmonchan",
-    line: Evolutions.TYROGUE,
-    type1: "fighting",
+    evolutionId: Evolution.TYROGUE.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 50,
       attack: 105,
@@ -5606,10 +5609,10 @@ export const Pokemons = pokemonTable({
       speed: 76,
     },
   }),
-  HITMONLEE: pokemon("HITMONLEE", {
+  HITMONLEE: createPokemon("HITMONLEE", {
     name: "Hitmonlee",
-    line: Evolutions.TYROGUE,
-    type1: "fighting",
+    evolutionId: Evolution.TYROGUE.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 50,
       attack: 120,
@@ -5619,10 +5622,10 @@ export const Pokemons = pokemonTable({
       speed: 87,
     },
   }),
-  HITMONTOP: pokemon("HITMONTOP", {
+  HITMONTOP: createPokemon("HITMONTOP", {
     name: "Hitmontop",
-    line: Evolutions.TYROGUE,
-    type1: "fighting",
+    evolutionId: Evolution.TYROGUE.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 50,
       attack: 95,
@@ -5632,11 +5635,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  HONCHKROW: pokemon("HONCHKROW", {
+  HONCHKROW: createPokemon("HONCHKROW", {
     name: "Honchkrow",
-    line: Evolutions.MURKROW,
-    type1: "dark",
-    type2: "flying",
+    evolutionId: Evolution.MURKROW.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 100,
       attack: 125,
@@ -5646,11 +5649,11 @@ export const Pokemons = pokemonTable({
       speed: 71,
     },
   }),
-  HONEDGE: pokemon("HONEDGE", {
+  HONEDGE: createPokemon("HONEDGE", {
     name: "Honedge",
-    line: Evolutions.HONEDGE,
-    type1: "steel",
-    type2: "ghost",
+    evolutionId: Evolution.HONEDGE.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 45,
       attack: 80,
@@ -5660,11 +5663,11 @@ export const Pokemons = pokemonTable({
       speed: 28,
     },
   }),
-  HOOH: pokemon("HOOH", {
+  HOOH: createPokemon("HOOH", {
     name: "Ho-Oh",
-    line: Evolutions.HOOH,
-    type1: "fire",
-    type2: "flying",
+    evolutionId: Evolution.HOOH.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 106,
       attack: 130,
@@ -5674,11 +5677,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  HOOPA: pokemon("HOOPA", {
+  HOOPA: createPokemon("HOOPA", {
     name: "Hoopa",
-    line: Evolutions.HOOPA,
-    type1: "psychic",
-    type2: "ghost",
+    evolutionId: Evolution.HOOPA.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 80,
       attack: 110,
@@ -5688,11 +5691,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  HOOTHOOT: pokemon("HOOTHOOT", {
+  HOOTHOOT: createPokemon("HOOTHOOT", {
     name: "Hoothoot",
-    line: Evolutions.HOOTHOOT,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.HOOTHOOT.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 60,
       attack: 30,
@@ -5702,11 +5705,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  HOPPIP: pokemon("HOPPIP", {
+  HOPPIP: createPokemon("HOPPIP", {
     name: "Hoppip",
-    line: Evolutions.HOPPIP,
-    type1: "grass",
-    type2: "flying",
+    evolutionId: Evolution.HOPPIP.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 35,
       attack: 35,
@@ -5716,10 +5719,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  HORSEA: pokemon("HORSEA", {
+  HORSEA: createPokemon("HORSEA", {
     name: "Horsea",
-    line: Evolutions.HORSEA,
-    type1: "water",
+    evolutionId: Evolution.HORSEA.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 30,
       attack: 40,
@@ -5729,11 +5732,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  HOUNDOOM: pokemon("HOUNDOOM", {
+  HOUNDOOM: createPokemon("HOUNDOOM", {
     name: "Houndoom",
-    line: Evolutions.HOUNDOUR,
-    type1: "dark",
-    type2: "fire",
+    evolutionId: Evolution.HOUNDOUR.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 75,
       attack: 90,
@@ -5743,11 +5746,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  HOUNDOUR: pokemon("HOUNDOUR", {
+  HOUNDOUR: createPokemon("HOUNDOUR", {
     name: "Houndour",
-    line: Evolutions.HOUNDOUR,
-    type1: "dark",
-    type2: "fire",
+    evolutionId: Evolution.HOUNDOUR.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 45,
       attack: 60,
@@ -5757,10 +5760,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  HOUNDSTONE: pokemon("HOUNDSTONE", {
+  HOUNDSTONE: createPokemon("HOUNDSTONE", {
     name: "Houndstone",
-    line: Evolutions.GREAVARD,
-    type1: "ghost",
+    evolutionId: Evolution.GREAVARD.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 72,
       attack: 101,
@@ -5770,10 +5773,10 @@ export const Pokemons = pokemonTable({
       speed: 68,
     },
   }),
-  HUNTAIL: pokemon("HUNTAIL", {
+  HUNTAIL: createPokemon("HUNTAIL", {
     name: "Huntail",
-    line: Evolutions.CLAMPERL,
-    type1: "water",
+    evolutionId: Evolution.CLAMPERL.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 55,
       attack: 104,
@@ -5783,11 +5786,11 @@ export const Pokemons = pokemonTable({
       speed: 52,
     },
   }),
-  HYDREIGON: pokemon("HYDREIGON", {
+  HYDREIGON: createPokemon("HYDREIGON", {
     name: "Hydreigon",
-    line: Evolutions.DEINO,
-    type1: "dark",
-    type2: "dragon",
+    evolutionId: Evolution.DEINO.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 92,
       attack: 105,
@@ -5797,10 +5800,10 @@ export const Pokemons = pokemonTable({
       speed: 98,
     },
   }),
-  HYPNO: pokemon("HYPNO", {
+  HYPNO: createPokemon("HYPNO", {
     name: "Hypno",
-    line: Evolutions.DROWZEE,
-    type1: "psychic",
+    evolutionId: Evolution.DROWZEE.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 85,
       attack: 73,
@@ -5810,11 +5813,11 @@ export const Pokemons = pokemonTable({
       speed: 67,
     },
   }),
-  IGGLYBUFF: pokemon("IGGLYBUFF", {
+  IGGLYBUFF: createPokemon("IGGLYBUFF", {
     name: "Igglybuff",
-    line: Evolutions.IGGLYBUFF,
-    type1: "normal",
-    type2: "fairy",
+    evolutionId: Evolution.IGGLYBUFF.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 90,
       attack: 30,
@@ -5824,10 +5827,10 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  ILLUMISE: pokemon("ILLUMISE", {
+  ILLUMISE: createPokemon("ILLUMISE", {
     name: "Illumise",
-    line: Evolutions.ILLUMISE,
-    type1: "bug",
+    evolutionId: Evolution.ILLUMISE.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 65,
       attack: 47,
@@ -5837,11 +5840,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  IMPIDIMP: pokemon("IMPIDIMP", {
+  IMPIDIMP: createPokemon("IMPIDIMP", {
     name: "Impidimp",
-    line: Evolutions.IMPIDIMP,
-    type1: "dark",
-    type2: "fairy",
+    evolutionId: Evolution.IMPIDIMP.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 45,
       attack: 45,
@@ -5851,11 +5854,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  INCINEROAR: pokemon("INCINEROAR", {
+  INCINEROAR: createPokemon("INCINEROAR", {
     name: "Incineroar",
-    line: Evolutions.LITTEN,
-    type1: "fire",
-    type2: "dark",
+    evolutionId: Evolution.LITTEN.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 95,
       attack: 115,
@@ -5865,11 +5868,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  INDEEDEE_F: pokemon("INDEEDEE_F", {
+  INDEEDEE_F: createPokemon("INDEEDEE_F", {
     name: "Indeedee",
-    line: Evolutions.INDEEDEE,
-    type1: "psychic",
-    type2: "normal",
+    evolutionId: Evolution.INDEEDEE.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 60,
       attack: 65,
@@ -5879,11 +5882,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  INDEEDEE: pokemon("INDEEDEE", {
+  INDEEDEE: createPokemon("INDEEDEE", {
     name: "Indeedee",
-    line: Evolutions.INDEEDEE,
-    type1: "psychic",
-    type2: "normal",
+    evolutionId: Evolution.INDEEDEE.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 60,
       attack: 65,
@@ -5893,11 +5896,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  INFERNAPE: pokemon("INFERNAPE", {
+  INFERNAPE: createPokemon("INFERNAPE", {
     name: "Infernape",
-    line: Evolutions.CHIMCHAR,
-    type1: "fire",
-    type2: "fighting",
+    evolutionId: Evolution.CHIMCHAR.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 76,
       attack: 104,
@@ -5907,11 +5910,11 @@ export const Pokemons = pokemonTable({
       speed: 108,
     },
   }),
-  INKAY: pokemon("INKAY", {
+  INKAY: createPokemon("INKAY", {
     name: "Inkay",
-    line: Evolutions.INKAY,
-    type1: "dark",
-    type2: "psychic",
+    evolutionId: Evolution.INKAY.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 53,
       attack: 54,
@@ -5921,10 +5924,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  INTELEON: pokemon("INTELEON", {
+  INTELEON: createPokemon("INTELEON", {
     name: "Inteleon",
-    line: Evolutions.SOBBLE,
-    type1: "water",
+    evolutionId: Evolution.SOBBLE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 70,
       attack: 85,
@@ -5934,11 +5937,11 @@ export const Pokemons = pokemonTable({
       speed: 120,
     },
   }),
-  IRON_BUNDLE: pokemon("IRON_BUNDLE", {
+  IRON_BUNDLE: createPokemon("IRON_BUNDLE", {
     name: "Iron Bundle",
-    line: Evolutions.IRON_BUNDLE,
-    type1: "ice",
-    type2: "water",
+    evolutionId: Evolution.IRON_BUNDLE.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 56,
       attack: 80,
@@ -5948,11 +5951,11 @@ export const Pokemons = pokemonTable({
       speed: 136,
     },
   }),
-  IRON_HANDS: pokemon("IRON_HANDS", {
+  IRON_HANDS: createPokemon("IRON_HANDS", {
     name: "Iron Hands",
-    line: Evolutions.IRON_HANDS,
-    type1: "fighting",
-    type2: "electric",
+    evolutionId: Evolution.IRON_HANDS.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 154,
       attack: 140,
@@ -5962,11 +5965,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  IRON_JUGULIS: pokemon("IRON_JUGULIS", {
+  IRON_JUGULIS: createPokemon("IRON_JUGULIS", {
     name: "Iron Jugulis",
-    line: Evolutions.IRON_JUGULIS,
-    type1: "dark",
-    type2: "flying",
+    evolutionId: Evolution.IRON_JUGULIS.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 94,
       attack: 80,
@@ -5976,11 +5979,11 @@ export const Pokemons = pokemonTable({
       speed: 108,
     },
   }),
-  IRON_MOTH: pokemon("IRON_MOTH", {
+  IRON_MOTH: createPokemon("IRON_MOTH", {
     name: "Iron Moth",
-    line: Evolutions.IRON_MOTH,
-    type1: "fire",
-    type2: "poison",
+    evolutionId: Evolution.IRON_MOTH.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 80,
       attack: 70,
@@ -5990,11 +5993,11 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  IRON_THORNS: pokemon("IRON_THORNS", {
+  IRON_THORNS: createPokemon("IRON_THORNS", {
     name: "Iron Thorns",
-    line: Evolutions.IRON_THORNS,
-    type1: "rock",
-    type2: "electric",
+    evolutionId: Evolution.IRON_THORNS.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 100,
       attack: 134,
@@ -6004,11 +6007,11 @@ export const Pokemons = pokemonTable({
       speed: 72,
     },
   }),
-  IRON_TREADS: pokemon("IRON_TREADS", {
+  IRON_TREADS: createPokemon("IRON_TREADS", {
     name: "Iron Treads",
-    line: Evolutions.IRON_TREADS,
-    type1: "ground",
-    type2: "steel",
+    evolutionId: Evolution.IRON_TREADS.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 90,
       attack: 112,
@@ -6018,11 +6021,11 @@ export const Pokemons = pokemonTable({
       speed: 106,
     },
   }),
-  IRON_VALIANT: pokemon("IRON_VALIANT", {
+  IRON_VALIANT: createPokemon("IRON_VALIANT", {
     name: "Iron Valiant",
-    line: Evolutions.IRON_VALIANT,
-    type1: "fairy",
-    type2: "fighting",
+    evolutionId: Evolution.IRON_VALIANT.id,
+    type1: PokemonTypes.FAIRY,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 74,
       attack: 130,
@@ -6032,11 +6035,11 @@ export const Pokemons = pokemonTable({
       speed: 116,
     },
   }),
-  IVYSAUR: pokemon("IVYSAUR", {
+  IVYSAUR: createPokemon("IVYSAUR", {
     name: "Ivysaur",
-    line: Evolutions.BULBASAUR,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.BULBASAUR.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 60,
       attack: 62,
@@ -6046,10 +6049,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  JANGMO_O: pokemon("JANGMO_O", {
+  JANGMO_O: createPokemon("JANGMO_O", {
     name: "Jangmo-o",
-    line: Evolutions.JANGMO_O,
-    type1: "dragon",
+    evolutionId: Evolution.JANGMO_O.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 45,
       attack: 55,
@@ -6059,11 +6062,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  JELLICENT: pokemon("JELLICENT", {
+  JELLICENT: createPokemon("JELLICENT", {
     name: "Jellicent",
-    line: Evolutions.FRILLISH,
-    type1: "water",
-    type2: "ghost",
+    evolutionId: Evolution.FRILLISH.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 100,
       attack: 60,
@@ -6073,11 +6076,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  JIGGLYPUFF: pokemon("JIGGLYPUFF", {
+  JIGGLYPUFF: createPokemon("JIGGLYPUFF", {
     name: "Jigglypuff",
-    line: Evolutions.IGGLYBUFF,
-    type1: "normal",
-    type2: "fairy",
+    evolutionId: Evolution.IGGLYBUFF.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 115,
       attack: 45,
@@ -6087,11 +6090,11 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  JIRACHI: pokemon("JIRACHI", {
+  JIRACHI: createPokemon("JIRACHI", {
     name: "Jirachi",
-    line: Evolutions.JIRACHI,
-    type1: "steel",
-    type2: "psychic",
+    evolutionId: Evolution.JIRACHI.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 100,
       attack: 100,
@@ -6101,10 +6104,10 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  JOLTEON: pokemon("JOLTEON", {
+  JOLTEON: createPokemon("JOLTEON", {
     name: "Jolteon",
-    line: Evolutions.EEVEE,
-    type1: "electric",
+    evolutionId: Evolution.EEVEE.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 65,
       attack: 65,
@@ -6114,11 +6117,11 @@ export const Pokemons = pokemonTable({
       speed: 130,
     },
   }),
-  JOLTIK: pokemon("JOLTIK", {
+  JOLTIK: createPokemon("JOLTIK", {
     name: "Joltik",
-    line: Evolutions.JOLTIK,
-    type1: "bug",
-    type2: "electric",
+    evolutionId: Evolution.JOLTIK.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 50,
       attack: 47,
@@ -6128,11 +6131,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  JUMPLUFF: pokemon("JUMPLUFF", {
+  JUMPLUFF: createPokemon("JUMPLUFF", {
     name: "Jumpluff",
-    line: Evolutions.HOPPIP,
-    type1: "grass",
-    type2: "flying",
+    evolutionId: Evolution.HOPPIP.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 75,
       attack: 55,
@@ -6142,11 +6145,11 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  JYNX: pokemon("JYNX", {
+  JYNX: createPokemon("JYNX", {
     name: "Jynx",
-    line: Evolutions.SMOOCHUM,
-    type1: "ice",
-    type2: "psychic",
+    evolutionId: Evolution.SMOOCHUM.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 65,
       attack: 50,
@@ -6156,11 +6159,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  KABUTO: pokemon("KABUTO", {
+  KABUTO: createPokemon("KABUTO", {
     name: "Kabuto",
-    line: Evolutions.KABUTO,
-    type1: "rock",
-    type2: "water",
+    evolutionId: Evolution.KABUTO.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 30,
       attack: 80,
@@ -6170,11 +6173,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  KABUTOPS: pokemon("KABUTOPS", {
+  KABUTOPS: createPokemon("KABUTOPS", {
     name: "Kabutops",
-    line: Evolutions.KABUTO,
-    type1: "rock",
-    type2: "water",
+    evolutionId: Evolution.KABUTO.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 60,
       attack: 115,
@@ -6184,10 +6187,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  KADABRA: pokemon("KADABRA", {
+  KADABRA: createPokemon("KADABRA", {
     name: "Kadabra",
-    line: Evolutions.ABRA,
-    type1: "psychic",
+    evolutionId: Evolution.ABRA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 40,
       attack: 35,
@@ -6197,11 +6200,11 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  KAKUNA: pokemon("KAKUNA", {
+  KAKUNA: createPokemon("KAKUNA", {
     name: "Kakuna",
-    line: Evolutions.WEEDLE,
-    type1: "bug",
-    type2: "poison",
+    evolutionId: Evolution.WEEDLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 45,
       attack: 25,
@@ -6211,10 +6214,10 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  KANGASKHAN: pokemon("KANGASKHAN", {
+  KANGASKHAN: createPokemon("KANGASKHAN", {
     name: "Kangaskhan",
-    line: Evolutions.KANGASKHAN,
-    type1: "normal",
+    evolutionId: Evolution.KANGASKHAN.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 105,
       attack: 95,
@@ -6224,10 +6227,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  KARRABLAST: pokemon("KARRABLAST", {
+  KARRABLAST: createPokemon("KARRABLAST", {
     name: "Karrablast",
-    line: Evolutions.KARRABLAST,
-    type1: "bug",
+    evolutionId: Evolution.KARRABLAST.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 50,
       attack: 75,
@@ -6237,11 +6240,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  KARTANA: pokemon("KARTANA", {
+  KARTANA: createPokemon("KARTANA", {
     name: "Kartana",
-    line: Evolutions.KARTANA,
-    type1: "grass",
-    type2: "steel",
+    evolutionId: Evolution.KARTANA.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 59,
       attack: 181,
@@ -6251,10 +6254,10 @@ export const Pokemons = pokemonTable({
       speed: 109,
     },
   }),
-  KECLEON: pokemon("KECLEON", {
+  KECLEON: createPokemon("KECLEON", {
     name: "Kecleon",
-    line: Evolutions.KECLEON,
-    type1: "normal",
+    evolutionId: Evolution.KECLEON.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 60,
       attack: 90,
@@ -6264,11 +6267,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  KELDEO_ORDINARY: pokemon("KELDEO_ORDINARY", {
+  KELDEO_ORDINARY: createPokemon("KELDEO_ORDINARY", {
     name: "Keldeo",
-    line: Evolutions.KELDEO,
-    type1: "water",
-    type2: "fighting",
+    evolutionId: Evolution.KELDEO.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 91,
       attack: 72,
@@ -6278,11 +6281,11 @@ export const Pokemons = pokemonTable({
       speed: 108,
     },
   }),
-  KILOWATTREL: pokemon("KILOWATTREL", {
+  KILOWATTREL: createPokemon("KILOWATTREL", {
     name: "Kilowattrel",
-    line: Evolutions.WATTREL,
-    type1: "electric",
-    type2: "flying",
+    evolutionId: Evolution.WATTREL.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 70,
       attack: 70,
@@ -6292,11 +6295,11 @@ export const Pokemons = pokemonTable({
       speed: 125,
     },
   }),
-  KINGAMBIT: pokemon("KINGAMBIT", {
+  KINGAMBIT: createPokemon("KINGAMBIT", {
     name: "Kingambit",
-    line: Evolutions.PAWNIARD,
-    type1: "dark",
-    type2: "steel",
+    evolutionId: Evolution.PAWNIARD.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 100,
       attack: 135,
@@ -6306,11 +6309,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  KINGDRA: pokemon("KINGDRA", {
+  KINGDRA: createPokemon("KINGDRA", {
     name: "Kingdra",
-    line: Evolutions.HORSEA,
-    type1: "water",
-    type2: "dragon",
+    evolutionId: Evolution.HORSEA.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 75,
       attack: 95,
@@ -6320,10 +6323,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  KINGLER: pokemon("KINGLER", {
+  KINGLER: createPokemon("KINGLER", {
     name: "Kingler",
-    line: Evolutions.KRABBY,
-    type1: "water",
+    evolutionId: Evolution.KRABBY.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 55,
       attack: 130,
@@ -6333,11 +6336,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  KIRLIA: pokemon("KIRLIA", {
+  KIRLIA: createPokemon("KIRLIA", {
     name: "Kirlia",
-    line: Evolutions.RALTS,
-    type1: "psychic",
-    type2: "fairy",
+    evolutionId: Evolution.RALTS.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 38,
       attack: 35,
@@ -6347,10 +6350,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  KLANG: pokemon("KLANG", {
+  KLANG: createPokemon("KLANG", {
     name: "Klang",
-    line: Evolutions.KLINK,
-    type1: "steel",
+    evolutionId: Evolution.KLINK.id,
+    type1: PokemonTypes.STEEL,
     baseStats: {
       hp: 60,
       attack: 80,
@@ -6360,10 +6363,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  KLAWF: pokemon("KLAWF", {
+  KLAWF: createPokemon("KLAWF", {
     name: "Klawf",
-    line: Evolutions.KLAWF,
-    type1: "rock",
+    evolutionId: Evolution.KLAWF.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 70,
       attack: 100,
@@ -6373,11 +6376,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  KLEAVOR: pokemon("KLEAVOR", {
+  KLEAVOR: createPokemon("KLEAVOR", {
     name: "Kleavor",
-    line: Evolutions.SCYTHER,
-    type1: "bug",
-    type2: "rock",
+    evolutionId: Evolution.SCYTHER.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 70,
       attack: 135,
@@ -6387,11 +6390,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  KLEFKI: pokemon("KLEFKI", {
+  KLEFKI: createPokemon("KLEFKI", {
     name: "Klefki",
-    line: Evolutions.KLEFKI,
-    type1: "steel",
-    type2: "fairy",
+    evolutionId: Evolution.KLEFKI.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 57,
       attack: 80,
@@ -6401,10 +6404,10 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  KLINK: pokemon("KLINK", {
+  KLINK: createPokemon("KLINK", {
     name: "Klink",
-    line: Evolutions.KLINK,
-    type1: "steel",
+    evolutionId: Evolution.KLINK.id,
+    type1: PokemonTypes.STEEL,
     baseStats: {
       hp: 40,
       attack: 55,
@@ -6414,10 +6417,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  KLINKLANG: pokemon("KLINKLANG", {
+  KLINKLANG: createPokemon("KLINKLANG", {
     name: "Klinklang",
-    line: Evolutions.KLINK,
-    type1: "steel",
+    evolutionId: Evolution.KLINK.id,
+    type1: PokemonTypes.STEEL,
     baseStats: {
       hp: 60,
       attack: 100,
@@ -6427,10 +6430,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  KOFFING: pokemon("KOFFING", {
+  KOFFING: createPokemon("KOFFING", {
     name: "Koffing",
-    line: Evolutions.KOFFING,
-    type1: "poison",
+    evolutionId: Evolution.KOFFING.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 40,
       attack: 65,
@@ -6440,10 +6443,10 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  KOMALA: pokemon("KOMALA", {
+  KOMALA: createPokemon("KOMALA", {
     name: "Komala",
-    line: Evolutions.KOMALA,
-    type1: "normal",
+    evolutionId: Evolution.KOMALA.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 65,
       attack: 115,
@@ -6453,11 +6456,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  KOMMO_O: pokemon("KOMMO_O", {
+  KOMMO_O: createPokemon("KOMMO_O", {
     name: "Kommo-o",
-    line: Evolutions.JANGMO_O,
-    type1: "dragon",
-    type2: "fighting",
+    evolutionId: Evolution.JANGMO_O.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 75,
       attack: 110,
@@ -6467,11 +6470,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  KORAIDON: pokemon("KORAIDON", {
+  KORAIDON: createPokemon("KORAIDON", {
     name: "Koraidon",
-    line: Evolutions.KORAIDON,
-    type1: "fighting",
-    type2: "dragon",
+    evolutionId: Evolution.KORAIDON.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 100,
       attack: 135,
@@ -6481,10 +6484,10 @@ export const Pokemons = pokemonTable({
       speed: 135,
     },
   }),
-  KRABBY: pokemon("KRABBY", {
+  KRABBY: createPokemon("KRABBY", {
     name: "Krabby",
-    line: Evolutions.KRABBY,
-    type1: "water",
+    evolutionId: Evolution.KRABBY.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 30,
       attack: 105,
@@ -6494,10 +6497,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  KRICKETOT: pokemon("KRICKETOT", {
+  KRICKETOT: createPokemon("KRICKETOT", {
     name: "Kricketot",
-    line: Evolutions.KRICKETOT,
-    type1: "bug",
+    evolutionId: Evolution.KRICKETOT.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 37,
       attack: 25,
@@ -6507,10 +6510,10 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  KRICKETUNE: pokemon("KRICKETUNE", {
+  KRICKETUNE: createPokemon("KRICKETUNE", {
     name: "Kricketune",
-    line: Evolutions.KRICKETOT,
-    type1: "bug",
+    evolutionId: Evolution.KRICKETOT.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 77,
       attack: 85,
@@ -6520,11 +6523,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  KROKOROK: pokemon("KROKOROK", {
+  KROKOROK: createPokemon("KROKOROK", {
     name: "Krokorok",
-    line: Evolutions.SANDILE,
-    type1: "ground",
-    type2: "dark",
+    evolutionId: Evolution.SANDILE.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 60,
       attack: 82,
@@ -6534,11 +6537,11 @@ export const Pokemons = pokemonTable({
       speed: 74,
     },
   }),
-  KROOKODILE: pokemon("KROOKODILE", {
+  KROOKODILE: createPokemon("KROOKODILE", {
     name: "Krookodile",
-    line: Evolutions.SANDILE,
-    type1: "ground",
-    type2: "dark",
+    evolutionId: Evolution.SANDILE.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 95,
       attack: 117,
@@ -6548,10 +6551,10 @@ export const Pokemons = pokemonTable({
       speed: 92,
     },
   }),
-  KUBFU: pokemon("KUBFU", {
+  KUBFU: createPokemon("KUBFU", {
     name: "Kubfu",
-    line: Evolutions.KUBFU,
-    type1: "fighting",
+    evolutionId: Evolution.KUBFU.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 60,
       attack: 90,
@@ -6561,10 +6564,10 @@ export const Pokemons = pokemonTable({
       speed: 72,
     },
   }),
-  KYOGRE: pokemon("KYOGRE", {
+  KYOGRE: createPokemon("KYOGRE", {
     name: "Kyogre",
-    line: Evolutions.KYOGRE,
-    type1: "water",
+    evolutionId: Evolution.KYOGRE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 100,
       attack: 100,
@@ -6574,11 +6577,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  KYUREM: pokemon("KYUREM", {
+  KYUREM: createPokemon("KYUREM", {
     name: "Kyurem",
-    line: Evolutions.KYUREM,
-    type1: "dragon",
-    type2: "ice",
+    evolutionId: Evolution.KYUREM.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 125,
       attack: 130,
@@ -6588,11 +6591,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  LAIRON: pokemon("LAIRON", {
+  LAIRON: createPokemon("LAIRON", {
     name: "Lairon",
-    line: Evolutions.ARON,
-    type1: "steel",
-    type2: "rock",
+    evolutionId: Evolution.ARON.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 60,
       attack: 90,
@@ -6602,11 +6605,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  LAMPENT: pokemon("LAMPENT", {
+  LAMPENT: createPokemon("LAMPENT", {
     name: "Lampent",
-    line: Evolutions.LITWICK,
-    type1: "ghost",
-    type2: "fire",
+    evolutionId: Evolution.LITWICK.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 60,
       attack: 40,
@@ -6616,11 +6619,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  LANDORUS: pokemon("LANDORUS", {
+  LANDORUS: createPokemon("LANDORUS", {
     name: "Landorus",
-    line: Evolutions.LANDORUS,
-    type1: "ground",
-    type2: "flying",
+    evolutionId: Evolution.LANDORUS.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 89,
       attack: 125,
@@ -6630,11 +6633,11 @@ export const Pokemons = pokemonTable({
       speed: 101,
     },
   }),
-  LANTURN: pokemon("LANTURN", {
+  LANTURN: createPokemon("LANTURN", {
     name: "Lanturn",
-    line: Evolutions.CHINCHOU,
-    type1: "water",
-    type2: "electric",
+    evolutionId: Evolution.CHINCHOU.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 125,
       attack: 58,
@@ -6644,11 +6647,11 @@ export const Pokemons = pokemonTable({
       speed: 67,
     },
   }),
-  LAPRAS: pokemon("LAPRAS", {
+  LAPRAS: createPokemon("LAPRAS", {
     name: "Lapras",
-    line: Evolutions.LAPRAS,
-    type1: "water",
-    type2: "ice",
+    evolutionId: Evolution.LAPRAS.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 130,
       attack: 85,
@@ -6658,11 +6661,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  LARVESTA: pokemon("LARVESTA", {
+  LARVESTA: createPokemon("LARVESTA", {
     name: "Larvesta",
-    line: Evolutions.LARVESTA,
-    type1: "bug",
-    type2: "fire",
+    evolutionId: Evolution.LARVESTA.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 55,
       attack: 85,
@@ -6672,11 +6675,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  LARVITAR: pokemon("LARVITAR", {
+  LARVITAR: createPokemon("LARVITAR", {
     name: "Larvitar",
-    line: Evolutions.LARVITAR,
-    type1: "rock",
-    type2: "ground",
+    evolutionId: Evolution.LARVITAR.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 50,
       attack: 64,
@@ -6686,11 +6689,11 @@ export const Pokemons = pokemonTable({
       speed: 41,
     },
   }),
-  LATIAS: pokemon("LATIAS", {
+  LATIAS: createPokemon("LATIAS", {
     name: "Latias",
-    line: Evolutions.LATIAS,
-    type1: "dragon",
-    type2: "psychic",
+    evolutionId: Evolution.LATIAS.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 80,
       attack: 80,
@@ -6700,11 +6703,11 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  LATIOS: pokemon("LATIOS", {
+  LATIOS: createPokemon("LATIOS", {
     name: "Latios",
-    line: Evolutions.LATIOS,
-    type1: "dragon",
-    type2: "psychic",
+    evolutionId: Evolution.LATIOS.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 80,
       attack: 90,
@@ -6714,10 +6717,10 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  LEAFEON: pokemon("LEAFEON", {
+  LEAFEON: createPokemon("LEAFEON", {
     name: "Leafeon",
-    line: Evolutions.EEVEE,
-    type1: "grass",
+    evolutionId: Evolution.EEVEE.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 65,
       attack: 110,
@@ -6727,11 +6730,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  LEAVANNY: pokemon("LEAVANNY", {
+  LEAVANNY: createPokemon("LEAVANNY", {
     name: "Leavanny",
-    line: Evolutions.SEWADDLE,
-    type1: "bug",
-    type2: "grass",
+    evolutionId: Evolution.SEWADDLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 75,
       attack: 103,
@@ -6741,10 +6744,10 @@ export const Pokemons = pokemonTable({
       speed: 92,
     },
   }),
-  LECHONK: pokemon("LECHONK", {
+  LECHONK: createPokemon("LECHONK", {
     name: "Lechonk",
-    line: Evolutions.LECHONK,
-    type1: "normal",
+    evolutionId: Evolution.LECHONK.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 54,
       attack: 45,
@@ -6754,11 +6757,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  LEDIAN: pokemon("LEDIAN", {
+  LEDIAN: createPokemon("LEDIAN", {
     name: "Ledian",
-    line: Evolutions.LEDYBA,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.LEDYBA.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 55,
       attack: 35,
@@ -6768,11 +6771,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  LEDYBA: pokemon("LEDYBA", {
+  LEDYBA: createPokemon("LEDYBA", {
     name: "Ledyba",
-    line: Evolutions.LEDYBA,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.LEDYBA.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 40,
       attack: 20,
@@ -6782,10 +6785,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  LICKILICKY: pokemon("LICKILICKY", {
+  LICKILICKY: createPokemon("LICKILICKY", {
     name: "Lickilicky",
-    line: Evolutions.LICKITUNG,
-    type1: "normal",
+    evolutionId: Evolution.LICKITUNG.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 110,
       attack: 85,
@@ -6795,10 +6798,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  LICKITUNG: pokemon("LICKITUNG", {
+  LICKITUNG: createPokemon("LICKITUNG", {
     name: "Lickitung",
-    line: Evolutions.LICKITUNG,
-    type1: "normal",
+    evolutionId: Evolution.LICKITUNG.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 90,
       attack: 55,
@@ -6808,10 +6811,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  LIEPARD: pokemon("LIEPARD", {
+  LIEPARD: createPokemon("LIEPARD", {
     name: "Liepard",
-    line: Evolutions.PURRLOIN,
-    type1: "dark",
+    evolutionId: Evolution.PURRLOIN.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 64,
       attack: 88,
@@ -6821,11 +6824,11 @@ export const Pokemons = pokemonTable({
       speed: 106,
     },
   }),
-  LILEEP: pokemon("LILEEP", {
+  LILEEP: createPokemon("LILEEP", {
     name: "Lileep",
-    line: Evolutions.LILEEP,
-    type1: "rock",
-    type2: "grass",
+    evolutionId: Evolution.LILEEP.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 66,
       attack: 41,
@@ -6835,11 +6838,11 @@ export const Pokemons = pokemonTable({
       speed: 23,
     },
   }),
-  LILLIGANT_HISUI: pokemon("LILLIGANT_HISUI", {
+  LILLIGANT_HISUI: createPokemon("LILLIGANT_HISUI", {
     name: "Hisuian Lilligant",
-    line: Evolutions.PETILIL,
-    type1: "grass",
-    type2: "fighting",
+    evolutionId: Evolution.PETILIL.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 70,
       attack: 105,
@@ -6849,10 +6852,10 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  LILLIGANT: pokemon("LILLIGANT", {
+  LILLIGANT: createPokemon("LILLIGANT", {
     name: "Lilligant",
-    line: Evolutions.PETILIL,
-    type1: "grass",
+    evolutionId: Evolution.PETILIL.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 70,
       attack: 60,
@@ -6862,10 +6865,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  LILLIPUP: pokemon("LILLIPUP", {
+  LILLIPUP: createPokemon("LILLIPUP", {
     name: "Lillipup",
-    line: Evolutions.LILLIPUP,
-    type1: "normal",
+    evolutionId: Evolution.LILLIPUP.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 45,
       attack: 60,
@@ -6875,11 +6878,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  LINOONE_GALAR: pokemon("LINOONE_GALAR", {
+  LINOONE_GALAR: createPokemon("LINOONE_GALAR", {
     name: "Galarian Linoone",
-    line: Evolutions.ZIGZAGOON,
-    type1: "dark",
-    type2: "normal",
+    evolutionId: Evolution.ZIGZAGOON.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 78,
       attack: 70,
@@ -6889,10 +6892,10 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  LINOONE: pokemon("LINOONE", {
+  LINOONE: createPokemon("LINOONE", {
     name: "Linoone",
-    line: Evolutions.ZIGZAGOON,
-    type1: "normal",
+    evolutionId: Evolution.ZIGZAGOON.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 78,
       attack: 70,
@@ -6902,11 +6905,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  LITLEO: pokemon("LITLEO", {
+  LITLEO: createPokemon("LITLEO", {
     name: "Litleo",
-    line: Evolutions.LITLEO,
-    type1: "fire",
-    type2: "normal",
+    evolutionId: Evolution.LITLEO.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 62,
       attack: 50,
@@ -6916,10 +6919,10 @@ export const Pokemons = pokemonTable({
       speed: 72,
     },
   }),
-  LITTEN: pokemon("LITTEN", {
+  LITTEN: createPokemon("LITTEN", {
     name: "Litten",
-    line: Evolutions.LITTEN,
-    type1: "fire",
+    evolutionId: Evolution.LITTEN.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 45,
       attack: 65,
@@ -6929,11 +6932,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  LITWICK: pokemon("LITWICK", {
+  LITWICK: createPokemon("LITWICK", {
     name: "Litwick",
-    line: Evolutions.LITWICK,
-    type1: "ghost",
-    type2: "fire",
+    evolutionId: Evolution.LITWICK.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 50,
       attack: 30,
@@ -6943,11 +6946,11 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  LOKIX: pokemon("LOKIX", {
+  LOKIX: createPokemon("LOKIX", {
     name: "Lokix",
-    line: Evolutions.NYMBLE,
-    type1: "bug",
-    type2: "dark",
+    evolutionId: Evolution.NYMBLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 71,
       attack: 102,
@@ -6957,11 +6960,11 @@ export const Pokemons = pokemonTable({
       speed: 92,
     },
   }),
-  LOMBRE: pokemon("LOMBRE", {
+  LOMBRE: createPokemon("LOMBRE", {
     name: "Lombre",
-    line: Evolutions.LOTAD,
-    type1: "water",
-    type2: "grass",
+    evolutionId: Evolution.LOTAD.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 60,
       attack: 50,
@@ -6971,10 +6974,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  LOPUNNY: pokemon("LOPUNNY", {
+  LOPUNNY: createPokemon("LOPUNNY", {
     name: "Lopunny",
-    line: Evolutions.BUNEARY,
-    type1: "normal",
+    evolutionId: Evolution.BUNEARY.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 65,
       attack: 76,
@@ -6984,11 +6987,11 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  LOTAD: pokemon("LOTAD", {
+  LOTAD: createPokemon("LOTAD", {
     name: "Lotad",
-    line: Evolutions.LOTAD,
-    type1: "water",
-    type2: "grass",
+    evolutionId: Evolution.LOTAD.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 40,
       attack: 30,
@@ -6998,10 +7001,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  LOUDRED: pokemon("LOUDRED", {
+  LOUDRED: createPokemon("LOUDRED", {
     name: "Loudred",
-    line: Evolutions.WHISMUR,
-    type1: "normal",
+    evolutionId: Evolution.WHISMUR.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 84,
       attack: 71,
@@ -7011,11 +7014,11 @@ export const Pokemons = pokemonTable({
       speed: 48,
     },
   }),
-  LUCARIO: pokemon("LUCARIO", {
+  LUCARIO: createPokemon("LUCARIO", {
     name: "Lucario",
-    line: Evolutions.RIOLU,
-    type1: "fighting",
-    type2: "steel",
+    evolutionId: Evolution.RIOLU.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 70,
       attack: 110,
@@ -7025,11 +7028,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  LUDICOLO: pokemon("LUDICOLO", {
+  LUDICOLO: createPokemon("LUDICOLO", {
     name: "Ludicolo",
-    line: Evolutions.LOTAD,
-    type1: "water",
-    type2: "grass",
+    evolutionId: Evolution.LOTAD.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 80,
       attack: 70,
@@ -7039,11 +7042,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  LUGIA: pokemon("LUGIA", {
+  LUGIA: createPokemon("LUGIA", {
     name: "Lugia",
-    line: Evolutions.LUGIA,
-    type1: "psychic",
-    type2: "flying",
+    evolutionId: Evolution.LUGIA.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 106,
       attack: 90,
@@ -7053,10 +7056,10 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  LUMINEON: pokemon("LUMINEON", {
+  LUMINEON: createPokemon("LUMINEON", {
     name: "Lumineon",
-    line: Evolutions.FINNEON,
-    type1: "water",
+    evolutionId: Evolution.FINNEON.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 69,
       attack: 69,
@@ -7066,11 +7069,11 @@ export const Pokemons = pokemonTable({
       speed: 91,
     },
   }),
-  LUNALA: pokemon("LUNALA", {
+  LUNALA: createPokemon("LUNALA", {
     name: "Lunala",
-    line: Evolutions.COSMOG,
-    type1: "psychic",
-    type2: "ghost",
+    evolutionId: Evolution.COSMOG.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 137,
       attack: 113,
@@ -7080,11 +7083,11 @@ export const Pokemons = pokemonTable({
       speed: 97,
     },
   }),
-  LUNATONE: pokemon("LUNATONE", {
+  LUNATONE: createPokemon("LUNATONE", {
     name: "Lunatone",
-    line: Evolutions.LUNATONE,
-    type1: "rock",
-    type2: "psychic",
+    evolutionId: Evolution.LUNATONE.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 90,
       attack: 55,
@@ -7094,10 +7097,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  LURANTIS: pokemon("LURANTIS", {
+  LURANTIS: createPokemon("LURANTIS", {
     name: "Lurantis",
-    line: Evolutions.FOMANTIS,
-    type1: "grass",
+    evolutionId: Evolution.FOMANTIS.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 70,
       attack: 105,
@@ -7107,10 +7110,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  LUVDISC: pokemon("LUVDISC", {
+  LUVDISC: createPokemon("LUVDISC", {
     name: "Luvdisc",
-    line: Evolutions.LUVDISC,
-    type1: "water",
+    evolutionId: Evolution.LUVDISC.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 43,
       attack: 30,
@@ -7120,10 +7123,10 @@ export const Pokemons = pokemonTable({
       speed: 97,
     },
   }),
-  LUXIO: pokemon("LUXIO", {
+  LUXIO: createPokemon("LUXIO", {
     name: "Luxio",
-    line: Evolutions.SHINX,
-    type1: "electric",
+    evolutionId: Evolution.SHINX.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 60,
       attack: 85,
@@ -7133,10 +7136,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  LUXRAY: pokemon("LUXRAY", {
+  LUXRAY: createPokemon("LUXRAY", {
     name: "Luxray",
-    line: Evolutions.SHINX,
-    type1: "electric",
+    evolutionId: Evolution.SHINX.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 80,
       attack: 120,
@@ -7146,10 +7149,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  LYCANROC_DUSK: pokemon("LYCANROC_DUSK", {
+  LYCANROC_DUSK: createPokemon("LYCANROC_DUSK", {
     name: "Lycanroc Dusk",
-    line: Evolutions.ROCKRUFF,
-    type1: "rock",
+    evolutionId: Evolution.ROCKRUFF.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 75,
       attack: 117,
@@ -7159,10 +7162,10 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  LYCANROC_MIDNIGHT: pokemon("LYCANROC_MIDNIGHT", {
+  LYCANROC_MIDNIGHT: createPokemon("LYCANROC_MIDNIGHT", {
     name: "Lycanroc Midnight",
-    line: Evolutions.ROCKRUFF,
-    type1: "rock",
+    evolutionId: Evolution.ROCKRUFF.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 85,
       attack: 115,
@@ -7172,10 +7175,10 @@ export const Pokemons = pokemonTable({
       speed: 82,
     },
   }),
-  LYCANROC: pokemon("LYCANROC", {
+  LYCANROC: createPokemon("LYCANROC", {
     name: "Lycanroc",
-    line: Evolutions.ROCKRUFF,
-    type1: "rock",
+    evolutionId: Evolution.ROCKRUFF.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 75,
       attack: 115,
@@ -7185,10 +7188,10 @@ export const Pokemons = pokemonTable({
       speed: 112,
     },
   }),
-  MABOSSTIFF: pokemon("MABOSSTIFF", {
+  MABOSSTIFF: createPokemon("MABOSSTIFF", {
     name: "Mabosstiff",
-    line: Evolutions.MASCHIFF,
-    type1: "dark",
+    evolutionId: Evolution.MASCHIFF.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 80,
       attack: 120,
@@ -7198,10 +7201,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  MACHAMP: pokemon("MACHAMP", {
+  MACHAMP: createPokemon("MACHAMP", {
     name: "Machamp",
-    line: Evolutions.MACHOP,
-    type1: "fighting",
+    evolutionId: Evolution.MACHOP.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 90,
       attack: 130,
@@ -7211,10 +7214,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  MACHOKE: pokemon("MACHOKE", {
+  MACHOKE: createPokemon("MACHOKE", {
     name: "Machoke",
-    line: Evolutions.MACHOP,
-    type1: "fighting",
+    evolutionId: Evolution.MACHOP.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 80,
       attack: 100,
@@ -7224,10 +7227,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  MACHOP: pokemon("MACHOP", {
+  MACHOP: createPokemon("MACHOP", {
     name: "Machop",
-    line: Evolutions.MACHOP,
-    type1: "fighting",
+    evolutionId: Evolution.MACHOP.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 70,
       attack: 80,
@@ -7237,10 +7240,10 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  MAGBY: pokemon("MAGBY", {
+  MAGBY: createPokemon("MAGBY", {
     name: "Magby",
-    line: Evolutions.MAGBY,
-    type1: "fire",
+    evolutionId: Evolution.MAGBY.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 45,
       attack: 75,
@@ -7250,11 +7253,11 @@ export const Pokemons = pokemonTable({
       speed: 83,
     },
   }),
-  MAGCARGO: pokemon("MAGCARGO", {
+  MAGCARGO: createPokemon("MAGCARGO", {
     name: "Magcargo",
-    line: Evolutions.SLUGMA,
-    type1: "fire",
-    type2: "rock",
+    evolutionId: Evolution.SLUGMA.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 60,
       attack: 50,
@@ -7264,11 +7267,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  MAGEARNA: pokemon("MAGEARNA", {
+  MAGEARNA: createPokemon("MAGEARNA", {
     name: "Magearna",
-    line: Evolutions.MAGEARNA,
-    type1: "steel",
-    type2: "fairy",
+    evolutionId: Evolution.MAGEARNA.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 80,
       attack: 95,
@@ -7278,10 +7281,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  MAGIKARP: pokemon("MAGIKARP", {
+  MAGIKARP: createPokemon("MAGIKARP", {
     name: "Magikarp",
-    line: Evolutions.MAGIKARP,
-    type1: "water",
+    evolutionId: Evolution.MAGIKARP.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 20,
       attack: 10,
@@ -7291,10 +7294,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  MAGMAR: pokemon("MAGMAR", {
+  MAGMAR: createPokemon("MAGMAR", {
     name: "Magmar",
-    line: Evolutions.MAGBY,
-    type1: "fire",
+    evolutionId: Evolution.MAGBY.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 65,
       attack: 95,
@@ -7304,10 +7307,10 @@ export const Pokemons = pokemonTable({
       speed: 93,
     },
   }),
-  MAGMORTAR: pokemon("MAGMORTAR", {
+  MAGMORTAR: createPokemon("MAGMORTAR", {
     name: "Magmortar",
-    line: Evolutions.MAGBY,
-    type1: "fire",
+    evolutionId: Evolution.MAGBY.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 75,
       attack: 95,
@@ -7317,11 +7320,11 @@ export const Pokemons = pokemonTable({
       speed: 83,
     },
   }),
-  MAGNEMITE: pokemon("MAGNEMITE", {
+  MAGNEMITE: createPokemon("MAGNEMITE", {
     name: "Magnemite",
-    line: Evolutions.MAGNEMITE,
-    type1: "electric",
-    type2: "steel",
+    evolutionId: Evolution.MAGNEMITE.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 25,
       attack: 35,
@@ -7331,11 +7334,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  MAGNETON: pokemon("MAGNETON", {
+  MAGNETON: createPokemon("MAGNETON", {
     name: "Magneton",
-    line: Evolutions.MAGNEMITE,
-    type1: "electric",
-    type2: "steel",
+    evolutionId: Evolution.MAGNEMITE.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 50,
       attack: 60,
@@ -7345,11 +7348,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  MAGNEZONE: pokemon("MAGNEZONE", {
+  MAGNEZONE: createPokemon("MAGNEZONE", {
     name: "Magnezone",
-    line: Evolutions.MAGNEMITE,
-    type1: "electric",
-    type2: "steel",
+    evolutionId: Evolution.MAGNEMITE.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 70,
       attack: 70,
@@ -7359,10 +7362,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  MAKUHITA: pokemon("MAKUHITA", {
+  MAKUHITA: createPokemon("MAKUHITA", {
     name: "Makuhita",
-    line: Evolutions.MAKUHITA,
-    type1: "fighting",
+    evolutionId: Evolution.MAKUHITA.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 72,
       attack: 60,
@@ -7372,11 +7375,11 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  MALAMAR: pokemon("MALAMAR", {
+  MALAMAR: createPokemon("MALAMAR", {
     name: "Malamar",
-    line: Evolutions.INKAY,
-    type1: "dark",
-    type2: "psychic",
+    evolutionId: Evolution.INKAY.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 86,
       attack: 92,
@@ -7386,11 +7389,11 @@ export const Pokemons = pokemonTable({
       speed: 73,
     },
   }),
-  MAMOSWINE: pokemon("MAMOSWINE", {
+  MAMOSWINE: createPokemon("MAMOSWINE", {
     name: "Mamoswine",
-    line: Evolutions.SWINUB,
-    type1: "ice",
-    type2: "ground",
+    evolutionId: Evolution.SWINUB.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 110,
       attack: 130,
@@ -7400,10 +7403,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  MANAPHY: pokemon("MANAPHY", {
+  MANAPHY: createPokemon("MANAPHY", {
     name: "Manaphy",
-    line: Evolutions.PHIONE,
-    type1: "water",
+    evolutionId: Evolution.PHIONE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 100,
       attack: 100,
@@ -7413,11 +7416,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  MANDIBUZZ: pokemon("MANDIBUZZ", {
+  MANDIBUZZ: createPokemon("MANDIBUZZ", {
     name: "Mandibuzz",
-    line: Evolutions.VULLABY,
-    type1: "dark",
-    type2: "flying",
+    evolutionId: Evolution.VULLABY.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 110,
       attack: 65,
@@ -7427,10 +7430,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  MANECTRIC: pokemon("MANECTRIC", {
+  MANECTRIC: createPokemon("MANECTRIC", {
     name: "Manectric",
-    line: Evolutions.ELECTRIKE,
-    type1: "electric",
+    evolutionId: Evolution.ELECTRIKE.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 70,
       attack: 75,
@@ -7440,10 +7443,10 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  MANKEY: pokemon("MANKEY", {
+  MANKEY: createPokemon("MANKEY", {
     name: "Mankey",
-    line: Evolutions.MANKEY,
-    type1: "fighting",
+    evolutionId: Evolution.MANKEY.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 40,
       attack: 80,
@@ -7453,11 +7456,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  MANTINE: pokemon("MANTINE", {
+  MANTINE: createPokemon("MANTINE", {
     name: "Mantine",
-    line: Evolutions.MANTYKE,
-    type1: "water",
-    type2: "flying",
+    evolutionId: Evolution.MANTYKE.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 85,
       attack: 40,
@@ -7467,11 +7470,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  MANTYKE: pokemon("MANTYKE", {
+  MANTYKE: createPokemon("MANTYKE", {
     name: "Mantyke",
-    line: Evolutions.MANTYKE,
-    type1: "water",
-    type2: "flying",
+    evolutionId: Evolution.MANTYKE.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 45,
       attack: 20,
@@ -7481,10 +7484,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  MARACTUS: pokemon("MARACTUS", {
+  MARACTUS: createPokemon("MARACTUS", {
     name: "Maractus",
-    line: Evolutions.MARACTUS,
-    type1: "grass",
+    evolutionId: Evolution.MARACTUS.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 75,
       attack: 86,
@@ -7494,11 +7497,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  MAREANIE: pokemon("MAREANIE", {
+  MAREANIE: createPokemon("MAREANIE", {
     name: "Mareanie",
-    line: Evolutions.MAREANIE,
-    type1: "poison",
-    type2: "water",
+    evolutionId: Evolution.MAREANIE.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 53,
@@ -7508,10 +7511,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  MAREEP: pokemon("MAREEP", {
+  MAREEP: createPokemon("MAREEP", {
     name: "Mareep",
-    line: Evolutions.MAREEP,
-    type1: "electric",
+    evolutionId: Evolution.MAREEP.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 55,
       attack: 40,
@@ -7521,11 +7524,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  MARILL: pokemon("MARILL", {
+  MARILL: createPokemon("MARILL", {
     name: "Marill",
-    line: Evolutions.AZURILL,
-    type1: "water",
-    type2: "fairy",
+    evolutionId: Evolution.AZURILL.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 70,
       attack: 20,
@@ -7535,11 +7538,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  MAROWAK_ALOLA: pokemon("MAROWAK_ALOLA", {
+  MAROWAK_ALOLA: createPokemon("MAROWAK_ALOLA", {
     name: "Alolan Marowak",
-    line: Evolutions.CUBONE,
-    type1: "fire",
-    type2: "ghost",
+    evolutionId: Evolution.CUBONE.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 60,
       attack: 80,
@@ -7549,10 +7552,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  MAROWAK: pokemon("MAROWAK", {
+  MAROWAK: createPokemon("MAROWAK", {
     name: "Marowak",
-    line: Evolutions.CUBONE,
-    type1: "ground",
+    evolutionId: Evolution.CUBONE.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 60,
       attack: 80,
@@ -7562,11 +7565,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  MARSHADOW: pokemon("MARSHADOW", {
+  MARSHADOW: createPokemon("MARSHADOW", {
     name: "Marshadow",
-    line: Evolutions.MARSHADOW,
-    type1: "fighting",
-    type2: "ghost",
+    evolutionId: Evolution.MARSHADOW.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 90,
       attack: 125,
@@ -7576,11 +7579,11 @@ export const Pokemons = pokemonTable({
       speed: 125,
     },
   }),
-  MARSHTOMP: pokemon("MARSHTOMP", {
+  MARSHTOMP: createPokemon("MARSHTOMP", {
     name: "Marshtomp",
-    line: Evolutions.MUDKIP,
-    type1: "water",
-    type2: "ground",
+    evolutionId: Evolution.MUDKIP.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 70,
       attack: 85,
@@ -7590,10 +7593,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  MASCHIFF: pokemon("MASCHIFF", {
+  MASCHIFF: createPokemon("MASCHIFF", {
     name: "Maschiff",
-    line: Evolutions.MASCHIFF,
-    type1: "dark",
+    evolutionId: Evolution.MASCHIFF.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 60,
       attack: 78,
@@ -7603,11 +7606,11 @@ export const Pokemons = pokemonTable({
       speed: 51,
     },
   }),
-  MASQUERAIN: pokemon("MASQUERAIN", {
+  MASQUERAIN: createPokemon("MASQUERAIN", {
     name: "Masquerain",
-    line: Evolutions.SURSKIT,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.SURSKIT.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 70,
       attack: 60,
@@ -7617,10 +7620,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  MAUSHOLD: pokemon("MAUSHOLD", {
+  MAUSHOLD: createPokemon("MAUSHOLD", {
     name: "Maushold",
-    line: Evolutions.TANDEMAUS,
-    type1: "normal",
+    evolutionId: Evolution.TANDEMAUS.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 74,
       attack: 75,
@@ -7630,11 +7633,11 @@ export const Pokemons = pokemonTable({
       speed: 111,
     },
   }),
-  MAWILE: pokemon("MAWILE", {
+  MAWILE: createPokemon("MAWILE", {
     name: "Mawile",
-    line: Evolutions.MAWILE,
-    type1: "steel",
-    type2: "fairy",
+    evolutionId: Evolution.MAWILE.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 50,
       attack: 85,
@@ -7644,11 +7647,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  MEDICHAM: pokemon("MEDICHAM", {
+  MEDICHAM: createPokemon("MEDICHAM", {
     name: "Medicham",
-    line: Evolutions.MEDITITE,
-    type1: "fighting",
-    type2: "psychic",
+    evolutionId: Evolution.MEDITITE.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 60,
       attack: 60,
@@ -7658,11 +7661,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  MEDITITE: pokemon("MEDITITE", {
+  MEDITITE: createPokemon("MEDITITE", {
     name: "Meditite",
-    line: Evolutions.MEDITITE,
-    type1: "fighting",
-    type2: "psychic",
+    evolutionId: Evolution.MEDITITE.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 30,
       attack: 40,
@@ -7672,10 +7675,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  MEGANIUM: pokemon("MEGANIUM", {
+  MEGANIUM: createPokemon("MEGANIUM", {
     name: "Meganium",
-    line: Evolutions.CHIKORITA,
-    type1: "grass",
+    evolutionId: Evolution.CHIKORITA.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 80,
       attack: 82,
@@ -7685,10 +7688,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  MELMETAL: pokemon("MELMETAL", {
+  MELMETAL: createPokemon("MELMETAL", {
     name: "Melmetal",
-    line: Evolutions.MELMETAL,
-    type1: "steel",
+    evolutionId: Evolution.MELMETAL.id,
+    type1: PokemonTypes.STEEL,
     baseStats: {
       hp: 135,
       attack: 143,
@@ -7698,11 +7701,11 @@ export const Pokemons = pokemonTable({
       speed: 34,
     },
   }),
-  MELOETTA_ARIA: pokemon("MELOETTA_ARIA", {
+  MELOETTA_ARIA: createPokemon("MELOETTA_ARIA", {
     name: "Meloetta",
-    line: Evolutions.MELOETTA,
-    type1: "normal",
-    type2: "psychic",
+    evolutionId: Evolution.MELOETTA.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 100,
       attack: 77,
@@ -7712,10 +7715,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  MELTAN: pokemon("MELTAN", {
+  MELTAN: createPokemon("MELTAN", {
     name: "Meltan",
-    line: Evolutions.MELTAN,
-    type1: "steel",
+    evolutionId: Evolution.MELTAN.id,
+    type1: PokemonTypes.STEEL,
     baseStats: {
       hp: 46,
       attack: 65,
@@ -7725,11 +7728,11 @@ export const Pokemons = pokemonTable({
       speed: 34,
     },
   }),
-  MEOWSCARADA: pokemon("MEOWSCARADA", {
+  MEOWSCARADA: createPokemon("MEOWSCARADA", {
     name: "Meowscarada",
-    line: Evolutions.SPRIGATITO,
-    type1: "grass",
-    type2: "dark",
+    evolutionId: Evolution.SPRIGATITO.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 76,
       attack: 110,
@@ -7739,10 +7742,10 @@ export const Pokemons = pokemonTable({
       speed: 123,
     },
   }),
-  MEOWSTIC: pokemon("MEOWSTIC", {
+  MEOWSTIC: createPokemon("MEOWSTIC", {
     name: "Meowstic",
-    line: Evolutions.ESPURR,
-    type1: "psychic",
+    evolutionId: Evolution.ESPURR.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 74,
       attack: 48,
@@ -7752,10 +7755,10 @@ export const Pokemons = pokemonTable({
       speed: 104,
     },
   }),
-  MEOWTH_ALOLA: pokemon("MEOWTH_ALOLA", {
+  MEOWTH_ALOLA: createPokemon("MEOWTH_ALOLA", {
     name: "Alolan Meowth",
-    line: Evolutions.MEOWTH,
-    type1: "dark",
+    evolutionId: Evolution.MEOWTH.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 40,
       attack: 35,
@@ -7765,10 +7768,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  MEOWTH_GALAR: pokemon("MEOWTH_GALAR", {
+  MEOWTH_GALAR: createPokemon("MEOWTH_GALAR", {
     name: "Galarian Meowth",
-    line: Evolutions.MEOWTH,
-    type1: "steel",
+    evolutionId: Evolution.MEOWTH.id,
+    type1: PokemonTypes.STEEL,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -7778,10 +7781,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  MEOWTH: pokemon("MEOWTH", {
+  MEOWTH: createPokemon("MEOWTH", {
     name: "Meowth",
-    line: Evolutions.MEOWTH,
-    type1: "normal",
+    evolutionId: Evolution.MEOWTH.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 40,
       attack: 45,
@@ -7791,10 +7794,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  MESPRIT: pokemon("MESPRIT", {
+  MESPRIT: createPokemon("MESPRIT", {
     name: "Mesprit",
-    line: Evolutions.MESPRIT,
-    type1: "psychic",
+    evolutionId: Evolution.MESPRIT.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 80,
       attack: 105,
@@ -7804,11 +7807,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  METAGROSS: pokemon("METAGROSS", {
+  METAGROSS: createPokemon("METAGROSS", {
     name: "Metagross",
-    line: Evolutions.BELDUM,
-    type1: "steel",
-    type2: "psychic",
+    evolutionId: Evolution.BELDUM.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 80,
       attack: 135,
@@ -7818,11 +7821,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  METANG: pokemon("METANG", {
+  METANG: createPokemon("METANG", {
     name: "Metang",
-    line: Evolutions.BELDUM,
-    type1: "steel",
-    type2: "psychic",
+    evolutionId: Evolution.BELDUM.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 60,
       attack: 75,
@@ -7832,10 +7835,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  METAPOD: pokemon("METAPOD", {
+  METAPOD: createPokemon("METAPOD", {
     name: "Metapod",
-    line: Evolutions.CATERPIE,
-    type1: "bug",
+    evolutionId: Evolution.CATERPIE.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 50,
       attack: 20,
@@ -7845,10 +7848,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  MEW: pokemon("MEW", {
+  MEW: createPokemon("MEW", {
     name: "Mew",
-    line: Evolutions.MEW,
-    type1: "psychic",
+    evolutionId: Evolution.MEW.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 100,
       attack: 100,
@@ -7858,10 +7861,10 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  MEWTWO: pokemon("MEWTWO", {
+  MEWTWO: createPokemon("MEWTWO", {
     name: "Mewtwo",
-    line: Evolutions.MEWTWO,
-    type1: "psychic",
+    evolutionId: Evolution.MEWTWO.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 106,
       attack: 110,
@@ -7871,10 +7874,10 @@ export const Pokemons = pokemonTable({
       speed: 130,
     },
   }),
-  MIENFOO: pokemon("MIENFOO", {
+  MIENFOO: createPokemon("MIENFOO", {
     name: "Mienfoo",
-    line: Evolutions.MIENFOO,
-    type1: "fighting",
+    evolutionId: Evolution.MIENFOO.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 45,
       attack: 85,
@@ -7884,10 +7887,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  MIENSHAO: pokemon("MIENSHAO", {
+  MIENSHAO: createPokemon("MIENSHAO", {
     name: "Mienshao",
-    line: Evolutions.MIENFOO,
-    type1: "fighting",
+    evolutionId: Evolution.MIENFOO.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 65,
       attack: 125,
@@ -7897,10 +7900,10 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  MIGHTYENA: pokemon("MIGHTYENA", {
+  MIGHTYENA: createPokemon("MIGHTYENA", {
     name: "Mightyena",
-    line: Evolutions.POOCHYENA,
-    type1: "dark",
+    evolutionId: Evolution.POOCHYENA.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 70,
       attack: 90,
@@ -7910,10 +7913,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  MILCERY: pokemon("MILCERY", {
+  MILCERY: createPokemon("MILCERY", {
     name: "Milcery",
-    line: Evolutions.MILCERY,
-    type1: "fairy",
+    evolutionId: Evolution.MILCERY.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 45,
       attack: 40,
@@ -7923,10 +7926,10 @@ export const Pokemons = pokemonTable({
       speed: 34,
     },
   }),
-  MILOTIC: pokemon("MILOTIC", {
+  MILOTIC: createPokemon("MILOTIC", {
     name: "Milotic",
-    line: Evolutions.FEEBAS,
-    type1: "water",
+    evolutionId: Evolution.FEEBAS.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 95,
       attack: 60,
@@ -7936,10 +7939,10 @@ export const Pokemons = pokemonTable({
       speed: 81,
     },
   }),
-  MILTANK: pokemon("MILTANK", {
+  MILTANK: createPokemon("MILTANK", {
     name: "Miltank",
-    line: Evolutions.MILTANK,
-    type1: "normal",
+    evolutionId: Evolution.MILTANK.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 95,
       attack: 80,
@@ -7949,11 +7952,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  MIME_JR: pokemon("MIME_JR", {
+  MIME_JR: createPokemon("MIME_JR", {
     name: "Mime Jr.",
-    line: Evolutions.MIME_JR,
-    type1: "psychic",
-    type2: "fairy",
+    evolutionId: Evolution.MIME_JR.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 20,
       attack: 25,
@@ -7963,11 +7966,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  MIMIKYU: pokemon("MIMIKYU", {
+  MIMIKYU: createPokemon("MIMIKYU", {
     name: "Mimikyu",
-    line: Evolutions.MIMIKYU,
-    type1: "ghost",
-    type2: "fairy",
+    evolutionId: Evolution.MIMIKYU.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 55,
       attack: 90,
@@ -7977,10 +7980,10 @@ export const Pokemons = pokemonTable({
       speed: 96,
     },
   }),
-  MINCCINO: pokemon("MINCCINO", {
+  MINCCINO: createPokemon("MINCCINO", {
     name: "Minccino",
-    line: Evolutions.MINCCINO,
-    type1: "normal",
+    evolutionId: Evolution.MINCCINO.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 55,
       attack: 50,
@@ -7990,11 +7993,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  MINIOR: pokemon("MINIOR", {
+  MINIOR: createPokemon("MINIOR", {
     name: "Minior",
-    line: Evolutions.MINIOR,
-    type1: "rock",
-    type2: "flying",
+    evolutionId: Evolution.MINIOR.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 60,
       attack: 60,
@@ -8004,10 +8007,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  MINUN: pokemon("MINUN", {
+  MINUN: createPokemon("MINUN", {
     name: "Minun",
-    line: Evolutions.MINUN,
-    type1: "electric",
+    evolutionId: Evolution.MINUN.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 60,
       attack: 40,
@@ -8017,11 +8020,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  MIRAIDON: pokemon("MIRAIDON", {
+  MIRAIDON: createPokemon("MIRAIDON", {
     name: "Miraidon",
-    line: Evolutions.MIRAIDON,
-    type1: "electric",
-    type2: "dragon",
+    evolutionId: Evolution.MIRAIDON.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 100,
       attack: 85,
@@ -8031,10 +8034,10 @@ export const Pokemons = pokemonTable({
       speed: 135,
     },
   }),
-  MISDREAVUS: pokemon("MISDREAVUS", {
+  MISDREAVUS: createPokemon("MISDREAVUS", {
     name: "Misdreavus",
-    line: Evolutions.MISDREAVUS,
-    type1: "ghost",
+    evolutionId: Evolution.MISDREAVUS.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 60,
       attack: 60,
@@ -8044,10 +8047,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  MISMAGIUS: pokemon("MISMAGIUS", {
+  MISMAGIUS: createPokemon("MISMAGIUS", {
     name: "Mismagius",
-    line: Evolutions.MISDREAVUS,
-    type1: "ghost",
+    evolutionId: Evolution.MISDREAVUS.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 60,
       attack: 60,
@@ -8057,11 +8060,11 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  MOLTRES_GALAR: pokemon("MOLTRES_GALAR", {
+  MOLTRES_GALAR: createPokemon("MOLTRES_GALAR", {
     name: "Galarian Moltres",
-    line: Evolutions.MOLTRES,
-    type1: "dark",
-    type2: "flying",
+    evolutionId: Evolution.MOLTRES.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 90,
       attack: 85,
@@ -8071,11 +8074,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  MOLTRES: pokemon("MOLTRES", {
+  MOLTRES: createPokemon("MOLTRES", {
     name: "Moltres",
-    line: Evolutions.MOLTRES,
-    type1: "fire",
-    type2: "flying",
+    evolutionId: Evolution.MOLTRES.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 90,
       attack: 100,
@@ -8085,11 +8088,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  MONFERNO: pokemon("MONFERNO", {
+  MONFERNO: createPokemon("MONFERNO", {
     name: "Monferno",
-    line: Evolutions.CHIMCHAR,
-    type1: "fire",
-    type2: "fighting",
+    evolutionId: Evolution.CHIMCHAR.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 64,
       attack: 78,
@@ -8099,11 +8102,11 @@ export const Pokemons = pokemonTable({
       speed: 81,
     },
   }),
-  MORELULL: pokemon("MORELULL", {
+  MORELULL: createPokemon("MORELULL", {
     name: "Morelull",
-    line: Evolutions.MORELULL,
-    type1: "grass",
-    type2: "fairy",
+    evolutionId: Evolution.MORELULL.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 40,
       attack: 35,
@@ -8113,11 +8116,11 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  MORGREM: pokemon("MORGREM", {
+  MORGREM: createPokemon("MORGREM", {
     name: "Morgrem",
-    line: Evolutions.IMPIDIMP,
-    type1: "dark",
-    type2: "fairy",
+    evolutionId: Evolution.IMPIDIMP.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 65,
       attack: 60,
@@ -8127,11 +8130,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  MORPEKO_FULL_BELLY: pokemon("MORPEKO_FULL_BELLY", {
+  MORPEKO_FULL_BELLY: createPokemon("MORPEKO_FULL_BELLY", {
     name: "Morpeko",
-    line: Evolutions.MORPEKO,
-    type1: "electric",
-    type2: "dark",
+    evolutionId: Evolution.MORPEKO.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 58,
       attack: 95,
@@ -8141,11 +8144,11 @@ export const Pokemons = pokemonTable({
       speed: 97,
     },
   }),
-  MOTHIM: pokemon("MOTHIM", {
+  MOTHIM: createPokemon("MOTHIM", {
     name: "Mothim",
-    line: Evolutions.BURMY,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.BURMY.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 70,
       attack: 94,
@@ -8155,11 +8158,11 @@ export const Pokemons = pokemonTable({
       speed: 66,
     },
   }),
-  MR_MIME_GALAR: pokemon("MR_MIME_GALAR", {
+  MR_MIME_GALAR: createPokemon("MR_MIME_GALAR", {
     name: "Galarian Mr. Mime",
-    line: Evolutions.MIME_JR,
-    type1: "ice",
-    type2: "psychic",
+    evolutionId: Evolution.MIME_JR.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -8169,11 +8172,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  MR_MIME: pokemon("MR_MIME", {
+  MR_MIME: createPokemon("MR_MIME", {
     name: "Mr. Mime",
-    line: Evolutions.MIME_JR,
-    type1: "psychic",
-    type2: "fairy",
+    evolutionId: Evolution.MIME_JR.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 40,
       attack: 45,
@@ -8183,11 +8186,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  MR_RIME: pokemon("MR_RIME", {
+  MR_RIME: createPokemon("MR_RIME", {
     name: "Mr. Rime",
-    line: Evolutions.MIME_JR,
-    type1: "ice",
-    type2: "psychic",
+    evolutionId: Evolution.MIME_JR.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 80,
       attack: 85,
@@ -8197,10 +8200,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  MUDBRAY: pokemon("MUDBRAY", {
+  MUDBRAY: createPokemon("MUDBRAY", {
     name: "Mudbray",
-    line: Evolutions.MUDBRAY,
-    type1: "ground",
+    evolutionId: Evolution.MUDBRAY.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 70,
       attack: 100,
@@ -8210,10 +8213,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  MUDKIP: pokemon("MUDKIP", {
+  MUDKIP: createPokemon("MUDKIP", {
     name: "Mudkip",
-    line: Evolutions.MUDKIP,
-    type1: "water",
+    evolutionId: Evolution.MUDKIP.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 70,
@@ -8223,10 +8226,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  MUDSDALE: pokemon("MUDSDALE", {
+  MUDSDALE: createPokemon("MUDSDALE", {
     name: "Mudsdale",
-    line: Evolutions.MUDBRAY,
-    type1: "ground",
+    evolutionId: Evolution.MUDBRAY.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 100,
       attack: 125,
@@ -8236,11 +8239,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  MUK_ALOLA: pokemon("MUK_ALOLA", {
+  MUK_ALOLA: createPokemon("MUK_ALOLA", {
     name: "Alolan Muk",
-    line: Evolutions.GRIMER,
-    type1: "poison",
-    type2: "dark",
+    evolutionId: Evolution.GRIMER.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 105,
       attack: 105,
@@ -8250,10 +8253,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  MUK: pokemon("MUK", {
+  MUK: createPokemon("MUK", {
     name: "Muk",
-    line: Evolutions.GRIMER,
-    type1: "poison",
+    evolutionId: Evolution.GRIMER.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 105,
       attack: 105,
@@ -8263,10 +8266,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  MUNCHLAX: pokemon("MUNCHLAX", {
+  MUNCHLAX: createPokemon("MUNCHLAX", {
     name: "Munchlax",
-    line: Evolutions.MUNCHLAX,
-    type1: "normal",
+    evolutionId: Evolution.MUNCHLAX.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 135,
       attack: 85,
@@ -8276,10 +8279,10 @@ export const Pokemons = pokemonTable({
       speed: 5,
     },
   }),
-  MUNNA: pokemon("MUNNA", {
+  MUNNA: createPokemon("MUNNA", {
     name: "Munna",
-    line: Evolutions.MUNNA,
-    type1: "psychic",
+    evolutionId: Evolution.MUNNA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 76,
       attack: 25,
@@ -8289,11 +8292,11 @@ export const Pokemons = pokemonTable({
       speed: 24,
     },
   }),
-  MURKROW: pokemon("MURKROW", {
+  MURKROW: createPokemon("MURKROW", {
     name: "Murkrow",
-    line: Evolutions.MURKROW,
-    type1: "dark",
-    type2: "flying",
+    evolutionId: Evolution.MURKROW.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 60,
       attack: 85,
@@ -8303,10 +8306,10 @@ export const Pokemons = pokemonTable({
       speed: 91,
     },
   }),
-  MUSHARNA: pokemon("MUSHARNA", {
+  MUSHARNA: createPokemon("MUSHARNA", {
     name: "Musharna",
-    line: Evolutions.MUNNA,
-    type1: "psychic",
+    evolutionId: Evolution.MUNNA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 116,
       attack: 55,
@@ -8316,10 +8319,10 @@ export const Pokemons = pokemonTable({
       speed: 29,
     },
   }),
-  NACLI: pokemon("NACLI", {
+  NACLI: createPokemon("NACLI", {
     name: "Nacli",
-    line: Evolutions.NACLI,
-    type1: "rock",
+    evolutionId: Evolution.NACLI.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 55,
       attack: 55,
@@ -8329,10 +8332,10 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  NACLSTACK: pokemon("NACLSTACK", {
+  NACLSTACK: createPokemon("NACLSTACK", {
     name: "Naclstack",
-    line: Evolutions.NACLI,
-    type1: "rock",
+    evolutionId: Evolution.NACLI.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 60,
       attack: 60,
@@ -8342,11 +8345,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  NAGANADEL: pokemon("NAGANADEL", {
+  NAGANADEL: createPokemon("NAGANADEL", {
     name: "Naganadel",
-    line: Evolutions.POIPOLE,
-    type1: "poison",
-    type2: "dragon",
+    evolutionId: Evolution.POIPOLE.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 73,
       attack: 73,
@@ -8356,11 +8359,11 @@ export const Pokemons = pokemonTable({
       speed: 121,
     },
   }),
-  NATU: pokemon("NATU", {
+  NATU: createPokemon("NATU", {
     name: "Natu",
-    line: Evolutions.NATU,
-    type1: "psychic",
-    type2: "flying",
+    evolutionId: Evolution.NATU.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 40,
       attack: 50,
@@ -8370,10 +8373,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  NECROZMA: pokemon("NECROZMA", {
+  NECROZMA: createPokemon("NECROZMA", {
     name: "Necrozma",
-    line: Evolutions.NECROZMA,
-    type1: "psychic",
+    evolutionId: Evolution.NECROZMA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 97,
       attack: 107,
@@ -8383,10 +8386,10 @@ export const Pokemons = pokemonTable({
       speed: 79,
     },
   }),
-  NICKIT: pokemon("NICKIT", {
+  NICKIT: createPokemon("NICKIT", {
     name: "Nickit",
-    line: Evolutions.NICKIT,
-    type1: "dark",
+    evolutionId: Evolution.NICKIT.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 40,
       attack: 28,
@@ -8396,11 +8399,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  NIDOKING: pokemon("NIDOKING", {
+  NIDOKING: createPokemon("NIDOKING", {
     name: "Nidoking",
-    line: Evolutions.NIDORAN_M,
-    type1: "poison",
-    type2: "ground",
+    evolutionId: Evolution.NIDORAN_M.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 81,
       attack: 102,
@@ -8410,11 +8413,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  NIDOQUEEN: pokemon("NIDOQUEEN", {
+  NIDOQUEEN: createPokemon("NIDOQUEEN", {
     name: "Nidoqueen",
-    line: Evolutions.NIDORAN_F,
-    type1: "poison",
-    type2: "ground",
+    evolutionId: Evolution.NIDORAN_F.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 90,
       attack: 92,
@@ -8424,10 +8427,10 @@ export const Pokemons = pokemonTable({
       speed: 76,
     },
   }),
-  NIDORAN_F: pokemon("NIDORAN_F", {
+  NIDORAN_F: createPokemon("NIDORAN_F", {
     name: "Nidoran♀",
-    line: Evolutions.NIDORAN_F,
-    type1: "poison",
+    evolutionId: Evolution.NIDORAN_F.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 55,
       attack: 47,
@@ -8437,10 +8440,10 @@ export const Pokemons = pokemonTable({
       speed: 41,
     },
   }),
-  NIDORAN_M: pokemon("NIDORAN_M", {
+  NIDORAN_M: createPokemon("NIDORAN_M", {
     name: "Nidoran♂",
-    line: Evolutions.NIDORAN_M,
-    type1: "poison",
+    evolutionId: Evolution.NIDORAN_M.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 46,
       attack: 57,
@@ -8450,10 +8453,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  NIDORINA: pokemon("NIDORINA", {
+  NIDORINA: createPokemon("NIDORINA", {
     name: "Nidorina",
-    line: Evolutions.NIDORAN_F,
-    type1: "poison",
+    evolutionId: Evolution.NIDORAN_F.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 70,
       attack: 62,
@@ -8463,10 +8466,10 @@ export const Pokemons = pokemonTable({
       speed: 56,
     },
   }),
-  NIDORINO: pokemon("NIDORINO", {
+  NIDORINO: createPokemon("NIDORINO", {
     name: "Nidorino",
-    line: Evolutions.NIDORAN_M,
-    type1: "poison",
+    evolutionId: Evolution.NIDORAN_M.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 61,
       attack: 72,
@@ -8476,11 +8479,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  NIHILEGO: pokemon("NIHILEGO", {
+  NIHILEGO: createPokemon("NIHILEGO", {
     name: "Nihilego",
-    line: Evolutions.NIHILEGO,
-    type1: "rock",
-    type2: "poison",
+    evolutionId: Evolution.NIHILEGO.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 109,
       attack: 53,
@@ -8490,11 +8493,11 @@ export const Pokemons = pokemonTable({
       speed: 103,
     },
   }),
-  NINCADA: pokemon("NINCADA", {
+  NINCADA: createPokemon("NINCADA", {
     name: "Nincada",
-    line: Evolutions.NINCADA,
-    type1: "bug",
-    type2: "ground",
+    evolutionId: Evolution.NINCADA.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 31,
       attack: 45,
@@ -8504,11 +8507,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  NINETALES_ALOLA: pokemon("NINETALES_ALOLA", {
+  NINETALES_ALOLA: createPokemon("NINETALES_ALOLA", {
     name: "Alolan Ninetales",
-    line: Evolutions.VULPIX,
-    type1: "ice",
-    type2: "fairy",
+    evolutionId: Evolution.VULPIX.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 73,
       attack: 67,
@@ -8518,10 +8521,10 @@ export const Pokemons = pokemonTable({
       speed: 109,
     },
   }),
-  NINETALES: pokemon("NINETALES", {
+  NINETALES: createPokemon("NINETALES", {
     name: "Ninetales",
-    line: Evolutions.VULPIX,
-    type1: "fire",
+    evolutionId: Evolution.VULPIX.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 73,
       attack: 76,
@@ -8531,11 +8534,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  NINJASK: pokemon("NINJASK", {
+  NINJASK: createPokemon("NINJASK", {
     name: "Ninjask",
-    line: Evolutions.NINCADA,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.NINCADA.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 61,
       attack: 90,
@@ -8545,11 +8548,11 @@ export const Pokemons = pokemonTable({
       speed: 160,
     },
   }),
-  NOCTOWL: pokemon("NOCTOWL", {
+  NOCTOWL: createPokemon("NOCTOWL", {
     name: "Noctowl",
-    line: Evolutions.HOOTHOOT,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.HOOTHOOT.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 100,
       attack: 50,
@@ -8559,11 +8562,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  NOIBAT: pokemon("NOIBAT", {
+  NOIBAT: createPokemon("NOIBAT", {
     name: "Noibat",
-    line: Evolutions.NOIBAT,
-    type1: "flying",
-    type2: "dragon",
+    evolutionId: Evolution.NOIBAT.id,
+    type1: PokemonTypes.FLYING,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 40,
       attack: 30,
@@ -8573,11 +8576,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  NOIVERN: pokemon("NOIVERN", {
+  NOIVERN: createPokemon("NOIVERN", {
     name: "Noivern",
-    line: Evolutions.NOIBAT,
-    type1: "flying",
-    type2: "dragon",
+    evolutionId: Evolution.NOIBAT.id,
+    type1: PokemonTypes.FLYING,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 85,
       attack: 70,
@@ -8587,10 +8590,10 @@ export const Pokemons = pokemonTable({
       speed: 123,
     },
   }),
-  NOSEPASS: pokemon("NOSEPASS", {
+  NOSEPASS: createPokemon("NOSEPASS", {
     name: "Nosepass",
-    line: Evolutions.NOSEPASS,
-    type1: "rock",
+    evolutionId: Evolution.NOSEPASS.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 30,
       attack: 45,
@@ -8600,11 +8603,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  NUMEL: pokemon("NUMEL", {
+  NUMEL: createPokemon("NUMEL", {
     name: "Numel",
-    line: Evolutions.NUMEL,
-    type1: "fire",
-    type2: "ground",
+    evolutionId: Evolution.NUMEL.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 60,
       attack: 60,
@@ -8614,11 +8617,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  NUZLEAF: pokemon("NUZLEAF", {
+  NUZLEAF: createPokemon("NUZLEAF", {
     name: "Nuzleaf",
-    line: Evolutions.SEEDOT,
-    type1: "grass",
-    type2: "dark",
+    evolutionId: Evolution.SEEDOT.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 70,
       attack: 70,
@@ -8628,10 +8631,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  NYMBLE: pokemon("NYMBLE", {
+  NYMBLE: createPokemon("NYMBLE", {
     name: "Nymble",
-    line: Evolutions.NYMBLE,
-    type1: "bug",
+    evolutionId: Evolution.NYMBLE.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 33,
       attack: 46,
@@ -8641,11 +8644,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  OBSTAGOON: pokemon("OBSTAGOON", {
+  OBSTAGOON: createPokemon("OBSTAGOON", {
     name: "Obstagoon",
-    line: Evolutions.ZIGZAGOON,
-    type1: "dark",
-    type2: "normal",
+    evolutionId: Evolution.ZIGZAGOON.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 93,
       attack: 90,
@@ -8655,10 +8658,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  OCTILLERY: pokemon("OCTILLERY", {
+  OCTILLERY: createPokemon("OCTILLERY", {
     name: "Octillery",
-    line: Evolutions.REMORAID,
-    type1: "water",
+    evolutionId: Evolution.REMORAID.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 75,
       attack: 105,
@@ -8668,11 +8671,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  ODDISH: pokemon("ODDISH", {
+  ODDISH: createPokemon("ODDISH", {
     name: "Oddish",
-    line: Evolutions.ODDISH,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.ODDISH.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 45,
       attack: 50,
@@ -8682,10 +8685,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  OINKOLOGNE: pokemon("OINKOLOGNE", {
+  OINKOLOGNE: createPokemon("OINKOLOGNE", {
     name: "Oinkologne",
-    line: Evolutions.LECHONK,
-    type1: "normal",
+    evolutionId: Evolution.LECHONK.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 110,
       attack: 100,
@@ -8695,11 +8698,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  OMANYTE: pokemon("OMANYTE", {
+  OMANYTE: createPokemon("OMANYTE", {
     name: "Omanyte",
-    line: Evolutions.OMANYTE,
-    type1: "rock",
-    type2: "water",
+    evolutionId: Evolution.OMANYTE.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 35,
       attack: 40,
@@ -8709,11 +8712,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  OMASTAR: pokemon("OMASTAR", {
+  OMASTAR: createPokemon("OMASTAR", {
     name: "Omastar",
-    line: Evolutions.OMANYTE,
-    type1: "rock",
-    type2: "water",
+    evolutionId: Evolution.OMANYTE.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 70,
       attack: 60,
@@ -8723,11 +8726,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  ONIX: pokemon("ONIX", {
+  ONIX: createPokemon("ONIX", {
     name: "Onix",
-    line: Evolutions.ONIX,
-    type1: "rock",
-    type2: "ground",
+    evolutionId: Evolution.ONIX.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 35,
       attack: 45,
@@ -8737,11 +8740,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  ORANGURU: pokemon("ORANGURU", {
+  ORANGURU: createPokemon("ORANGURU", {
     name: "Oranguru",
-    line: Evolutions.ORANGURU,
-    type1: "normal",
-    type2: "psychic",
+    evolutionId: Evolution.ORANGURU.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 90,
       attack: 60,
@@ -8751,11 +8754,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  ORBEETLE: pokemon("ORBEETLE", {
+  ORBEETLE: createPokemon("ORBEETLE", {
     name: "Orbeetle",
-    line: Evolutions.BLIPBUG,
-    type1: "bug",
-    type2: "psychic",
+    evolutionId: Evolution.BLIPBUG.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 60,
       attack: 45,
@@ -8765,11 +8768,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  ORICORIO_PAU: pokemon("ORICORIO_PAU", {
+  ORICORIO_PAU: createPokemon("ORICORIO_PAU", {
     name: "Oricorio",
-    line: Evolutions.ORICORIO,
-    type1: "psychic",
-    type2: "flying",
+    evolutionId: Evolution.ORICORIO.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 75,
       attack: 70,
@@ -8779,11 +8782,11 @@ export const Pokemons = pokemonTable({
       speed: 93,
     },
   }),
-  ORICORIO_POM_POM: pokemon("ORICORIO_POM_POM", {
+  ORICORIO_POM_POM: createPokemon("ORICORIO_POM_POM", {
     name: "Oricorio",
-    line: Evolutions.ORICORIO,
-    type1: "electric",
-    type2: "flying",
+    evolutionId: Evolution.ORICORIO.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 75,
       attack: 70,
@@ -8793,11 +8796,11 @@ export const Pokemons = pokemonTable({
       speed: 93,
     },
   }),
-  ORICORIO_SENSU: pokemon("ORICORIO_SENSU", {
+  ORICORIO_SENSU: createPokemon("ORICORIO_SENSU", {
     name: "Oricorio",
-    line: Evolutions.ORICORIO,
-    type1: "ghost",
-    type2: "flying",
+    evolutionId: Evolution.ORICORIO.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 75,
       attack: 70,
@@ -8807,11 +8810,11 @@ export const Pokemons = pokemonTable({
       speed: 93,
     },
   }),
-  ORICORIO: pokemon("ORICORIO", {
+  ORICORIO: createPokemon("ORICORIO", {
     name: "Oricorio",
-    line: Evolutions.ORICORIO,
-    type1: "fire",
-    type2: "flying",
+    evolutionId: Evolution.ORICORIO.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 75,
       attack: 70,
@@ -8821,10 +8824,10 @@ export const Pokemons = pokemonTable({
       speed: 93,
     },
   }),
-  ORTHWORM: pokemon("ORTHWORM", {
+  ORTHWORM: createPokemon("ORTHWORM", {
     name: "Orthworm",
-    line: Evolutions.ORTHWORM,
-    type1: "steel",
+    evolutionId: Evolution.ORTHWORM.id,
+    type1: PokemonTypes.STEEL,
     baseStats: {
       hp: 70,
       attack: 85,
@@ -8834,10 +8837,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  OSHAWOTT: pokemon("OSHAWOTT", {
+  OSHAWOTT: createPokemon("OSHAWOTT", {
     name: "Oshawott",
-    line: Evolutions.OSHAWOTT,
-    type1: "water",
+    evolutionId: Evolution.OSHAWOTT.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 55,
       attack: 55,
@@ -8847,11 +8850,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  OVERQWIL: pokemon("OVERQWIL", {
+  OVERQWIL: createPokemon("OVERQWIL", {
     name: "Overqwil",
-    line: Evolutions.QWILFISH,
-    type1: "dark",
-    type2: "poison",
+    evolutionId: Evolution.QWILFISH.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 85,
       attack: 115,
@@ -8861,10 +8864,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  PACHIRISU: pokemon("PACHIRISU", {
+  PACHIRISU: createPokemon("PACHIRISU", {
     name: "Pachirisu",
-    line: Evolutions.PACHIRISU,
-    type1: "electric",
+    evolutionId: Evolution.PACHIRISU.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 60,
       attack: 45,
@@ -8874,10 +8877,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  PALAFIN: pokemon("PALAFIN", {
+  PALAFIN: createPokemon("PALAFIN", {
     name: "Palafin",
-    line: Evolutions.FINIZEN,
-    type1: "water",
+    evolutionId: Evolution.FINIZEN.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 100,
       attack: 70,
@@ -8887,11 +8890,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  PALKIA: pokemon("PALKIA", {
+  PALKIA: createPokemon("PALKIA", {
     name: "Palkia",
-    line: Evolutions.PALKIA,
-    type1: "water",
-    type2: "dragon",
+    evolutionId: Evolution.PALKIA.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 90,
       attack: 120,
@@ -8901,11 +8904,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  PALOSSAND: pokemon("PALOSSAND", {
+  PALOSSAND: createPokemon("PALOSSAND", {
     name: "Palossand",
-    line: Evolutions.SANDYGAST,
-    type1: "ghost",
-    type2: "ground",
+    evolutionId: Evolution.SANDYGAST.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 85,
       attack: 75,
@@ -8915,11 +8918,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  PALPITOAD: pokemon("PALPITOAD", {
+  PALPITOAD: createPokemon("PALPITOAD", {
     name: "Palpitoad",
-    line: Evolutions.TYMPOLE,
-    type1: "water",
-    type2: "ground",
+    evolutionId: Evolution.TYMPOLE.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 75,
       attack: 65,
@@ -8929,10 +8932,10 @@ export const Pokemons = pokemonTable({
       speed: 69,
     },
   }),
-  PANCHAM: pokemon("PANCHAM", {
+  PANCHAM: createPokemon("PANCHAM", {
     name: "Pancham",
-    line: Evolutions.PANCHAM,
-    type1: "fighting",
+    evolutionId: Evolution.PANCHAM.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 67,
       attack: 82,
@@ -8942,11 +8945,11 @@ export const Pokemons = pokemonTable({
       speed: 43,
     },
   }),
-  PANGORO: pokemon("PANGORO", {
+  PANGORO: createPokemon("PANGORO", {
     name: "Pangoro",
-    line: Evolutions.PANCHAM,
-    type1: "fighting",
-    type2: "dark",
+    evolutionId: Evolution.PANCHAM.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 95,
       attack: 124,
@@ -8956,10 +8959,10 @@ export const Pokemons = pokemonTable({
       speed: 58,
     },
   }),
-  PANPOUR: pokemon("PANPOUR", {
+  PANPOUR: createPokemon("PANPOUR", {
     name: "Panpour",
-    line: Evolutions.PANPOUR,
-    type1: "water",
+    evolutionId: Evolution.PANPOUR.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 53,
@@ -8969,10 +8972,10 @@ export const Pokemons = pokemonTable({
       speed: 64,
     },
   }),
-  PANSAGE: pokemon("PANSAGE", {
+  PANSAGE: createPokemon("PANSAGE", {
     name: "Pansage",
-    line: Evolutions.PANSAGE,
-    type1: "grass",
+    evolutionId: Evolution.PANSAGE.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 50,
       attack: 53,
@@ -8982,10 +8985,10 @@ export const Pokemons = pokemonTable({
       speed: 64,
     },
   }),
-  PANSEAR: pokemon("PANSEAR", {
+  PANSEAR: createPokemon("PANSEAR", {
     name: "Pansear",
-    line: Evolutions.PANSEAR,
-    type1: "fire",
+    evolutionId: Evolution.PANSEAR.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 50,
       attack: 53,
@@ -8995,11 +8998,11 @@ export const Pokemons = pokemonTable({
       speed: 64,
     },
   }),
-  PARAS: pokemon("PARAS", {
+  PARAS: createPokemon("PARAS", {
     name: "Paras",
-    line: Evolutions.PARAS,
-    type1: "bug",
-    type2: "grass",
+    evolutionId: Evolution.PARAS.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 35,
       attack: 70,
@@ -9009,11 +9012,11 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  PARASECT: pokemon("PARASECT", {
+  PARASECT: createPokemon("PARASECT", {
     name: "Parasect",
-    line: Evolutions.PARAS,
-    type1: "bug",
-    type2: "grass",
+    evolutionId: Evolution.PARAS.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 60,
       attack: 95,
@@ -9023,10 +9026,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  PASSIMIAN: pokemon("PASSIMIAN", {
+  PASSIMIAN: createPokemon("PASSIMIAN", {
     name: "Passimian",
-    line: Evolutions.PASSIMIAN,
-    type1: "fighting",
+    evolutionId: Evolution.PASSIMIAN.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 100,
       attack: 120,
@@ -9036,10 +9039,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  PATRAT: pokemon("PATRAT", {
+  PATRAT: createPokemon("PATRAT", {
     name: "Patrat",
-    line: Evolutions.PATRAT,
-    type1: "normal",
+    evolutionId: Evolution.PATRAT.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 45,
       attack: 55,
@@ -9049,10 +9052,10 @@ export const Pokemons = pokemonTable({
       speed: 42,
     },
   }),
-  PAWMI: pokemon("PAWMI", {
+  PAWMI: createPokemon("PAWMI", {
     name: "Pawmi",
-    line: Evolutions.PAWMI,
-    type1: "electric",
+    evolutionId: Evolution.PAWMI.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 45,
       attack: 50,
@@ -9062,11 +9065,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  PAWMO: pokemon("PAWMO", {
+  PAWMO: createPokemon("PAWMO", {
     name: "Pawmo",
-    line: Evolutions.PAWMI,
-    type1: "electric",
-    type2: "fighting",
+    evolutionId: Evolution.PAWMI.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 60,
       attack: 75,
@@ -9076,11 +9079,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  PAWMOT: pokemon("PAWMOT", {
+  PAWMOT: createPokemon("PAWMOT", {
     name: "Pawmot",
-    line: Evolutions.PAWMI,
-    type1: "electric",
-    type2: "fighting",
+    evolutionId: Evolution.PAWMI.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 70,
       attack: 115,
@@ -9090,11 +9093,11 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  PAWNIARD: pokemon("PAWNIARD", {
+  PAWNIARD: createPokemon("PAWNIARD", {
     name: "Pawniard",
-    line: Evolutions.PAWNIARD,
-    type1: "dark",
-    type2: "steel",
+    evolutionId: Evolution.PAWNIARD.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 45,
       attack: 85,
@@ -9104,11 +9107,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  PELIPPER: pokemon("PELIPPER", {
+  PELIPPER: createPokemon("PELIPPER", {
     name: "Pelipper",
-    line: Evolutions.WINGULL,
-    type1: "water",
-    type2: "flying",
+    evolutionId: Evolution.WINGULL.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 60,
       attack: 50,
@@ -9118,10 +9121,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  PERRSERKER: pokemon("PERRSERKER", {
+  PERRSERKER: createPokemon("PERRSERKER", {
     name: "Perrserker",
-    line: Evolutions.MEOWTH,
-    type1: "steel",
+    evolutionId: Evolution.MEOWTH.id,
+    type1: PokemonTypes.STEEL,
     baseStats: {
       hp: 70,
       attack: 110,
@@ -9131,10 +9134,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  PERSIAN_ALOLA: pokemon("PERSIAN_ALOLA", {
+  PERSIAN_ALOLA: createPokemon("PERSIAN_ALOLA", {
     name: "Alolan Persian",
-    line: Evolutions.MEOWTH,
-    type1: "dark",
+    evolutionId: Evolution.MEOWTH.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 65,
       attack: 60,
@@ -9144,10 +9147,10 @@ export const Pokemons = pokemonTable({
       speed: 115,
     },
   }),
-  PERSIAN: pokemon("PERSIAN", {
+  PERSIAN: createPokemon("PERSIAN", {
     name: "Persian",
-    line: Evolutions.MEOWTH,
-    type1: "normal",
+    evolutionId: Evolution.MEOWTH.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 65,
       attack: 70,
@@ -9157,10 +9160,10 @@ export const Pokemons = pokemonTable({
       speed: 115,
     },
   }),
-  PETILIL: pokemon("PETILIL", {
+  PETILIL: createPokemon("PETILIL", {
     name: "Petilil",
-    line: Evolutions.PETILIL,
-    type1: "grass",
+    evolutionId: Evolution.PETILIL.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 45,
       attack: 35,
@@ -9170,10 +9173,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  PHANPY: pokemon("PHANPY", {
+  PHANPY: createPokemon("PHANPY", {
     name: "Phanpy",
-    line: Evolutions.PHANPY,
-    type1: "ground",
+    evolutionId: Evolution.PHANPY.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 90,
       attack: 60,
@@ -9183,11 +9186,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  PHANTUMP: pokemon("PHANTUMP", {
+  PHANTUMP: createPokemon("PHANTUMP", {
     name: "Phantump",
-    line: Evolutions.PHANTUMP,
-    type1: "ghost",
-    type2: "grass",
+    evolutionId: Evolution.PHANTUMP.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 43,
       attack: 70,
@@ -9197,11 +9200,11 @@ export const Pokemons = pokemonTable({
       speed: 38,
     },
   }),
-  PHEROMOSA: pokemon("PHEROMOSA", {
+  PHEROMOSA: createPokemon("PHEROMOSA", {
     name: "Pheromosa",
-    line: Evolutions.PHEROMOSA,
-    type1: "bug",
-    type2: "fighting",
+    evolutionId: Evolution.PHEROMOSA.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 71,
       attack: 137,
@@ -9211,10 +9214,10 @@ export const Pokemons = pokemonTable({
       speed: 151,
     },
   }),
-  PHIONE: pokemon("PHIONE", {
+  PHIONE: createPokemon("PHIONE", {
     name: "Phione",
-    line: Evolutions.PHIONE,
-    type1: "water",
+    evolutionId: Evolution.PHIONE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 80,
       attack: 80,
@@ -9224,10 +9227,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  PICHU: pokemon("PICHU", {
+  PICHU: createPokemon("PICHU", {
     name: "Pichu",
-    line: Evolutions.PICHU,
-    type1: "electric",
+    evolutionId: Evolution.PICHU.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 20,
       attack: 40,
@@ -9237,11 +9240,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  PIDGEOT: pokemon("PIDGEOT", {
+  PIDGEOT: createPokemon("PIDGEOT", {
     name: "Pidgeot",
-    line: Evolutions.PIDGEY,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.PIDGEY.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 83,
       attack: 80,
@@ -9251,11 +9254,11 @@ export const Pokemons = pokemonTable({
       speed: 101,
     },
   }),
-  PIDGEOTTO: pokemon("PIDGEOTTO", {
+  PIDGEOTTO: createPokemon("PIDGEOTTO", {
     name: "Pidgeotto",
-    line: Evolutions.PIDGEY,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.PIDGEY.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 63,
       attack: 60,
@@ -9265,11 +9268,11 @@ export const Pokemons = pokemonTable({
       speed: 71,
     },
   }),
-  PIDGEY: pokemon("PIDGEY", {
+  PIDGEY: createPokemon("PIDGEY", {
     name: "Pidgey",
-    line: Evolutions.PIDGEY,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.PIDGEY.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 40,
       attack: 45,
@@ -9279,11 +9282,11 @@ export const Pokemons = pokemonTable({
       speed: 56,
     },
   }),
-  PIDOVE: pokemon("PIDOVE", {
+  PIDOVE: createPokemon("PIDOVE", {
     name: "Pidove",
-    line: Evolutions.PIDOVE,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.PIDOVE.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 50,
       attack: 55,
@@ -9293,11 +9296,11 @@ export const Pokemons = pokemonTable({
       speed: 43,
     },
   }),
-  PIGNITE: pokemon("PIGNITE", {
+  PIGNITE: createPokemon("PIGNITE", {
     name: "Pignite",
-    line: Evolutions.TEPIG,
-    type1: "fire",
-    type2: "fighting",
+    evolutionId: Evolution.TEPIG.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 90,
       attack: 93,
@@ -9307,10 +9310,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  PIKACHU_BELLE: pokemon("PIKACHU_BELLE", {
+  PIKACHU_BELLE: createPokemon("PIKACHU_BELLE", {
     name: "Pikachu Belle",
-    line: Evolutions.PICHU,
-    type1: "electric",
+    evolutionId: Evolution.PICHU.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 35,
       attack: 55,
@@ -9320,10 +9323,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  PIKACHU_COSPLAY: pokemon("PIKACHU_COSPLAY", {
+  PIKACHU_COSPLAY: createPokemon("PIKACHU_COSPLAY", {
     name: "Pikachu",
-    line: Evolutions.PICHU,
-    type1: "electric",
+    evolutionId: Evolution.PICHU.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 35,
       attack: 55,
@@ -9333,10 +9336,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  PIKACHU_LIBRE: pokemon("PIKACHU_LIBRE", {
+  PIKACHU_LIBRE: createPokemon("PIKACHU_LIBRE", {
     name: "Pikachu Libre",
-    line: Evolutions.PICHU,
-    type1: "electric",
+    evolutionId: Evolution.PICHU.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 35,
       attack: 55,
@@ -9346,10 +9349,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  PIKACHU_PHD: pokemon("PIKACHU_PHD", {
+  PIKACHU_PHD: createPokemon("PIKACHU_PHD", {
     name: "PHD Pikachu",
-    line: Evolutions.PICHU,
-    type1: "electric",
+    evolutionId: Evolution.PICHU.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 35,
       attack: 55,
@@ -9359,10 +9362,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  PIKACHU_POP_STAR: pokemon("PIKACHU_POP_STAR", {
+  PIKACHU_POP_STAR: createPokemon("PIKACHU_POP_STAR", {
     name: "Pop Star Pikachu",
-    line: Evolutions.PICHU,
-    type1: "electric",
+    evolutionId: Evolution.PICHU.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 35,
       attack: 55,
@@ -9372,10 +9375,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  PIKACHU_ROCK_STAR: pokemon("PIKACHU_ROCK_STAR", {
+  PIKACHU_ROCK_STAR: createPokemon("PIKACHU_ROCK_STAR", {
     name: "Rock Star Pikachu",
-    line: Evolutions.PICHU,
-    type1: "electric",
+    evolutionId: Evolution.PICHU.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 35,
       attack: 55,
@@ -9385,10 +9388,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  PIKACHU: pokemon("PIKACHU", {
+  PIKACHU: createPokemon("PIKACHU", {
     name: "Pikachu",
-    line: Evolutions.PICHU,
-    type1: "electric",
+    evolutionId: Evolution.PICHU.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 35,
       attack: 55,
@@ -9398,11 +9401,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  PIKIPEK: pokemon("PIKIPEK", {
+  PIKIPEK: createPokemon("PIKIPEK", {
     name: "Pikipek",
-    line: Evolutions.PIKIPEK,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.PIKIPEK.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 35,
       attack: 75,
@@ -9412,11 +9415,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  PILOSWINE: pokemon("PILOSWINE", {
+  PILOSWINE: createPokemon("PILOSWINE", {
     name: "Piloswine",
-    line: Evolutions.SWINUB,
-    type1: "ice",
-    type2: "ground",
+    evolutionId: Evolution.SWINUB.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 100,
       attack: 100,
@@ -9426,10 +9429,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  PINCURCHIN: pokemon("PINCURCHIN", {
+  PINCURCHIN: createPokemon("PINCURCHIN", {
     name: "Pincurchin",
-    line: Evolutions.PINCURCHIN,
-    type1: "electric",
+    evolutionId: Evolution.PINCURCHIN.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 48,
       attack: 101,
@@ -9439,10 +9442,10 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  PINECO: pokemon("PINECO", {
+  PINECO: createPokemon("PINECO", {
     name: "Pineco",
-    line: Evolutions.PINECO,
-    type1: "bug",
+    evolutionId: Evolution.PINECO.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -9452,10 +9455,10 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  PINSIR: pokemon("PINSIR", {
+  PINSIR: createPokemon("PINSIR", {
     name: "Pinsir",
-    line: Evolutions.PINSIR,
-    type1: "bug",
+    evolutionId: Evolution.PINSIR.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 65,
       attack: 125,
@@ -9465,10 +9468,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  PIPLUP: pokemon("PIPLUP", {
+  PIPLUP: createPokemon("PIPLUP", {
     name: "Piplup",
-    line: Evolutions.PIPLUP,
-    type1: "water",
+    evolutionId: Evolution.PIPLUP.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 53,
       attack: 51,
@@ -9478,10 +9481,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  PLUSLE: pokemon("PLUSLE", {
+  PLUSLE: createPokemon("PLUSLE", {
     name: "Plusle",
-    line: Evolutions.PLUSLE,
-    type1: "electric",
+    evolutionId: Evolution.PLUSLE.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 60,
       attack: 50,
@@ -9491,10 +9494,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  POIPOLE: pokemon("POIPOLE", {
+  POIPOLE: createPokemon("POIPOLE", {
     name: "Poipole",
-    line: Evolutions.POIPOLE,
-    type1: "poison",
+    evolutionId: Evolution.POIPOLE.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 67,
       attack: 73,
@@ -9504,10 +9507,10 @@ export const Pokemons = pokemonTable({
       speed: 73,
     },
   }),
-  POLITOED: pokemon("POLITOED", {
+  POLITOED: createPokemon("POLITOED", {
     name: "Politoed",
-    line: Evolutions.POLIWAG,
-    type1: "water",
+    evolutionId: Evolution.POLIWAG.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 90,
       attack: 75,
@@ -9517,10 +9520,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  POLIWAG: pokemon("POLIWAG", {
+  POLIWAG: createPokemon("POLIWAG", {
     name: "Poliwag",
-    line: Evolutions.POLIWAG,
-    type1: "water",
+    evolutionId: Evolution.POLIWAG.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 40,
       attack: 50,
@@ -9530,10 +9533,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  POLIWHIRL: pokemon("POLIWHIRL", {
+  POLIWHIRL: createPokemon("POLIWHIRL", {
     name: "Poliwhirl",
-    line: Evolutions.POLIWAG,
-    type1: "water",
+    evolutionId: Evolution.POLIWAG.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 65,
       attack: 65,
@@ -9543,11 +9546,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  POLIWRATH: pokemon("POLIWRATH", {
+  POLIWRATH: createPokemon("POLIWRATH", {
     name: "Poliwrath",
-    line: Evolutions.POLIWAG,
-    type1: "water",
-    type2: "fighting",
+    evolutionId: Evolution.POLIWAG.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 90,
       attack: 95,
@@ -9557,10 +9560,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  POLTEAGEIST: pokemon("POLTEAGEIST", {
+  POLTEAGEIST: createPokemon("POLTEAGEIST", {
     name: "Polteageist",
-    line: Evolutions.SINISTEA,
-    type1: "ghost",
+    evolutionId: Evolution.SINISTEA.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 60,
       attack: 65,
@@ -9570,10 +9573,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  PONYTA_GALAR: pokemon("PONYTA_GALAR", {
+  PONYTA_GALAR: createPokemon("PONYTA_GALAR", {
     name: "Galarian Ponyta",
-    line: Evolutions.PONYTA,
-    type1: "psychic",
+    evolutionId: Evolution.PONYTA.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 50,
       attack: 85,
@@ -9583,10 +9586,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  PONYTA: pokemon("PONYTA", {
+  PONYTA: createPokemon("PONYTA", {
     name: "Ponyta",
-    line: Evolutions.PONYTA,
-    type1: "fire",
+    evolutionId: Evolution.PONYTA.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 50,
       attack: 85,
@@ -9596,10 +9599,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  POOCHYENA: pokemon("POOCHYENA", {
+  POOCHYENA: createPokemon("POOCHYENA", {
     name: "Poochyena",
-    line: Evolutions.POOCHYENA,
-    type1: "dark",
+    evolutionId: Evolution.POOCHYENA.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 35,
       attack: 55,
@@ -9609,10 +9612,10 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  POPPLIO: pokemon("POPPLIO", {
+  POPPLIO: createPokemon("POPPLIO", {
     name: "Popplio",
-    line: Evolutions.POPPLIO,
-    type1: "water",
+    evolutionId: Evolution.POPPLIO.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 54,
@@ -9622,10 +9625,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  PORYGON_Z: pokemon("PORYGON_Z", {
+  PORYGON_Z: createPokemon("PORYGON_Z", {
     name: "Porygon-Z",
-    line: Evolutions.PORYGON,
-    type1: "normal",
+    evolutionId: Evolution.PORYGON.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 85,
       attack: 80,
@@ -9635,10 +9638,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  PORYGON: pokemon("PORYGON", {
+  PORYGON: createPokemon("PORYGON", {
     name: "Porygon",
-    line: Evolutions.PORYGON,
-    type1: "normal",
+    evolutionId: Evolution.PORYGON.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 65,
       attack: 60,
@@ -9648,10 +9651,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  PORYGON2: pokemon("PORYGON2", {
+  PORYGON2: createPokemon("PORYGON2", {
     name: "Porygon2",
-    line: Evolutions.PORYGON,
-    type1: "normal",
+    evolutionId: Evolution.PORYGON.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 85,
       attack: 80,
@@ -9661,11 +9664,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  PRIMARINA: pokemon("PRIMARINA", {
+  PRIMARINA: createPokemon("PRIMARINA", {
     name: "Primarina",
-    line: Evolutions.POPPLIO,
-    type1: "water",
-    type2: "fairy",
+    evolutionId: Evolution.POPPLIO.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 80,
       attack: 74,
@@ -9675,10 +9678,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  PRIMEAPE: pokemon("PRIMEAPE", {
+  PRIMEAPE: createPokemon("PRIMEAPE", {
     name: "Primeape",
-    line: Evolutions.MANKEY,
-    type1: "fighting",
+    evolutionId: Evolution.MANKEY.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 65,
       attack: 105,
@@ -9688,10 +9691,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  PRINPLUP: pokemon("PRINPLUP", {
+  PRINPLUP: createPokemon("PRINPLUP", {
     name: "Prinplup",
-    line: Evolutions.PIPLUP,
-    type1: "water",
+    evolutionId: Evolution.PIPLUP.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 64,
       attack: 66,
@@ -9701,11 +9704,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  PROBOPASS: pokemon("PROBOPASS", {
+  PROBOPASS: createPokemon("PROBOPASS", {
     name: "Probopass",
-    line: Evolutions.NOSEPASS,
-    type1: "rock",
-    type2: "steel",
+    evolutionId: Evolution.NOSEPASS.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 60,
       attack: 55,
@@ -9715,10 +9718,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  PSYDUCK: pokemon("PSYDUCK", {
+  PSYDUCK: createPokemon("PSYDUCK", {
     name: "Psyduck",
-    line: Evolutions.PSYDUCK,
-    type1: "water",
+    evolutionId: Evolution.PSYDUCK.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 52,
@@ -9728,11 +9731,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  PUMPKABOO: pokemon("PUMPKABOO", {
+  PUMPKABOO: createPokemon("PUMPKABOO", {
     name: "Pumpkaboo",
-    line: Evolutions.PUMPKABOO,
-    type1: "ghost",
-    type2: "grass",
+    evolutionId: Evolution.PUMPKABOO.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 49,
       attack: 66,
@@ -9742,11 +9745,11 @@ export const Pokemons = pokemonTable({
       speed: 51,
     },
   }),
-  PUPITAR: pokemon("PUPITAR", {
+  PUPITAR: createPokemon("PUPITAR", {
     name: "Pupitar",
-    line: Evolutions.LARVITAR,
-    type1: "rock",
-    type2: "ground",
+    evolutionId: Evolution.LARVITAR.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 70,
       attack: 84,
@@ -9756,10 +9759,10 @@ export const Pokemons = pokemonTable({
       speed: 51,
     },
   }),
-  PURRLOIN: pokemon("PURRLOIN", {
+  PURRLOIN: createPokemon("PURRLOIN", {
     name: "Purrloin",
-    line: Evolutions.PURRLOIN,
-    type1: "dark",
+    evolutionId: Evolution.PURRLOIN.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 41,
       attack: 50,
@@ -9769,10 +9772,10 @@ export const Pokemons = pokemonTable({
       speed: 66,
     },
   }),
-  PURUGLY: pokemon("PURUGLY", {
+  PURUGLY: createPokemon("PURUGLY", {
     name: "Purugly",
-    line: Evolutions.GLAMEOW,
-    type1: "normal",
+    evolutionId: Evolution.GLAMEOW.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 71,
       attack: 82,
@@ -9782,11 +9785,11 @@ export const Pokemons = pokemonTable({
       speed: 112,
     },
   }),
-  PYROAR: pokemon("PYROAR", {
+  PYROAR: createPokemon("PYROAR", {
     name: "Pyroar",
-    line: Evolutions.LITLEO,
-    type1: "fire",
-    type2: "normal",
+    evolutionId: Evolution.LITLEO.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 86,
       attack: 68,
@@ -9796,10 +9799,10 @@ export const Pokemons = pokemonTable({
       speed: 106,
     },
   }),
-  PYUKUMUKU: pokemon("PYUKUMUKU", {
+  PYUKUMUKU: createPokemon("PYUKUMUKU", {
     name: "Pyukumuku",
-    line: Evolutions.PYUKUMUKU,
-    type1: "water",
+    evolutionId: Evolution.PYUKUMUKU.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 55,
       attack: 60,
@@ -9809,11 +9812,11 @@ export const Pokemons = pokemonTable({
       speed: 5,
     },
   }),
-  QUAGSIRE: pokemon("QUAGSIRE", {
+  QUAGSIRE: createPokemon("QUAGSIRE", {
     name: "Quagsire",
-    line: Evolutions.WOOPER,
-    type1: "water",
-    type2: "ground",
+    evolutionId: Evolution.WOOPER.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 95,
       attack: 85,
@@ -9823,11 +9826,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  QUAQUAVAL: pokemon("QUAQUAVAL", {
+  QUAQUAVAL: createPokemon("QUAQUAVAL", {
     name: "Quaquaval",
-    line: Evolutions.QUAXLY,
-    type1: "water",
-    type2: "fighting",
+    evolutionId: Evolution.QUAXLY.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 85,
       attack: 120,
@@ -9837,10 +9840,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  QUAXLY: pokemon("QUAXLY", {
+  QUAXLY: createPokemon("QUAXLY", {
     name: "Quaxly",
-    line: Evolutions.QUAXLY,
-    type1: "water",
+    evolutionId: Evolution.QUAXLY.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 55,
       attack: 65,
@@ -9850,10 +9853,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  QUAXWELL: pokemon("QUAXWELL", {
+  QUAXWELL: createPokemon("QUAXWELL", {
     name: "Quaxwell",
-    line: Evolutions.QUAXLY,
-    type1: "water",
+    evolutionId: Evolution.QUAXLY.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 70,
       attack: 85,
@@ -9863,10 +9866,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  QUILAVA: pokemon("QUILAVA", {
+  QUILAVA: createPokemon("QUILAVA", {
     name: "Quilava",
-    line: Evolutions.CYNDAQUIL,
-    type1: "fire",
+    evolutionId: Evolution.CYNDAQUIL.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 58,
       attack: 64,
@@ -9876,10 +9879,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  QUILLADIN: pokemon("QUILLADIN", {
+  QUILLADIN: createPokemon("QUILLADIN", {
     name: "Quilladin",
-    line: Evolutions.CHESPIN,
-    type1: "grass",
+    evolutionId: Evolution.CHESPIN.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 61,
       attack: 78,
@@ -9889,11 +9892,11 @@ export const Pokemons = pokemonTable({
       speed: 57,
     },
   }),
-  QWILFISH_HISUI: pokemon("QWILFISH_HISUI", {
+  QWILFISH_HISUI: createPokemon("QWILFISH_HISUI", {
     name: "Hisuian Qwilfish",
-    line: Evolutions.QWILFISH,
-    type1: "dark",
-    type2: "poison",
+    evolutionId: Evolution.QWILFISH.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 65,
       attack: 95,
@@ -9903,11 +9906,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  QWILFISH: pokemon("QWILFISH", {
+  QWILFISH: createPokemon("QWILFISH", {
     name: "Qwilfish",
-    line: Evolutions.QWILFISH,
-    type1: "water",
-    type2: "poison",
+    evolutionId: Evolution.QWILFISH.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 65,
       attack: 95,
@@ -9917,10 +9920,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  RABOOT: pokemon("RABOOT", {
+  RABOOT: createPokemon("RABOOT", {
     name: "Raboot",
-    line: Evolutions.SCORBUNNY,
-    type1: "fire",
+    evolutionId: Evolution.SCORBUNNY.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 65,
       attack: 86,
@@ -9930,11 +9933,11 @@ export const Pokemons = pokemonTable({
       speed: 94,
     },
   }),
-  RABSCA: pokemon("RABSCA", {
+  RABSCA: createPokemon("RABSCA", {
     name: "Rabsca",
-    line: Evolutions.RELLOR,
-    type1: "bug",
-    type2: "psychic",
+    evolutionId: Evolution.RELLOR.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 75,
       attack: 50,
@@ -9944,11 +9947,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  RAICHU_ALOLA: pokemon("RAICHU_ALOLA", {
+  RAICHU_ALOLA: createPokemon("RAICHU_ALOLA", {
     name: "Alolan Raichu",
-    line: Evolutions.PICHU,
-    type1: "electric",
-    type2: "psychic",
+    evolutionId: Evolution.PICHU.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 60,
       attack: 85,
@@ -9958,10 +9961,10 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  RAICHU: pokemon("RAICHU", {
+  RAICHU: createPokemon("RAICHU", {
     name: "Raichu",
-    line: Evolutions.PICHU,
-    type1: "electric",
+    evolutionId: Evolution.PICHU.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 60,
       attack: 90,
@@ -9971,10 +9974,10 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  RAIKOU: pokemon("RAIKOU", {
+  RAIKOU: createPokemon("RAIKOU", {
     name: "Raikou",
-    line: Evolutions.RAIKOU,
-    type1: "electric",
+    evolutionId: Evolution.RAIKOU.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 90,
       attack: 85,
@@ -9984,11 +9987,11 @@ export const Pokemons = pokemonTable({
       speed: 115,
     },
   }),
-  RALTS: pokemon("RALTS", {
+  RALTS: createPokemon("RALTS", {
     name: "Ralts",
-    line: Evolutions.RALTS,
-    type1: "psychic",
-    type2: "fairy",
+    evolutionId: Evolution.RALTS.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 28,
       attack: 25,
@@ -9998,10 +10001,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  RAMPARDOS: pokemon("RAMPARDOS", {
+  RAMPARDOS: createPokemon("RAMPARDOS", {
     name: "Rampardos",
-    line: Evolutions.CRANIDOS,
-    type1: "rock",
+    evolutionId: Evolution.CRANIDOS.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 97,
       attack: 165,
@@ -10011,11 +10014,11 @@ export const Pokemons = pokemonTable({
       speed: 58,
     },
   }),
-  RAPIDASH_GALAR: pokemon("RAPIDASH_GALAR", {
+  RAPIDASH_GALAR: createPokemon("RAPIDASH_GALAR", {
     name: "Galarian Rapidash",
-    line: Evolutions.PONYTA,
-    type1: "psychic",
-    type2: "fairy",
+    evolutionId: Evolution.PONYTA.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 65,
       attack: 100,
@@ -10025,10 +10028,10 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  RAPIDASH: pokemon("RAPIDASH", {
+  RAPIDASH: createPokemon("RAPIDASH", {
     name: "Rapidash",
-    line: Evolutions.PONYTA,
-    type1: "fire",
+    evolutionId: Evolution.PONYTA.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 65,
       attack: 100,
@@ -10038,11 +10041,11 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  RATICATE_ALOLA: pokemon("RATICATE_ALOLA", {
+  RATICATE_ALOLA: createPokemon("RATICATE_ALOLA", {
     name: "Alolan Raticate",
-    line: Evolutions.RATTATA,
-    type1: "dark",
-    type2: "normal",
+    evolutionId: Evolution.RATTATA.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 75,
       attack: 71,
@@ -10052,11 +10055,11 @@ export const Pokemons = pokemonTable({
       speed: 77,
     },
   }),
-  RATICATE_TOTEM_ALOLA: pokemon("RATICATE_TOTEM_ALOLA", {
+  RATICATE_TOTEM_ALOLA: createPokemon("RATICATE_TOTEM_ALOLA", {
     name: "Alolan Raticate",
-    line: Evolutions.RATTATA,
-    type1: "dark",
-    type2: "normal",
+    evolutionId: Evolution.RATTATA.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 75,
       attack: 71,
@@ -10066,10 +10069,10 @@ export const Pokemons = pokemonTable({
       speed: 77,
     },
   }),
-  RATICATE: pokemon("RATICATE", {
+  RATICATE: createPokemon("RATICATE", {
     name: "Raticate",
-    line: Evolutions.RATTATA,
-    type1: "normal",
+    evolutionId: Evolution.RATTATA.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 55,
       attack: 81,
@@ -10079,11 +10082,11 @@ export const Pokemons = pokemonTable({
       speed: 97,
     },
   }),
-  RATTATA_ALOLA: pokemon("RATTATA_ALOLA", {
+  RATTATA_ALOLA: createPokemon("RATTATA_ALOLA", {
     name: "Alolan Rattata",
-    line: Evolutions.RATTATA,
-    type1: "dark",
-    type2: "normal",
+    evolutionId: Evolution.RATTATA.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 30,
       attack: 56,
@@ -10093,10 +10096,10 @@ export const Pokemons = pokemonTable({
       speed: 72,
     },
   }),
-  RATTATA: pokemon("RATTATA", {
+  RATTATA: createPokemon("RATTATA", {
     name: "Rattata",
-    line: Evolutions.RATTATA,
-    type1: "normal",
+    evolutionId: Evolution.RATTATA.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 30,
       attack: 56,
@@ -10106,11 +10109,11 @@ export const Pokemons = pokemonTable({
       speed: 72,
     },
   }),
-  RAYQUAZA: pokemon("RAYQUAZA", {
+  RAYQUAZA: createPokemon("RAYQUAZA", {
     name: "Rayquaza",
-    line: Evolutions.RAYQUAZA,
-    type1: "dragon",
-    type2: "flying",
+    evolutionId: Evolution.RAYQUAZA.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 105,
       attack: 150,
@@ -10120,10 +10123,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  REGICE: pokemon("REGICE", {
+  REGICE: createPokemon("REGICE", {
     name: "Regice",
-    line: Evolutions.REGICE,
-    type1: "ice",
+    evolutionId: Evolution.REGICE.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 80,
       attack: 50,
@@ -10133,10 +10136,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  REGIDRAGO: pokemon("REGIDRAGO", {
+  REGIDRAGO: createPokemon("REGIDRAGO", {
     name: "Regidrago",
-    line: Evolutions.REGIDRAGO,
-    type1: "dragon",
+    evolutionId: Evolution.REGIDRAGO.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 200,
       attack: 100,
@@ -10146,10 +10149,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  REGIELEKI: pokemon("REGIELEKI", {
+  REGIELEKI: createPokemon("REGIELEKI", {
     name: "Regieleki",
-    line: Evolutions.REGIELEKI,
-    type1: "electric",
+    evolutionId: Evolution.REGIELEKI.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 80,
       attack: 100,
@@ -10159,10 +10162,10 @@ export const Pokemons = pokemonTable({
       speed: 200,
     },
   }),
-  REGIGIGAS: pokemon("REGIGIGAS", {
+  REGIGIGAS: createPokemon("REGIGIGAS", {
     name: "Regigigas",
-    line: Evolutions.REGIGIGAS,
-    type1: "normal",
+    evolutionId: Evolution.REGIGIGAS.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 110,
       attack: 160,
@@ -10172,10 +10175,10 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  REGIROCK: pokemon("REGIROCK", {
+  REGIROCK: createPokemon("REGIROCK", {
     name: "Regirock",
-    line: Evolutions.REGIROCK,
-    type1: "rock",
+    evolutionId: Evolution.REGIROCK.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 80,
       attack: 100,
@@ -10185,10 +10188,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  REGISTEEL: pokemon("REGISTEEL", {
+  REGISTEEL: createPokemon("REGISTEEL", {
     name: "Registeel",
-    line: Evolutions.REGISTEEL,
-    type1: "steel",
+    evolutionId: Evolution.REGISTEEL.id,
+    type1: PokemonTypes.STEEL,
     baseStats: {
       hp: 80,
       attack: 75,
@@ -10198,11 +10201,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  RELICANTH: pokemon("RELICANTH", {
+  RELICANTH: createPokemon("RELICANTH", {
     name: "Relicanth",
-    line: Evolutions.RELICANTH,
-    type1: "water",
-    type2: "rock",
+    evolutionId: Evolution.RELICANTH.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 100,
       attack: 90,
@@ -10212,10 +10215,10 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  RELLOR: pokemon("RELLOR", {
+  RELLOR: createPokemon("RELLOR", {
     name: "Rellor",
-    line: Evolutions.RELLOR,
-    type1: "bug",
+    evolutionId: Evolution.RELLOR.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 41,
       attack: 50,
@@ -10225,10 +10228,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  REMORAID: pokemon("REMORAID", {
+  REMORAID: createPokemon("REMORAID", {
     name: "Remoraid",
-    line: Evolutions.REMORAID,
-    type1: "water",
+    evolutionId: Evolution.REMORAID.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 35,
       attack: 65,
@@ -10238,11 +10241,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  RESHIRAM: pokemon("RESHIRAM", {
+  RESHIRAM: createPokemon("RESHIRAM", {
     name: "Reshiram",
-    line: Evolutions.RESHIRAM,
-    type1: "dragon",
-    type2: "fire",
+    evolutionId: Evolution.RESHIRAM.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 100,
       attack: 120,
@@ -10252,10 +10255,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  REUNICLUS: pokemon("REUNICLUS", {
+  REUNICLUS: createPokemon("REUNICLUS", {
     name: "Reuniclus",
-    line: Evolutions.SOLOSIS,
-    type1: "psychic",
+    evolutionId: Evolution.SOLOSIS.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 110,
       attack: 65,
@@ -10265,11 +10268,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  REVAVROOM: pokemon("REVAVROOM", {
+  REVAVROOM: createPokemon("REVAVROOM", {
     name: "Revavroom",
-    line: Evolutions.VAROOM,
-    type1: "steel",
-    type2: "poison",
+    evolutionId: Evolution.VAROOM.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 80,
       attack: 119,
@@ -10279,11 +10282,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  RHYDON: pokemon("RHYDON", {
+  RHYDON: createPokemon("RHYDON", {
     name: "Rhydon",
-    line: Evolutions.RHYHORN,
-    type1: "ground",
-    type2: "rock",
+    evolutionId: Evolution.RHYHORN.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 105,
       attack: 130,
@@ -10293,11 +10296,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  RHYHORN: pokemon("RHYHORN", {
+  RHYHORN: createPokemon("RHYHORN", {
     name: "Rhyhorn",
-    line: Evolutions.RHYHORN,
-    type1: "ground",
-    type2: "rock",
+    evolutionId: Evolution.RHYHORN.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 80,
       attack: 85,
@@ -10307,11 +10310,11 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  RHYPERIOR: pokemon("RHYPERIOR", {
+  RHYPERIOR: createPokemon("RHYPERIOR", {
     name: "Rhyperior",
-    line: Evolutions.RHYHORN,
-    type1: "ground",
-    type2: "rock",
+    evolutionId: Evolution.RHYHORN.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 115,
       attack: 140,
@@ -10321,11 +10324,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  RIBOMBEE: pokemon("RIBOMBEE", {
+  RIBOMBEE: createPokemon("RIBOMBEE", {
     name: "Ribombee",
-    line: Evolutions.CUTIEFLY,
-    type1: "bug",
-    type2: "fairy",
+    evolutionId: Evolution.CUTIEFLY.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 60,
       attack: 55,
@@ -10335,10 +10338,10 @@ export const Pokemons = pokemonTable({
       speed: 124,
     },
   }),
-  RILLABOOM: pokemon("RILLABOOM", {
+  RILLABOOM: createPokemon("RILLABOOM", {
     name: "Rillaboom",
-    line: Evolutions.GROOKEY,
-    type1: "grass",
+    evolutionId: Evolution.GROOKEY.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 100,
       attack: 125,
@@ -10348,10 +10351,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  RIOLU: pokemon("RIOLU", {
+  RIOLU: createPokemon("RIOLU", {
     name: "Riolu",
-    line: Evolutions.RIOLU,
-    type1: "fighting",
+    evolutionId: Evolution.RIOLU.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 40,
       attack: 70,
@@ -10361,11 +10364,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  ROARING_MOON: pokemon("ROARING_MOON", {
+  ROARING_MOON: createPokemon("ROARING_MOON", {
     name: "Roaring Moon",
-    line: Evolutions.ROARING_MOON,
-    type1: "dragon",
-    type2: "dark",
+    evolutionId: Evolution.ROARING_MOON.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 105,
       attack: 139,
@@ -10375,10 +10378,10 @@ export const Pokemons = pokemonTable({
       speed: 119,
     },
   }),
-  ROCKRUFF: pokemon("ROCKRUFF", {
+  ROCKRUFF: createPokemon("ROCKRUFF", {
     name: "Rockruff",
-    line: Evolutions.ROCKRUFF,
-    type1: "rock",
+    evolutionId: Evolution.ROCKRUFF.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 45,
       attack: 65,
@@ -10388,10 +10391,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  ROGGENROLA: pokemon("ROGGENROLA", {
+  ROGGENROLA: createPokemon("ROGGENROLA", {
     name: "Roggenrola",
-    line: Evolutions.ROGGENROLA,
-    type1: "rock",
+    evolutionId: Evolution.ROGGENROLA.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 55,
       attack: 75,
@@ -10401,10 +10404,10 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  ROLYCOLY: pokemon("ROLYCOLY", {
+  ROLYCOLY: createPokemon("ROLYCOLY", {
     name: "Rolycoly",
-    line: Evolutions.ROLYCOLY,
-    type1: "rock",
+    evolutionId: Evolution.ROLYCOLY.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 30,
       attack: 40,
@@ -10414,10 +10417,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  ROOKIDEE: pokemon("ROOKIDEE", {
+  ROOKIDEE: createPokemon("ROOKIDEE", {
     name: "Rookidee",
-    line: Evolutions.ROOKIDEE,
-    type1: "flying",
+    evolutionId: Evolution.ROOKIDEE.id,
+    type1: PokemonTypes.FLYING,
     baseStats: {
       hp: 38,
       attack: 47,
@@ -10427,11 +10430,11 @@ export const Pokemons = pokemonTable({
       speed: 57,
     },
   }),
-  ROSELIA: pokemon("ROSELIA", {
+  ROSELIA: createPokemon("ROSELIA", {
     name: "Roselia",
-    line: Evolutions.BUDEW,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.BUDEW.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 50,
       attack: 60,
@@ -10441,11 +10444,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  ROSERADE: pokemon("ROSERADE", {
+  ROSERADE: createPokemon("ROSERADE", {
     name: "Roserade",
-    line: Evolutions.BUDEW,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.BUDEW.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 60,
       attack: 70,
@@ -10455,11 +10458,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  ROTOM_FAN: pokemon("ROTOM_FAN", {
+  ROTOM_FAN: createPokemon("ROTOM_FAN", {
     name: "Rotom Fan",
-    line: Evolutions.ROTOM,
-    type1: "electric",
-    type2: "flying",
+    evolutionId: Evolution.ROTOM.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -10469,11 +10472,11 @@ export const Pokemons = pokemonTable({
       speed: 86,
     },
   }),
-  ROTOM_FROST: pokemon("ROTOM_FROST", {
+  ROTOM_FROST: createPokemon("ROTOM_FROST", {
     name: "Rotom Frost",
-    line: Evolutions.ROTOM,
-    type1: "electric",
-    type2: "ice",
+    evolutionId: Evolution.ROTOM.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -10483,11 +10486,11 @@ export const Pokemons = pokemonTable({
       speed: 86,
     },
   }),
-  ROTOM_HEAT: pokemon("ROTOM_HEAT", {
+  ROTOM_HEAT: createPokemon("ROTOM_HEAT", {
     name: "Rotom Heat",
-    line: Evolutions.ROTOM,
-    type1: "electric",
-    type2: "fire",
+    evolutionId: Evolution.ROTOM.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -10497,11 +10500,11 @@ export const Pokemons = pokemonTable({
       speed: 86,
     },
   }),
-  ROTOM_MOW: pokemon("ROTOM_MOW", {
+  ROTOM_MOW: createPokemon("ROTOM_MOW", {
     name: "Rotom Mow",
-    line: Evolutions.ROTOM,
-    type1: "electric",
-    type2: "grass",
+    evolutionId: Evolution.ROTOM.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -10511,11 +10514,11 @@ export const Pokemons = pokemonTable({
       speed: 86,
     },
   }),
-  ROTOM_WASH: pokemon("ROTOM_WASH", {
+  ROTOM_WASH: createPokemon("ROTOM_WASH", {
     name: "Rotom Wash",
-    line: Evolutions.ROTOM,
-    type1: "electric",
-    type2: "water",
+    evolutionId: Evolution.ROTOM.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -10525,11 +10528,11 @@ export const Pokemons = pokemonTable({
       speed: 86,
     },
   }),
-  ROTOM: pokemon("ROTOM", {
+  ROTOM: createPokemon("ROTOM", {
     name: "Rotom",
-    line: Evolutions.ROTOM,
-    type1: "electric",
-    type2: "ghost",
+    evolutionId: Evolution.ROTOM.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 50,
       attack: 50,
@@ -10539,11 +10542,11 @@ export const Pokemons = pokemonTable({
       speed: 91,
     },
   }),
-  ROWLET: pokemon("ROWLET", {
+  ROWLET: createPokemon("ROWLET", {
     name: "Rowlet",
-    line: Evolutions.ROWLET,
-    type1: "grass",
-    type2: "flying",
+    evolutionId: Evolution.ROWLET.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 68,
       attack: 55,
@@ -10553,11 +10556,11 @@ export const Pokemons = pokemonTable({
       speed: 42,
     },
   }),
-  RUFFLET: pokemon("RUFFLET", {
+  RUFFLET: createPokemon("RUFFLET", {
     name: "Rufflet",
-    line: Evolutions.RUFFLET,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.RUFFLET.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 70,
       attack: 83,
@@ -10567,11 +10570,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  RUNERIGUS: pokemon("RUNERIGUS", {
+  RUNERIGUS: createPokemon("RUNERIGUS", {
     name: "Runerigus",
-    line: Evolutions.YAMASK,
-    type1: "ground",
-    type2: "ghost",
+    evolutionId: Evolution.YAMASK.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 58,
       attack: 95,
@@ -10581,11 +10584,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SABLEYE: pokemon("SABLEYE", {
+  SABLEYE: createPokemon("SABLEYE", {
     name: "Sableye",
-    line: Evolutions.SABLEYE,
-    type1: "dark",
-    type2: "ghost",
+    evolutionId: Evolution.SABLEYE.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 50,
       attack: 75,
@@ -10595,11 +10598,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  SALAMENCE: pokemon("SALAMENCE", {
+  SALAMENCE: createPokemon("SALAMENCE", {
     name: "Salamence",
-    line: Evolutions.BAGON,
-    type1: "dragon",
-    type2: "flying",
+    evolutionId: Evolution.BAGON.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 95,
       attack: 135,
@@ -10609,11 +10612,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  SALANDIT: pokemon("SALANDIT", {
+  SALANDIT: createPokemon("SALANDIT", {
     name: "Salandit",
-    line: Evolutions.SALANDIT,
-    type1: "poison",
-    type2: "fire",
+    evolutionId: Evolution.SALANDIT.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 48,
       attack: 44,
@@ -10623,11 +10626,11 @@ export const Pokemons = pokemonTable({
       speed: 77,
     },
   }),
-  SALAZZLE: pokemon("SALAZZLE", {
+  SALAZZLE: createPokemon("SALAZZLE", {
     name: "Salazzle",
-    line: Evolutions.SALANDIT,
-    type1: "poison",
-    type2: "fire",
+    evolutionId: Evolution.SALANDIT.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 68,
       attack: 64,
@@ -10637,11 +10640,11 @@ export const Pokemons = pokemonTable({
       speed: 117,
     },
   }),
-  SAMUROTT_HISUI: pokemon("SAMUROTT_HISUI", {
+  SAMUROTT_HISUI: createPokemon("SAMUROTT_HISUI", {
     name: "Hisuian Samurott",
-    line: Evolutions.OSHAWOTT,
-    type1: "water",
-    type2: "dark",
+    evolutionId: Evolution.OSHAWOTT.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 90,
       attack: 108,
@@ -10651,10 +10654,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  SAMUROTT: pokemon("SAMUROTT", {
+  SAMUROTT: createPokemon("SAMUROTT", {
     name: "Samurott",
-    line: Evolutions.OSHAWOTT,
-    type1: "water",
+    evolutionId: Evolution.OSHAWOTT.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 95,
       attack: 100,
@@ -10664,10 +10667,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  SANDACONDA: pokemon("SANDACONDA", {
+  SANDACONDA: createPokemon("SANDACONDA", {
     name: "Sandaconda",
-    line: Evolutions.SILICOBRA,
-    type1: "ground",
+    evolutionId: Evolution.SILICOBRA.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 72,
       attack: 107,
@@ -10677,11 +10680,11 @@ export const Pokemons = pokemonTable({
       speed: 71,
     },
   }),
-  SANDILE: pokemon("SANDILE", {
+  SANDILE: createPokemon("SANDILE", {
     name: "Sandile",
-    line: Evolutions.SANDILE,
-    type1: "ground",
-    type2: "dark",
+    evolutionId: Evolution.SANDILE.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 50,
       attack: 72,
@@ -10691,11 +10694,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  SANDSHREW_ALOLA: pokemon("SANDSHREW_ALOLA", {
+  SANDSHREW_ALOLA: createPokemon("SANDSHREW_ALOLA", {
     name: "Alolan Sandshrew",
-    line: Evolutions.SANDSHREW,
-    type1: "ice",
-    type2: "steel",
+    evolutionId: Evolution.SANDSHREW.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 50,
       attack: 75,
@@ -10705,10 +10708,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  SANDSHREW: pokemon("SANDSHREW", {
+  SANDSHREW: createPokemon("SANDSHREW", {
     name: "Sandshrew",
-    line: Evolutions.SANDSHREW,
-    type1: "ground",
+    evolutionId: Evolution.SANDSHREW.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 50,
       attack: 75,
@@ -10718,11 +10721,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  SANDSLASH_ALOLA: pokemon("SANDSLASH_ALOLA", {
+  SANDSLASH_ALOLA: createPokemon("SANDSLASH_ALOLA", {
     name: "Alolan Sandslash",
-    line: Evolutions.SANDSHREW,
-    type1: "ice",
-    type2: "steel",
+    evolutionId: Evolution.SANDSHREW.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 75,
       attack: 100,
@@ -10732,10 +10735,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  SANDSLASH: pokemon("SANDSLASH", {
+  SANDSLASH: createPokemon("SANDSLASH", {
     name: "Sandslash",
-    line: Evolutions.SANDSHREW,
-    type1: "ground",
+    evolutionId: Evolution.SANDSHREW.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 75,
       attack: 100,
@@ -10745,11 +10748,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  SANDY_SHOCKS: pokemon("SANDY_SHOCKS", {
+  SANDY_SHOCKS: createPokemon("SANDY_SHOCKS", {
     name: "Sandy Shocks",
-    line: Evolutions.SANDY_SHOCKS,
-    type1: "electric",
-    type2: "ground",
+    evolutionId: Evolution.SANDY_SHOCKS.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 85,
       attack: 81,
@@ -10759,11 +10762,11 @@ export const Pokemons = pokemonTable({
       speed: 101,
     },
   }),
-  SANDYGAST: pokemon("SANDYGAST", {
+  SANDYGAST: createPokemon("SANDYGAST", {
     name: "Sandygast",
-    line: Evolutions.SANDYGAST,
-    type1: "ghost",
-    type2: "ground",
+    evolutionId: Evolution.SANDYGAST.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 55,
       attack: 55,
@@ -10773,10 +10776,10 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  SAWK: pokemon("SAWK", {
+  SAWK: createPokemon("SAWK", {
     name: "Sawk",
-    line: Evolutions.SAWK,
-    type1: "fighting",
+    evolutionId: Evolution.SAWK.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 75,
       attack: 125,
@@ -10786,11 +10789,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  SAWSBUCK: pokemon("SAWSBUCK", {
+  SAWSBUCK: createPokemon("SAWSBUCK", {
     name: "Sawsbuck",
-    line: Evolutions.DEERLING,
-    type1: "normal",
-    type2: "grass",
+    evolutionId: Evolution.DEERLING.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 80,
       attack: 100,
@@ -10800,10 +10803,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  SCATTERBUG: pokemon("SCATTERBUG", {
+  SCATTERBUG: createPokemon("SCATTERBUG", {
     name: "Scatterbug",
-    line: Evolutions.SCATTERBUG,
-    type1: "bug",
+    evolutionId: Evolution.SCATTERBUG.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 38,
       attack: 35,
@@ -10813,10 +10816,10 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  SCEPTILE: pokemon("SCEPTILE", {
+  SCEPTILE: createPokemon("SCEPTILE", {
     name: "Sceptile",
-    line: Evolutions.TREECKO,
-    type1: "grass",
+    evolutionId: Evolution.TREECKO.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 70,
       attack: 85,
@@ -10826,11 +10829,11 @@ export const Pokemons = pokemonTable({
       speed: 120,
     },
   }),
-  SCIZOR: pokemon("SCIZOR", {
+  SCIZOR: createPokemon("SCIZOR", {
     name: "Scizor",
-    line: Evolutions.SCYTHER,
-    type1: "bug",
-    type2: "steel",
+    evolutionId: Evolution.SCYTHER.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 70,
       attack: 130,
@@ -10840,11 +10843,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  SCOLIPEDE: pokemon("SCOLIPEDE", {
+  SCOLIPEDE: createPokemon("SCOLIPEDE", {
     name: "Scolipede",
-    line: Evolutions.VENIPEDE,
-    type1: "bug",
-    type2: "poison",
+    evolutionId: Evolution.VENIPEDE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 60,
       attack: 100,
@@ -10854,10 +10857,10 @@ export const Pokemons = pokemonTable({
       speed: 112,
     },
   }),
-  SCORBUNNY: pokemon("SCORBUNNY", {
+  SCORBUNNY: createPokemon("SCORBUNNY", {
     name: "Scorbunny",
-    line: Evolutions.SCORBUNNY,
-    type1: "fire",
+    evolutionId: Evolution.SCORBUNNY.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 50,
       attack: 71,
@@ -10867,11 +10870,11 @@ export const Pokemons = pokemonTable({
       speed: 69,
     },
   }),
-  SCOVILLAIN: pokemon("SCOVILLAIN", {
+  SCOVILLAIN: createPokemon("SCOVILLAIN", {
     name: "Scovillain",
-    line: Evolutions.CAPSAKID,
-    type1: "grass",
-    type2: "fire",
+    evolutionId: Evolution.CAPSAKID.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 65,
       attack: 108,
@@ -10881,11 +10884,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  SCRAFTY: pokemon("SCRAFTY", {
+  SCRAFTY: createPokemon("SCRAFTY", {
     name: "Scrafty",
-    line: Evolutions.SCRAGGY,
-    type1: "dark",
-    type2: "fighting",
+    evolutionId: Evolution.SCRAGGY.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 65,
       attack: 90,
@@ -10895,11 +10898,11 @@ export const Pokemons = pokemonTable({
       speed: 58,
     },
   }),
-  SCRAGGY: pokemon("SCRAGGY", {
+  SCRAGGY: createPokemon("SCRAGGY", {
     name: "Scraggy",
-    line: Evolutions.SCRAGGY,
-    type1: "dark",
-    type2: "fighting",
+    evolutionId: Evolution.SCRAGGY.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 50,
       attack: 75,
@@ -10909,11 +10912,11 @@ export const Pokemons = pokemonTable({
       speed: 48,
     },
   }),
-  SCREAM_TAIL: pokemon("SCREAM_TAIL", {
+  SCREAM_TAIL: createPokemon("SCREAM_TAIL", {
     name: "Scream Tail",
-    line: Evolutions.SCREAM_TAIL,
-    type1: "fairy",
-    type2: "psychic",
+    evolutionId: Evolution.SCREAM_TAIL.id,
+    type1: PokemonTypes.FAIRY,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 115,
       attack: 65,
@@ -10923,11 +10926,11 @@ export const Pokemons = pokemonTable({
       speed: 111,
     },
   }),
-  SCYTHER: pokemon("SCYTHER", {
+  SCYTHER: createPokemon("SCYTHER", {
     name: "Scyther",
-    line: Evolutions.SCYTHER,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.SCYTHER.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 70,
       attack: 110,
@@ -10937,10 +10940,10 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  SEADRA: pokemon("SEADRA", {
+  SEADRA: createPokemon("SEADRA", {
     name: "Seadra",
-    line: Evolutions.HORSEA,
-    type1: "water",
+    evolutionId: Evolution.HORSEA.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 55,
       attack: 65,
@@ -10950,10 +10953,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  SEAKING: pokemon("SEAKING", {
+  SEAKING: createPokemon("SEAKING", {
     name: "Seaking",
-    line: Evolutions.GOLDEEN,
-    type1: "water",
+    evolutionId: Evolution.GOLDEEN.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 80,
       attack: 92,
@@ -10963,11 +10966,11 @@ export const Pokemons = pokemonTable({
       speed: 68,
     },
   }),
-  SEALEO: pokemon("SEALEO", {
+  SEALEO: createPokemon("SEALEO", {
     name: "Sealeo",
-    line: Evolutions.SPHEAL,
-    type1: "ice",
-    type2: "water",
+    evolutionId: Evolution.SPHEAL.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 90,
       attack: 60,
@@ -10977,10 +10980,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  SEEDOT: pokemon("SEEDOT", {
+  SEEDOT: createPokemon("SEEDOT", {
     name: "Seedot",
-    line: Evolutions.SEEDOT,
-    type1: "grass",
+    evolutionId: Evolution.SEEDOT.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 40,
       attack: 40,
@@ -10990,10 +10993,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SEEL: pokemon("SEEL", {
+  SEEL: createPokemon("SEEL", {
     name: "Seel",
-    line: Evolutions.SEEL,
-    type1: "water",
+    evolutionId: Evolution.SEEL.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 65,
       attack: 45,
@@ -11003,11 +11006,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  SEISMITOAD: pokemon("SEISMITOAD", {
+  SEISMITOAD: createPokemon("SEISMITOAD", {
     name: "Seismitoad",
-    line: Evolutions.TYMPOLE,
-    type1: "water",
-    type2: "ground",
+    evolutionId: Evolution.TYMPOLE.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 105,
       attack: 95,
@@ -11017,10 +11020,10 @@ export const Pokemons = pokemonTable({
       speed: 74,
     },
   }),
-  SENTRET: pokemon("SENTRET", {
+  SENTRET: createPokemon("SENTRET", {
     name: "Sentret",
-    line: Evolutions.SENTRET,
-    type1: "normal",
+    evolutionId: Evolution.SENTRET.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 35,
       attack: 46,
@@ -11030,10 +11033,10 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  SERPERIOR: pokemon("SERPERIOR", {
+  SERPERIOR: createPokemon("SERPERIOR", {
     name: "Serperior",
-    line: Evolutions.SNIVY,
-    type1: "grass",
+    evolutionId: Evolution.SNIVY.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 75,
       attack: 75,
@@ -11043,10 +11046,10 @@ export const Pokemons = pokemonTable({
       speed: 113,
     },
   }),
-  SERVINE: pokemon("SERVINE", {
+  SERVINE: createPokemon("SERVINE", {
     name: "Servine",
-    line: Evolutions.SNIVY,
-    type1: "grass",
+    evolutionId: Evolution.SNIVY.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 60,
       attack: 60,
@@ -11056,10 +11059,10 @@ export const Pokemons = pokemonTable({
       speed: 83,
     },
   }),
-  SEVIPER: pokemon("SEVIPER", {
+  SEVIPER: createPokemon("SEVIPER", {
     name: "Seviper",
-    line: Evolutions.SEVIPER,
-    type1: "poison",
+    evolutionId: Evolution.SEVIPER.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 73,
       attack: 100,
@@ -11069,11 +11072,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  SEWADDLE: pokemon("SEWADDLE", {
+  SEWADDLE: createPokemon("SEWADDLE", {
     name: "Sewaddle",
-    line: Evolutions.SEWADDLE,
-    type1: "bug",
-    type2: "grass",
+    evolutionId: Evolution.SEWADDLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 45,
       attack: 53,
@@ -11083,11 +11086,11 @@ export const Pokemons = pokemonTable({
       speed: 42,
     },
   }),
-  SHARPEDO: pokemon("SHARPEDO", {
+  SHARPEDO: createPokemon("SHARPEDO", {
     name: "Sharpedo",
-    line: Evolutions.CARVANHA,
-    type1: "water",
-    type2: "dark",
+    evolutionId: Evolution.CARVANHA.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 70,
       attack: 120,
@@ -11097,10 +11100,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  SHAYMIN_LAND: pokemon("SHAYMIN_LAND", {
+  SHAYMIN_LAND: createPokemon("SHAYMIN_LAND", {
     name: "Shaymin",
-    line: Evolutions.SHAYMIN,
-    type1: "grass",
+    evolutionId: Evolution.SHAYMIN.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 100,
       attack: 100,
@@ -11110,11 +11113,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  SHEDINJA: pokemon("SHEDINJA", {
+  SHEDINJA: createPokemon("SHEDINJA", {
     name: "Shedinja",
-    line: Evolutions.NINCADA,
-    type1: "bug",
-    type2: "ghost",
+    evolutionId: Evolution.NINCADA.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 1,
       attack: 90,
@@ -11124,10 +11127,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  SHELGON: pokemon("SHELGON", {
+  SHELGON: createPokemon("SHELGON", {
     name: "Shelgon",
-    line: Evolutions.BAGON,
-    type1: "dragon",
+    evolutionId: Evolution.BAGON.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 65,
       attack: 95,
@@ -11137,10 +11140,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  SHELLDER: pokemon("SHELLDER", {
+  SHELLDER: createPokemon("SHELLDER", {
     name: "Shellder",
-    line: Evolutions.SHELLDER,
-    type1: "water",
+    evolutionId: Evolution.SHELLDER.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 30,
       attack: 65,
@@ -11150,10 +11153,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  SHELLOS: pokemon("SHELLOS", {
+  SHELLOS: createPokemon("SHELLOS", {
     name: "Shellos",
-    line: Evolutions.SHELLOS,
-    type1: "water",
+    evolutionId: Evolution.SHELLOS.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 76,
       attack: 48,
@@ -11163,10 +11166,10 @@ export const Pokemons = pokemonTable({
       speed: 34,
     },
   }),
-  SHELMET: pokemon("SHELMET", {
+  SHELMET: createPokemon("SHELMET", {
     name: "Shelmet",
-    line: Evolutions.SHELMET,
-    type1: "bug",
+    evolutionId: Evolution.SHELMET.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 50,
       attack: 40,
@@ -11176,11 +11179,11 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  SHIELDON: pokemon("SHIELDON", {
+  SHIELDON: createPokemon("SHIELDON", {
     name: "Shieldon",
-    line: Evolutions.SHIELDON,
-    type1: "rock",
-    type2: "steel",
+    evolutionId: Evolution.SHIELDON.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 30,
       attack: 42,
@@ -11190,11 +11193,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SHIFTRY: pokemon("SHIFTRY", {
+  SHIFTRY: createPokemon("SHIFTRY", {
     name: "Shiftry",
-    line: Evolutions.SEEDOT,
-    type1: "grass",
-    type2: "dark",
+    evolutionId: Evolution.SEEDOT.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 90,
       attack: 100,
@@ -11204,11 +11207,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  SHIINOTIC: pokemon("SHIINOTIC", {
+  SHIINOTIC: createPokemon("SHIINOTIC", {
     name: "Shiinotic",
-    line: Evolutions.MORELULL,
-    type1: "grass",
-    type2: "fairy",
+    evolutionId: Evolution.MORELULL.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 60,
       attack: 45,
@@ -11218,10 +11221,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SHINX: pokemon("SHINX", {
+  SHINX: createPokemon("SHINX", {
     name: "Shinx",
-    line: Evolutions.SHINX,
-    type1: "electric",
+    evolutionId: Evolution.SHINX.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 45,
       attack: 65,
@@ -11231,11 +11234,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  SHROODLE: pokemon("SHROODLE", {
+  SHROODLE: createPokemon("SHROODLE", {
     name: "Shroodle",
-    line: Evolutions.SHROODLE,
-    type1: "poison",
-    type2: "normal",
+    evolutionId: Evolution.SHROODLE.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 40,
       attack: 65,
@@ -11245,10 +11248,10 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  SHROOMISH: pokemon("SHROOMISH", {
+  SHROOMISH: createPokemon("SHROOMISH", {
     name: "Shroomish",
-    line: Evolutions.SHROOMISH,
-    type1: "grass",
+    evolutionId: Evolution.SHROOMISH.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 60,
       attack: 40,
@@ -11258,11 +11261,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  SHUCKLE: pokemon("SHUCKLE", {
+  SHUCKLE: createPokemon("SHUCKLE", {
     name: "Shuckle",
-    line: Evolutions.SHUCKLE,
-    type1: "bug",
-    type2: "rock",
+    evolutionId: Evolution.SHUCKLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 20,
       attack: 10,
@@ -11272,10 +11275,10 @@ export const Pokemons = pokemonTable({
       speed: 5,
     },
   }),
-  SHUPPET: pokemon("SHUPPET", {
+  SHUPPET: createPokemon("SHUPPET", {
     name: "Shuppet",
-    line: Evolutions.SHUPPET,
-    type1: "ghost",
+    evolutionId: Evolution.SHUPPET.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 44,
       attack: 75,
@@ -11285,11 +11288,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  SIGILYPH: pokemon("SIGILYPH", {
+  SIGILYPH: createPokemon("SIGILYPH", {
     name: "Sigilyph",
-    line: Evolutions.SIGILYPH,
-    type1: "psychic",
-    type2: "flying",
+    evolutionId: Evolution.SIGILYPH.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 72,
       attack: 58,
@@ -11299,10 +11302,10 @@ export const Pokemons = pokemonTable({
       speed: 97,
     },
   }),
-  SILCOON: pokemon("SILCOON", {
+  SILCOON: createPokemon("SILCOON", {
     name: "Silcoon",
-    line: Evolutions.WURMPLE,
-    type1: "bug",
+    evolutionId: Evolution.WURMPLE.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 50,
       attack: 35,
@@ -11312,10 +11315,10 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  SILICOBRA: pokemon("SILICOBRA", {
+  SILICOBRA: createPokemon("SILICOBRA", {
     name: "Silicobra",
-    line: Evolutions.SILICOBRA,
-    type1: "ground",
+    evolutionId: Evolution.SILICOBRA.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 52,
       attack: 57,
@@ -11325,10 +11328,10 @@ export const Pokemons = pokemonTable({
       speed: 46,
     },
   }),
-  SILVALLY: pokemon("SILVALLY", {
+  SILVALLY: createPokemon("SILVALLY", {
     name: "Silvally",
-    line: Evolutions.TYPE_NULL,
-    type1: "normal",
+    evolutionId: Evolution.TYPE_NULL.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 95,
       attack: 95,
@@ -11338,10 +11341,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  SIMIPOUR: pokemon("SIMIPOUR", {
+  SIMIPOUR: createPokemon("SIMIPOUR", {
     name: "Simipour",
-    line: Evolutions.PANPOUR,
-    type1: "water",
+    evolutionId: Evolution.PANPOUR.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 75,
       attack: 98,
@@ -11351,10 +11354,10 @@ export const Pokemons = pokemonTable({
       speed: 101,
     },
   }),
-  SIMISAGE: pokemon("SIMISAGE", {
+  SIMISAGE: createPokemon("SIMISAGE", {
     name: "Simisage",
-    line: Evolutions.PANSAGE,
-    type1: "grass",
+    evolutionId: Evolution.PANSAGE.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 75,
       attack: 98,
@@ -11364,10 +11367,10 @@ export const Pokemons = pokemonTable({
       speed: 101,
     },
   }),
-  SIMISEAR: pokemon("SIMISEAR", {
+  SIMISEAR: createPokemon("SIMISEAR", {
     name: "Simisear",
-    line: Evolutions.PANSEAR,
-    type1: "fire",
+    evolutionId: Evolution.PANSEAR.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 75,
       attack: 98,
@@ -11377,10 +11380,10 @@ export const Pokemons = pokemonTable({
       speed: 101,
     },
   }),
-  SINISTEA: pokemon("SINISTEA", {
+  SINISTEA: createPokemon("SINISTEA", {
     name: "Sinistea",
-    line: Evolutions.SINISTEA,
-    type1: "ghost",
+    evolutionId: Evolution.SINISTEA.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 40,
       attack: 45,
@@ -11390,10 +11393,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  SIRFETCHD: pokemon("SIRFETCHD", {
+  SIRFETCHD: createPokemon("SIRFETCHD", {
     name: "Sirfetch’d",
-    line: Evolutions.FARFETCHD,
-    type1: "fighting",
+    evolutionId: Evolution.FARFETCHD.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 62,
       attack: 135,
@@ -11403,11 +11406,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  SIZZLIPEDE: pokemon("SIZZLIPEDE", {
+  SIZZLIPEDE: createPokemon("SIZZLIPEDE", {
     name: "Sizzlipede",
-    line: Evolutions.SIZZLIPEDE,
-    type1: "fire",
-    type2: "bug",
+    evolutionId: Evolution.SIZZLIPEDE.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.BUG,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -11417,11 +11420,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  SKARMORY: pokemon("SKARMORY", {
+  SKARMORY: createPokemon("SKARMORY", {
     name: "Skarmory",
-    line: Evolutions.SKARMORY,
-    type1: "steel",
-    type2: "flying",
+    evolutionId: Evolution.SKARMORY.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 65,
       attack: 80,
@@ -11431,11 +11434,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  SKELEDIRGE: pokemon("SKELEDIRGE", {
+  SKELEDIRGE: createPokemon("SKELEDIRGE", {
     name: "Skeledirge",
-    line: Evolutions.FUECOCO,
-    type1: "fire",
-    type2: "ghost",
+    evolutionId: Evolution.FUECOCO.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 104,
       attack: 75,
@@ -11445,10 +11448,10 @@ export const Pokemons = pokemonTable({
       speed: 66,
     },
   }),
-  SKIDDO: pokemon("SKIDDO", {
+  SKIDDO: createPokemon("SKIDDO", {
     name: "Skiddo",
-    line: Evolutions.SKIDDO,
-    type1: "grass",
+    evolutionId: Evolution.SKIDDO.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 66,
       attack: 65,
@@ -11458,11 +11461,11 @@ export const Pokemons = pokemonTable({
       speed: 52,
     },
   }),
-  SKIPLOOM: pokemon("SKIPLOOM", {
+  SKIPLOOM: createPokemon("SKIPLOOM", {
     name: "Skiploom",
-    line: Evolutions.HOPPIP,
-    type1: "grass",
-    type2: "flying",
+    evolutionId: Evolution.HOPPIP.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 55,
       attack: 45,
@@ -11472,10 +11475,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  SKITTY: pokemon("SKITTY", {
+  SKITTY: createPokemon("SKITTY", {
     name: "Skitty",
-    line: Evolutions.SKITTY,
-    type1: "normal",
+    evolutionId: Evolution.SKITTY.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 50,
       attack: 45,
@@ -11485,11 +11488,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  SKORUPI: pokemon("SKORUPI", {
+  SKORUPI: createPokemon("SKORUPI", {
     name: "Skorupi",
-    line: Evolutions.SKORUPI,
-    type1: "poison",
-    type2: "bug",
+    evolutionId: Evolution.SKORUPI.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.BUG,
     baseStats: {
       hp: 40,
       attack: 50,
@@ -11499,11 +11502,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  SKRELP: pokemon("SKRELP", {
+  SKRELP: createPokemon("SKRELP", {
     name: "Skrelp",
-    line: Evolutions.SKRELP,
-    type1: "poison",
-    type2: "water",
+    evolutionId: Evolution.SKRELP.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 60,
@@ -11513,11 +11516,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SKUNTANK: pokemon("SKUNTANK", {
+  SKUNTANK: createPokemon("SKUNTANK", {
     name: "Skuntank",
-    line: Evolutions.STUNKY,
-    type1: "poison",
-    type2: "dark",
+    evolutionId: Evolution.STUNKY.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 103,
       attack: 93,
@@ -11527,10 +11530,10 @@ export const Pokemons = pokemonTable({
       speed: 84,
     },
   }),
-  SKWOVET: pokemon("SKWOVET", {
+  SKWOVET: createPokemon("SKWOVET", {
     name: "Skwovet",
-    line: Evolutions.SKWOVET,
-    type1: "normal",
+    evolutionId: Evolution.SKWOVET.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 70,
       attack: 55,
@@ -11540,10 +11543,10 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  SLAKING: pokemon("SLAKING", {
+  SLAKING: createPokemon("SLAKING", {
     name: "Slaking",
-    line: Evolutions.SLAKOTH,
-    type1: "normal",
+    evolutionId: Evolution.SLAKOTH.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 150,
       attack: 160,
@@ -11553,10 +11556,10 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  SLAKOTH: pokemon("SLAKOTH", {
+  SLAKOTH: createPokemon("SLAKOTH", {
     name: "Slakoth",
-    line: Evolutions.SLAKOTH,
-    type1: "normal",
+    evolutionId: Evolution.SLAKOTH.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 60,
       attack: 60,
@@ -11566,11 +11569,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SLIGGOO_HISUI: pokemon("SLIGGOO_HISUI", {
+  SLIGGOO_HISUI: createPokemon("SLIGGOO_HISUI", {
     name: "Hisuian Sliggoo",
-    line: Evolutions.GOOMY,
-    type1: "steel",
-    type2: "dragon",
+    evolutionId: Evolution.GOOMY.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 58,
       attack: 75,
@@ -11580,10 +11583,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  SLIGGOO: pokemon("SLIGGOO", {
+  SLIGGOO: createPokemon("SLIGGOO", {
     name: "Sliggoo",
-    line: Evolutions.GOOMY,
-    type1: "dragon",
+    evolutionId: Evolution.GOOMY.id,
+    type1: PokemonTypes.DRAGON,
     baseStats: {
       hp: 68,
       attack: 75,
@@ -11593,11 +11596,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  SLITHER_WING: pokemon("SLITHER_WING", {
+  SLITHER_WING: createPokemon("SLITHER_WING", {
     name: "Slither Wing",
-    line: Evolutions.SLITHER_WING,
-    type1: "bug",
-    type2: "fighting",
+    evolutionId: Evolution.SLITHER_WING.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 85,
       attack: 135,
@@ -11607,11 +11610,11 @@ export const Pokemons = pokemonTable({
       speed: 81,
     },
   }),
-  SLOWBRO_GALAR: pokemon("SLOWBRO_GALAR", {
+  SLOWBRO_GALAR: createPokemon("SLOWBRO_GALAR", {
     name: "Galarian Slowbro",
-    line: Evolutions.SLOWPOKE,
-    type1: "poison",
-    type2: "psychic",
+    evolutionId: Evolution.SLOWPOKE.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 95,
       attack: 100,
@@ -11621,11 +11624,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SLOWBRO: pokemon("SLOWBRO", {
+  SLOWBRO: createPokemon("SLOWBRO", {
     name: "Slowbro",
-    line: Evolutions.SLOWPOKE,
-    type1: "water",
-    type2: "psychic",
+    evolutionId: Evolution.SLOWPOKE.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 95,
       attack: 75,
@@ -11635,11 +11638,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SLOWKING_GALAR: pokemon("SLOWKING_GALAR", {
+  SLOWKING_GALAR: createPokemon("SLOWKING_GALAR", {
     name: "Galarian Slowking",
-    line: Evolutions.SLOWPOKE,
-    type1: "poison",
-    type2: "psychic",
+    evolutionId: Evolution.SLOWPOKE.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 95,
       attack: 65,
@@ -11649,11 +11652,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SLOWKING: pokemon("SLOWKING", {
+  SLOWKING: createPokemon("SLOWKING", {
     name: "Slowking",
-    line: Evolutions.SLOWPOKE,
-    type1: "water",
-    type2: "psychic",
+    evolutionId: Evolution.SLOWPOKE.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 95,
       attack: 75,
@@ -11663,10 +11666,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SLOWPOKE_GALAR: pokemon("SLOWPOKE_GALAR", {
+  SLOWPOKE_GALAR: createPokemon("SLOWPOKE_GALAR", {
     name: "Galarian Slowpoke",
-    line: Evolutions.SLOWPOKE,
-    type1: "psychic",
+    evolutionId: Evolution.SLOWPOKE.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 90,
       attack: 65,
@@ -11676,11 +11679,11 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  SLOWPOKE: pokemon("SLOWPOKE", {
+  SLOWPOKE: createPokemon("SLOWPOKE", {
     name: "Slowpoke",
-    line: Evolutions.SLOWPOKE,
-    type1: "water",
-    type2: "psychic",
+    evolutionId: Evolution.SLOWPOKE.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 90,
       attack: 65,
@@ -11690,10 +11693,10 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  SLUGMA: pokemon("SLUGMA", {
+  SLUGMA: createPokemon("SLUGMA", {
     name: "Slugma",
-    line: Evolutions.SLUGMA,
-    type1: "fire",
+    evolutionId: Evolution.SLUGMA.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 40,
       attack: 40,
@@ -11703,10 +11706,10 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  SLURPUFF: pokemon("SLURPUFF", {
+  SLURPUFF: createPokemon("SLURPUFF", {
     name: "Slurpuff",
-    line: Evolutions.SWIRLIX,
-    type1: "fairy",
+    evolutionId: Evolution.SWIRLIX.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 82,
       attack: 80,
@@ -11716,10 +11719,10 @@ export const Pokemons = pokemonTable({
       speed: 72,
     },
   }),
-  SMEARGLE: pokemon("SMEARGLE", {
+  SMEARGLE: createPokemon("SMEARGLE", {
     name: "Smeargle",
-    line: Evolutions.SMEARGLE,
-    type1: "normal",
+    evolutionId: Evolution.SMEARGLE.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 55,
       attack: 20,
@@ -11729,11 +11732,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  SMOLIV: pokemon("SMOLIV", {
+  SMOLIV: createPokemon("SMOLIV", {
     name: "Smoliv",
-    line: Evolutions.SMOLIV,
-    type1: "grass",
-    type2: "normal",
+    evolutionId: Evolution.SMOLIV.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 41,
       attack: 35,
@@ -11743,11 +11746,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SMOOCHUM: pokemon("SMOOCHUM", {
+  SMOOCHUM: createPokemon("SMOOCHUM", {
     name: "Smoochum",
-    line: Evolutions.SMOOCHUM,
-    type1: "ice",
-    type2: "psychic",
+    evolutionId: Evolution.SMOOCHUM.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 45,
       attack: 30,
@@ -11757,11 +11760,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  SNEASEL_HISUI: pokemon("SNEASEL_HISUI", {
+  SNEASEL_HISUI: createPokemon("SNEASEL_HISUI", {
     name: "Hisuian Sneasel",
-    line: Evolutions.SNEASEL,
-    type1: "fighting",
-    type2: "poison",
+    evolutionId: Evolution.SNEASEL.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 55,
       attack: 95,
@@ -11771,11 +11774,11 @@ export const Pokemons = pokemonTable({
       speed: 115,
     },
   }),
-  SNEASEL: pokemon("SNEASEL", {
+  SNEASEL: createPokemon("SNEASEL", {
     name: "Sneasel",
-    line: Evolutions.SNEASEL,
-    type1: "dark",
-    type2: "ice",
+    evolutionId: Evolution.SNEASEL.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 55,
       attack: 95,
@@ -11785,11 +11788,11 @@ export const Pokemons = pokemonTable({
       speed: 115,
     },
   }),
-  SNEASLER: pokemon("SNEASLER", {
+  SNEASLER: createPokemon("SNEASLER", {
     name: "Sneasler",
-    line: Evolutions.SNEASEL,
-    type1: "fighting",
-    type2: "poison",
+    evolutionId: Evolution.SNEASEL.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 80,
       attack: 130,
@@ -11799,10 +11802,10 @@ export const Pokemons = pokemonTable({
       speed: 120,
     },
   }),
-  SNIVY: pokemon("SNIVY", {
+  SNIVY: createPokemon("SNIVY", {
     name: "Snivy",
-    line: Evolutions.SNIVY,
-    type1: "grass",
+    evolutionId: Evolution.SNIVY.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 45,
       attack: 45,
@@ -11812,11 +11815,11 @@ export const Pokemons = pokemonTable({
       speed: 63,
     },
   }),
-  SNOM: pokemon("SNOM", {
+  SNOM: createPokemon("SNOM", {
     name: "Snom",
-    line: Evolutions.SNOM,
-    type1: "ice",
-    type2: "bug",
+    evolutionId: Evolution.SNOM.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.BUG,
     baseStats: {
       hp: 30,
       attack: 25,
@@ -11826,10 +11829,10 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  SNORLAX: pokemon("SNORLAX", {
+  SNORLAX: createPokemon("SNORLAX", {
     name: "Snorlax",
-    line: Evolutions.MUNCHLAX,
-    type1: "normal",
+    evolutionId: Evolution.MUNCHLAX.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 160,
       attack: 110,
@@ -11839,10 +11842,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SNORUNT: pokemon("SNORUNT", {
+  SNORUNT: createPokemon("SNORUNT", {
     name: "Snorunt",
-    line: Evolutions.SNORUNT,
-    type1: "ice",
+    evolutionId: Evolution.SNORUNT.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 50,
       attack: 50,
@@ -11852,11 +11855,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  SNOVER: pokemon("SNOVER", {
+  SNOVER: createPokemon("SNOVER", {
     name: "Snover",
-    line: Evolutions.SNOVER,
-    type1: "grass",
-    type2: "ice",
+    evolutionId: Evolution.SNOVER.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 60,
       attack: 62,
@@ -11866,10 +11869,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  SNUBBULL: pokemon("SNUBBULL", {
+  SNUBBULL: createPokemon("SNUBBULL", {
     name: "Snubbull",
-    line: Evolutions.SNUBBULL,
-    type1: "fairy",
+    evolutionId: Evolution.SNUBBULL.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 60,
       attack: 80,
@@ -11879,10 +11882,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SOBBLE: pokemon("SOBBLE", {
+  SOBBLE: createPokemon("SOBBLE", {
     name: "Sobble",
-    line: Evolutions.SOBBLE,
-    type1: "water",
+    evolutionId: Evolution.SOBBLE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 40,
@@ -11892,11 +11895,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  SOLGALEO: pokemon("SOLGALEO", {
+  SOLGALEO: createPokemon("SOLGALEO", {
     name: "Solgaleo",
-    line: Evolutions.COSMOG,
-    type1: "psychic",
-    type2: "steel",
+    evolutionId: Evolution.COSMOG.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 137,
       attack: 137,
@@ -11906,10 +11909,10 @@ export const Pokemons = pokemonTable({
       speed: 97,
     },
   }),
-  SOLOSIS: pokemon("SOLOSIS", {
+  SOLOSIS: createPokemon("SOLOSIS", {
     name: "Solosis",
-    line: Evolutions.SOLOSIS,
-    type1: "psychic",
+    evolutionId: Evolution.SOLOSIS.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 45,
       attack: 30,
@@ -11919,11 +11922,11 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  SOLROCK: pokemon("SOLROCK", {
+  SOLROCK: createPokemon("SOLROCK", {
     name: "Solrock",
-    line: Evolutions.SOLROCK,
-    type1: "rock",
-    type2: "psychic",
+    evolutionId: Evolution.SOLROCK.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 90,
       attack: 95,
@@ -11933,11 +11936,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  SPEAROW: pokemon("SPEAROW", {
+  SPEAROW: createPokemon("SPEAROW", {
     name: "Spearow",
-    line: Evolutions.SPEAROW,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.SPEAROW.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 40,
       attack: 60,
@@ -11947,10 +11950,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  SPECTRIER: pokemon("SPECTRIER", {
+  SPECTRIER: createPokemon("SPECTRIER", {
     name: "Spectrier",
-    line: Evolutions.SPECTRIER,
-    type1: "ghost",
+    evolutionId: Evolution.SPECTRIER.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 100,
       attack: 65,
@@ -11960,10 +11963,10 @@ export const Pokemons = pokemonTable({
       speed: 130,
     },
   }),
-  SPEWPA: pokemon("SPEWPA", {
+  SPEWPA: createPokemon("SPEWPA", {
     name: "Spewpa",
-    line: Evolutions.SCATTERBUG,
-    type1: "bug",
+    evolutionId: Evolution.SCATTERBUG.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 45,
       attack: 22,
@@ -11973,11 +11976,11 @@ export const Pokemons = pokemonTable({
       speed: 29,
     },
   }),
-  SPHEAL: pokemon("SPHEAL", {
+  SPHEAL: createPokemon("SPHEAL", {
     name: "Spheal",
-    line: Evolutions.SPHEAL,
-    type1: "ice",
-    type2: "water",
+    evolutionId: Evolution.SPHEAL.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 70,
       attack: 40,
@@ -11987,10 +11990,10 @@ export const Pokemons = pokemonTable({
       speed: 25,
     },
   }),
-  SPIDOPS: pokemon("SPIDOPS", {
+  SPIDOPS: createPokemon("SPIDOPS", {
     name: "Spidops",
-    line: Evolutions.TAROUNTULA,
-    type1: "bug",
+    evolutionId: Evolution.TAROUNTULA.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 60,
       attack: 79,
@@ -12000,11 +12003,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  SPINARAK: pokemon("SPINARAK", {
+  SPINARAK: createPokemon("SPINARAK", {
     name: "Spinarak",
-    line: Evolutions.SPINARAK,
-    type1: "bug",
-    type2: "poison",
+    evolutionId: Evolution.SPINARAK.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 40,
       attack: 60,
@@ -12014,10 +12017,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SPINDA: pokemon("SPINDA", {
+  SPINDA: createPokemon("SPINDA", {
     name: "Spinda",
-    line: Evolutions.SPINDA,
-    type1: "normal",
+    evolutionId: Evolution.SPINDA.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 60,
       attack: 60,
@@ -12027,11 +12030,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  SPIRITOMB: pokemon("SPIRITOMB", {
+  SPIRITOMB: createPokemon("SPIRITOMB", {
     name: "Spiritomb",
-    line: Evolutions.SPIRITOMB,
-    type1: "ghost",
-    type2: "dark",
+    evolutionId: Evolution.SPIRITOMB.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 50,
       attack: 92,
@@ -12041,10 +12044,10 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  SPOINK: pokemon("SPOINK", {
+  SPOINK: createPokemon("SPOINK", {
     name: "Spoink",
-    line: Evolutions.SPOINK,
-    type1: "psychic",
+    evolutionId: Evolution.SPOINK.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 60,
       attack: 25,
@@ -12054,10 +12057,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  SPRIGATITO: pokemon("SPRIGATITO", {
+  SPRIGATITO: createPokemon("SPRIGATITO", {
     name: "Sprigatito",
-    line: Evolutions.SPRIGATITO,
-    type1: "grass",
+    evolutionId: Evolution.SPRIGATITO.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 40,
       attack: 61,
@@ -12067,10 +12070,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  SPRITZEE: pokemon("SPRITZEE", {
+  SPRITZEE: createPokemon("SPRITZEE", {
     name: "Spritzee",
-    line: Evolutions.SPRITZEE,
-    type1: "fairy",
+    evolutionId: Evolution.SPRITZEE.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 78,
       attack: 52,
@@ -12080,11 +12083,11 @@ export const Pokemons = pokemonTable({
       speed: 23,
     },
   }),
-  SQUAWKABILLY: pokemon("SQUAWKABILLY", {
+  SQUAWKABILLY: createPokemon("SQUAWKABILLY", {
     name: "Squawkabilly",
-    line: Evolutions.SQUAWKABILLY,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.SQUAWKABILLY.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 82,
       attack: 96,
@@ -12094,10 +12097,10 @@ export const Pokemons = pokemonTable({
       speed: 92,
     },
   }),
-  SQUIRTLE: pokemon("SQUIRTLE", {
+  SQUIRTLE: createPokemon("SQUIRTLE", {
     name: "Squirtle",
-    line: Evolutions.SQUIRTLE,
-    type1: "water",
+    evolutionId: Evolution.SQUIRTLE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 44,
       attack: 48,
@@ -12107,11 +12110,11 @@ export const Pokemons = pokemonTable({
       speed: 43,
     },
   }),
-  STAKATAKA: pokemon("STAKATAKA", {
+  STAKATAKA: createPokemon("STAKATAKA", {
     name: "Stakataka",
-    line: Evolutions.STAKATAKA,
-    type1: "rock",
-    type2: "steel",
+    evolutionId: Evolution.STAKATAKA.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 61,
       attack: 131,
@@ -12121,10 +12124,10 @@ export const Pokemons = pokemonTable({
       speed: 13,
     },
   }),
-  STANTLER: pokemon("STANTLER", {
+  STANTLER: createPokemon("STANTLER", {
     name: "Stantler",
-    line: Evolutions.STANTLER,
-    type1: "normal",
+    evolutionId: Evolution.STANTLER.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 73,
       attack: 95,
@@ -12134,11 +12137,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  STARAPTOR: pokemon("STARAPTOR", {
+  STARAPTOR: createPokemon("STARAPTOR", {
     name: "Staraptor",
-    line: Evolutions.STARLY,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.STARLY.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 85,
       attack: 120,
@@ -12148,11 +12151,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  STARAVIA: pokemon("STARAVIA", {
+  STARAVIA: createPokemon("STARAVIA", {
     name: "Staravia",
-    line: Evolutions.STARLY,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.STARLY.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 55,
       attack: 75,
@@ -12162,11 +12165,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  STARLY: pokemon("STARLY", {
+  STARLY: createPokemon("STARLY", {
     name: "Starly",
-    line: Evolutions.STARLY,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.STARLY.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 40,
       attack: 55,
@@ -12176,11 +12179,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  STARMIE: pokemon("STARMIE", {
+  STARMIE: createPokemon("STARMIE", {
     name: "Starmie",
-    line: Evolutions.STARYU,
-    type1: "water",
-    type2: "psychic",
+    evolutionId: Evolution.STARYU.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 60,
       attack: 75,
@@ -12190,10 +12193,10 @@ export const Pokemons = pokemonTable({
       speed: 115,
     },
   }),
-  STARYU: pokemon("STARYU", {
+  STARYU: createPokemon("STARYU", {
     name: "Staryu",
-    line: Evolutions.STARYU,
-    type1: "water",
+    evolutionId: Evolution.STARYU.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 30,
       attack: 45,
@@ -12203,11 +12206,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  STEELIX: pokemon("STEELIX", {
+  STEELIX: createPokemon("STEELIX", {
     name: "Steelix",
-    line: Evolutions.ONIX,
-    type1: "steel",
-    type2: "ground",
+    evolutionId: Evolution.ONIX.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 75,
       attack: 85,
@@ -12217,10 +12220,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  STEENEE: pokemon("STEENEE", {
+  STEENEE: createPokemon("STEENEE", {
     name: "Steenee",
-    line: Evolutions.BOUNSWEET,
-    type1: "grass",
+    evolutionId: Evolution.BOUNSWEET.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 52,
       attack: 40,
@@ -12230,10 +12233,10 @@ export const Pokemons = pokemonTable({
       speed: 62,
     },
   }),
-  STONJOURNER: pokemon("STONJOURNER", {
+  STONJOURNER: createPokemon("STONJOURNER", {
     name: "Stonjourner",
-    line: Evolutions.STONJOURNER,
-    type1: "rock",
+    evolutionId: Evolution.STONJOURNER.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 100,
       attack: 125,
@@ -12243,10 +12246,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  STOUTLAND: pokemon("STOUTLAND", {
+  STOUTLAND: createPokemon("STOUTLAND", {
     name: "Stoutland",
-    line: Evolutions.LILLIPUP,
-    type1: "normal",
+    evolutionId: Evolution.LILLIPUP.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 85,
       attack: 110,
@@ -12256,11 +12259,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  STUFFUL: pokemon("STUFFUL", {
+  STUFFUL: createPokemon("STUFFUL", {
     name: "Stufful",
-    line: Evolutions.STUFFUL,
-    type1: "normal",
-    type2: "fighting",
+    evolutionId: Evolution.STUFFUL.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 70,
       attack: 75,
@@ -12270,11 +12273,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  STUNFISK_GALAR: pokemon("STUNFISK_GALAR", {
+  STUNFISK_GALAR: createPokemon("STUNFISK_GALAR", {
     name: "Galarian Stunfisk",
-    line: Evolutions.STUNFISK,
-    type1: "ground",
-    type2: "steel",
+    evolutionId: Evolution.STUNFISK.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 109,
       attack: 81,
@@ -12284,11 +12287,11 @@ export const Pokemons = pokemonTable({
       speed: 32,
     },
   }),
-  STUNFISK: pokemon("STUNFISK", {
+  STUNFISK: createPokemon("STUNFISK", {
     name: "Stunfisk",
-    line: Evolutions.STUNFISK,
-    type1: "ground",
-    type2: "electric",
+    evolutionId: Evolution.STUNFISK.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 109,
       attack: 66,
@@ -12298,11 +12301,11 @@ export const Pokemons = pokemonTable({
       speed: 32,
     },
   }),
-  STUNKY: pokemon("STUNKY", {
+  STUNKY: createPokemon("STUNKY", {
     name: "Stunky",
-    line: Evolutions.STUNKY,
-    type1: "poison",
-    type2: "dark",
+    evolutionId: Evolution.STUNKY.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 63,
       attack: 63,
@@ -12312,10 +12315,10 @@ export const Pokemons = pokemonTable({
       speed: 74,
     },
   }),
-  SUDOWOODO: pokemon("SUDOWOODO", {
+  SUDOWOODO: createPokemon("SUDOWOODO", {
     name: "Sudowoodo",
-    line: Evolutions.BONSLY,
-    type1: "rock",
+    evolutionId: Evolution.BONSLY.id,
+    type1: PokemonTypes.ROCK,
     baseStats: {
       hp: 70,
       attack: 100,
@@ -12325,10 +12328,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SUICUNE: pokemon("SUICUNE", {
+  SUICUNE: createPokemon("SUICUNE", {
     name: "Suicune",
-    line: Evolutions.SUICUNE,
-    type1: "water",
+    evolutionId: Evolution.SUICUNE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 100,
       attack: 75,
@@ -12338,10 +12341,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  SUNFLORA: pokemon("SUNFLORA", {
+  SUNFLORA: createPokemon("SUNFLORA", {
     name: "Sunflora",
-    line: Evolutions.SUNKERN,
-    type1: "grass",
+    evolutionId: Evolution.SUNKERN.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 75,
       attack: 75,
@@ -12351,10 +12354,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SUNKERN: pokemon("SUNKERN", {
+  SUNKERN: createPokemon("SUNKERN", {
     name: "Sunkern",
-    line: Evolutions.SUNKERN,
-    type1: "grass",
+    evolutionId: Evolution.SUNKERN.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 30,
       attack: 30,
@@ -12364,11 +12367,11 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  SURSKIT: pokemon("SURSKIT", {
+  SURSKIT: createPokemon("SURSKIT", {
     name: "Surskit",
-    line: Evolutions.SURSKIT,
-    type1: "bug",
-    type2: "water",
+    evolutionId: Evolution.SURSKIT.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 40,
       attack: 30,
@@ -12378,11 +12381,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  SWABLU: pokemon("SWABLU", {
+  SWABLU: createPokemon("SWABLU", {
     name: "Swablu",
-    line: Evolutions.SWABLU,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.SWABLU.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 45,
       attack: 40,
@@ -12392,11 +12395,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  SWADLOON: pokemon("SWADLOON", {
+  SWADLOON: createPokemon("SWADLOON", {
     name: "Swadloon",
-    line: Evolutions.SEWADDLE,
-    type1: "bug",
-    type2: "grass",
+    evolutionId: Evolution.SEWADDLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 55,
       attack: 63,
@@ -12406,10 +12409,10 @@ export const Pokemons = pokemonTable({
       speed: 42,
     },
   }),
-  SWALOT: pokemon("SWALOT", {
+  SWALOT: createPokemon("SWALOT", {
     name: "Swalot",
-    line: Evolutions.GULPIN,
-    type1: "poison",
+    evolutionId: Evolution.GULPIN.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 100,
       attack: 73,
@@ -12419,11 +12422,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  SWAMPERT: pokemon("SWAMPERT", {
+  SWAMPERT: createPokemon("SWAMPERT", {
     name: "Swampert",
-    line: Evolutions.MUDKIP,
-    type1: "water",
-    type2: "ground",
+    evolutionId: Evolution.MUDKIP.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 100,
       attack: 110,
@@ -12433,11 +12436,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  SWANNA: pokemon("SWANNA", {
+  SWANNA: createPokemon("SWANNA", {
     name: "Swanna",
-    line: Evolutions.DUCKLETT,
-    type1: "water",
-    type2: "flying",
+    evolutionId: Evolution.DUCKLETT.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 75,
       attack: 87,
@@ -12447,11 +12450,11 @@ export const Pokemons = pokemonTable({
       speed: 98,
     },
   }),
-  SWELLOW: pokemon("SWELLOW", {
+  SWELLOW: createPokemon("SWELLOW", {
     name: "Swellow",
-    line: Evolutions.TAILLOW,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.TAILLOW.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 60,
       attack: 85,
@@ -12461,11 +12464,11 @@ export const Pokemons = pokemonTable({
       speed: 125,
     },
   }),
-  SWINUB: pokemon("SWINUB", {
+  SWINUB: createPokemon("SWINUB", {
     name: "Swinub",
-    line: Evolutions.SWINUB,
-    type1: "ice",
-    type2: "ground",
+    evolutionId: Evolution.SWINUB.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 50,
       attack: 50,
@@ -12475,10 +12478,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  SWIRLIX: pokemon("SWIRLIX", {
+  SWIRLIX: createPokemon("SWIRLIX", {
     name: "Swirlix",
-    line: Evolutions.SWIRLIX,
-    type1: "fairy",
+    evolutionId: Evolution.SWIRLIX.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 62,
       attack: 48,
@@ -12488,11 +12491,11 @@ export const Pokemons = pokemonTable({
       speed: 49,
     },
   }),
-  SWOOBAT: pokemon("SWOOBAT", {
+  SWOOBAT: createPokemon("SWOOBAT", {
     name: "Swoobat",
-    line: Evolutions.WOOBAT,
-    type1: "psychic",
-    type2: "flying",
+    evolutionId: Evolution.WOOBAT.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 67,
       attack: 57,
@@ -12502,10 +12505,10 @@ export const Pokemons = pokemonTable({
       speed: 114,
     },
   }),
-  SYLVEON: pokemon("SYLVEON", {
+  SYLVEON: createPokemon("SYLVEON", {
     name: "Sylveon",
-    line: Evolutions.EEVEE,
-    type1: "fairy",
+    evolutionId: Evolution.EEVEE.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 95,
       attack: 65,
@@ -12515,10 +12518,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  TADBULB: pokemon("TADBULB", {
+  TADBULB: createPokemon("TADBULB", {
     name: "Tadbulb",
-    line: Evolutions.TADBULB,
-    type1: "electric",
+    evolutionId: Evolution.TADBULB.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 61,
       attack: 31,
@@ -12528,11 +12531,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  TAILLOW: pokemon("TAILLOW", {
+  TAILLOW: createPokemon("TAILLOW", {
     name: "Taillow",
-    line: Evolutions.TAILLOW,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.TAILLOW.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 40,
       attack: 55,
@@ -12542,11 +12545,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  TALONFLAME: pokemon("TALONFLAME", {
+  TALONFLAME: createPokemon("TALONFLAME", {
     name: "Talonflame",
-    line: Evolutions.FLETCHLING,
-    type1: "fire",
-    type2: "flying",
+    evolutionId: Evolution.FLETCHLING.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 78,
       attack: 81,
@@ -12556,10 +12559,10 @@ export const Pokemons = pokemonTable({
       speed: 126,
     },
   }),
-  TANDEMAUS: pokemon("TANDEMAUS", {
+  TANDEMAUS: createPokemon("TANDEMAUS", {
     name: "Tandemaus",
-    line: Evolutions.TANDEMAUS,
-    type1: "normal",
+    evolutionId: Evolution.TANDEMAUS.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 50,
       attack: 50,
@@ -12569,10 +12572,10 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  TANGELA: pokemon("TANGELA", {
+  TANGELA: createPokemon("TANGELA", {
     name: "Tangela",
-    line: Evolutions.TANGELA,
-    type1: "grass",
+    evolutionId: Evolution.TANGELA.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 65,
       attack: 55,
@@ -12582,10 +12585,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  TANGROWTH: pokemon("TANGROWTH", {
+  TANGROWTH: createPokemon("TANGROWTH", {
     name: "Tangrowth",
-    line: Evolutions.TANGELA,
-    type1: "grass",
+    evolutionId: Evolution.TANGELA.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 100,
       attack: 100,
@@ -12595,11 +12598,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  TAPU_BULU: pokemon("TAPU_BULU", {
+  TAPU_BULU: createPokemon("TAPU_BULU", {
     name: "Tapu Bulu",
-    line: Evolutions.TAPU_BULU,
-    type1: "grass",
-    type2: "fairy",
+    evolutionId: Evolution.TAPU_BULU.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 70,
       attack: 130,
@@ -12609,11 +12612,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  TAPU_FINI: pokemon("TAPU_FINI", {
+  TAPU_FINI: createPokemon("TAPU_FINI", {
     name: "Tapu Fini",
-    line: Evolutions.TAPU_FINI,
-    type1: "water",
-    type2: "fairy",
+    evolutionId: Evolution.TAPU_FINI.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 70,
       attack: 75,
@@ -12623,11 +12626,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  TAPU_KOKO: pokemon("TAPU_KOKO", {
+  TAPU_KOKO: createPokemon("TAPU_KOKO", {
     name: "Tapu Koko",
-    line: Evolutions.TAPU_KOKO,
-    type1: "electric",
-    type2: "fairy",
+    evolutionId: Evolution.TAPU_KOKO.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 70,
       attack: 115,
@@ -12637,11 +12640,11 @@ export const Pokemons = pokemonTable({
       speed: 130,
     },
   }),
-  TAPU_LELE: pokemon("TAPU_LELE", {
+  TAPU_LELE: createPokemon("TAPU_LELE", {
     name: "Tapu Lele",
-    line: Evolutions.TAPU_LELE,
-    type1: "psychic",
-    type2: "fairy",
+    evolutionId: Evolution.TAPU_LELE.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 70,
       attack: 85,
@@ -12651,10 +12654,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  TAROUNTULA: pokemon("TAROUNTULA", {
+  TAROUNTULA: createPokemon("TAROUNTULA", {
     name: "Tarountula",
-    line: Evolutions.TAROUNTULA,
-    type1: "bug",
+    evolutionId: Evolution.TAROUNTULA.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 35,
       attack: 41,
@@ -12664,11 +12667,11 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  TATSUGIRI: pokemon("TATSUGIRI", {
+  TATSUGIRI: createPokemon("TATSUGIRI", {
     name: "Tatsugiri",
-    line: Evolutions.TATSUGIRI,
-    type1: "dragon",
-    type2: "water",
+    evolutionId: Evolution.TATSUGIRI.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 68,
       attack: 50,
@@ -12678,10 +12681,10 @@ export const Pokemons = pokemonTable({
       speed: 82,
     },
   }),
-  TAUROS: pokemon("TAUROS", {
+  TAUROS: createPokemon("TAUROS", {
     name: "Tauros",
-    line: Evolutions.TAUROS,
-    type1: "normal",
+    evolutionId: Evolution.TAUROS.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 75,
       attack: 100,
@@ -12691,10 +12694,10 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  TEDDIURSA: pokemon("TEDDIURSA", {
+  TEDDIURSA: createPokemon("TEDDIURSA", {
     name: "Teddiursa",
-    line: Evolutions.TEDDIURSA,
-    type1: "normal",
+    evolutionId: Evolution.TEDDIURSA.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 60,
       attack: 80,
@@ -12704,11 +12707,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  TENTACOOL: pokemon("TENTACOOL", {
+  TENTACOOL: createPokemon("TENTACOOL", {
     name: "Tentacool",
-    line: Evolutions.TENTACOOL,
-    type1: "water",
-    type2: "poison",
+    evolutionId: Evolution.TENTACOOL.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 40,
       attack: 40,
@@ -12718,11 +12721,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  TENTACRUEL: pokemon("TENTACRUEL", {
+  TENTACRUEL: createPokemon("TENTACRUEL", {
     name: "Tentacruel",
-    line: Evolutions.TENTACOOL,
-    type1: "water",
-    type2: "poison",
+    evolutionId: Evolution.TENTACOOL.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 80,
       attack: 70,
@@ -12732,10 +12735,10 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  TEPIG: pokemon("TEPIG", {
+  TEPIG: createPokemon("TEPIG", {
     name: "Tepig",
-    line: Evolutions.TEPIG,
-    type1: "fire",
+    evolutionId: Evolution.TEPIG.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 65,
       attack: 63,
@@ -12745,11 +12748,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  TERRAKION: pokemon("TERRAKION", {
+  TERRAKION: createPokemon("TERRAKION", {
     name: "Terrakion",
-    line: Evolutions.TERRAKION,
-    type1: "rock",
-    type2: "fighting",
+    evolutionId: Evolution.TERRAKION.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 91,
       attack: 129,
@@ -12759,10 +12762,10 @@ export const Pokemons = pokemonTable({
       speed: 108,
     },
   }),
-  THIEVUL: pokemon("THIEVUL", {
+  THIEVUL: createPokemon("THIEVUL", {
     name: "Thievul",
-    line: Evolutions.NICKIT,
-    type1: "dark",
+    evolutionId: Evolution.NICKIT.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 70,
       attack: 58,
@@ -12772,10 +12775,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  THROH: pokemon("THROH", {
+  THROH: createPokemon("THROH", {
     name: "Throh",
-    line: Evolutions.THROH,
-    type1: "fighting",
+    evolutionId: Evolution.THROH.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 120,
       attack: 100,
@@ -12785,11 +12788,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  THUNDURUS: pokemon("THUNDURUS", {
+  THUNDURUS: createPokemon("THUNDURUS", {
     name: "Thundurus",
-    line: Evolutions.THUNDURUS,
-    type1: "electric",
-    type2: "flying",
+    evolutionId: Evolution.THUNDURUS.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 79,
       attack: 115,
@@ -12799,10 +12802,10 @@ export const Pokemons = pokemonTable({
       speed: 111,
     },
   }),
-  THWACKEY: pokemon("THWACKEY", {
+  THWACKEY: createPokemon("THWACKEY", {
     name: "Thwackey",
-    line: Evolutions.GROOKEY,
-    type1: "grass",
+    evolutionId: Evolution.GROOKEY.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 70,
       attack: 85,
@@ -12812,10 +12815,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  TIMBURR: pokemon("TIMBURR", {
+  TIMBURR: createPokemon("TIMBURR", {
     name: "Timburr",
-    line: Evolutions.TIMBURR,
-    type1: "fighting",
+    evolutionId: Evolution.TIMBURR.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 75,
       attack: 80,
@@ -12825,11 +12828,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  TING_LU: pokemon("TING_LU", {
+  TING_LU: createPokemon("TING_LU", {
     name: "Ting-Lu",
-    line: Evolutions.TING_LU,
-    type1: "dark",
-    type2: "ground",
+    evolutionId: Evolution.TING_LU.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 155,
       attack: 110,
@@ -12839,11 +12842,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  TINKATINK: pokemon("TINKATINK", {
+  TINKATINK: createPokemon("TINKATINK", {
     name: "Tinkatink",
-    line: Evolutions.TINKATINK,
-    type1: "fairy",
-    type2: "steel",
+    evolutionId: Evolution.TINKATINK.id,
+    type1: PokemonTypes.FAIRY,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 50,
       attack: 45,
@@ -12853,11 +12856,11 @@ export const Pokemons = pokemonTable({
       speed: 58,
     },
   }),
-  TINKATON: pokemon("TINKATON", {
+  TINKATON: createPokemon("TINKATON", {
     name: "Tinkaton",
-    line: Evolutions.TINKATINK,
-    type1: "fairy",
-    type2: "steel",
+    evolutionId: Evolution.TINKATINK.id,
+    type1: PokemonTypes.FAIRY,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 85,
       attack: 75,
@@ -12867,11 +12870,11 @@ export const Pokemons = pokemonTable({
       speed: 94,
     },
   }),
-  TINKATUFF: pokemon("TINKATUFF", {
+  TINKATUFF: createPokemon("TINKATUFF", {
     name: "Tinkatuff",
-    line: Evolutions.TINKATINK,
-    type1: "fairy",
-    type2: "steel",
+    evolutionId: Evolution.TINKATINK.id,
+    type1: PokemonTypes.FAIRY,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 65,
       attack: 55,
@@ -12881,11 +12884,11 @@ export const Pokemons = pokemonTable({
       speed: 78,
     },
   }),
-  TIRTOUGA: pokemon("TIRTOUGA", {
+  TIRTOUGA: createPokemon("TIRTOUGA", {
     name: "Tirtouga",
-    line: Evolutions.TIRTOUGA,
-    type1: "water",
-    type2: "rock",
+    evolutionId: Evolution.TIRTOUGA.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.ROCK,
     baseStats: {
       hp: 54,
       attack: 78,
@@ -12895,11 +12898,11 @@ export const Pokemons = pokemonTable({
       speed: 22,
     },
   }),
-  TOEDSCOOL: pokemon("TOEDSCOOL", {
+  TOEDSCOOL: createPokemon("TOEDSCOOL", {
     name: "Toedscool",
-    line: Evolutions.TOEDSCOOL,
-    type1: "ground",
-    type2: "grass",
+    evolutionId: Evolution.TOEDSCOOL.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 40,
       attack: 40,
@@ -12909,11 +12912,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  TOEDSCRUEL: pokemon("TOEDSCRUEL", {
+  TOEDSCRUEL: createPokemon("TOEDSCRUEL", {
     name: "Toedscruel",
-    line: Evolutions.TOEDSCOOL,
-    type1: "ground",
-    type2: "grass",
+    evolutionId: Evolution.TOEDSCOOL.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 80,
       attack: 70,
@@ -12923,11 +12926,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  TOGEDEMARU: pokemon("TOGEDEMARU", {
+  TOGEDEMARU: createPokemon("TOGEDEMARU", {
     name: "Togedemaru",
-    line: Evolutions.TOGEDEMARU,
-    type1: "electric",
-    type2: "steel",
+    evolutionId: Evolution.TOGEDEMARU.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 65,
       attack: 98,
@@ -12937,11 +12940,11 @@ export const Pokemons = pokemonTable({
       speed: 96,
     },
   }),
-  TOGEKISS: pokemon("TOGEKISS", {
+  TOGEKISS: createPokemon("TOGEKISS", {
     name: "Togekiss",
-    line: Evolutions.TOGEPI,
-    type1: "fairy",
-    type2: "flying",
+    evolutionId: Evolution.TOGEPI.id,
+    type1: PokemonTypes.FAIRY,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 85,
       attack: 50,
@@ -12951,10 +12954,10 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  TOGEPI: pokemon("TOGEPI", {
+  TOGEPI: createPokemon("TOGEPI", {
     name: "Togepi",
-    line: Evolutions.TOGEPI,
-    type1: "fairy",
+    evolutionId: Evolution.TOGEPI.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 35,
       attack: 20,
@@ -12964,11 +12967,11 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  TOGETIC: pokemon("TOGETIC", {
+  TOGETIC: createPokemon("TOGETIC", {
     name: "Togetic",
-    line: Evolutions.TOGEPI,
-    type1: "fairy",
-    type2: "flying",
+    evolutionId: Evolution.TOGEPI.id,
+    type1: PokemonTypes.FAIRY,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 55,
       attack: 40,
@@ -12978,10 +12981,10 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  TORCHIC: pokemon("TORCHIC", {
+  TORCHIC: createPokemon("TORCHIC", {
     name: "Torchic",
-    line: Evolutions.TORCHIC,
-    type1: "fire",
+    evolutionId: Evolution.TORCHIC.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 45,
       attack: 60,
@@ -12991,10 +12994,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  TORKOAL: pokemon("TORKOAL", {
+  TORKOAL: createPokemon("TORKOAL", {
     name: "Torkoal",
-    line: Evolutions.TORKOAL,
-    type1: "fire",
+    evolutionId: Evolution.TORKOAL.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 70,
       attack: 85,
@@ -13004,10 +13007,10 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  TORNADUS: pokemon("TORNADUS", {
+  TORNADUS: createPokemon("TORNADUS", {
     name: "Tornadus",
-    line: Evolutions.TORNADUS,
-    type1: "flying",
+    evolutionId: Evolution.TORNADUS.id,
+    type1: PokemonTypes.FLYING,
     baseStats: {
       hp: 79,
       attack: 115,
@@ -13017,10 +13020,10 @@ export const Pokemons = pokemonTable({
       speed: 111,
     },
   }),
-  TORRACAT: pokemon("TORRACAT", {
+  TORRACAT: createPokemon("TORRACAT", {
     name: "Torracat",
-    line: Evolutions.LITTEN,
-    type1: "fire",
+    evolutionId: Evolution.LITTEN.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 65,
       attack: 85,
@@ -13030,11 +13033,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  TORTERRA: pokemon("TORTERRA", {
+  TORTERRA: createPokemon("TORTERRA", {
     name: "Torterra",
-    line: Evolutions.TURTWIG,
-    type1: "grass",
-    type2: "ground",
+    evolutionId: Evolution.TURTWIG.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 95,
       attack: 109,
@@ -13044,10 +13047,10 @@ export const Pokemons = pokemonTable({
       speed: 56,
     },
   }),
-  TOTODILE: pokemon("TOTODILE", {
+  TOTODILE: createPokemon("TOTODILE", {
     name: "Totodile",
-    line: Evolutions.TOTODILE,
-    type1: "water",
+    evolutionId: Evolution.TOTODILE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 65,
@@ -13057,11 +13060,11 @@ export const Pokemons = pokemonTable({
       speed: 43,
     },
   }),
-  TOUCANNON: pokemon("TOUCANNON", {
+  TOUCANNON: createPokemon("TOUCANNON", {
     name: "Toucannon",
-    line: Evolutions.PIKIPEK,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.PIKIPEK.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 80,
       attack: 120,
@@ -13071,11 +13074,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  TOXAPEX: pokemon("TOXAPEX", {
+  TOXAPEX: createPokemon("TOXAPEX", {
     name: "Toxapex",
-    line: Evolutions.MAREANIE,
-    type1: "poison",
-    type2: "water",
+    evolutionId: Evolution.MAREANIE.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 63,
@@ -13085,11 +13088,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  TOXEL: pokemon("TOXEL", {
+  TOXEL: createPokemon("TOXEL", {
     name: "Toxel",
-    line: Evolutions.TOXEL,
-    type1: "electric",
-    type2: "poison",
+    evolutionId: Evolution.TOXEL.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 40,
       attack: 38,
@@ -13099,11 +13102,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  TOXICROAK: pokemon("TOXICROAK", {
+  TOXICROAK: createPokemon("TOXICROAK", {
     name: "Toxicroak",
-    line: Evolutions.CROAGUNK,
-    type1: "poison",
-    type2: "fighting",
+    evolutionId: Evolution.CROAGUNK.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 83,
       attack: 106,
@@ -13113,11 +13116,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  TOXTRICITY_LOW_KEY: pokemon("TOXTRICITY_LOW_KEY", {
+  TOXTRICITY_LOW_KEY: createPokemon("TOXTRICITY_LOW_KEY", {
     name: "Toxtricity",
-    line: Evolutions.TOXEL,
-    type1: "electric",
-    type2: "poison",
+    evolutionId: Evolution.TOXEL.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 75,
       attack: 98,
@@ -13127,11 +13130,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  TOXTRICITY: pokemon("TOXTRICITY", {
+  TOXTRICITY: createPokemon("TOXTRICITY", {
     name: "Toxtricity",
-    line: Evolutions.TOXEL,
-    type1: "electric",
-    type2: "poison",
+    evolutionId: Evolution.TOXEL.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 75,
       attack: 98,
@@ -13141,11 +13144,11 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  TRANQUILL: pokemon("TRANQUILL", {
+  TRANQUILL: createPokemon("TRANQUILL", {
     name: "Tranquill",
-    line: Evolutions.PIDOVE,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.PIDOVE.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 62,
       attack: 77,
@@ -13155,10 +13158,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  TRAPINCH: pokemon("TRAPINCH", {
+  TRAPINCH: createPokemon("TRAPINCH", {
     name: "Trapinch",
-    line: Evolutions.TRAPINCH,
-    type1: "ground",
+    evolutionId: Evolution.TRAPINCH.id,
+    type1: PokemonTypes.GROUND,
     baseStats: {
       hp: 45,
       attack: 100,
@@ -13168,10 +13171,10 @@ export const Pokemons = pokemonTable({
       speed: 10,
     },
   }),
-  TREECKO: pokemon("TREECKO", {
+  TREECKO: createPokemon("TREECKO", {
     name: "Treecko",
-    line: Evolutions.TREECKO,
-    type1: "grass",
+    evolutionId: Evolution.TREECKO.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 40,
       attack: 45,
@@ -13181,11 +13184,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  TREVENANT: pokemon("TREVENANT", {
+  TREVENANT: createPokemon("TREVENANT", {
     name: "Trevenant",
-    line: Evolutions.PHANTUMP,
-    type1: "ghost",
-    type2: "grass",
+    evolutionId: Evolution.PHANTUMP.id,
+    type1: PokemonTypes.GHOST,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 85,
       attack: 110,
@@ -13195,11 +13198,11 @@ export const Pokemons = pokemonTable({
       speed: 56,
     },
   }),
-  TROPIUS: pokemon("TROPIUS", {
+  TROPIUS: createPokemon("TROPIUS", {
     name: "Tropius",
-    line: Evolutions.TROPIUS,
-    type1: "grass",
-    type2: "flying",
+    evolutionId: Evolution.TROPIUS.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 99,
       attack: 68,
@@ -13209,10 +13212,10 @@ export const Pokemons = pokemonTable({
       speed: 51,
     },
   }),
-  TRUBBISH: pokemon("TRUBBISH", {
+  TRUBBISH: createPokemon("TRUBBISH", {
     name: "Trubbish",
-    line: Evolutions.TRUBBISH,
-    type1: "poison",
+    evolutionId: Evolution.TRUBBISH.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 50,
       attack: 50,
@@ -13222,11 +13225,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  TRUMBEAK: pokemon("TRUMBEAK", {
+  TRUMBEAK: createPokemon("TRUMBEAK", {
     name: "Trumbeak",
-    line: Evolutions.PIKIPEK,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.PIKIPEK.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 55,
       attack: 85,
@@ -13236,10 +13239,10 @@ export const Pokemons = pokemonTable({
       speed: 75,
     },
   }),
-  TSAREENA: pokemon("TSAREENA", {
+  TSAREENA: createPokemon("TSAREENA", {
     name: "Tsareena",
-    line: Evolutions.BOUNSWEET,
-    type1: "grass",
+    evolutionId: Evolution.BOUNSWEET.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 72,
       attack: 120,
@@ -13249,11 +13252,11 @@ export const Pokemons = pokemonTable({
       speed: 72,
     },
   }),
-  TURTONATOR: pokemon("TURTONATOR", {
+  TURTONATOR: createPokemon("TURTONATOR", {
     name: "Turtonator",
-    line: Evolutions.TURTONATOR,
-    type1: "fire",
-    type2: "dragon",
+    evolutionId: Evolution.TURTONATOR.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 60,
       attack: 78,
@@ -13263,10 +13266,10 @@ export const Pokemons = pokemonTable({
       speed: 36,
     },
   }),
-  TURTWIG: pokemon("TURTWIG", {
+  TURTWIG: createPokemon("TURTWIG", {
     name: "Turtwig",
-    line: Evolutions.TURTWIG,
-    type1: "grass",
+    evolutionId: Evolution.TURTWIG.id,
+    type1: PokemonTypes.GRASS,
     baseStats: {
       hp: 55,
       attack: 68,
@@ -13276,10 +13279,10 @@ export const Pokemons = pokemonTable({
       speed: 31,
     },
   }),
-  TYMPOLE: pokemon("TYMPOLE", {
+  TYMPOLE: createPokemon("TYMPOLE", {
     name: "Tympole",
-    line: Evolutions.TYMPOLE,
-    type1: "water",
+    evolutionId: Evolution.TYMPOLE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 50,
       attack: 50,
@@ -13289,10 +13292,10 @@ export const Pokemons = pokemonTable({
       speed: 64,
     },
   }),
-  TYNAMO: pokemon("TYNAMO", {
+  TYNAMO: createPokemon("TYNAMO", {
     name: "Tynamo",
-    line: Evolutions.TYNAMO,
-    type1: "electric",
+    evolutionId: Evolution.TYNAMO.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 35,
       attack: 55,
@@ -13302,10 +13305,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  TYPE_NULL: pokemon("TYPE_NULL", {
+  TYPE_NULL: createPokemon("TYPE_NULL", {
     name: "Type: Null",
-    line: Evolutions.TYPE_NULL,
-    type1: "normal",
+    evolutionId: Evolution.TYPE_NULL.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 95,
       attack: 95,
@@ -13315,11 +13318,11 @@ export const Pokemons = pokemonTable({
       speed: 59,
     },
   }),
-  TYPHLOSION_HISUI: pokemon("TYPHLOSION_HISUI", {
+  TYPHLOSION_HISUI: createPokemon("TYPHLOSION_HISUI", {
     name: "Hisuian Typhlosion",
-    line: Evolutions.CYNDAQUIL,
-    type1: "fire",
-    type2: "ghost",
+    evolutionId: Evolution.CYNDAQUIL.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 73,
       attack: 84,
@@ -13329,10 +13332,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  TYPHLOSION: pokemon("TYPHLOSION", {
+  TYPHLOSION: createPokemon("TYPHLOSION", {
     name: "Typhlosion",
-    line: Evolutions.CYNDAQUIL,
-    type1: "fire",
+    evolutionId: Evolution.CYNDAQUIL.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 78,
       attack: 84,
@@ -13342,11 +13345,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  TYRANITAR: pokemon("TYRANITAR", {
+  TYRANITAR: createPokemon("TYRANITAR", {
     name: "Tyranitar",
-    line: Evolutions.LARVITAR,
-    type1: "rock",
-    type2: "dark",
+    evolutionId: Evolution.LARVITAR.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 100,
       attack: 134,
@@ -13356,11 +13359,11 @@ export const Pokemons = pokemonTable({
       speed: 61,
     },
   }),
-  TYRANTRUM: pokemon("TYRANTRUM", {
+  TYRANTRUM: createPokemon("TYRANTRUM", {
     name: "Tyrantrum",
-    line: Evolutions.TYRUNT,
-    type1: "rock",
-    type2: "dragon",
+    evolutionId: Evolution.TYRUNT.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 82,
       attack: 121,
@@ -13370,10 +13373,10 @@ export const Pokemons = pokemonTable({
       speed: 71,
     },
   }),
-  TYROGUE: pokemon("TYROGUE", {
+  TYROGUE: createPokemon("TYROGUE", {
     name: "Tyrogue",
-    line: Evolutions.TYROGUE,
-    type1: "fighting",
+    evolutionId: Evolution.TYROGUE.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 35,
       attack: 35,
@@ -13383,11 +13386,11 @@ export const Pokemons = pokemonTable({
       speed: 35,
     },
   }),
-  TYRUNT: pokemon("TYRUNT", {
+  TYRUNT: createPokemon("TYRUNT", {
     name: "Tyrunt",
-    line: Evolutions.TYRUNT,
-    type1: "rock",
-    type2: "dragon",
+    evolutionId: Evolution.TYRUNT.id,
+    type1: PokemonTypes.ROCK,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 58,
       attack: 89,
@@ -13397,10 +13400,10 @@ export const Pokemons = pokemonTable({
       speed: 48,
     },
   }),
-  UMBREON: pokemon("UMBREON", {
+  UMBREON: createPokemon("UMBREON", {
     name: "Umbreon",
-    line: Evolutions.EEVEE,
-    type1: "dark",
+    evolutionId: Evolution.EEVEE.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 95,
       attack: 65,
@@ -13410,11 +13413,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  UNFEZANT: pokemon("UNFEZANT", {
+  UNFEZANT: createPokemon("UNFEZANT", {
     name: "Unfezant",
-    line: Evolutions.PIDOVE,
-    type1: "normal",
-    type2: "flying",
+    evolutionId: Evolution.PIDOVE.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 80,
       attack: 115,
@@ -13424,10 +13427,10 @@ export const Pokemons = pokemonTable({
       speed: 93,
     },
   }),
-  UNOWN: pokemon("UNOWN", {
+  UNOWN: createPokemon("UNOWN", {
     name: "Unown",
-    line: Evolutions.UNOWN,
-    type1: "psychic",
+    evolutionId: Evolution.UNOWN.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 48,
       attack: 72,
@@ -13437,11 +13440,11 @@ export const Pokemons = pokemonTable({
       speed: 48,
     },
   }),
-  URSALUNA: pokemon("URSALUNA", {
+  URSALUNA: createPokemon("URSALUNA", {
     name: "Ursaluna",
-    line: Evolutions.TEDDIURSA,
-    type1: "ground",
-    type2: "normal",
+    evolutionId: Evolution.TEDDIURSA.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 130,
       attack: 140,
@@ -13451,10 +13454,10 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  URSARING: pokemon("URSARING", {
+  URSARING: createPokemon("URSARING", {
     name: "Ursaring",
-    line: Evolutions.TEDDIURSA,
-    type1: "normal",
+    evolutionId: Evolution.TEDDIURSA.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 90,
       attack: 130,
@@ -13464,11 +13467,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  URSHIFU_RAPID_STRIKE: pokemon("URSHIFU_RAPID_STRIKE", {
+  URSHIFU_RAPID_STRIKE: createPokemon("URSHIFU_RAPID_STRIKE", {
     name: "Urshifu",
-    line: Evolutions.KUBFU,
-    type1: "fighting",
-    type2: "water",
+    evolutionId: Evolution.KUBFU.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 100,
       attack: 130,
@@ -13478,11 +13481,11 @@ export const Pokemons = pokemonTable({
       speed: 97,
     },
   }),
-  URSHIFU_SINGLE_STRIKE: pokemon("URSHIFU_SINGLE_STRIKE", {
+  URSHIFU_SINGLE_STRIKE: createPokemon("URSHIFU_SINGLE_STRIKE", {
     name: "Urshifu",
-    line: Evolutions.KUBFU,
-    type1: "fighting",
-    type2: "dark",
+    evolutionId: Evolution.KUBFU.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.DARK,
     baseStats: {
       hp: 100,
       attack: 130,
@@ -13492,10 +13495,10 @@ export const Pokemons = pokemonTable({
       speed: 97,
     },
   }),
-  UXIE: pokemon("UXIE", {
+  UXIE: createPokemon("UXIE", {
     name: "Uxie",
-    line: Evolutions.UXIE,
-    type1: "psychic",
+    evolutionId: Evolution.UXIE.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 75,
       attack: 75,
@@ -13505,10 +13508,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  VANILLISH: pokemon("VANILLISH", {
+  VANILLISH: createPokemon("VANILLISH", {
     name: "Vanillish",
-    line: Evolutions.VANILLITE,
-    type1: "ice",
+    evolutionId: Evolution.VANILLITE.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 51,
       attack: 65,
@@ -13518,10 +13521,10 @@ export const Pokemons = pokemonTable({
       speed: 59,
     },
   }),
-  VANILLITE: pokemon("VANILLITE", {
+  VANILLITE: createPokemon("VANILLITE", {
     name: "Vanillite",
-    line: Evolutions.VANILLITE,
-    type1: "ice",
+    evolutionId: Evolution.VANILLITE.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 36,
       attack: 50,
@@ -13531,10 +13534,10 @@ export const Pokemons = pokemonTable({
       speed: 44,
     },
   }),
-  VANILLUXE: pokemon("VANILLUXE", {
+  VANILLUXE: createPokemon("VANILLUXE", {
     name: "Vanilluxe",
-    line: Evolutions.VANILLITE,
-    type1: "ice",
+    evolutionId: Evolution.VANILLITE.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 71,
       attack: 95,
@@ -13544,10 +13547,10 @@ export const Pokemons = pokemonTable({
       speed: 79,
     },
   }),
-  VAPOREON: pokemon("VAPOREON", {
+  VAPOREON: createPokemon("VAPOREON", {
     name: "Vaporeon",
-    line: Evolutions.EEVEE,
-    type1: "water",
+    evolutionId: Evolution.EEVEE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 130,
       attack: 65,
@@ -13557,11 +13560,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  VAROOM: pokemon("VAROOM", {
+  VAROOM: createPokemon("VAROOM", {
     name: "Varoom",
-    line: Evolutions.VAROOM,
-    type1: "steel",
-    type2: "poison",
+    evolutionId: Evolution.VAROOM.id,
+    type1: PokemonTypes.STEEL,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 45,
       attack: 70,
@@ -13571,11 +13574,11 @@ export const Pokemons = pokemonTable({
       speed: 47,
     },
   }),
-  VELUZA: pokemon("VELUZA", {
+  VELUZA: createPokemon("VELUZA", {
     name: "Veluza",
-    line: Evolutions.VELUZA,
-    type1: "water",
-    type2: "psychic",
+    evolutionId: Evolution.VELUZA.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 90,
       attack: 102,
@@ -13585,11 +13588,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  VENIPEDE: pokemon("VENIPEDE", {
+  VENIPEDE: createPokemon("VENIPEDE", {
     name: "Venipede",
-    line: Evolutions.VENIPEDE,
-    type1: "bug",
-    type2: "poison",
+    evolutionId: Evolution.VENIPEDE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 30,
       attack: 45,
@@ -13599,11 +13602,11 @@ export const Pokemons = pokemonTable({
       speed: 57,
     },
   }),
-  VENOMOTH: pokemon("VENOMOTH", {
+  VENOMOTH: createPokemon("VENOMOTH", {
     name: "Venomoth",
-    line: Evolutions.VENONAT,
-    type1: "bug",
-    type2: "poison",
+    evolutionId: Evolution.VENONAT.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 70,
       attack: 65,
@@ -13613,11 +13616,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  VENONAT: pokemon("VENONAT", {
+  VENONAT: createPokemon("VENONAT", {
     name: "Venonat",
-    line: Evolutions.VENONAT,
-    type1: "bug",
-    type2: "poison",
+    evolutionId: Evolution.VENONAT.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 60,
       attack: 55,
@@ -13627,11 +13630,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  VENUSAUR: pokemon("VENUSAUR", {
+  VENUSAUR: createPokemon("VENUSAUR", {
     name: "Venusaur",
-    line: Evolutions.BULBASAUR,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.BULBASAUR.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 80,
       attack: 82,
@@ -13641,11 +13644,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  VESPIQUEN: pokemon("VESPIQUEN", {
+  VESPIQUEN: createPokemon("VESPIQUEN", {
     name: "Vespiquen",
-    line: Evolutions.COMBEE,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.COMBEE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 70,
       attack: 80,
@@ -13655,11 +13658,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  VIBRAVA: pokemon("VIBRAVA", {
+  VIBRAVA: createPokemon("VIBRAVA", {
     name: "Vibrava",
-    line: Evolutions.TRAPINCH,
-    type1: "ground",
-    type2: "dragon",
+    evolutionId: Evolution.TRAPINCH.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 50,
       attack: 70,
@@ -13669,11 +13672,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  VICTINI: pokemon("VICTINI", {
+  VICTINI: createPokemon("VICTINI", {
     name: "Victini",
-    line: Evolutions.VICTINI,
-    type1: "psychic",
-    type2: "fire",
+    evolutionId: Evolution.VICTINI.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 100,
       attack: 100,
@@ -13683,11 +13686,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  VICTREEBEL: pokemon("VICTREEBEL", {
+  VICTREEBEL: createPokemon("VICTREEBEL", {
     name: "Victreebel",
-    line: Evolutions.BELLSPROUT,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.BELLSPROUT.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 80,
       attack: 105,
@@ -13697,10 +13700,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  VIGOROTH: pokemon("VIGOROTH", {
+  VIGOROTH: createPokemon("VIGOROTH", {
     name: "Vigoroth",
-    line: Evolutions.SLAKOTH,
-    type1: "normal",
+    evolutionId: Evolution.SLAKOTH.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 80,
       attack: 80,
@@ -13710,11 +13713,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  VIKAVOLT: pokemon("VIKAVOLT", {
+  VIKAVOLT: createPokemon("VIKAVOLT", {
     name: "Vikavolt",
-    line: Evolutions.GRUBBIN,
-    type1: "bug",
-    type2: "electric",
+    evolutionId: Evolution.GRUBBIN.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 77,
       attack: 70,
@@ -13724,11 +13727,11 @@ export const Pokemons = pokemonTable({
       speed: 43,
     },
   }),
-  VILEPLUME: pokemon("VILEPLUME", {
+  VILEPLUME: createPokemon("VILEPLUME", {
     name: "Vileplume",
-    line: Evolutions.ODDISH,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.ODDISH.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 75,
       attack: 80,
@@ -13738,11 +13741,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  VIRIZION: pokemon("VIRIZION", {
+  VIRIZION: createPokemon("VIRIZION", {
     name: "Virizion",
-    line: Evolutions.VIRIZION,
-    type1: "grass",
-    type2: "fighting",
+    evolutionId: Evolution.VIRIZION.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 91,
       attack: 90,
@@ -13752,11 +13755,11 @@ export const Pokemons = pokemonTable({
       speed: 108,
     },
   }),
-  VIVILLON: pokemon("VIVILLON", {
+  VIVILLON: createPokemon("VIVILLON", {
     name: "Vivillon",
-    line: Evolutions.SCATTERBUG,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.SCATTERBUG.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 80,
       attack: 52,
@@ -13766,10 +13769,10 @@ export const Pokemons = pokemonTable({
       speed: 89,
     },
   }),
-  VOLBEAT: pokemon("VOLBEAT", {
+  VOLBEAT: createPokemon("VOLBEAT", {
     name: "Volbeat",
-    line: Evolutions.VOLBEAT,
-    type1: "bug",
+    evolutionId: Evolution.VOLBEAT.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 65,
       attack: 73,
@@ -13779,11 +13782,11 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  VOLCANION: pokemon("VOLCANION", {
+  VOLCANION: createPokemon("VOLCANION", {
     name: "Volcanion",
-    line: Evolutions.VOLCANION,
-    type1: "fire",
-    type2: "water",
+    evolutionId: Evolution.VOLCANION.id,
+    type1: PokemonTypes.FIRE,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 80,
       attack: 110,
@@ -13793,11 +13796,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  VOLCARONA: pokemon("VOLCARONA", {
+  VOLCARONA: createPokemon("VOLCARONA", {
     name: "Volcarona",
-    line: Evolutions.LARVESTA,
-    type1: "bug",
-    type2: "fire",
+    evolutionId: Evolution.LARVESTA.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FIRE,
     baseStats: {
       hp: 85,
       attack: 60,
@@ -13807,11 +13810,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  VOLTORB_HISUI: pokemon("VOLTORB_HISUI", {
+  VOLTORB_HISUI: createPokemon("VOLTORB_HISUI", {
     name: "Hisuian Voltorb",
-    line: Evolutions.VOLTORB,
-    type1: "electric",
-    type2: "grass",
+    evolutionId: Evolution.VOLTORB.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 40,
       attack: 30,
@@ -13821,10 +13824,10 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  VOLTORB: pokemon("VOLTORB", {
+  VOLTORB: createPokemon("VOLTORB", {
     name: "Voltorb",
-    line: Evolutions.VOLTORB,
-    type1: "electric",
+    evolutionId: Evolution.VOLTORB.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 40,
       attack: 30,
@@ -13834,11 +13837,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  VULLABY: pokemon("VULLABY", {
+  VULLABY: createPokemon("VULLABY", {
     name: "Vullaby",
-    line: Evolutions.VULLABY,
-    type1: "dark",
-    type2: "flying",
+    evolutionId: Evolution.VULLABY.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 70,
       attack: 55,
@@ -13848,10 +13851,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  VULPIX_ALOLA: pokemon("VULPIX_ALOLA", {
+  VULPIX_ALOLA: createPokemon("VULPIX_ALOLA", {
     name: "Alolan Vulpix",
-    line: Evolutions.VULPIX,
-    type1: "ice",
+    evolutionId: Evolution.VULPIX.id,
+    type1: PokemonTypes.ICE,
     baseStats: {
       hp: 38,
       attack: 41,
@@ -13861,10 +13864,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  VULPIX: pokemon("VULPIX", {
+  VULPIX: createPokemon("VULPIX", {
     name: "Vulpix",
-    line: Evolutions.VULPIX,
-    type1: "fire",
+    evolutionId: Evolution.VULPIX.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 38,
       attack: 41,
@@ -13874,10 +13877,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  WAILMER: pokemon("WAILMER", {
+  WAILMER: createPokemon("WAILMER", {
     name: "Wailmer",
-    line: Evolutions.WAILMER,
-    type1: "water",
+    evolutionId: Evolution.WAILMER.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 130,
       attack: 70,
@@ -13887,10 +13890,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  WAILORD: pokemon("WAILORD", {
+  WAILORD: createPokemon("WAILORD", {
     name: "Wailord",
-    line: Evolutions.WAILMER,
-    type1: "water",
+    evolutionId: Evolution.WAILMER.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 170,
       attack: 90,
@@ -13900,11 +13903,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  WALREIN: pokemon("WALREIN", {
+  WALREIN: createPokemon("WALREIN", {
     name: "Walrein",
-    line: Evolutions.SPHEAL,
-    type1: "ice",
-    type2: "water",
+    evolutionId: Evolution.SPHEAL.id,
+    type1: PokemonTypes.ICE,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 110,
       attack: 80,
@@ -13914,10 +13917,10 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  WARTORTLE: pokemon("WARTORTLE", {
+  WARTORTLE: createPokemon("WARTORTLE", {
     name: "Wartortle",
-    line: Evolutions.SQUIRTLE,
-    type1: "water",
+    evolutionId: Evolution.SQUIRTLE.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 59,
       attack: 63,
@@ -13927,10 +13930,10 @@ export const Pokemons = pokemonTable({
       speed: 58,
     },
   }),
-  WATCHOG: pokemon("WATCHOG", {
+  WATCHOG: createPokemon("WATCHOG", {
     name: "Watchog",
-    line: Evolutions.PATRAT,
-    type1: "normal",
+    evolutionId: Evolution.PATRAT.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 60,
       attack: 85,
@@ -13940,11 +13943,11 @@ export const Pokemons = pokemonTable({
       speed: 77,
     },
   }),
-  WATTREL: pokemon("WATTREL", {
+  WATTREL: createPokemon("WATTREL", {
     name: "Wattrel",
-    line: Evolutions.WATTREL,
-    type1: "electric",
-    type2: "flying",
+    evolutionId: Evolution.WATTREL.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 40,
       attack: 40,
@@ -13954,11 +13957,11 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  WEAVILE: pokemon("WEAVILE", {
+  WEAVILE: createPokemon("WEAVILE", {
     name: "Weavile",
-    line: Evolutions.SNEASEL,
-    type1: "dark",
-    type2: "ice",
+    evolutionId: Evolution.SNEASEL.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.ICE,
     baseStats: {
       hp: 70,
       attack: 120,
@@ -13968,11 +13971,11 @@ export const Pokemons = pokemonTable({
       speed: 125,
     },
   }),
-  WEEDLE: pokemon("WEEDLE", {
+  WEEDLE: createPokemon("WEEDLE", {
     name: "Weedle",
-    line: Evolutions.WEEDLE,
-    type1: "bug",
-    type2: "poison",
+    evolutionId: Evolution.WEEDLE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 40,
       attack: 35,
@@ -13982,11 +13985,11 @@ export const Pokemons = pokemonTable({
       speed: 50,
     },
   }),
-  WEEPINBELL: pokemon("WEEPINBELL", {
+  WEEPINBELL: createPokemon("WEEPINBELL", {
     name: "Weepinbell",
-    line: Evolutions.BELLSPROUT,
-    type1: "grass",
-    type2: "poison",
+    evolutionId: Evolution.BELLSPROUT.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 65,
       attack: 90,
@@ -13996,11 +13999,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  WEEZING_GALAR: pokemon("WEEZING_GALAR", {
+  WEEZING_GALAR: createPokemon("WEEZING_GALAR", {
     name: "Galarian Weezing",
-    line: Evolutions.KOFFING,
-    type1: "poison",
-    type2: "fairy",
+    evolutionId: Evolution.KOFFING.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 65,
       attack: 90,
@@ -14010,10 +14013,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  WEEZING: pokemon("WEEZING", {
+  WEEZING: createPokemon("WEEZING", {
     name: "Weezing",
-    line: Evolutions.KOFFING,
-    type1: "poison",
+    evolutionId: Evolution.KOFFING.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 65,
       attack: 90,
@@ -14023,11 +14026,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  WHIMSICOTT: pokemon("WHIMSICOTT", {
+  WHIMSICOTT: createPokemon("WHIMSICOTT", {
     name: "Whimsicott",
-    line: Evolutions.COTTONEE,
-    type1: "grass",
-    type2: "fairy",
+    evolutionId: Evolution.COTTONEE.id,
+    type1: PokemonTypes.GRASS,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 60,
       attack: 67,
@@ -14037,11 +14040,11 @@ export const Pokemons = pokemonTable({
       speed: 116,
     },
   }),
-  WHIRLIPEDE: pokemon("WHIRLIPEDE", {
+  WHIRLIPEDE: createPokemon("WHIRLIPEDE", {
     name: "Whirlipede",
-    line: Evolutions.VENIPEDE,
-    type1: "bug",
-    type2: "poison",
+    evolutionId: Evolution.VENIPEDE.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.POISON,
     baseStats: {
       hp: 40,
       attack: 55,
@@ -14051,11 +14054,11 @@ export const Pokemons = pokemonTable({
       speed: 47,
     },
   }),
-  WHISCASH: pokemon("WHISCASH", {
+  WHISCASH: createPokemon("WHISCASH", {
     name: "Whiscash",
-    line: Evolutions.BARBOACH,
-    type1: "water",
-    type2: "ground",
+    evolutionId: Evolution.BARBOACH.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 110,
       attack: 78,
@@ -14065,10 +14068,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  WHISMUR: pokemon("WHISMUR", {
+  WHISMUR: createPokemon("WHISMUR", {
     name: "Whismur",
-    line: Evolutions.WHISMUR,
-    type1: "normal",
+    evolutionId: Evolution.WHISMUR.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 64,
       attack: 51,
@@ -14078,11 +14081,11 @@ export const Pokemons = pokemonTable({
       speed: 28,
     },
   }),
-  WIGGLYTUFF: pokemon("WIGGLYTUFF", {
+  WIGGLYTUFF: createPokemon("WIGGLYTUFF", {
     name: "Wigglytuff",
-    line: Evolutions.IGGLYBUFF,
-    type1: "normal",
-    type2: "fairy",
+    evolutionId: Evolution.IGGLYBUFF.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.FAIRY,
     baseStats: {
       hp: 140,
       attack: 70,
@@ -14092,10 +14095,10 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  WIGLETT: pokemon("WIGLETT", {
+  WIGLETT: createPokemon("WIGLETT", {
     name: "Wiglett",
-    line: Evolutions.WIGLETT,
-    type1: "water",
+    evolutionId: Evolution.WIGLETT.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 10,
       attack: 55,
@@ -14105,11 +14108,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  WIMPOD: pokemon("WIMPOD", {
+  WIMPOD: createPokemon("WIMPOD", {
     name: "Wimpod",
-    line: Evolutions.WIMPOD,
-    type1: "bug",
-    type2: "water",
+    evolutionId: Evolution.WIMPOD.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.WATER,
     baseStats: {
       hp: 25,
       attack: 35,
@@ -14119,11 +14122,11 @@ export const Pokemons = pokemonTable({
       speed: 80,
     },
   }),
-  WINGULL: pokemon("WINGULL", {
+  WINGULL: createPokemon("WINGULL", {
     name: "Wingull",
-    line: Evolutions.WINGULL,
-    type1: "water",
-    type2: "flying",
+    evolutionId: Evolution.WINGULL.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 40,
       attack: 30,
@@ -14133,10 +14136,10 @@ export const Pokemons = pokemonTable({
       speed: 85,
     },
   }),
-  WISHIWASHI: pokemon("WISHIWASHI", {
+  WISHIWASHI: createPokemon("WISHIWASHI", {
     name: "Wishiwashi",
-    line: Evolutions.WISHIWASHI,
-    type1: "water",
+    evolutionId: Evolution.WISHIWASHI.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 45,
       attack: 20,
@@ -14146,11 +14149,11 @@ export const Pokemons = pokemonTable({
       speed: 40,
     },
   }),
-  WO_CHIEN: pokemon("WO_CHIEN", {
+  WO_CHIEN: createPokemon("WO_CHIEN", {
     name: "Wo-Chien",
-    line: Evolutions.WO_CHIEN,
-    type1: "dark",
-    type2: "grass",
+    evolutionId: Evolution.WO_CHIEN.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 85,
       attack: 85,
@@ -14160,10 +14163,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  WOBBUFFET: pokemon("WOBBUFFET", {
+  WOBBUFFET: createPokemon("WOBBUFFET", {
     name: "Wobbuffet",
-    line: Evolutions.WYNAUT,
-    type1: "psychic",
+    evolutionId: Evolution.WYNAUT.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 190,
       attack: 33,
@@ -14173,11 +14176,11 @@ export const Pokemons = pokemonTable({
       speed: 33,
     },
   }),
-  WOOBAT: pokemon("WOOBAT", {
+  WOOBAT: createPokemon("WOOBAT", {
     name: "Woobat",
-    line: Evolutions.WOOBAT,
-    type1: "psychic",
-    type2: "flying",
+    evolutionId: Evolution.WOOBAT.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 65,
       attack: 45,
@@ -14187,10 +14190,10 @@ export const Pokemons = pokemonTable({
       speed: 72,
     },
   }),
-  WOOLOO: pokemon("WOOLOO", {
+  WOOLOO: createPokemon("WOOLOO", {
     name: "Wooloo",
-    line: Evolutions.WOOLOO,
-    type1: "normal",
+    evolutionId: Evolution.WOOLOO.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 42,
       attack: 40,
@@ -14200,11 +14203,11 @@ export const Pokemons = pokemonTable({
       speed: 48,
     },
   }),
-  WOOPER_PALDEA: pokemon("WOOPER_PALDEA", {
+  WOOPER_PALDEA: createPokemon("WOOPER_PALDEA", {
     name: "Paldean Wooper",
-    line: Evolutions.WOOPER,
-    type1: "poison",
-    type2: "ground",
+    evolutionId: Evolution.WOOPER.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 55,
       attack: 45,
@@ -14214,11 +14217,11 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  WOOPER: pokemon("WOOPER", {
+  WOOPER: createPokemon("WOOPER", {
     name: "Wooper",
-    line: Evolutions.WOOPER,
-    type1: "water",
-    type2: "ground",
+    evolutionId: Evolution.WOOPER.id,
+    type1: PokemonTypes.WATER,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 55,
       attack: 45,
@@ -14228,11 +14231,11 @@ export const Pokemons = pokemonTable({
       speed: 15,
     },
   }),
-  WORMADAM_SANDY: pokemon("WORMADAM_SANDY", {
+  WORMADAM_SANDY: createPokemon("WORMADAM_SANDY", {
     name: "Wormadam",
-    line: Evolutions.BURMY,
-    type1: "bug",
-    type2: "ground",
+    evolutionId: Evolution.BURMY.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 60,
       attack: 79,
@@ -14242,11 +14245,11 @@ export const Pokemons = pokemonTable({
       speed: 36,
     },
   }),
-  WORMADAM_TRASH: pokemon("WORMADAM_TRASH", {
+  WORMADAM_TRASH: createPokemon("WORMADAM_TRASH", {
     name: "Wormadam",
-    line: Evolutions.BURMY,
-    type1: "bug",
-    type2: "steel",
+    evolutionId: Evolution.BURMY.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.STEEL,
     baseStats: {
       hp: 60,
       attack: 69,
@@ -14256,11 +14259,11 @@ export const Pokemons = pokemonTable({
       speed: 36,
     },
   }),
-  WORMADAM: pokemon("WORMADAM", {
+  WORMADAM: createPokemon("WORMADAM", {
     name: "Wormadam",
-    line: Evolutions.BURMY,
-    type1: "bug",
-    type2: "grass",
+    evolutionId: Evolution.BURMY.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 60,
       attack: 59,
@@ -14270,10 +14273,10 @@ export const Pokemons = pokemonTable({
       speed: 36,
     },
   }),
-  WUGTRIO: pokemon("WUGTRIO", {
+  WUGTRIO: createPokemon("WUGTRIO", {
     name: "Wugtrio",
-    line: Evolutions.WIGLETT,
-    type1: "water",
+    evolutionId: Evolution.WIGLETT.id,
+    type1: PokemonTypes.WATER,
     baseStats: {
       hp: 35,
       attack: 100,
@@ -14283,10 +14286,10 @@ export const Pokemons = pokemonTable({
       speed: 120,
     },
   }),
-  WURMPLE: pokemon("WURMPLE", {
+  WURMPLE: createPokemon("WURMPLE", {
     name: "Wurmple",
-    line: Evolutions.WURMPLE,
-    type1: "bug",
+    evolutionId: Evolution.WURMPLE.id,
+    type1: PokemonTypes.BUG,
     baseStats: {
       hp: 45,
       attack: 45,
@@ -14296,10 +14299,10 @@ export const Pokemons = pokemonTable({
       speed: 20,
     },
   }),
-  WYNAUT: pokemon("WYNAUT", {
+  WYNAUT: createPokemon("WYNAUT", {
     name: "Wynaut",
-    line: Evolutions.WYNAUT,
-    type1: "psychic",
+    evolutionId: Evolution.WYNAUT.id,
+    type1: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 95,
       attack: 23,
@@ -14309,11 +14312,11 @@ export const Pokemons = pokemonTable({
       speed: 23,
     },
   }),
-  WYRDEER: pokemon("WYRDEER", {
+  WYRDEER: createPokemon("WYRDEER", {
     name: "Wyrdeer",
-    line: Evolutions.STANTLER,
-    type1: "normal",
-    type2: "psychic",
+    evolutionId: Evolution.STANTLER.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.PSYCHIC,
     baseStats: {
       hp: 103,
       attack: 105,
@@ -14323,11 +14326,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  XATU: pokemon("XATU", {
+  XATU: createPokemon("XATU", {
     name: "Xatu",
-    line: Evolutions.NATU,
-    type1: "psychic",
-    type2: "flying",
+    evolutionId: Evolution.NATU.id,
+    type1: PokemonTypes.PSYCHIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 65,
       attack: 75,
@@ -14337,10 +14340,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  XERNEAS: pokemon("XERNEAS", {
+  XERNEAS: createPokemon("XERNEAS", {
     name: "Xerneas",
-    line: Evolutions.XERNEAS,
-    type1: "fairy",
+    evolutionId: Evolution.XERNEAS.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 126,
       attack: 131,
@@ -14350,10 +14353,10 @@ export const Pokemons = pokemonTable({
       speed: 99,
     },
   }),
-  XURKITREE: pokemon("XURKITREE", {
+  XURKITREE: createPokemon("XURKITREE", {
     name: "Xurkitree",
-    line: Evolutions.XURKITREE,
-    type1: "electric",
+    evolutionId: Evolution.XURKITREE.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 83,
       attack: 89,
@@ -14363,11 +14366,11 @@ export const Pokemons = pokemonTable({
       speed: 83,
     },
   }),
-  YAMASK_GALAR: pokemon("YAMASK_GALAR", {
+  YAMASK_GALAR: createPokemon("YAMASK_GALAR", {
     name: "Galarian Yamask",
-    line: Evolutions.YAMASK,
-    type1: "ground",
-    type2: "ghost",
+    evolutionId: Evolution.YAMASK.id,
+    type1: PokemonTypes.GROUND,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 38,
       attack: 55,
@@ -14377,10 +14380,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  YAMASK: pokemon("YAMASK", {
+  YAMASK: createPokemon("YAMASK", {
     name: "Yamask",
-    line: Evolutions.YAMASK,
-    type1: "ghost",
+    evolutionId: Evolution.YAMASK.id,
+    type1: PokemonTypes.GHOST,
     baseStats: {
       hp: 38,
       attack: 30,
@@ -14390,10 +14393,10 @@ export const Pokemons = pokemonTable({
       speed: 30,
     },
   }),
-  YAMPER: pokemon("YAMPER", {
+  YAMPER: createPokemon("YAMPER", {
     name: "Yamper",
-    line: Evolutions.YAMPER,
-    type1: "electric",
+    evolutionId: Evolution.YAMPER.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 59,
       attack: 45,
@@ -14403,11 +14406,11 @@ export const Pokemons = pokemonTable({
       speed: 26,
     },
   }),
-  YANMA: pokemon("YANMA", {
+  YANMA: createPokemon("YANMA", {
     name: "Yanma",
-    line: Evolutions.YANMA,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.YANMA.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 65,
       attack: 65,
@@ -14417,11 +14420,11 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  YANMEGA: pokemon("YANMEGA", {
+  YANMEGA: createPokemon("YANMEGA", {
     name: "Yanmega",
-    line: Evolutions.YANMA,
-    type1: "bug",
-    type2: "flying",
+    evolutionId: Evolution.YANMA.id,
+    type1: PokemonTypes.BUG,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 86,
       attack: 76,
@@ -14431,10 +14434,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  YUNGOOS: pokemon("YUNGOOS", {
+  YUNGOOS: createPokemon("YUNGOOS", {
     name: "Yungoos",
-    line: Evolutions.YUNGOOS,
-    type1: "normal",
+    evolutionId: Evolution.YUNGOOS.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 48,
       attack: 70,
@@ -14444,11 +14447,11 @@ export const Pokemons = pokemonTable({
       speed: 45,
     },
   }),
-  YVELTAL: pokemon("YVELTAL", {
+  YVELTAL: createPokemon("YVELTAL", {
     name: "Yveltal",
-    line: Evolutions.YVELTAL,
-    type1: "dark",
-    type2: "flying",
+    evolutionId: Evolution.YVELTAL.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 126,
       attack: 131,
@@ -14458,10 +14461,10 @@ export const Pokemons = pokemonTable({
       speed: 99,
     },
   }),
-  ZACIAN: pokemon("ZACIAN", {
+  ZACIAN: createPokemon("ZACIAN", {
     name: "Zacian",
-    line: Evolutions.ZACIAN,
-    type1: "fairy",
+    evolutionId: Evolution.ZACIAN.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 92,
       attack: 130,
@@ -14471,10 +14474,10 @@ export const Pokemons = pokemonTable({
       speed: 138,
     },
   }),
-  ZAMAZENTA: pokemon("ZAMAZENTA", {
+  ZAMAZENTA: createPokemon("ZAMAZENTA", {
     name: "Zamazenta",
-    line: Evolutions.ZAMAZENTA,
-    type1: "fighting",
+    evolutionId: Evolution.ZAMAZENTA.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 92,
       attack: 130,
@@ -14484,10 +14487,10 @@ export const Pokemons = pokemonTable({
       speed: 138,
     },
   }),
-  ZANGOOSE: pokemon("ZANGOOSE", {
+  ZANGOOSE: createPokemon("ZANGOOSE", {
     name: "Zangoose",
-    line: Evolutions.ZANGOOSE,
-    type1: "normal",
+    evolutionId: Evolution.ZANGOOSE.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 73,
       attack: 115,
@@ -14497,11 +14500,11 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  ZAPDOS_GALAR: pokemon("ZAPDOS_GALAR", {
+  ZAPDOS_GALAR: createPokemon("ZAPDOS_GALAR", {
     name: "Galarian Zapdos",
-    line: Evolutions.ZAPDOS,
-    type1: "fighting",
-    type2: "flying",
+    evolutionId: Evolution.ZAPDOS.id,
+    type1: PokemonTypes.FIGHTING,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 90,
       attack: 125,
@@ -14511,11 +14514,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  ZAPDOS: pokemon("ZAPDOS", {
+  ZAPDOS: createPokemon("ZAPDOS", {
     name: "Zapdos",
-    line: Evolutions.ZAPDOS,
-    type1: "electric",
-    type2: "flying",
+    evolutionId: Evolution.ZAPDOS.id,
+    type1: PokemonTypes.ELECTRIC,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 90,
       attack: 90,
@@ -14525,11 +14528,11 @@ export const Pokemons = pokemonTable({
       speed: 100,
     },
   }),
-  ZARUDE: pokemon("ZARUDE", {
+  ZARUDE: createPokemon("ZARUDE", {
     name: "Zarude",
-    line: Evolutions.ZARUDE,
-    type1: "dark",
-    type2: "grass",
+    evolutionId: Evolution.ZARUDE.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.GRASS,
     baseStats: {
       hp: 105,
       attack: 120,
@@ -14539,10 +14542,10 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  ZEBSTRIKA: pokemon("ZEBSTRIKA", {
+  ZEBSTRIKA: createPokemon("ZEBSTRIKA", {
     name: "Zebstrika",
-    line: Evolutions.BLITZLE,
-    type1: "electric",
+    evolutionId: Evolution.BLITZLE.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 75,
       attack: 100,
@@ -14552,11 +14555,11 @@ export const Pokemons = pokemonTable({
       speed: 116,
     },
   }),
-  ZEKROM: pokemon("ZEKROM", {
+  ZEKROM: createPokemon("ZEKROM", {
     name: "Zekrom",
-    line: Evolutions.ZEKROM,
-    type1: "dragon",
-    type2: "electric",
+    evolutionId: Evolution.ZEKROM.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 100,
       attack: 150,
@@ -14566,10 +14569,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  ZERAORA: pokemon("ZERAORA", {
+  ZERAORA: createPokemon("ZERAORA", {
     name: "Zeraora",
-    line: Evolutions.ZERAORA,
-    type1: "electric",
+    evolutionId: Evolution.ZERAORA.id,
+    type1: PokemonTypes.ELECTRIC,
     baseStats: {
       hp: 88,
       attack: 112,
@@ -14579,11 +14582,11 @@ export const Pokemons = pokemonTable({
       speed: 143,
     },
   }),
-  ZIGZAGOON_GALAR: pokemon("ZIGZAGOON_GALAR", {
+  ZIGZAGOON_GALAR: createPokemon("ZIGZAGOON_GALAR", {
     name: "Galarian Zigzagoon",
-    line: Evolutions.ZIGZAGOON,
-    type1: "dark",
-    type2: "normal",
+    evolutionId: Evolution.ZIGZAGOON.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.NORMAL,
     baseStats: {
       hp: 38,
       attack: 30,
@@ -14593,10 +14596,10 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  ZIGZAGOON: pokemon("ZIGZAGOON", {
+  ZIGZAGOON: createPokemon("ZIGZAGOON", {
     name: "Zigzagoon",
-    line: Evolutions.ZIGZAGOON,
-    type1: "normal",
+    evolutionId: Evolution.ZIGZAGOON.id,
+    type1: PokemonTypes.NORMAL,
     baseStats: {
       hp: 38,
       attack: 30,
@@ -14606,11 +14609,11 @@ export const Pokemons = pokemonTable({
       speed: 60,
     },
   }),
-  ZOROARK_HISUI: pokemon("ZOROARK_HISUI", {
+  ZOROARK_HISUI: createPokemon("ZOROARK_HISUI", {
     name: "Hisuian Zoroark",
-    line: Evolutions.ZORUA,
-    type1: "normal",
-    type2: "ghost",
+    evolutionId: Evolution.ZORUA.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 55,
       attack: 100,
@@ -14620,10 +14623,10 @@ export const Pokemons = pokemonTable({
       speed: 110,
     },
   }),
-  ZOROARK: pokemon("ZOROARK", {
+  ZOROARK: createPokemon("ZOROARK", {
     name: "Zoroark",
-    line: Evolutions.ZORUA,
-    type1: "dark",
+    evolutionId: Evolution.ZORUA.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 60,
       attack: 105,
@@ -14633,11 +14636,11 @@ export const Pokemons = pokemonTable({
       speed: 105,
     },
   }),
-  ZORUA_HISUI: pokemon("ZORUA_HISUI", {
+  ZORUA_HISUI: createPokemon("ZORUA_HISUI", {
     name: "Hisuian Zorua",
-    line: Evolutions.ZORUA,
-    type1: "normal",
-    type2: "ghost",
+    evolutionId: Evolution.ZORUA.id,
+    type1: PokemonTypes.NORMAL,
+    type2: PokemonTypes.GHOST,
     baseStats: {
       hp: 35,
       attack: 60,
@@ -14647,10 +14650,10 @@ export const Pokemons = pokemonTable({
       speed: 70,
     },
   }),
-  ZORUA: pokemon("ZORUA", {
+  ZORUA: createPokemon("ZORUA", {
     name: "Zorua",
-    line: Evolutions.ZORUA,
-    type1: "dark",
+    evolutionId: Evolution.ZORUA.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 40,
       attack: 65,
@@ -14660,11 +14663,11 @@ export const Pokemons = pokemonTable({
       speed: 65,
     },
   }),
-  ZUBAT: pokemon("ZUBAT", {
+  ZUBAT: createPokemon("ZUBAT", {
     name: "Zubat",
-    line: Evolutions.ZUBAT,
-    type1: "poison",
-    type2: "flying",
+    evolutionId: Evolution.ZUBAT.id,
+    type1: PokemonTypes.POISON,
+    type2: PokemonTypes.FLYING,
     baseStats: {
       hp: 40,
       attack: 45,
@@ -14674,11 +14677,11 @@ export const Pokemons = pokemonTable({
       speed: 55,
     },
   }),
-  ZWEILOUS: pokemon("ZWEILOUS", {
+  ZWEILOUS: createPokemon("ZWEILOUS", {
     name: "Zweilous",
-    line: Evolutions.DEINO,
-    type1: "dark",
-    type2: "dragon",
+    evolutionId: Evolution.DEINO.id,
+    type1: PokemonTypes.DARK,
+    type2: PokemonTypes.DRAGON,
     baseStats: {
       hp: 72,
       attack: 85,
@@ -14688,11 +14691,11 @@ export const Pokemons = pokemonTable({
       speed: 58,
     },
   }),
-  ZYGARDE: pokemon("ZYGARDE", {
+  ZYGARDE: createPokemon("ZYGARDE", {
     name: "Zygarde",
-    line: Evolutions.ZYGARDE,
-    type1: "dragon",
-    type2: "ground",
+    evolutionId: Evolution.ZYGARDE.id,
+    type1: PokemonTypes.DRAGON,
+    type2: PokemonTypes.GROUND,
     baseStats: {
       hp: 108,
       attack: 100,
@@ -14702,10 +14705,10 @@ export const Pokemons = pokemonTable({
       speed: 95,
     },
   }),
-  SEGIN_STARMOBILE: pokemon("SEGIN_STARMOBILE", {
+  SEGIN_STARMOBILE: createPokemon("SEGIN_STARMOBILE", {
     name: "Segin Starmobile",
-    line: Evolutions.VAROOM,
-    type1: "dark",
+    evolutionId: Evolution.VAROOM.id,
+    type1: PokemonTypes.DARK,
     baseStats: {
       hp: 80,
       attack: 119,
@@ -14715,10 +14718,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  SCHEDAR_STARMOBILE: pokemon("SCHEDAR_STARMOBILE", {
+  SCHEDAR_STARMOBILE: createPokemon("SCHEDAR_STARMOBILE", {
     name: "Schedar Starmobile",
-    line: Evolutions.VAROOM,
-    type1: "fire",
+    evolutionId: Evolution.VAROOM.id,
+    type1: PokemonTypes.FIRE,
     baseStats: {
       hp: 80,
       attack: 119,
@@ -14728,10 +14731,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  NAVI_STARMOBILE: pokemon("NAVI_STARMOBILE", {
+  NAVI_STARMOBILE: createPokemon("NAVI_STARMOBILE", {
     name: "Navi Starmobile",
-    line: Evolutions.VAROOM,
-    type1: "poison",
+    evolutionId: Evolution.VAROOM.id,
+    type1: PokemonTypes.POISON,
     baseStats: {
       hp: 80,
       attack: 119,
@@ -14741,10 +14744,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  RUCHBAH_STARMOBILE: pokemon("RUCHBAH_STARMOBILE", {
+  RUCHBAH_STARMOBILE: createPokemon("RUCHBAH_STARMOBILE", {
     name: "Ruchbah Starmobile",
-    line: Evolutions.VAROOM,
-    type1: "fairy",
+    evolutionId: Evolution.VAROOM.id,
+    type1: PokemonTypes.FAIRY,
     baseStats: {
       hp: 80,
       attack: 119,
@@ -14754,10 +14757,10 @@ export const Pokemons = pokemonTable({
       speed: 90,
     },
   }),
-  CAPH_STARMOBILE: pokemon("CAPH_STARMOBILE", {
+  CAPH_STARMOBILE: createPokemon("CAPH_STARMOBILE", {
     name: "Caph Starmobile",
-    line: Evolutions.VAROOM,
-    type1: "fighting",
+    evolutionId: Evolution.VAROOM.id,
+    type1: PokemonTypes.FIGHTING,
     baseStats: {
       hp: 80,
       attack: 119,

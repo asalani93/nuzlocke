@@ -1,5 +1,5 @@
 import { StatusIndicator } from "../common/status_indicator"
-import { useProgressForRouteStep } from "../state/step_status"
+import { useProgressForRouteStep } from "../state/step_status_hooks"
 import type { RouteId } from "../types/route"
 
 export interface RouteStepStatusIndicator {

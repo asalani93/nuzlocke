@@ -21,7 +21,14 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Paths */
+    "baseUrl": ".",
+    "paths": {
+      "@/scripts/*": ["./scripts/*"],
+      "@/src/*": ["./src/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["scripts", "src"]
 }

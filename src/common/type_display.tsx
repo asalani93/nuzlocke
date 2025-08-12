@@ -1,5 +1,7 @@
 import { Group, Text } from "@mantine/core"
-import type { PokemonType } from "../types/pokemon"
+
+import type { PokemonType } from "../types/pokemon_type"
+
 import { TypeBadge } from "./type_badge"
 
 export interface TypeDisplayProps {

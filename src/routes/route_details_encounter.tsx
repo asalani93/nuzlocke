@@ -1,11 +1,14 @@
 import { ActionIcon, Center, Skeleton, Stack, Text, Tooltip } from "@mantine/core"
-import { EncounterStatus, useEncounterForRoute, useRevealEncounter } from "../state/encounters"
-import type { RouteId } from "../types/route"
-import { useCallback, useMemo } from "react"
-import { StepStatus, useProgressForRouteStep } from "../state/step_status"
-import { usePokemon, useRoute } from "../app/hooks"
 import { IconEye } from "@tabler/icons-react"
+import { useCallback, useMemo } from "react"
+
 import { TypeDisplay } from "../common/type_display"
+import { useEncounterForRoute, useRevealEncounter } from "../state/encounters_hooks"
+import { EncounterStatuses } from "../state/encounters"
+import { usePokemon, useRoute } from "../state/game_data_hooks"
+import { useProgressForRouteStep } from "../state/step_status_hooks"
+import { StepStatus } from "../state/step_status"
+import type { RouteId } from "../types/route"
 
 export interface RouteDetailsEncounterProps {
   routeId: RouteId
@@ -21,15 +24,15 @@ export function RouteDetailsEncounter({ routeId }: RouteDetailsEncounterProps) {
   if (encounter == null) {
     throw new Error("Encounter not found")
   }
-  const pokemon = usePokemon(encounter.pokemonId)
+  const pokemon = usePokemon(encounter.pokemonId)!
 
   const routeStepStatus = useProgressForRouteStep(routeId)
-  const hidden = encounter?.status === EncounterStatus.HIDDEN
+  const hidden = encounter?.status === EncounterStatuses.HIDDEN
   const locked = routeStepStatus === StepStatus.LOCKED
 
-  const route = useRoute(routeId)
+  const route = useRoute(routeId)!
   const encounterData = useMemo(() => {
-    return route.encounters.find((e) => e.pokemon === encounter.pokemonId)!
+    return route.encounters.find((e) => e.pokemonId === encounter.pokemonId)!
   }, [encounter, route])
 
   const levelData =

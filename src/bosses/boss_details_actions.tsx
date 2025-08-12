@@ -1,9 +1,11 @@
 import { ActionIcon, Button, Center, Group, Menu } from "@mantine/core"
-import { useCallback } from "react"
 import { IconDots, IconRefresh } from "@tabler/icons-react"
-import { useCompleteBoss, useFailBoss, useResetBoss } from "../state/boss_progression"
+import { useCallback } from "react"
+
+import { useCompleteBoss, useFailBoss, useResetBoss } from "../state/boss_progression_hooks"
+import { useProgressForBossStep } from "../state/step_status_hooks"
+import { StepStatus } from "../state/step_status"
 import type { BossId } from "../types/boss"
-import { StepStatus, useProgressForBossStep } from "../state/step_status"
 
 export interface BossDetailsActionsProps {
   bossId: BossId

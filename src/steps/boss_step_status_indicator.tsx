@@ -1,5 +1,5 @@
 import { StatusIndicator } from "../common/status_indicator"
-import { useProgressForBossStep } from "../state/step_status"
+import { useProgressForBossStep } from "../state/step_status_hooks"
 import type { BossId } from "../types/boss"
 
 export interface BossStepStatusIndicator {

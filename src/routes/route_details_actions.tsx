@@ -1,18 +1,20 @@
 import { ActionIcon, Button, Center, Group, Menu } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
+import { IconDice3, IconDots, IconEyeOff, IconPencil } from "@tabler/icons-react"
+import { useCallback } from "react"
+
 import type { RouteId } from "../types/route"
 import {
-  EncounterStatus,
   useCatchEncounter,
   useDefeatEncounter,
   useEncounterForRoute,
   useHideEncounter,
   useRerollEncounter,
-} from "../state/encounters"
-import { useCallback } from "react"
-import { IconDice3, IconDots, IconEyeOff, IconPencil } from "@tabler/icons-react"
+} from "../state/encounters_hooks"
+import { EncounterStatuses } from "../state/encounters"
+import { useProgressForRouteStep } from "../state/step_status_hooks"
+
 import { RouteOverrideModal } from "./route_override_modal"
-import { useProgressForRouteStep } from "../state/step_status"
 
 export interface RouteDetailsActionsProps {
   routeId: RouteId
@@ -48,7 +50,7 @@ export function RouteDetailsActions({ routeId }: RouteDetailsActionsProps) {
   }
 
   const stepStatus = useProgressForRouteStep(routeId)
-  const hidden = encounter?.status === EncounterStatus.HIDDEN || stepStatus === "LOCKED"
+  const hidden = encounter?.status === EncounterStatuses.HIDDEN || stepStatus === "LOCKED"
 
   return (
     <>

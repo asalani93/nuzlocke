@@ -1,24 +1,9 @@
-import {
-  createTable,
-  createId,
-  type Id,
-  type IdInstance,
-  type Table,
-} from "./util";
+import z from "zod"
 
-export type EvolutionId = Id<"evolution">;
+export const evolutionId = z.string().brand("evolution")
+export type EvolutionId = z.infer<typeof evolutionId>
 
-export type EvolutionIdInstance<T extends string> = IdInstance<EvolutionId, T>;
-
-export type EvolutionTable<T extends string> = Table<
-  T,
-  () => EvolutionIdInstance<T>
->;
-
-export const evolutionId = createId<EvolutionId>();
-
-export function evolutionTable<T extends string>(
-  table: EvolutionTable<T>
-): EvolutionTable<T> {
-  return createTable<T, EvolutionTable<T>>(table);
-}
+export const evolution = z.object({
+  id: evolutionId,
+})
+export type Evolution = z.infer<typeof evolution>

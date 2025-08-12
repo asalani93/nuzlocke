@@ -1,51 +1,23 @@
-import type { LocationId } from "./location";
-import type { PokemonId } from "./pokemon";
-import type { VersionId } from "./version";
-import {
-  createId,
-  createTable,
-  type Id,
-  type IdInstance,
-  type Table,
-} from "./util";
+import z from "zod"
+import { locationId } from "./location"
+import { pokemonId } from "./pokemon"
+import { versionId } from "./version"
 
-export type RouteId = Id<"route">;
+export const routeId = z.string().brand("route")
+export type RouteId = z.infer<typeof routeId>
 
-type RouteIdInstance<T extends string> = IdInstance<RouteId, T>;
+export const routeEncounter = z.object({
+  pokemonId: pokemonId,
+  weight: z.number(),
+  versionIds: z.array(versionId),
+  minLevel: z.number(),
+  maxLevel: z.number(),
+})
+export type RouteEncounter = z.infer<typeof routeEncounter>
 
-export type RouteTable<T extends string> = Table<T, () => _Route<T>>;
-
-export const routeId = createId<RouteId>();
-
-export function routeTable<T extends string>(
-  table: RouteTable<T>
-): RouteTable<T> {
-  return createTable<T, RouteTable<T>>(table);
-}
-
-interface _Route<T extends string> {
-  id: RouteIdInstance<T>;
-  location: LocationId;
-  encounters: RouteEncounter[];
-}
-
-export type Route = _Route<string>;
-
-export interface RouteEncounter {
-  pokemon: PokemonId;
-  weight: number;
-  versions: VersionId[];
-  minLevel: number;
-  maxLevel: number;
-}
-
-export function route<T extends string>(
-  id: T,
-  { location, encounters }: Omit<Route, "id">
-): _Route<T> {
-  return {
-    id: routeId(id),
-    location,
-    encounters,
-  };
-}
+export const route = z.object({
+  id: routeId,
+  locationId: locationId,
+  encounters: z.array(routeEncounter),
+})
+export type Route = z.infer<typeof route>
