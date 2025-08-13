@@ -15,7 +15,8 @@ export function StateProvider({ children }: StateProviderProps) {
   const state = useMemo(() => {
     const { gameData, stepOrder } = loadGameData()
 
-    const initialVersionId = gameData.defaultVersion
+    const initialVersionId = gameData.defaultVersionId
+    const starterRouteId = gameData.starterRouteId
 
     const { currentVersionIdAtom } = createCurrentVersionIdState(initialVersionId)
 
@@ -27,6 +28,7 @@ export function StateProvider({ children }: StateProviderProps) {
 
     const { encountersAtom } = createEncountersState(
       initialVersionId,
+      starterRouteId,
       currentVersionIdAtom,
       gameData,
       stepOrder

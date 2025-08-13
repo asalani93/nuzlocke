@@ -16,12 +16,13 @@ export async function buildScarletViolet() {
   const body = {
     abilities: Object.values(Ability),
     bosses: Object.values(Boss),
-    defaultVersion: Version.SCARLET.id,
+    defaultVersionId: Version.SCARLET.id,
     evolutions: Object.values(Evolution),
     locations: Object.values(Location),
     moves: Object.values(Move),
     pokemon: Object.values(Pokemon),
     routes: Object.values(Route),
+    starterRouteId: Route.STARTER.id,
     steps: Object.values(Step),
     versions: Object.values(Version),
   }

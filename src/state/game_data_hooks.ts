@@ -2,16 +2,18 @@ import { useCallback, useMemo } from "react"
 
 import type { AbilityId } from "../types/ability"
 import type { BossId } from "../types/boss"
+import { ConditionType } from "../types/condition"
 import type { EvolutionId } from "../types/evolution"
 import type { LocationId } from "../types/location"
 import type { MoveId } from "../types/move"
 import type { PokemonId } from "../types/pokemon"
 import type { RouteId } from "../types/route"
-import type { StepId } from "../types/step"
+import { StepTypes, type BossStepId, type RouteStepId, type StepId } from "../types/step"
 import type { VersionId } from "../types/version"
 
 import type { GameData } from "./game_data"
 import { useStateContext } from "./state_context"
+import { useEncounters } from "./encounters_hooks"
 
 export function useGameData(): GameData {
   const { gameData } = useStateContext()
@@ -107,6 +109,16 @@ export function useRoute(routeId: RouteId) {
   return useMemo(() => routeLookup(routeId), [routeId, routeLookup])
 }
 
+export function useBossStep(bossStepId: BossStepId) {
+  const step = useStep(bossStepId)
+  return step?.type === StepTypes.BOSS ? step : undefined
+}
+
+export function useRouteStep(routeStepId: RouteStepId) {
+  const step = useStep(routeStepId)
+  return step?.type === StepTypes.ROUTE ? step : undefined
+}
+
 export function useStep(stepId: StepId) {
   const stepLookup = useStepLookup()
   return useMemo(() => stepLookup(stepId), [stepId, stepLookup])
@@ -115,6 +127,26 @@ export function useStep(stepId: StepId) {
 export function useVersion(versionId: VersionId) {
   const versionLookup = useVersionLookup()
   return useMemo(() => versionLookup(versionId), [versionId, versionLookup])
+}
+
+export function useBossStepVariantId(bossStepId: BossStepId) {
+  const bossStep = useBossStep(bossStepId)!
+  const encounters = useEncounters()
+
+  let bossId = bossStep.bossId
+  for (const bossVariant of bossStep.bossVariants) {
+    const condition = bossVariant.condition
+
+    switch (condition.type) {
+      case ConditionType.ENCOUNTER: {
+        if (encounters[condition.routeId]?.pokemonId === condition.pokemonId) {
+          bossId = bossVariant.bossId
+        }
+      }
+    }
+  }
+
+  return bossId
 }
 
 export function useOrderedSteps() {

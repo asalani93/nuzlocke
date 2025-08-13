@@ -4,8 +4,8 @@ import { useMemo } from "react"
 
 import { BossDetails } from "../bosses/boss_details"
 import { BossName } from "../bosses/boss_name"
+import { useBoss, useBossStepVariantId } from "../state/game_data_hooks"
 import { type BossStep } from "../types/step"
-import { useBoss } from "../state/game_data_hooks"
 
 import { BossStepStatusIndicator } from "./boss_step_status_indicator"
 
@@ -14,7 +14,8 @@ export interface BossStepProps {
 }
 
 export function BossStep({ bossStep }: BossStepProps) {
-  const boss = useBoss(bossStep.bossId)!
+  const bossId = useBossStepVariantId(bossStep.id)
+  const boss = useBoss(bossId)!
 
   const maxLevel = useMemo(
     () => Math.max(...boss.team.map((teamMember) => teamMember.level)),

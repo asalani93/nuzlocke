@@ -23,12 +23,13 @@ function arrayToRecord<TId extends string, TData extends { id: TId }>(
 export const serializedGameData = z.object({
   abilities: z.array(ability),
   bosses: z.array(boss),
-  defaultVersion: versionId,
+  defaultVersionId: versionId,
   evolutions: z.array(evolution),
   locations: z.array(location),
   moves: z.array(move),
   pokemon: z.array(pokemon),
   routes: z.array(route),
+  starterRouteId: routeId,
   steps: z.array(step),
   versions: z.array(version),
 })
@@ -37,12 +38,13 @@ export type SerializedGameData = z.infer<typeof serializedGameData>
 export const deserializedGameData = z.object({
   abilities: z.record(abilityId, ability.optional()),
   bosses: z.record(bossId, boss.optional()),
-  defaultVersion: versionId,
+  defaultVersionId: versionId,
   evolutions: z.record(evolutionId, evolution.optional()),
   locations: z.record(locationId, location.optional()),
   moves: z.record(moveId, move.optional()),
   pokemon: z.record(pokemonId, pokemon.optional()),
   routes: z.record(routeId, route.optional()),
+  starterRouteId: routeId,
   steps: z.record(stepId, step.optional()),
   versions: z.record(versionId, version.optional()),
 })
@@ -52,12 +54,13 @@ export const gameData = serializedGameData.transform(
   (gameData): DeserializedGameData => ({
     abilities: arrayToRecord(gameData.abilities),
     bosses: arrayToRecord(gameData.bosses),
-    defaultVersion: gameData.defaultVersion,
+    defaultVersionId: gameData.defaultVersionId,
     evolutions: arrayToRecord(gameData.evolutions),
     locations: arrayToRecord(gameData.locations),
     moves: arrayToRecord(gameData.moves),
     pokemon: arrayToRecord(gameData.pokemon),
     routes: arrayToRecord(gameData.routes),
+    starterRouteId: gameData.starterRouteId,
     steps: arrayToRecord(gameData.steps),
     versions: arrayToRecord(gameData.versions),
   })

@@ -2581,7 +2581,7 @@
       ]
     }
   ],
-  "defaultVersion": "SCARLET",
+  "defaultVersionId": "SCARLET",
   "evolutions": [
     {
       "id": "ABRA"
@@ -36663,6 +36663,7 @@
       ]
     }
   ],
+  "starterRouteId": "STARTER",
   "steps": [
     {
       "id": "STARTER",
@@ -36679,6 +36680,32 @@
       "type": "BOSS",
       "index": 1,
       "bossId": "NEMONA_1A",
+      "bossVariants": [
+        {
+          "bossId": "NEMONA_1A",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "SPRIGATITO"
+          }
+        },
+        {
+          "bossId": "NEMONA_1B",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "FUECOCO"
+          }
+        },
+        {
+          "bossId": "NEMONA_1C",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "QUAXLY"
+          }
+        }
+      ],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36710,6 +36737,32 @@
       "type": "BOSS",
       "index": 4,
       "bossId": "NEMONA_2A",
+      "bossVariants": [
+        {
+          "bossId": "NEMONA_2A",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "SPRIGATITO"
+          }
+        },
+        {
+          "bossId": "NEMONA_2B",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "FUECOCO"
+          }
+        },
+        {
+          "bossId": "NEMONA_2C",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "QUAXLY"
+          }
+        }
+      ],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36751,6 +36804,7 @@
       "type": "BOSS",
       "index": 8,
       "bossId": "KATY",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36792,6 +36846,7 @@
       "type": "BOSS",
       "index": 12,
       "bossId": "KLAWF",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36803,6 +36858,7 @@
       "type": "BOSS",
       "index": 13,
       "bossId": "BRASSIUS",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36824,6 +36880,7 @@
       "type": "BOSS",
       "index": 15,
       "bossId": "BOMBIRDIER",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36835,6 +36892,7 @@
       "type": "BOSS",
       "index": 16,
       "bossId": "GIACOMO",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36856,6 +36914,32 @@
       "type": "BOSS",
       "index": 18,
       "bossId": "NEMONA_3A",
+      "bossVariants": [
+        {
+          "bossId": "NEMONA_3A",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "SPRIGATITO"
+          }
+        },
+        {
+          "bossId": "NEMONA_3B",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "FUECOCO"
+          }
+        },
+        {
+          "bossId": "NEMONA_3C",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "QUAXLY"
+          }
+        }
+      ],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36867,6 +36951,7 @@
       "type": "BOSS",
       "index": 19,
       "bossId": "IONO",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36878,6 +36963,7 @@
       "type": "BOSS",
       "index": 20,
       "bossId": "MELA",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36899,6 +36985,7 @@
       "type": "BOSS",
       "index": 22,
       "bossId": "ORTHWORM",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36920,6 +37007,7 @@
       "type": "BOSS",
       "index": 24,
       "bossId": "KOFU",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36971,6 +37059,7 @@
       "type": "BOSS",
       "index": 29,
       "bossId": "ATTICUS",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36982,6 +37071,32 @@
       "type": "BOSS",
       "index": 30,
       "bossId": "NEMONA_4A",
+      "bossVariants": [
+        {
+          "bossId": "NEMONA_4A",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "SPRIGATITO"
+          }
+        },
+        {
+          "bossId": "NEMONA_4B",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "FUECOCO"
+          }
+        },
+        {
+          "bossId": "NEMONA_4C",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "QUAXLY"
+          }
+        }
+      ],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36993,6 +37108,7 @@
       "type": "BOSS",
       "index": 31,
       "bossId": "LARRY_1",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37014,6 +37130,7 @@
       "type": "BOSS",
       "index": 33,
       "bossId": "RYME",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37045,6 +37162,7 @@
       "type": "BOSS",
       "index": 36,
       "bossId": "GREAT_TUSK",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET"
       ],
@@ -37055,6 +37173,7 @@
       "type": "BOSS",
       "index": 37,
       "bossId": "IRON_TREADS",
+      "bossVariants": [],
       "versionIds": [
         "VIOLET"
       ],
@@ -37065,6 +37184,32 @@
       "type": "BOSS",
       "index": 38,
       "bossId": "NEMONA_5A",
+      "bossVariants": [
+        {
+          "bossId": "NEMONA_5A",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "SPRIGATITO"
+          }
+        },
+        {
+          "bossId": "NEMONA_5B",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "FUECOCO"
+          }
+        },
+        {
+          "bossId": "NEMONA_5C",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "QUAXLY"
+          }
+        }
+      ],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37076,6 +37221,7 @@
       "type": "BOSS",
       "index": 39,
       "bossId": "TULIP",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37087,6 +37233,7 @@
       "type": "BOSS",
       "index": 40,
       "bossId": "GRUSHA",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37108,6 +37255,7 @@
       "type": "BOSS",
       "index": 42,
       "bossId": "ORTEGA",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37129,6 +37277,7 @@
       "type": "BOSS",
       "index": 44,
       "bossId": "TATSUGIRI",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37160,6 +37309,7 @@
       "type": "BOSS",
       "index": 47,
       "bossId": "ERI",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37241,6 +37391,7 @@
       "type": "BOSS",
       "index": 55,
       "bossId": "RIKA",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37252,6 +37403,7 @@
       "type": "BOSS",
       "index": 56,
       "bossId": "POPPY",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37263,6 +37415,7 @@
       "type": "BOSS",
       "index": 57,
       "bossId": "LARRY_2",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37274,6 +37427,7 @@
       "type": "BOSS",
       "index": 58,
       "bossId": "HASSEL",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37285,6 +37439,7 @@
       "type": "BOSS",
       "index": 59,
       "bossId": "GEETA",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37296,6 +37451,7 @@
       "type": "BOSS",
       "index": 60,
       "bossId": "ARVEN",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37307,6 +37463,7 @@
       "type": "BOSS",
       "index": 61,
       "bossId": "CLIVE",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37318,6 +37475,7 @@
       "type": "BOSS",
       "index": 62,
       "bossId": "PENNY",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37329,6 +37487,32 @@
       "type": "BOSS",
       "index": 63,
       "bossId": "NEMONA_6A",
+      "bossVariants": [
+        {
+          "bossId": "NEMONA_6A",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "SPRIGATITO"
+          }
+        },
+        {
+          "bossId": "NEMONA_6B",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "FUECOCO"
+          }
+        },
+        {
+          "bossId": "NEMONA_6C",
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "QUAXLY"
+          }
+        }
+      ],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37340,6 +37524,7 @@
       "type": "BOSS",
       "index": 64,
       "bossId": "SADA_1",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET"
       ],
@@ -37350,6 +37535,7 @@
       "type": "BOSS",
       "index": 65,
       "bossId": "TURO_1",
+      "bossVariants": [],
       "versionIds": [
         "VIOLET"
       ],
@@ -37360,6 +37546,7 @@
       "type": "BOSS",
       "index": 66,
       "bossId": "SADA_2",
+      "bossVariants": [],
       "versionIds": [
         "SCARLET"
       ],
@@ -37370,6 +37557,7 @@
       "type": "BOSS",
       "index": 67,
       "bossId": "TURO_2",
+      "bossVariants": [],
       "versionIds": [
         "VIOLET"
       ],

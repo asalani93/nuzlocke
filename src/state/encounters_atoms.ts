@@ -29,10 +29,12 @@ interface CalculateEncountersOptions {
 class EncounterManager {
   private readonly gameData: GameData
   private readonly stepOrder: Step[]
+  private readonly starterRouteId: RouteId
 
-  constructor(gameData: GameData, stepOrder: Step[]) {
+  constructor(gameData: GameData, stepOrder: Step[], starterRouteId: RouteId) {
     this.gameData = gameData
     this.stepOrder = stepOrder
+    this.starterRouteId = starterRouteId
   }
 
   public calculateEncounters(
@@ -63,7 +65,12 @@ class EncounterManager {
         TBD_HANDLE_ERROR()
       }
 
-      const status = shouldRoll ? EncounterStatuses.HIDDEN : currentEncounter.status
+      const status =
+        shouldRoll && step.routeId === this.starterRouteId
+          ? EncounterStatuses.UNCAUGHT
+          : shouldRoll
+          ? EncounterStatuses.HIDDEN
+          : currentEncounter.status
 
       newEncounters[step.routeId] = {
         routeId: step.routeId,
@@ -167,17 +174,17 @@ class EncounterManager {
 
 export function createEncountersState(
   initialVersionId: VersionId,
+  starterRouteId: RouteId,
   currentVersionIdAtom: CurrentVersionIdAtom,
   gameData: GameData,
   stepOrder: Step[]
 ) {
-  const encounterManager = new EncounterManager(gameData, stepOrder)
-
   const validatedStorage = createValidatedJsonStorage<SerializedEncounters, Encounters>(
     serializedEncounters,
     1
   )
 
+  const encounterManager = new EncounterManager(gameData, stepOrder, starterRouteId)
   const encountersAtomInner = atomWithStorage<Encounters>(
     "nuzlocke_encounters",
     encounterManager.calculateEncounters({}, initialVersionId),
@@ -192,8 +199,7 @@ export function createEncountersState(
       const oldEncounters = get(encountersAtomInner)
       switch (action.type) {
         case "RESET_ALL": {
-          const newEncounters = encounterManager.calculateEncounters({}, currentVersionId)
-          set(encountersAtomInner, newEncounters)
+          set(encountersAtomInner, encounterManager.calculateEncounters({}, initialVersionId))
           break
         }
 

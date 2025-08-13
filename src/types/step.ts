@@ -1,5 +1,7 @@
 import z from "zod"
+
 import { bossId } from "./boss"
+import { condition } from "./condition"
 import { routeId } from "./route"
 import { versionId } from "./version"
 
@@ -16,11 +18,18 @@ export type BossStepId = z.infer<typeof bossStepId>
 export const routeStepId = stepId.brand("routeStep")
 export type RouteStepId = z.infer<typeof routeStepId>
 
+export const bossVariant = z.object({
+  condition: condition,
+  bossId: bossId,
+})
+export type BossVariant = z.infer<typeof bossVariant>
+
 export const bossStep = z.object({
   id: bossStepId,
   index: z.number(),
   type: z.literal(StepTypes.BOSS),
   bossId: bossId,
+  bossVariants: z.array(bossVariant).default([]),
   versionIds: z.array(versionId),
   enforceCap: z.boolean(),
 })

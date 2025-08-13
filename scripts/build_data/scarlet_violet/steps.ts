@@ -1,8 +1,10 @@
+import { ConditionType } from "@/src/types/condition"
 import { createBossStep, createRouteStep, createStepTable } from "../utils"
 
 import { Boss } from "./bosses"
 import { Route } from "./routes"
 import { Version } from "./versions"
+import { Pokemon } from "./pokemon"
 
 export const Step = createStepTable({
   STARTER: createRouteStep("STARTER", {
@@ -13,6 +15,32 @@ export const Step = createStepTable({
   NEMONA_1: createBossStep("NEMONA_1", {
     index: 1,
     bossId: Boss.NEMONA_1A.id,
+    bossVariants: [
+      {
+        bossId: Boss.NEMONA_1A.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.SPRIGATITO.id,
+        },
+      },
+      {
+        bossId: Boss.NEMONA_1B.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.FUECOCO.id,
+        },
+      },
+      {
+        bossId: Boss.NEMONA_1C.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.QUAXLY.id,
+        },
+      },
+    ],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -29,6 +57,32 @@ export const Step = createStepTable({
   NEMONA_2: createBossStep("NEMONA_2", {
     index: 4,
     bossId: Boss.NEMONA_2A.id,
+    bossVariants: [
+      {
+        bossId: Boss.NEMONA_2A.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.SPRIGATITO.id,
+        },
+      },
+      {
+        bossId: Boss.NEMONA_2B.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.FUECOCO.id,
+        },
+      },
+      {
+        bossId: Boss.NEMONA_2C.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.QUAXLY.id,
+        },
+      },
+    ],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -50,6 +104,7 @@ export const Step = createStepTable({
   KATY: createBossStep("KATY", {
     index: 8,
     bossId: Boss.KATY.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -71,12 +126,14 @@ export const Step = createStepTable({
   KLAWF: createBossStep("KLAWF", {
     index: 12,
     bossId: Boss.KLAWF.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
   BRASSIUS: createBossStep("BRASSIUS", {
     index: 13,
     bossId: Boss.BRASSIUS.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -88,12 +145,14 @@ export const Step = createStepTable({
   BOMBIRDIER: createBossStep("BOMBIRDIER", {
     index: 15,
     bossId: Boss.BOMBIRDIER.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
   GIACOMO: createBossStep("GIACOMO", {
     index: 16,
     bossId: Boss.GIACOMO.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -105,18 +164,46 @@ export const Step = createStepTable({
   NEMONA_3: createBossStep("NEMONA_3", {
     index: 18,
     bossId: Boss.NEMONA_3A.id,
+    bossVariants: [
+      {
+        bossId: Boss.NEMONA_3A.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.SPRIGATITO.id,
+        },
+      },
+      {
+        bossId: Boss.NEMONA_3B.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.FUECOCO.id,
+        },
+      },
+      {
+        bossId: Boss.NEMONA_3C.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.QUAXLY.id,
+        },
+      },
+    ],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
   IONO: createBossStep("IONO", {
     index: 19,
     bossId: Boss.IONO.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
   MELA: createBossStep("MELA", {
     index: 20,
     bossId: Boss.MELA.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -128,6 +215,7 @@ export const Step = createStepTable({
   ORTHWORM: createBossStep("ORTHWORM", {
     index: 22,
     bossId: Boss.ORTHWORM.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -139,6 +227,7 @@ export const Step = createStepTable({
   KOFU: createBossStep("KOFU", {
     index: 24,
     bossId: Boss.KOFU.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -165,18 +254,46 @@ export const Step = createStepTable({
   ATTICUS: createBossStep("ATTICUS", {
     index: 29,
     bossId: Boss.ATTICUS.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
   NEMONA_4: createBossStep("NEMONA_4", {
     index: 30,
     bossId: Boss.NEMONA_4A.id,
+    bossVariants: [
+      {
+        bossId: Boss.NEMONA_4A.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.SPRIGATITO.id,
+        },
+      },
+      {
+        bossId: Boss.NEMONA_4B.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.FUECOCO.id,
+        },
+      },
+      {
+        bossId: Boss.NEMONA_4C.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.QUAXLY.id,
+        },
+      },
+    ],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
   LARRY_1: createBossStep("LARRY_1", {
     index: 31,
     bossId: Boss.LARRY_1.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -188,6 +305,7 @@ export const Step = createStepTable({
   RYME: createBossStep("RYME", {
     index: 33,
     bossId: Boss.RYME.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -204,30 +322,60 @@ export const Step = createStepTable({
   GREAT_TUSK: createBossStep("GREAT_TUSK", {
     index: 36,
     bossId: Boss.GREAT_TUSK.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id],
     enforceCap: true,
   }),
   IRON_TREADS: createBossStep("IRON_TREADS", {
     index: 37,
     bossId: Boss.IRON_TREADS.id,
+    bossVariants: [],
     versionIds: [Version.VIOLET.id],
     enforceCap: true,
   }),
   NEMONA_5: createBossStep("NEMONA_5", {
     index: 38,
     bossId: Boss.NEMONA_5A.id,
+    bossVariants: [
+      {
+        bossId: Boss.NEMONA_5A.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.SPRIGATITO.id,
+        },
+      },
+      {
+        bossId: Boss.NEMONA_5B.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.FUECOCO.id,
+        },
+      },
+      {
+        bossId: Boss.NEMONA_5C.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.QUAXLY.id,
+        },
+      },
+    ],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
   TULIP: createBossStep("TULIP", {
     index: 39,
     bossId: Boss.TULIP.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
   GRUSHA: createBossStep("GRUSHA", {
     index: 40,
     bossId: Boss.GRUSHA.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -239,6 +387,7 @@ export const Step = createStepTable({
   ORTEGA: createBossStep("ORTEGA", {
     index: 42,
     bossId: Boss.ORTEGA.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -250,6 +399,7 @@ export const Step = createStepTable({
   TATSUGIRI: createBossStep("TATSUGIRI", {
     index: 44,
     bossId: Boss.TATSUGIRI.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -266,6 +416,7 @@ export const Step = createStepTable({
   ERI: createBossStep("ERI", {
     index: 47,
     bossId: Boss.ERI.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
@@ -307,78 +458,116 @@ export const Step = createStepTable({
   RIKA: createBossStep("RIKA", {
     index: 55,
     bossId: Boss.RIKA.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: false,
   }),
   POPPY: createBossStep("POPPY", {
     index: 56,
     bossId: Boss.POPPY.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: false,
   }),
   LARRY_2: createBossStep("LARRY_2", {
     index: 57,
     bossId: Boss.LARRY_2.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: false,
   }),
   HASSEL: createBossStep("HASSEL", {
     index: 58,
     bossId: Boss.HASSEL.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: false,
   }),
   GEETA: createBossStep("GEETA", {
     index: 59,
     bossId: Boss.GEETA.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
   ARVEN: createBossStep("ARVEN", {
     index: 60,
     bossId: Boss.ARVEN.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
   CLIVE: createBossStep("CLIVE", {
     index: 61,
     bossId: Boss.CLIVE.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: false,
   }),
   PENNY: createBossStep("PENNY", {
     index: 62,
     bossId: Boss.PENNY.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
   NEMONA_6: createBossStep("NEMONA_6", {
     index: 63,
     bossId: Boss.NEMONA_6A.id,
+    bossVariants: [
+      {
+        bossId: Boss.NEMONA_6A.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.SPRIGATITO.id,
+        },
+      },
+      {
+        bossId: Boss.NEMONA_6B.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.FUECOCO.id,
+        },
+      },
+      {
+        bossId: Boss.NEMONA_6C.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.QUAXLY.id,
+        },
+      },
+    ],
     versionIds: [Version.SCARLET.id, Version.VIOLET.id],
     enforceCap: true,
   }),
   SADA_1: createBossStep("SADA_1", {
     index: 64,
     bossId: Boss.SADA_1.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id],
     enforceCap: true,
   }),
   TURO_1: createBossStep("TURO_1", {
     index: 65,
     bossId: Boss.TURO_1.id,
+    bossVariants: [],
     versionIds: [Version.VIOLET.id],
     enforceCap: true,
   }),
   SADA_2: createBossStep("SADA_2", {
     index: 66,
     bossId: Boss.SADA_2.id,
+    bossVariants: [],
     versionIds: [Version.SCARLET.id],
     enforceCap: true,
   }),
   TURO_2: createBossStep("TURO_2", {
     index: 67,
     bossId: Boss.TURO_2.id,
+    bossVariants: [],
     versionIds: [Version.VIOLET.id],
     enforceCap: true,
   }),
