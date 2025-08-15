@@ -1232,7 +1232,7 @@
       ]
     },
     {
-      "id": "NEMONA_1A",
+      "id": "NEMONA_1",
       "name": "Nemona",
       "type": "RIVAL",
       "locationId": "POCO_PATH",
@@ -1247,46 +1247,69 @@
             "WATER_GUN"
           ]
         }
-      ]
-    },
-    {
-      "id": "NEMONA_1B",
-      "name": "Nemona",
-      "type": "RIVAL",
-      "locationId": "POCO_PATH",
-      "team": [
+      ],
+      "teamVariants": [
         {
-          "pokemonId": "SPRIGATITO",
-          "level": 5,
-          "abilityId": "OVERGROW",
-          "moveIds": [
-            "SCRATCH",
-            "TAIL_WHIP",
-            "LEAFAGE"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "SPRIGATITO"
+          },
+          "team": [
+            {
+              "pokemonId": "QUAXLY",
+              "level": 5,
+              "abilityId": "TORRENT",
+              "moveIds": [
+                "POUND",
+                "GROWL",
+                "WATER_GUN"
+              ]
+            }
+          ]
+        },
+        {
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "FUECOCO"
+          },
+          "team": [
+            {
+              "pokemonId": "SPRIGATITO",
+              "level": 5,
+              "abilityId": "OVERGROW",
+              "moveIds": [
+                "SCRATCH",
+                "TAIL_WHIP",
+                "LEAFAGE"
+              ]
+            }
+          ]
+        },
+        {
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "QUAXLY"
+          },
+          "team": [
+            {
+              "pokemonId": "FUECOCO",
+              "level": 5,
+              "abilityId": "BLAZE",
+              "moveIds": [
+                "TACKLE",
+                "LEER",
+                "EMBER"
+              ]
+            }
           ]
         }
       ]
     },
     {
-      "id": "NEMONA_1C",
-      "name": "Nemona",
-      "type": "RIVAL",
-      "locationId": "POCO_PATH",
-      "team": [
-        {
-          "pokemonId": "FUECOCO",
-          "level": 5,
-          "abilityId": "BLAZE",
-          "moveIds": [
-            "TACKLE",
-            "LEER",
-            "EMBER"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "NEMONA_2A",
+      "id": "NEMONA_2",
       "name": "Nemona",
       "type": "RIVAL",
       "locationId": "MESAGOZA",
@@ -1310,64 +1333,96 @@
             "THUNDER_SHOCK"
           ]
         }
-      ]
-    },
-    {
-      "id": "NEMONA_2B",
-      "name": "Nemona",
-      "type": "RIVAL",
-      "locationId": "MESAGOZA",
-      "team": [
+      ],
+      "teamVariants": [
         {
-          "pokemonId": "SPRIGATITO",
-          "level": 8,
-          "abilityId": "OVERGROW",
-          "moveIds": [
-            "SCRATCH",
-            "TAIL_WHIP",
-            "LEAFAGE",
-            "BITE"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "SPRIGATITO"
+          },
+          "team": [
+            {
+              "pokemonId": "QUAXLY",
+              "level": 8,
+              "abilityId": "TORRENT",
+              "moveIds": [
+                "POUND",
+                "GROWL",
+                "WATER_GUN",
+                "WORK_UP"
+              ]
+            },
+            {
+              "pokemonId": "PAWMI",
+              "level": 9,
+              "abilityId": "STATIC",
+              "moveIds": [
+                "THUNDER_SHOCK"
+              ]
+            }
           ]
         },
         {
-          "pokemonId": "PAWMI",
-          "level": 9,
-          "abilityId": "STATIC",
-          "moveIds": [
-            "THUNDER_SHOCK"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "FUECOCO"
+          },
+          "team": [
+            {
+              "pokemonId": "SPRIGATITO",
+              "level": 8,
+              "abilityId": "OVERGROW",
+              "moveIds": [
+                "SCRATCH",
+                "TAIL_WHIP",
+                "LEAFAGE",
+                "BITE"
+              ]
+            },
+            {
+              "pokemonId": "PAWMI",
+              "level": 9,
+              "abilityId": "STATIC",
+              "moveIds": [
+                "THUNDER_SHOCK"
+              ]
+            }
+          ]
+        },
+        {
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "QUAXLY"
+          },
+          "team": [
+            {
+              "pokemonId": "FUECOCO",
+              "level": 8,
+              "abilityId": "BLAZE",
+              "moveIds": [
+                "TACKLE",
+                "LEER",
+                "EMBER",
+                "ROUND"
+              ]
+            },
+            {
+              "pokemonId": "PAWMI",
+              "level": 9,
+              "abilityId": "STATIC",
+              "moveIds": [
+                "THUNDER_SHOCK"
+              ]
+            }
           ]
         }
       ]
     },
     {
-      "id": "NEMONA_2C",
-      "name": "Nemona",
-      "type": "RIVAL",
-      "locationId": "MESAGOZA",
-      "team": [
-        {
-          "pokemonId": "FUECOCO",
-          "level": 8,
-          "abilityId": "BLAZE",
-          "moveIds": [
-            "TACKLE",
-            "LEER",
-            "EMBER",
-            "ROUND"
-          ]
-        },
-        {
-          "pokemonId": "PAWMI",
-          "level": 9,
-          "abilityId": "STATIC",
-          "moveIds": [
-            "THUNDER_SHOCK"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "NEMONA_3A",
+      "id": "NEMONA_3",
       "name": "Nemona",
       "type": "RIVAL",
       "locationId": "LEVINCIA_CITY",
@@ -1405,92 +1460,138 @@
             "WORK_UP"
           ]
         }
-      ]
-    },
-    {
-      "id": "NEMONA_3B",
-      "name": "Nemona",
-      "type": "RIVAL",
-      "locationId": "LEVINCIA_CITY",
-      "team": [
+      ],
+      "teamVariants": [
         {
-          "pokemonId": "ROCKRUFF",
-          "level": 21,
-          "abilityId": "VITAL_SPIRIT",
-          "moveIds": [
-            "DOUBLE_TEAM",
-            "ROCK_THROW",
-            "HOWL",
-            "BITE"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "SPRIGATITO"
+          },
+          "team": [
+            {
+              "pokemonId": "ROCKRUFF",
+              "level": 21,
+              "abilityId": "VITAL_SPIRIT",
+              "moveIds": [
+                "DOUBLE_TEAM",
+                "ROCK_THROW",
+                "HOWL",
+                "BITE"
+              ]
+            },
+            {
+              "pokemonId": "PAWMI",
+              "level": 21,
+              "abilityId": "STATIC",
+              "moveIds": [
+                "CHARGE",
+                "NUZZLE",
+                "DIG",
+                "BITE"
+              ]
+            },
+            {
+              "pokemonId": "QUAXWELL",
+              "level": 22,
+              "abilityId": "TORRENT",
+              "moveIds": [
+                "DOUBLE_HIT",
+                "WATER_PULSE",
+                "WING_ATTACK",
+                "WORK_UP"
+              ]
+            }
           ]
         },
         {
-          "pokemonId": "PAWMI",
-          "level": 21,
-          "abilityId": "STATIC",
-          "moveIds": [
-            "CHARGE",
-            "NUZZLE",
-            "DIG",
-            "BITE"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "FUECOCO"
+          },
+          "team": [
+            {
+              "pokemonId": "ROCKRUFF",
+              "level": 21,
+              "abilityId": "VITAL_SPIRIT",
+              "moveIds": [
+                "DOUBLE_TEAM",
+                "ROCK_THROW",
+                "HOWL",
+                "BITE"
+              ]
+            },
+            {
+              "pokemonId": "PAWMI",
+              "level": 21,
+              "abilityId": "STATIC",
+              "moveIds": [
+                "CHARGE",
+                "NUZZLE",
+                "DIG",
+                "BITE"
+              ]
+            },
+            {
+              "pokemonId": "FLORAGATO",
+              "level": 22,
+              "abilityId": "OVERGROW",
+              "moveIds": [
+                "QUICK_ATTACK",
+                "MAGICAL_LEAF",
+                "HONE_CLAWS",
+                "BITE"
+              ]
+            }
           ]
         },
         {
-          "pokemonId": "FLORAGATO",
-          "level": 22,
-          "abilityId": "OVERGROW",
-          "moveIds": [
-            "QUICK_ATTACK",
-            "MAGICAL_LEAF",
-            "HONE_CLAWS",
-            "BITE"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "QUAXLY"
+          },
+          "team": [
+            {
+              "pokemonId": "ROCKRUFF",
+              "level": 21,
+              "abilityId": "VITAL_SPIRIT",
+              "moveIds": [
+                "DOUBLE_TEAM",
+                "ROCK_THROW",
+                "HOWL",
+                "BITE"
+              ]
+            },
+            {
+              "pokemonId": "PAWMI",
+              "level": 21,
+              "abilityId": "STATIC",
+              "moveIds": [
+                "CHARGE",
+                "NUZZLE",
+                "DIG",
+                "BITE"
+              ]
+            },
+            {
+              "pokemonId": "CROCALOR",
+              "level": 22,
+              "abilityId": "BLAZE",
+              "moveIds": [
+                "INCINERATE",
+                "YAWN",
+                "BITE",
+                "ROUND"
+              ]
+            }
           ]
         }
       ]
     },
     {
-      "id": "NEMONA_3C",
-      "name": "Nemona",
-      "type": "RIVAL",
-      "locationId": "LEVINCIA_CITY",
-      "team": [
-        {
-          "pokemonId": "ROCKRUFF",
-          "level": 21,
-          "abilityId": "VITAL_SPIRIT",
-          "moveIds": [
-            "DOUBLE_TEAM",
-            "ROCK_THROW",
-            "HOWL",
-            "BITE"
-          ]
-        },
-        {
-          "pokemonId": "PAWMI",
-          "level": 21,
-          "abilityId": "STATIC",
-          "moveIds": [
-            "CHARGE",
-            "NUZZLE",
-            "DIG",
-            "BITE"
-          ]
-        },
-        {
-          "pokemonId": "CROCALOR",
-          "level": 22,
-          "abilityId": "BLAZE",
-          "moveIds": [
-            "INCINERATE",
-            "YAWN",
-            "BITE",
-            "ROUND"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "NEMONA_4A",
+      "id": "NEMONA_4",
       "name": "Nemona",
       "type": "RIVAL",
       "locationId": "MEDALI_CITY",
@@ -1536,108 +1637,162 @@
             "AQUA_JET"
           ]
         }
-      ]
-    },
-    {
-      "id": "NEMONA_4B",
-      "name": "Nemona",
-      "type": "RIVAL",
-      "locationId": "MEDALI_CITY",
-      "team": [
+      ],
+      "teamVariants": [
         {
-          "pokemonId": "LYCANROC",
-          "level": 36,
-          "abilityId": "SAND_RUSH",
-          "moveIds": [
-            "QUICK_ATTACK",
-            "ACCELEROCK",
-            "BITE"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "SPRIGATITO"
+          },
+          "team": [
+            {
+              "pokemonId": "LYCANROC",
+              "level": 36,
+              "abilityId": "SAND_RUSH",
+              "moveIds": [
+                "QUICK_ATTACK",
+                "ACCELEROCK",
+                "BITE"
+              ]
+            },
+            {
+              "pokemonId": "GOOMY",
+              "level": 36,
+              "abilityId": "SAP_SIPPER",
+              "moveIds": [
+                "DRAGON_PULSE",
+                "WATER_PULSE",
+                "FLAIL"
+              ]
+            },
+            {
+              "pokemonId": "PAWMO",
+              "level": 36,
+              "abilityId": "VOLT_ABSORB",
+              "moveIds": [
+                "ARM_THRUST",
+                "SPARK",
+                "THUNDER_WAVE",
+                "QUICK_ATTACK"
+              ]
+            },
+            {
+              "pokemonId": "QUAQUAVAL",
+              "level": 37,
+              "abilityId": "TORRENT",
+              "moveIds": [
+                "AIR_SLASH",
+                "AQUA_STEP",
+                "AQUA_JET"
+              ]
+            }
           ]
         },
         {
-          "pokemonId": "GOOMY",
-          "level": 36,
-          "abilityId": "SAP_SIPPER",
-          "moveIds": [
-            "DRAGON_PULSE",
-            "WATER_PULSE",
-            "FLAIL"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "FUECOCO"
+          },
+          "team": [
+            {
+              "pokemonId": "LYCANROC",
+              "level": 36,
+              "abilityId": "SAND_RUSH",
+              "moveIds": [
+                "QUICK_ATTACK",
+                "ACCELEROCK",
+                "BITE"
+              ]
+            },
+            {
+              "pokemonId": "GOOMY",
+              "level": 36,
+              "abilityId": "SAP_SIPPER",
+              "moveIds": [
+                "DRAGON_PULSE",
+                "WATER_PULSE",
+                "FLAIL"
+              ]
+            },
+            {
+              "pokemonId": "PAWMO",
+              "level": 36,
+              "abilityId": "VOLT_ABSORB",
+              "moveIds": [
+                "ARM_THRUST",
+                "SPARK",
+                "THUNDER_WAVE",
+                "QUICK_ATTACK"
+              ]
+            },
+            {
+              "pokemonId": "MEOWSCARADA",
+              "level": 37,
+              "abilityId": "OVERGROW",
+              "moveIds": [
+                "SLASH",
+                "FLOWER_TRICK",
+                "QUICK_ATTACK"
+              ]
+            }
           ]
         },
         {
-          "pokemonId": "PAWMO",
-          "level": 36,
-          "abilityId": "VOLT_ABSORB",
-          "moveIds": [
-            "ARM_THRUST",
-            "SPARK",
-            "THUNDER_WAVE",
-            "QUICK_ATTACK"
-          ]
-        },
-        {
-          "pokemonId": "MEOWSCARADA",
-          "level": 37,
-          "abilityId": "OVERGROW",
-          "moveIds": [
-            "SLASH",
-            "FLOWER_TRICK",
-            "QUICK_ATTACK"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "QUAXLY"
+          },
+          "team": [
+            {
+              "pokemonId": "LYCANROC",
+              "level": 36,
+              "abilityId": "SAND_RUSH",
+              "moveIds": [
+                "QUICK_ATTACK",
+                "ACCELEROCK",
+                "BITE"
+              ]
+            },
+            {
+              "pokemonId": "GOOMY",
+              "level": 36,
+              "abilityId": "SAP_SIPPER",
+              "moveIds": [
+                "DRAGON_PULSE",
+                "WATER_PULSE",
+                "FLAIL"
+              ]
+            },
+            {
+              "pokemonId": "PAWMO",
+              "level": 36,
+              "abilityId": "VOLT_ABSORB",
+              "moveIds": [
+                "ARM_THRUST",
+                "SPARK",
+                "THUNDER_WAVE",
+                "QUICK_ATTACK"
+              ]
+            },
+            {
+              "pokemonId": "SKELEDIRGE",
+              "level": 37,
+              "abilityId": "BLAZE",
+              "moveIds": [
+                "SNARL",
+                "TORCH_SONG",
+                "LICK"
+              ]
+            }
           ]
         }
       ]
     },
     {
-      "id": "NEMONA_4C",
-      "name": "Nemona",
-      "type": "RIVAL",
-      "locationId": "MEDALI_CITY",
-      "team": [
-        {
-          "pokemonId": "LYCANROC",
-          "level": 36,
-          "abilityId": "SAND_RUSH",
-          "moveIds": [
-            "QUICK_ATTACK",
-            "ACCELEROCK",
-            "BITE"
-          ]
-        },
-        {
-          "pokemonId": "GOOMY",
-          "level": 36,
-          "abilityId": "SAP_SIPPER",
-          "moveIds": [
-            "DRAGON_PULSE",
-            "WATER_PULSE",
-            "FLAIL"
-          ]
-        },
-        {
-          "pokemonId": "PAWMO",
-          "level": 36,
-          "abilityId": "VOLT_ABSORB",
-          "moveIds": [
-            "ARM_THRUST",
-            "SPARK",
-            "THUNDER_WAVE",
-            "QUICK_ATTACK"
-          ]
-        },
-        {
-          "pokemonId": "SKELEDIRGE",
-          "level": 37,
-          "abilityId": "BLAZE",
-          "moveIds": [
-            "SNARL",
-            "TORCH_SONG",
-            "LICK"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "NEMONA_5A",
+      "id": "NEMONA_5",
       "name": "Nemona",
       "type": "RIVAL",
       "locationId": "ALFORNADA_CITY",
@@ -1684,110 +1839,165 @@
             "AQUA_JET"
           ]
         }
-      ]
-    },
-    {
-      "id": "NEMONA_5B",
-      "name": "Nemona",
-      "type": "RIVAL",
-      "locationId": "ALFORNADA_CITY",
-      "team": [
+      ],
+      "teamVariants": [
         {
-          "pokemonId": "LYCANROC",
-          "level": 42,
-          "abilityId": "SAND_RUSH",
-          "moveIds": [
-            "ACCELEROCK",
-            "CRUNCH",
-            "ROCK_SLIDE",
-            "SAND_ATTACK"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "SPRIGATITO"
+          },
+          "team": [
+            {
+              "pokemonId": "LYCANROC",
+              "level": 42,
+              "abilityId": "SAND_RUSH",
+              "moveIds": [
+                "ACCELEROCK",
+                "CRUNCH",
+                "ROCK_SLIDE",
+                "SAND_ATTACK"
+              ]
+            },
+            {
+              "pokemonId": "SLIGGOO",
+              "level": 42,
+              "abilityId": "SAP_SIPPER",
+              "moveIds": [
+                "DRAGON_PULSE",
+                "WATER_PULSE",
+                "FLAIL"
+              ]
+            },
+            {
+              "pokemonId": "PAWMOT",
+              "level": 42,
+              "abilityId": "VOLT_ABSORB",
+              "moveIds": [
+                "ARM_THRUST",
+                "SPARK",
+                "THUNDER_WAVE",
+                "QUICK_ATTACK"
+              ]
+            },
+            {
+              "pokemonId": "QUAQUAVAL",
+              "level": 43,
+              "abilityId": "TORRENT",
+              "moveIds": [
+                "AIR_SLASH",
+                "AQUA_STEP",
+                "AQUA_JET"
+              ]
+            }
           ]
         },
         {
-          "pokemonId": "SLIGGOO",
-          "level": 42,
-          "abilityId": "SAP_SIPPER",
-          "moveIds": [
-            "DRAGON_PULSE",
-            "WATER_PULSE",
-            "FLAIL"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "FUECOCO"
+          },
+          "team": [
+            {
+              "pokemonId": "LYCANROC",
+              "level": 42,
+              "abilityId": "SAND_RUSH",
+              "moveIds": [
+                "ACCELEROCK",
+                "CRUNCH",
+                "ROCK_SLIDE",
+                "SAND_ATTACK"
+              ]
+            },
+            {
+              "pokemonId": "SLIGGOO",
+              "level": 42,
+              "abilityId": "SAP_SIPPER",
+              "moveIds": [
+                "DRAGON_PULSE",
+                "WATER_PULSE",
+                "FLAIL"
+              ]
+            },
+            {
+              "pokemonId": "PAWMOT",
+              "level": 42,
+              "abilityId": "VOLT_ABSORB",
+              "moveIds": [
+                "ARM_THRUST",
+                "SPARK",
+                "THUNDER_WAVE",
+                "QUICK_ATTACK"
+              ]
+            },
+            {
+              "pokemonId": "MEOWSCARADA",
+              "level": 43,
+              "abilityId": "OVERGROW",
+              "moveIds": [
+                "SLASH",
+                "FLOWER_TRICK",
+                "QUICK_ATTACK"
+              ]
+            }
           ]
         },
         {
-          "pokemonId": "PAWMOT",
-          "level": 42,
-          "abilityId": "VOLT_ABSORB",
-          "moveIds": [
-            "ARM_THRUST",
-            "SPARK",
-            "THUNDER_WAVE",
-            "QUICK_ATTACK"
-          ]
-        },
-        {
-          "pokemonId": "MEOWSCARADA",
-          "level": 43,
-          "abilityId": "OVERGROW",
-          "moveIds": [
-            "SLASH",
-            "FLOWER_TRICK",
-            "QUICK_ATTACK"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "QUAXLY"
+          },
+          "team": [
+            {
+              "pokemonId": "LYCANROC",
+              "level": 42,
+              "abilityId": "SAND_RUSH",
+              "moveIds": [
+                "ACCELEROCK",
+                "CRUNCH",
+                "ROCK_SLIDE",
+                "SAND_ATTACK"
+              ]
+            },
+            {
+              "pokemonId": "SLIGGOO",
+              "level": 42,
+              "abilityId": "SAP_SIPPER",
+              "moveIds": [
+                "DRAGON_PULSE",
+                "WATER_PULSE",
+                "FLAIL"
+              ]
+            },
+            {
+              "pokemonId": "PAWMOT",
+              "level": 42,
+              "abilityId": "VOLT_ABSORB",
+              "moveIds": [
+                "ARM_THRUST",
+                "SPARK",
+                "THUNDER_WAVE",
+                "QUICK_ATTACK"
+              ]
+            },
+            {
+              "pokemonId": "SKELEDIRGE",
+              "level": 43,
+              "abilityId": "BLAZE",
+              "moveIds": [
+                "SNARL",
+                "TORCH_SONG",
+                "LICK"
+              ]
+            }
           ]
         }
       ]
     },
     {
-      "id": "NEMONA_5C",
-      "name": "Nemona",
-      "type": "RIVAL",
-      "locationId": "ALFORNADA_CITY",
-      "team": [
-        {
-          "pokemonId": "LYCANROC",
-          "level": 42,
-          "abilityId": "SAND_RUSH",
-          "moveIds": [
-            "ACCELEROCK",
-            "CRUNCH",
-            "ROCK_SLIDE",
-            "SAND_ATTACK"
-          ]
-        },
-        {
-          "pokemonId": "SLIGGOO",
-          "level": 42,
-          "abilityId": "SAP_SIPPER",
-          "moveIds": [
-            "DRAGON_PULSE",
-            "WATER_PULSE",
-            "FLAIL"
-          ]
-        },
-        {
-          "pokemonId": "PAWMOT",
-          "level": 42,
-          "abilityId": "VOLT_ABSORB",
-          "moveIds": [
-            "ARM_THRUST",
-            "SPARK",
-            "THUNDER_WAVE",
-            "QUICK_ATTACK"
-          ]
-        },
-        {
-          "pokemonId": "SKELEDIRGE",
-          "level": 43,
-          "abilityId": "BLAZE",
-          "moveIds": [
-            "SNARL",
-            "TORCH_SONG",
-            "LICK"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "NEMONA_6A",
+      "id": "NEMONA_6",
       "name": "Nemona",
       "type": "RIVAL",
       "locationId": "MESAGOZA",
@@ -1858,152 +2068,231 @@
             "ICE_SPINNER"
           ]
         }
-      ]
-    },
-    {
-      "id": "NEMONA_6B",
-      "name": "Nemona",
-      "type": "RIVAL",
-      "locationId": "MESAGOZA",
-      "team": [
+      ],
+      "teamVariants": [
         {
-          "pokemonId": "LYCANROC",
-          "level": 65,
-          "abilityId": "SAND_RUSH",
-          "moveIds": [
-            "ACCELEROCK",
-            "DRILL_RUN",
-            "STEALTH_ROCK",
-            "STONE_EDGE"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "SPRIGATITO"
+          },
+          "team": [
+            {
+              "pokemonId": "LYCANROC",
+              "level": 65,
+              "abilityId": "SAND_RUSH",
+              "moveIds": [
+                "ACCELEROCK",
+                "DRILL_RUN",
+                "STEALTH_ROCK",
+                "STONE_EDGE"
+              ]
+            },
+            {
+              "pokemonId": "GOODRA",
+              "level": 65,
+              "abilityId": "SAP_SIPPER",
+              "moveIds": [
+                "DRAGON_PULSE",
+                "MUDDY_WATER",
+                "ICE_BEAM",
+                "SLUDGE_BOMB"
+              ]
+            },
+            {
+              "pokemonId": "DUDUNSPARCE",
+              "level": 65,
+              "abilityId": "SERENE_GRACE",
+              "moveIds": [
+                "HYPER_DRILL",
+                "DRILL_RUN",
+                "DRAGON_RUSH",
+                "COIL"
+              ]
+            },
+            {
+              "pokemonId": "ORTHWORM",
+              "level": 65,
+              "abilityId": "EARTH_EATER",
+              "moveIds": [
+                "IRON_TAIL",
+                "BODY_PRESS",
+                "EARTHQUAKE",
+                "ROCK_BLAST"
+              ]
+            },
+            {
+              "pokemonId": "PAWMOT",
+              "level": 65,
+              "abilityId": "VOLT_ABSORB",
+              "moveIds": [
+                "DOUBLE_SHOCK",
+                "CLOSE_COMBAT",
+                "ICE_PUNCH",
+                "QUICK_ATTACK"
+              ]
+            },
+            {
+              "pokemonId": "QUAQUAVAL",
+              "level": 66,
+              "abilityId": "TORRENT",
+              "moveIds": [
+                "AQUA_STEP",
+                "BRICK_BREAK",
+                "AERIAL_ACE",
+                "ICE_SPINNER"
+              ]
+            }
           ]
         },
         {
-          "pokemonId": "GOODRA",
-          "level": 65,
-          "abilityId": "SAP_SIPPER",
-          "moveIds": [
-            "DRAGON_PULSE",
-            "MUDDY_WATER",
-            "ICE_BEAM",
-            "SLUDGE_BOMB"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "FUECOCO"
+          },
+          "team": [
+            {
+              "pokemonId": "LYCANROC",
+              "level": 65,
+              "abilityId": "SAND_RUSH",
+              "moveIds": [
+                "ACCELEROCK",
+                "DRILL_RUN",
+                "STEALTH_ROCK",
+                "STONE_EDGE"
+              ]
+            },
+            {
+              "pokemonId": "GOODRA",
+              "level": 65,
+              "abilityId": "SAP_SIPPER",
+              "moveIds": [
+                "DRAGON_PULSE",
+                "MUDDY_WATER",
+                "ICE_BEAM",
+                "SLUDGE_BOMB"
+              ]
+            },
+            {
+              "pokemonId": "DUDUNSPARCE",
+              "level": 65,
+              "abilityId": "SERENE_GRACE",
+              "moveIds": [
+                "HYPER_DRILL",
+                "DRILL_RUN",
+                "DRAGON_RUSH",
+                "COIL"
+              ]
+            },
+            {
+              "pokemonId": "ORTHWORM",
+              "level": 65,
+              "abilityId": "EARTH_EATER",
+              "moveIds": [
+                "IRON_TAIL",
+                "BODY_PRESS",
+                "EARTHQUAKE",
+                "ROCK_BLAST"
+              ]
+            },
+            {
+              "pokemonId": "PAWMOT",
+              "level": 65,
+              "abilityId": "VOLT_ABSORB",
+              "moveIds": [
+                "DOUBLE_SHOCK",
+                "CLOSE_COMBAT",
+                "ICE_PUNCH",
+                "QUICK_ATTACK"
+              ]
+            },
+            {
+              "pokemonId": "MEOWSCARADA",
+              "level": 66,
+              "abilityId": "OVERGROW",
+              "moveIds": [
+                "THUNDER_PUNCH",
+                "FLOWER_TRICK",
+                "SHADOW_CLAW",
+                "PLAY_ROUGH"
+              ]
+            }
           ]
         },
         {
-          "pokemonId": "DUDUNSPARCE",
-          "level": 65,
-          "abilityId": "SERENE_GRACE",
-          "moveIds": [
-            "HYPER_DRILL",
-            "DRILL_RUN",
-            "DRAGON_RUSH",
-            "COIL"
-          ]
-        },
-        {
-          "pokemonId": "ORTHWORM",
-          "level": 65,
-          "abilityId": "EARTH_EATER",
-          "moveIds": [
-            "IRON_TAIL",
-            "BODY_PRESS",
-            "EARTHQUAKE",
-            "ROCK_BLAST"
-          ]
-        },
-        {
-          "pokemonId": "PAWMOT",
-          "level": 65,
-          "abilityId": "VOLT_ABSORB",
-          "moveIds": [
-            "DOUBLE_SHOCK",
-            "CLOSE_COMBAT",
-            "ICE_PUNCH",
-            "QUICK_ATTACK"
-          ]
-        },
-        {
-          "pokemonId": "MEOWSCARADA",
-          "level": 66,
-          "abilityId": "OVERGROW",
-          "moveIds": [
-            "THUNDER_PUNCH",
-            "FLOWER_TRICK",
-            "SHADOW_CLAW",
-            "PLAY_ROUGH"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "NEMONA_6C",
-      "name": "Nemona",
-      "type": "RIVAL",
-      "locationId": "MESAGOZA",
-      "team": [
-        {
-          "pokemonId": "LYCANROC",
-          "level": 65,
-          "abilityId": "SAND_RUSH",
-          "moveIds": [
-            "ACCELEROCK",
-            "DRILL_RUN",
-            "STEALTH_ROCK",
-            "STONE_EDGE"
-          ]
-        },
-        {
-          "pokemonId": "GOODRA",
-          "level": 65,
-          "abilityId": "SAP_SIPPER",
-          "moveIds": [
-            "DRAGON_PULSE",
-            "MUDDY_WATER",
-            "ICE_BEAM",
-            "SLUDGE_BOMB"
-          ]
-        },
-        {
-          "pokemonId": "DUDUNSPARCE",
-          "level": 65,
-          "abilityId": "SERENE_GRACE",
-          "moveIds": [
-            "HYPER_DRILL",
-            "DRILL_RUN",
-            "DRAGON_RUSH",
-            "COIL"
-          ]
-        },
-        {
-          "pokemonId": "ORTHWORM",
-          "level": 65,
-          "abilityId": "EARTH_EATER",
-          "moveIds": [
-            "IRON_TAIL",
-            "BODY_PRESS",
-            "EARTHQUAKE",
-            "ROCK_BLAST"
-          ]
-        },
-        {
-          "pokemonId": "PAWMOT",
-          "level": 65,
-          "abilityId": "VOLT_ABSORB",
-          "moveIds": [
-            "DOUBLE_SHOCK",
-            "CLOSE_COMBAT",
-            "ICE_PUNCH",
-            "QUICK_ATTACK"
-          ]
-        },
-        {
-          "pokemonId": "SKELEDIRGE",
-          "level": 66,
-          "abilityId": "BLAZE",
-          "moveIds": [
-            "TORCH_SONG",
-            "EARTH_POWER",
-            "SHADOW_BALL",
-            "SNARL"
+          "condition": {
+            "type": "ENCOUNTER",
+            "routeId": "STARTER",
+            "pokemonId": "QUAXLY"
+          },
+          "team": [
+            {
+              "pokemonId": "LYCANROC",
+              "level": 65,
+              "abilityId": "SAND_RUSH",
+              "moveIds": [
+                "ACCELEROCK",
+                "DRILL_RUN",
+                "STEALTH_ROCK",
+                "STONE_EDGE"
+              ]
+            },
+            {
+              "pokemonId": "GOODRA",
+              "level": 65,
+              "abilityId": "SAP_SIPPER",
+              "moveIds": [
+                "DRAGON_PULSE",
+                "MUDDY_WATER",
+                "ICE_BEAM",
+                "SLUDGE_BOMB"
+              ]
+            },
+            {
+              "pokemonId": "DUDUNSPARCE",
+              "level": 65,
+              "abilityId": "SERENE_GRACE",
+              "moveIds": [
+                "HYPER_DRILL",
+                "DRILL_RUN",
+                "DRAGON_RUSH",
+                "COIL"
+              ]
+            },
+            {
+              "pokemonId": "ORTHWORM",
+              "level": 65,
+              "abilityId": "EARTH_EATER",
+              "moveIds": [
+                "IRON_TAIL",
+                "BODY_PRESS",
+                "EARTHQUAKE",
+                "ROCK_BLAST"
+              ]
+            },
+            {
+              "pokemonId": "PAWMOT",
+              "level": 65,
+              "abilityId": "VOLT_ABSORB",
+              "moveIds": [
+                "DOUBLE_SHOCK",
+                "CLOSE_COMBAT",
+                "ICE_PUNCH",
+                "QUICK_ATTACK"
+              ]
+            },
+            {
+              "pokemonId": "SKELEDIRGE",
+              "level": 66,
+              "abilityId": "BLAZE",
+              "moveIds": [
+                "TORCH_SONG",
+                "EARTH_POWER",
+                "SHADOW_BALL",
+                "SNARL"
+              ]
+            }
           ]
         }
       ]
@@ -36679,33 +36968,7 @@
       "id": "NEMONA_1",
       "type": "BOSS",
       "index": 1,
-      "bossId": "NEMONA_1A",
-      "bossVariants": [
-        {
-          "bossId": "NEMONA_1A",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "SPRIGATITO"
-          }
-        },
-        {
-          "bossId": "NEMONA_1B",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "FUECOCO"
-          }
-        },
-        {
-          "bossId": "NEMONA_1C",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "QUAXLY"
-          }
-        }
-      ],
+      "bossId": "NEMONA_1",
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36723,9 +36986,19 @@
       ]
     },
     {
-      "id": "SOUTH_PROVINCE_A1",
+      "id": "INLET_GROTTO",
       "type": "ROUTE",
       "index": 3,
+      "routeId": "INLET_GROTTO",
+      "versionIds": [
+        "SCARLET",
+        "VIOLET"
+      ]
+    },
+    {
+      "id": "SOUTH_PROVINCE_A1",
+      "type": "ROUTE",
+      "index": 4,
       "routeId": "SOUTH_PROVINCE_A1",
       "versionIds": [
         "SCARLET",
@@ -36735,34 +37008,8 @@
     {
       "id": "NEMONA_2",
       "type": "BOSS",
-      "index": 4,
-      "bossId": "NEMONA_2A",
-      "bossVariants": [
-        {
-          "bossId": "NEMONA_2A",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "SPRIGATITO"
-          }
-        },
-        {
-          "bossId": "NEMONA_2B",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "FUECOCO"
-          }
-        },
-        {
-          "bossId": "NEMONA_2C",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "QUAXLY"
-          }
-        }
-      ],
+      "index": 5,
+      "bossId": "NEMONA_2",
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36770,29 +37017,9 @@
       "enforceCap": true
     },
     {
-      "id": "INLET_GROTTO",
-      "type": "ROUTE",
-      "index": 5,
-      "routeId": "INLET_GROTTO",
-      "versionIds": [
-        "SCARLET",
-        "VIOLET"
-      ]
-    },
-    {
-      "id": "SOUTH_PROVINCE_A4",
-      "type": "ROUTE",
-      "index": 6,
-      "routeId": "SOUTH_PROVINCE_A4",
-      "versionIds": [
-        "SCARLET",
-        "VIOLET"
-      ]
-    },
-    {
       "id": "SOUTH_PROVINCE_A2",
       "type": "ROUTE",
-      "index": 7,
+      "index": 6,
       "routeId": "SOUTH_PROVINCE_A2",
       "versionIds": [
         "SCARLET",
@@ -36802,9 +37029,8 @@
     {
       "id": "KATY",
       "type": "BOSS",
-      "index": 8,
+      "index": 7,
       "bossId": "KATY",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36812,29 +37038,9 @@
       "enforceCap": true
     },
     {
-      "id": "SOUTH_PROVINCE_A5",
-      "type": "ROUTE",
-      "index": 9,
-      "routeId": "SOUTH_PROVINCE_A5",
-      "versionIds": [
-        "SCARLET",
-        "VIOLET"
-      ]
-    },
-    {
-      "id": "EAST_PROVINCE_A1",
-      "type": "ROUTE",
-      "index": 10,
-      "routeId": "EAST_PROVINCE_A1",
-      "versionIds": [
-        "SCARLET",
-        "VIOLET"
-      ]
-    },
-    {
       "id": "SOUTH_PROVINCE_A3",
       "type": "ROUTE",
-      "index": 11,
+      "index": 8,
       "routeId": "SOUTH_PROVINCE_A3",
       "versionIds": [
         "SCARLET",
@@ -36844,9 +37050,8 @@
     {
       "id": "KLAWF",
       "type": "BOSS",
-      "index": 12,
+      "index": 9,
       "bossId": "KLAWF",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36856,9 +37061,8 @@
     {
       "id": "BRASSIUS",
       "type": "BOSS",
-      "index": 13,
+      "index": 10,
       "bossId": "BRASSIUS",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36868,7 +37072,7 @@
     {
       "id": "WEST_PROVINCE_A1",
       "type": "ROUTE",
-      "index": 14,
+      "index": 11,
       "routeId": "WEST_PROVINCE_A1",
       "versionIds": [
         "SCARLET",
@@ -36878,9 +37082,8 @@
     {
       "id": "BOMBIRDIER",
       "type": "BOSS",
-      "index": 15,
+      "index": 12,
       "bossId": "BOMBIRDIER",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36890,14 +37093,43 @@
     {
       "id": "GIACOMO",
       "type": "BOSS",
-      "index": 16,
+      "index": 13,
       "bossId": "GIACOMO",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
       ],
       "enforceCap": true
+    },
+    {
+      "id": "SOUTH_PROVINCE_A4",
+      "type": "ROUTE",
+      "index": 14,
+      "routeId": "SOUTH_PROVINCE_A4",
+      "versionIds": [
+        "SCARLET",
+        "VIOLET"
+      ]
+    },
+    {
+      "id": "SOUTH_PROVINCE_A5",
+      "type": "ROUTE",
+      "index": 15,
+      "routeId": "SOUTH_PROVINCE_A5",
+      "versionIds": [
+        "SCARLET",
+        "VIOLET"
+      ]
+    },
+    {
+      "id": "EAST_PROVINCE_A1",
+      "type": "ROUTE",
+      "index": 16,
+      "routeId": "EAST_PROVINCE_A1",
+      "versionIds": [
+        "SCARLET",
+        "VIOLET"
+      ]
     },
     {
       "id": "EAST_PROVINCE_A2",
@@ -36913,33 +37145,7 @@
       "id": "NEMONA_3",
       "type": "BOSS",
       "index": 18,
-      "bossId": "NEMONA_3A",
-      "bossVariants": [
-        {
-          "bossId": "NEMONA_3A",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "SPRIGATITO"
-          }
-        },
-        {
-          "bossId": "NEMONA_3B",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "FUECOCO"
-          }
-        },
-        {
-          "bossId": "NEMONA_3C",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "QUAXLY"
-          }
-        }
-      ],
+      "bossId": "NEMONA_3",
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36951,7 +37157,6 @@
       "type": "BOSS",
       "index": 19,
       "bossId": "IONO",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36959,11 +37164,20 @@
       "enforceCap": true
     },
     {
+      "id": "SOUTH_PALDEAN_SEA",
+      "type": "ROUTE",
+      "index": 20,
+      "routeId": "SOUTH_PALDEAN_SEA",
+      "versionIds": [
+        "SCARLET",
+        "VIOLET"
+      ]
+    },
+    {
       "id": "MELA",
       "type": "BOSS",
-      "index": 20,
+      "index": 21,
       "bossId": "MELA",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36973,8 +37187,18 @@
     {
       "id": "EAST_PROVINCE_A3",
       "type": "ROUTE",
-      "index": 21,
+      "index": 22,
       "routeId": "EAST_PROVINCE_A3",
+      "versionIds": [
+        "SCARLET",
+        "VIOLET"
+      ]
+    },
+    {
+      "id": "EAST_PALDEAN_SEA",
+      "type": "ROUTE",
+      "index": 23,
+      "routeId": "EAST_PALDEAN_SEA",
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36983,9 +37207,8 @@
     {
       "id": "ORTHWORM",
       "type": "BOSS",
-      "index": 22,
+      "index": 24,
       "bossId": "ORTHWORM",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -36995,8 +37218,18 @@
     {
       "id": "WEST_PROVINCE_A2",
       "type": "ROUTE",
-      "index": 23,
+      "index": 25,
       "routeId": "WEST_PROVINCE_A2",
+      "versionIds": [
+        "SCARLET",
+        "VIOLET"
+      ]
+    },
+    {
+      "id": "ASADO_DESERT",
+      "type": "ROUTE",
+      "index": 26,
+      "routeId": "ASADO_DESERT",
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37005,9 +37238,8 @@
     {
       "id": "KOFU",
       "type": "BOSS",
-      "index": 24,
+      "index": 27,
       "bossId": "KOFU",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37017,28 +37249,8 @@
     {
       "id": "WEST_PROVINCE_A3",
       "type": "ROUTE",
-      "index": 25,
+      "index": 28,
       "routeId": "WEST_PROVINCE_A3",
-      "versionIds": [
-        "SCARLET",
-        "VIOLET"
-      ]
-    },
-    {
-      "id": "GLASEADO_MOUNTAIN_SOUTH",
-      "type": "ROUTE",
-      "index": 26,
-      "routeId": "GLASEADO_MOUNTAIN_SOUTH",
-      "versionIds": [
-        "SCARLET",
-        "VIOLET"
-      ]
-    },
-    {
-      "id": "DALIZAPA_PASSAGE",
-      "type": "ROUTE",
-      "index": 27,
-      "routeId": "DALIZAPA_PASSAGE",
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37047,7 +37259,7 @@
     {
       "id": "TAGTREE_THICKET",
       "type": "ROUTE",
-      "index": 28,
+      "index": 29,
       "routeId": "TAGTREE_THICKET",
       "versionIds": [
         "SCARLET",
@@ -37057,9 +37269,8 @@
     {
       "id": "ATTICUS",
       "type": "BOSS",
-      "index": 29,
+      "index": 30,
       "bossId": "ATTICUS",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37067,36 +37278,20 @@
       "enforceCap": true
     },
     {
+      "id": "DALIZAPA_PASSAGE",
+      "type": "ROUTE",
+      "index": 31,
+      "routeId": "DALIZAPA_PASSAGE",
+      "versionIds": [
+        "SCARLET",
+        "VIOLET"
+      ]
+    },
+    {
       "id": "NEMONA_4",
       "type": "BOSS",
-      "index": 30,
-      "bossId": "NEMONA_4A",
-      "bossVariants": [
-        {
-          "bossId": "NEMONA_4A",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "SPRIGATITO"
-          }
-        },
-        {
-          "bossId": "NEMONA_4B",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "FUECOCO"
-          }
-        },
-        {
-          "bossId": "NEMONA_4C",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "QUAXLY"
-          }
-        }
-      ],
+      "index": 32,
+      "bossId": "NEMONA_4",
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37106,9 +37301,8 @@
     {
       "id": "LARRY_1",
       "type": "BOSS",
-      "index": 31,
+      "index": 33,
       "bossId": "LARRY_1",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37116,10 +37310,30 @@
       "enforceCap": true
     },
     {
+      "id": "GLASEADO_MOUNTAIN_SOUTH",
+      "type": "ROUTE",
+      "index": 34,
+      "routeId": "GLASEADO_MOUNTAIN_SOUTH",
+      "versionIds": [
+        "SCARLET",
+        "VIOLET"
+      ]
+    },
+    {
       "id": "GLASEADO_MOUNTAIN_NORTH",
       "type": "ROUTE",
-      "index": 32,
+      "index": 35,
       "routeId": "GLASEADO_MOUNTAIN_NORTH",
+      "versionIds": [
+        "SCARLET",
+        "VIOLET"
+      ]
+    },
+    {
+      "id": "WEST_PALDEAN_SEA",
+      "type": "ROUTE",
+      "index": 36,
+      "routeId": "WEST_PALDEAN_SEA",
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37128,9 +37342,8 @@
     {
       "id": "RYME",
       "type": "BOSS",
-      "index": 33,
+      "index": 37,
       "bossId": "RYME",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37140,18 +37353,8 @@
     {
       "id": "SOUTH_PROVINCE_A6",
       "type": "ROUTE",
-      "index": 34,
+      "index": 38,
       "routeId": "SOUTH_PROVINCE_A6",
-      "versionIds": [
-        "SCARLET",
-        "VIOLET"
-      ]
-    },
-    {
-      "id": "ASADO_DESERT",
-      "type": "ROUTE",
-      "index": 35,
-      "routeId": "ASADO_DESERT",
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37160,9 +37363,8 @@
     {
       "id": "GREAT_TUSK",
       "type": "BOSS",
-      "index": 36,
+      "index": 39,
       "bossId": "GREAT_TUSK",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET"
       ],
@@ -37171,9 +37373,8 @@
     {
       "id": "IRON_TREADS",
       "type": "BOSS",
-      "index": 37,
+      "index": 40,
       "bossId": "IRON_TREADS",
-      "bossVariants": [],
       "versionIds": [
         "VIOLET"
       ],
@@ -37182,34 +37383,8 @@
     {
       "id": "NEMONA_5",
       "type": "BOSS",
-      "index": 38,
-      "bossId": "NEMONA_5A",
-      "bossVariants": [
-        {
-          "bossId": "NEMONA_5A",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "SPRIGATITO"
-          }
-        },
-        {
-          "bossId": "NEMONA_5B",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "FUECOCO"
-          }
-        },
-        {
-          "bossId": "NEMONA_5C",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "QUAXLY"
-          }
-        }
-      ],
+      "index": 41,
+      "bossId": "NEMONA_5",
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37219,9 +37394,8 @@
     {
       "id": "TULIP",
       "type": "BOSS",
-      "index": 39,
+      "index": 42,
       "bossId": "TULIP",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37231,9 +37405,8 @@
     {
       "id": "GRUSHA",
       "type": "BOSS",
-      "index": 40,
+      "index": 43,
       "bossId": "GRUSHA",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37243,7 +37416,7 @@
     {
       "id": "NORTH_PROVINCE_A3",
       "type": "ROUTE",
-      "index": 41,
+      "index": 44,
       "routeId": "NORTH_PROVINCE_A3",
       "versionIds": [
         "SCARLET",
@@ -37253,9 +37426,8 @@
     {
       "id": "ORTEGA",
       "type": "BOSS",
-      "index": 42,
+      "index": 45,
       "bossId": "ORTEGA",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37265,7 +37437,7 @@
     {
       "id": "CASSEROYA_LAKE",
       "type": "ROUTE",
-      "index": 43,
+      "index": 46,
       "routeId": "CASSEROYA_LAKE",
       "versionIds": [
         "SCARLET",
@@ -37275,9 +37447,8 @@
     {
       "id": "TATSUGIRI",
       "type": "BOSS",
-      "index": 44,
+      "index": 47,
       "bossId": "TATSUGIRI",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37287,7 +37458,7 @@
     {
       "id": "NORTH_PROVINCE_A1",
       "type": "ROUTE",
-      "index": 45,
+      "index": 48,
       "routeId": "NORTH_PROVINCE_A1",
       "versionIds": [
         "SCARLET",
@@ -37297,50 +37468,8 @@
     {
       "id": "NORTH_PROVINCE_A2",
       "type": "ROUTE",
-      "index": 46,
-      "routeId": "NORTH_PROVINCE_A2",
-      "versionIds": [
-        "SCARLET",
-        "VIOLET"
-      ]
-    },
-    {
-      "id": "ERI",
-      "type": "BOSS",
-      "index": 47,
-      "bossId": "ERI",
-      "bossVariants": [],
-      "versionIds": [
-        "SCARLET",
-        "VIOLET"
-      ],
-      "enforceCap": true
-    },
-    {
-      "id": "WEST_PALDEAN_SEA",
-      "type": "ROUTE",
-      "index": 48,
-      "routeId": "WEST_PALDEAN_SEA",
-      "versionIds": [
-        "SCARLET",
-        "VIOLET"
-      ]
-    },
-    {
-      "id": "SOUTH_PALDEAN_SEA",
-      "type": "ROUTE",
       "index": 49,
-      "routeId": "SOUTH_PALDEAN_SEA",
-      "versionIds": [
-        "SCARLET",
-        "VIOLET"
-      ]
-    },
-    {
-      "id": "EAST_PALDEAN_SEA",
-      "type": "ROUTE",
-      "index": 50,
-      "routeId": "EAST_PALDEAN_SEA",
+      "routeId": "NORTH_PROVINCE_A2",
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37349,12 +37478,23 @@
     {
       "id": "NORTH_PALDEAN_SEA",
       "type": "ROUTE",
-      "index": 51,
+      "index": 50,
       "routeId": "NORTH_PALDEAN_SEA",
       "versionIds": [
         "SCARLET",
         "VIOLET"
       ]
+    },
+    {
+      "id": "ERI",
+      "type": "BOSS",
+      "index": 51,
+      "bossId": "ERI",
+      "versionIds": [
+        "SCARLET",
+        "VIOLET"
+      ],
+      "enforceCap": true
     },
     {
       "id": "SOCARRAT_TRAIL",
@@ -37391,7 +37531,6 @@
       "type": "BOSS",
       "index": 55,
       "bossId": "RIKA",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37403,7 +37542,6 @@
       "type": "BOSS",
       "index": 56,
       "bossId": "POPPY",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37415,7 +37553,6 @@
       "type": "BOSS",
       "index": 57,
       "bossId": "LARRY_2",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37427,7 +37564,6 @@
       "type": "BOSS",
       "index": 58,
       "bossId": "HASSEL",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37439,7 +37575,6 @@
       "type": "BOSS",
       "index": 59,
       "bossId": "GEETA",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37451,7 +37586,6 @@
       "type": "BOSS",
       "index": 60,
       "bossId": "ARVEN",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37463,7 +37597,6 @@
       "type": "BOSS",
       "index": 61,
       "bossId": "CLIVE",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37475,7 +37608,6 @@
       "type": "BOSS",
       "index": 62,
       "bossId": "PENNY",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37486,33 +37618,7 @@
       "id": "NEMONA_6",
       "type": "BOSS",
       "index": 63,
-      "bossId": "NEMONA_6A",
-      "bossVariants": [
-        {
-          "bossId": "NEMONA_6A",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "SPRIGATITO"
-          }
-        },
-        {
-          "bossId": "NEMONA_6B",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "FUECOCO"
-          }
-        },
-        {
-          "bossId": "NEMONA_6C",
-          "condition": {
-            "type": "ENCOUNTER",
-            "routeId": "STARTER",
-            "pokemonId": "QUAXLY"
-          }
-        }
-      ],
+      "bossId": "NEMONA_6",
       "versionIds": [
         "SCARLET",
         "VIOLET"
@@ -37524,7 +37630,6 @@
       "type": "BOSS",
       "index": 64,
       "bossId": "SADA_1",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET"
       ],
@@ -37535,7 +37640,6 @@
       "type": "BOSS",
       "index": 65,
       "bossId": "TURO_1",
-      "bossVariants": [],
       "versionIds": [
         "VIOLET"
       ],
@@ -37546,7 +37650,6 @@
       "type": "BOSS",
       "index": 66,
       "bossId": "SADA_2",
-      "bossVariants": [],
       "versionIds": [
         "SCARLET"
       ],
@@ -37557,7 +37660,6 @@
       "type": "BOSS",
       "index": 67,
       "bossId": "TURO_2",
-      "bossVariants": [],
       "versionIds": [
         "VIOLET"
       ],

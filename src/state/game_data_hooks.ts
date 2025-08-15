@@ -11,9 +11,9 @@ import type { RouteId } from "../types/route"
 import { StepTypes, type BossStepId, type RouteStepId, type StepId } from "../types/step"
 import type { VersionId } from "../types/version"
 
+import { useEncounters } from "./encounters_hooks"
 import type { GameData } from "./game_data"
 import { useStateContext } from "./state_context"
-import { useEncounters } from "./encounters_hooks"
 
 export function useGameData(): GameData {
   const { gameData } = useStateContext()
@@ -84,6 +84,30 @@ export function useBoss(bossId: BossId) {
   return useMemo(() => bossLookup(bossId), [bossId, bossLookup])
 }
 
+export function useBossTeam(bossId: BossId) {
+  const boss = useBoss(bossId)
+  const encounters = useEncounters()
+
+  return useMemo(() => {
+    if (boss == null) {
+      return undefined
+    }
+
+    for (const teamVariant of boss.teamVariants ?? []) {
+      const condition = teamVariant.condition
+
+      switch (teamVariant.condition.type) {
+        case ConditionType.ENCOUNTER:
+          if (encounters[condition.routeId]?.pokemonId === condition.pokemonId) {
+            return teamVariant.team
+          }
+      }
+    }
+
+    return boss.team
+  }, [boss, encounters])
+}
+
 export function useEvolution(evolutionId: EvolutionId) {
   const evolutionLookup = useEvolutionLookup()
   return useMemo(() => evolutionLookup(evolutionId), [evolutionId, evolutionLookup])
@@ -127,26 +151,6 @@ export function useStep(stepId: StepId) {
 export function useVersion(versionId: VersionId) {
   const versionLookup = useVersionLookup()
   return useMemo(() => versionLookup(versionId), [versionId, versionLookup])
-}
-
-export function useBossStepVariantId(bossStepId: BossStepId) {
-  const bossStep = useBossStep(bossStepId)!
-  const encounters = useEncounters()
-
-  let bossId = bossStep.bossId
-  for (const bossVariant of bossStep.bossVariants) {
-    const condition = bossVariant.condition
-
-    switch (condition.type) {
-      case ConditionType.ENCOUNTER: {
-        if (encounters[condition.routeId]?.pokemonId === condition.pokemonId) {
-          bossId = bossVariant.bossId
-        }
-      }
-    }
-  }
-
-  return bossId
 }
 
 export function useOrderedSteps() {

@@ -1,5 +1,6 @@
 import z from "zod"
 import { abilityId } from "./ability"
+import { condition } from "./condition"
 import { locationId } from "./location"
 import { moveId } from "./move"
 import { pokemonId } from "./pokemon"
@@ -19,11 +20,18 @@ export const bossPokemon = z.object({
 })
 export type BossPokemon = z.infer<typeof bossPokemon>
 
+export const bossTeamVariant = z.object({
+  condition: condition,
+  team: z.array(bossPokemon),
+})
+export type BossTeamVariant = z.infer<typeof bossTeamVariant>
+
 export const boss = z.object({
   id: bossId,
   name: z.string(),
   type: bossType,
   locationId: locationId,
   team: z.array(bossPokemon),
+  teamVariants: z.array(bossTeamVariant).optional(),
 })
 export type Boss = z.infer<typeof boss>

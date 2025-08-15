@@ -1,4 +1,5 @@
 import { BossTypes } from "@/src/types/boss"
+import { ConditionType } from "@/src/types/condition"
 
 import { createBoss, createBossTable } from "../utils"
 
@@ -6,6 +7,7 @@ import { Ability } from "./abilities"
 import { Location } from "./locations"
 import { Move } from "./moves"
 import { Pokemon } from "./pokemon"
+import { Route } from "./routes"
 
 export const Boss = createBossTable({
   ARVEN: createBoss("ARVEN", {
@@ -596,7 +598,7 @@ export const Boss = createBossTable({
       },
     ],
   }),
-  NEMONA_1A: createBoss("NEMONA_1A", {
+  NEMONA_1: createBoss("NEMONA_1", {
     name: "Nemona",
     type: BossTypes.RIVAL,
     locationId: Location.POCO_PATH.id,
@@ -608,34 +610,55 @@ export const Boss = createBossTable({
         moveIds: [Move.POUND.id, Move.GROWL.id, Move.WATER_GUN.id],
       },
     ],
-  }),
-  NEMONA_1B: createBoss("NEMONA_1B", {
-    name: "Nemona",
-    type: BossTypes.RIVAL,
-    locationId: Location.POCO_PATH.id,
-    team: [
+    teamVariants: [
       {
-        pokemonId: Pokemon.SPRIGATITO.id,
-        level: 5,
-        abilityId: Ability.OVERGROW.id,
-        moveIds: [Move.SCRATCH.id, Move.TAIL_WHIP.id, Move.LEAFAGE.id],
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.SPRIGATITO.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.QUAXLY.id,
+            level: 5,
+            abilityId: Ability.TORRENT.id,
+            moveIds: [Move.POUND.id, Move.GROWL.id, Move.WATER_GUN.id],
+          },
+        ],
+      },
+      {
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.FUECOCO.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.SPRIGATITO.id,
+            level: 5,
+            abilityId: Ability.OVERGROW.id,
+            moveIds: [Move.SCRATCH.id, Move.TAIL_WHIP.id, Move.LEAFAGE.id],
+          },
+        ],
+      },
+      {
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.QUAXLY.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.FUECOCO.id,
+            level: 5,
+            abilityId: Ability.BLAZE.id,
+            moveIds: [Move.TACKLE.id, Move.LEER.id, Move.EMBER.id],
+          },
+        ],
       },
     ],
   }),
-  NEMONA_1C: createBoss("NEMONA_1C", {
-    name: "Nemona",
-    type: BossTypes.RIVAL,
-    locationId: Location.POCO_PATH.id,
-    team: [
-      {
-        pokemonId: Pokemon.FUECOCO.id,
-        level: 5,
-        abilityId: Ability.BLAZE.id,
-        moveIds: [Move.TACKLE.id, Move.LEER.id, Move.EMBER.id],
-      },
-    ],
-  }),
-  NEMONA_2A: createBoss("NEMONA_2A", {
+  NEMONA_2: createBoss("NEMONA_2", {
     name: "Nemona",
     type: BossTypes.RIVAL,
     locationId: Location.MESAGOZA.id,
@@ -653,46 +676,73 @@ export const Boss = createBossTable({
         moveIds: [Move.THUNDER_SHOCK.id],
       },
     ],
-  }),
-  NEMONA_2B: createBoss("NEMONA_2B", {
-    name: "Nemona",
-    type: BossTypes.RIVAL,
-    locationId: Location.MESAGOZA.id,
-    team: [
+    teamVariants: [
       {
-        pokemonId: Pokemon.SPRIGATITO.id,
-        level: 8,
-        abilityId: Ability.OVERGROW.id,
-        moveIds: [Move.SCRATCH.id, Move.TAIL_WHIP.id, Move.LEAFAGE.id, Move.BITE.id],
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.SPRIGATITO.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.QUAXLY.id,
+            level: 8,
+            abilityId: Ability.TORRENT.id,
+            moveIds: [Move.POUND.id, Move.GROWL.id, Move.WATER_GUN.id, Move.WORK_UP.id],
+          },
+          {
+            pokemonId: Pokemon.PAWMI.id,
+            level: 9,
+            abilityId: Ability.STATIC.id,
+            moveIds: [Move.THUNDER_SHOCK.id],
+          },
+        ],
       },
       {
-        pokemonId: Pokemon.PAWMI.id,
-        level: 9,
-        abilityId: Ability.STATIC.id,
-        moveIds: [Move.THUNDER_SHOCK.id],
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.FUECOCO.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.SPRIGATITO.id,
+            level: 8,
+            abilityId: Ability.OVERGROW.id,
+            moveIds: [Move.SCRATCH.id, Move.TAIL_WHIP.id, Move.LEAFAGE.id, Move.BITE.id],
+          },
+          {
+            pokemonId: Pokemon.PAWMI.id,
+            level: 9,
+            abilityId: Ability.STATIC.id,
+            moveIds: [Move.THUNDER_SHOCK.id],
+          },
+        ],
+      },
+      {
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.QUAXLY.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.FUECOCO.id,
+            level: 8,
+            abilityId: Ability.BLAZE.id,
+            moveIds: [Move.TACKLE.id, Move.LEER.id, Move.EMBER.id, Move.ROUND.id],
+          },
+          {
+            pokemonId: Pokemon.PAWMI.id,
+            level: 9,
+            abilityId: Ability.STATIC.id,
+            moveIds: [Move.THUNDER_SHOCK.id],
+          },
+        ],
       },
     ],
   }),
-  NEMONA_2C: createBoss("NEMONA_2C", {
-    name: "Nemona",
-    type: BossTypes.RIVAL,
-    locationId: Location.MESAGOZA.id,
-    team: [
-      {
-        pokemonId: Pokemon.FUECOCO.id,
-        level: 8,
-        abilityId: Ability.BLAZE.id,
-        moveIds: [Move.TACKLE.id, Move.LEER.id, Move.EMBER.id, Move.ROUND.id],
-      },
-      {
-        pokemonId: Pokemon.PAWMI.id,
-        level: 9,
-        abilityId: Ability.STATIC.id,
-        moveIds: [Move.THUNDER_SHOCK.id],
-      },
-    ],
-  }),
-  NEMONA_3A: createBoss("NEMONA_3A", {
+  NEMONA_3: createBoss("NEMONA_3", {
     name: "Nemona",
     type: BossTypes.RIVAL,
     locationId: Location.LEVINCIA_CITY.id,
@@ -716,58 +766,96 @@ export const Boss = createBossTable({
         moveIds: [Move.DOUBLE_HIT.id, Move.WATER_PULSE.id, Move.WING_ATTACK.id, Move.WORK_UP.id],
       },
     ],
-  }),
-  NEMONA_3B: createBoss("NEMONA_3B", {
-    name: "Nemona",
-    type: BossTypes.RIVAL,
-    locationId: Location.LEVINCIA_CITY.id,
-    team: [
+    teamVariants: [
       {
-        pokemonId: Pokemon.ROCKRUFF.id,
-        level: 21,
-        abilityId: Ability.VITAL_SPIRIT.id,
-        moveIds: [Move.DOUBLE_TEAM.id, Move.ROCK_THROW.id, Move.HOWL.id, Move.BITE.id],
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.SPRIGATITO.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.ROCKRUFF.id,
+            level: 21,
+            abilityId: Ability.VITAL_SPIRIT.id,
+            moveIds: [Move.DOUBLE_TEAM.id, Move.ROCK_THROW.id, Move.HOWL.id, Move.BITE.id],
+          },
+          {
+            pokemonId: Pokemon.PAWMI.id,
+            level: 21,
+            abilityId: Ability.STATIC.id,
+            moveIds: [Move.CHARGE.id, Move.NUZZLE.id, Move.DIG.id, Move.BITE.id],
+          },
+          {
+            pokemonId: Pokemon.QUAXWELL.id,
+            level: 22,
+            abilityId: Ability.TORRENT.id,
+            moveIds: [
+              Move.DOUBLE_HIT.id,
+              Move.WATER_PULSE.id,
+              Move.WING_ATTACK.id,
+              Move.WORK_UP.id,
+            ],
+          },
+        ],
       },
       {
-        pokemonId: Pokemon.PAWMI.id,
-        level: 21,
-        abilityId: Ability.STATIC.id,
-        moveIds: [Move.CHARGE.id, Move.NUZZLE.id, Move.DIG.id, Move.BITE.id],
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.FUECOCO.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.ROCKRUFF.id,
+            level: 21,
+            abilityId: Ability.VITAL_SPIRIT.id,
+            moveIds: [Move.DOUBLE_TEAM.id, Move.ROCK_THROW.id, Move.HOWL.id, Move.BITE.id],
+          },
+          {
+            pokemonId: Pokemon.PAWMI.id,
+            level: 21,
+            abilityId: Ability.STATIC.id,
+            moveIds: [Move.CHARGE.id, Move.NUZZLE.id, Move.DIG.id, Move.BITE.id],
+          },
+          {
+            pokemonId: Pokemon.FLORAGATO.id,
+            level: 22,
+            abilityId: Ability.OVERGROW.id,
+            moveIds: [Move.QUICK_ATTACK.id, Move.MAGICAL_LEAF.id, Move.HONE_CLAWS.id, Move.BITE.id],
+          },
+        ],
       },
       {
-        pokemonId: Pokemon.FLORAGATO.id,
-        level: 22,
-        abilityId: Ability.OVERGROW.id,
-        moveIds: [Move.QUICK_ATTACK.id, Move.MAGICAL_LEAF.id, Move.HONE_CLAWS.id, Move.BITE.id],
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.QUAXLY.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.ROCKRUFF.id,
+            level: 21,
+            abilityId: Ability.VITAL_SPIRIT.id,
+            moveIds: [Move.DOUBLE_TEAM.id, Move.ROCK_THROW.id, Move.HOWL.id, Move.BITE.id],
+          },
+          {
+            pokemonId: Pokemon.PAWMI.id,
+            level: 21,
+            abilityId: Ability.STATIC.id,
+            moveIds: [Move.CHARGE.id, Move.NUZZLE.id, Move.DIG.id, Move.BITE.id],
+          },
+          {
+            pokemonId: Pokemon.CROCALOR.id,
+            level: 22,
+            abilityId: Ability.BLAZE.id,
+            moveIds: [Move.INCINERATE.id, Move.YAWN.id, Move.BITE.id, Move.ROUND.id],
+          },
+        ],
       },
     ],
   }),
-  NEMONA_3C: createBoss("NEMONA_3C", {
-    name: "Nemona",
-    type: BossTypes.RIVAL,
-    locationId: Location.LEVINCIA_CITY.id,
-    team: [
-      {
-        pokemonId: Pokemon.ROCKRUFF.id,
-        level: 21,
-        abilityId: Ability.VITAL_SPIRIT.id,
-        moveIds: [Move.DOUBLE_TEAM.id, Move.ROCK_THROW.id, Move.HOWL.id, Move.BITE.id],
-      },
-      {
-        pokemonId: Pokemon.PAWMI.id,
-        level: 21,
-        abilityId: Ability.STATIC.id,
-        moveIds: [Move.CHARGE.id, Move.NUZZLE.id, Move.DIG.id, Move.BITE.id],
-      },
-      {
-        pokemonId: Pokemon.CROCALOR.id,
-        level: 22,
-        abilityId: Ability.BLAZE.id,
-        moveIds: [Move.INCINERATE.id, Move.YAWN.id, Move.BITE.id, Move.ROUND.id],
-      },
-    ],
-  }),
-  NEMONA_4A: createBoss("NEMONA_4A", {
+  NEMONA_4: createBoss("NEMONA_4", {
     name: "Nemona",
     type: BossTypes.RIVAL,
     locationId: Location.MEDALI_CITY.id,
@@ -797,70 +885,124 @@ export const Boss = createBossTable({
         moveIds: [Move.AIR_SLASH.id, Move.AQUA_STEP.id, Move.AQUA_JET.id],
       },
     ],
-  }),
-  NEMONA_4B: createBoss("NEMONA_4B", {
-    name: "Nemona",
-    type: BossTypes.RIVAL,
-    locationId: Location.MEDALI_CITY.id,
-    team: [
+    teamVariants: [
       {
-        pokemonId: Pokemon.LYCANROC.id,
-        level: 36,
-        abilityId: Ability.SAND_RUSH.id,
-        moveIds: [Move.QUICK_ATTACK.id, Move.ACCELEROCK.id, Move.BITE.id],
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.SPRIGATITO.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.LYCANROC.id,
+            level: 36,
+            abilityId: Ability.SAND_RUSH.id,
+            moveIds: [Move.QUICK_ATTACK.id, Move.ACCELEROCK.id, Move.BITE.id],
+          },
+          {
+            pokemonId: Pokemon.GOOMY.id,
+            level: 36,
+            abilityId: Ability.SAP_SIPPER.id,
+            moveIds: [Move.DRAGON_PULSE.id, Move.WATER_PULSE.id, Move.FLAIL.id],
+          },
+          {
+            pokemonId: Pokemon.PAWMO.id,
+            level: 36,
+            abilityId: Ability.VOLT_ABSORB.id,
+            moveIds: [
+              Move.ARM_THRUST.id,
+              Move.SPARK.id,
+              Move.THUNDER_WAVE.id,
+              Move.QUICK_ATTACK.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.QUAQUAVAL.id,
+            level: 37,
+            abilityId: Ability.TORRENT.id,
+            moveIds: [Move.AIR_SLASH.id, Move.AQUA_STEP.id, Move.AQUA_JET.id],
+          },
+        ],
       },
       {
-        pokemonId: Pokemon.GOOMY.id,
-        level: 36,
-        abilityId: Ability.SAP_SIPPER.id,
-        moveIds: [Move.DRAGON_PULSE.id, Move.WATER_PULSE.id, Move.FLAIL.id],
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.FUECOCO.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.LYCANROC.id,
+            level: 36,
+            abilityId: Ability.SAND_RUSH.id,
+            moveIds: [Move.QUICK_ATTACK.id, Move.ACCELEROCK.id, Move.BITE.id],
+          },
+          {
+            pokemonId: Pokemon.GOOMY.id,
+            level: 36,
+            abilityId: Ability.SAP_SIPPER.id,
+            moveIds: [Move.DRAGON_PULSE.id, Move.WATER_PULSE.id, Move.FLAIL.id],
+          },
+          {
+            pokemonId: Pokemon.PAWMO.id,
+            level: 36,
+            abilityId: Ability.VOLT_ABSORB.id,
+            moveIds: [
+              Move.ARM_THRUST.id,
+              Move.SPARK.id,
+              Move.THUNDER_WAVE.id,
+              Move.QUICK_ATTACK.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.MEOWSCARADA.id,
+            level: 37,
+            abilityId: Ability.OVERGROW.id,
+            moveIds: [Move.SLASH.id, Move.FLOWER_TRICK.id, Move.QUICK_ATTACK.id],
+          },
+        ],
       },
       {
-        pokemonId: Pokemon.PAWMO.id,
-        level: 36,
-        abilityId: Ability.VOLT_ABSORB.id,
-        moveIds: [Move.ARM_THRUST.id, Move.SPARK.id, Move.THUNDER_WAVE.id, Move.QUICK_ATTACK.id],
-      },
-      {
-        pokemonId: Pokemon.MEOWSCARADA.id,
-        level: 37,
-        abilityId: Ability.OVERGROW.id,
-        moveIds: [Move.SLASH.id, Move.FLOWER_TRICK.id, Move.QUICK_ATTACK.id],
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.QUAXLY.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.LYCANROC.id,
+            level: 36,
+            abilityId: Ability.SAND_RUSH.id,
+            moveIds: [Move.QUICK_ATTACK.id, Move.ACCELEROCK.id, Move.BITE.id],
+          },
+          {
+            pokemonId: Pokemon.GOOMY.id,
+            level: 36,
+            abilityId: Ability.SAP_SIPPER.id,
+            moveIds: [Move.DRAGON_PULSE.id, Move.WATER_PULSE.id, Move.FLAIL.id],
+          },
+          {
+            pokemonId: Pokemon.PAWMO.id,
+            level: 36,
+            abilityId: Ability.VOLT_ABSORB.id,
+            moveIds: [
+              Move.ARM_THRUST.id,
+              Move.SPARK.id,
+              Move.THUNDER_WAVE.id,
+              Move.QUICK_ATTACK.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.SKELEDIRGE.id,
+            level: 37,
+            abilityId: Ability.BLAZE.id,
+            moveIds: [Move.SNARL.id, Move.TORCH_SONG.id, Move.LICK.id],
+          },
+        ],
       },
     ],
   }),
-  NEMONA_4C: createBoss("NEMONA_4C", {
-    name: "Nemona",
-    type: BossTypes.RIVAL,
-    locationId: Location.MEDALI_CITY.id,
-    team: [
-      {
-        pokemonId: Pokemon.LYCANROC.id,
-        level: 36,
-        abilityId: Ability.SAND_RUSH.id,
-        moveIds: [Move.QUICK_ATTACK.id, Move.ACCELEROCK.id, Move.BITE.id],
-      },
-      {
-        pokemonId: Pokemon.GOOMY.id,
-        level: 36,
-        abilityId: Ability.SAP_SIPPER.id,
-        moveIds: [Move.DRAGON_PULSE.id, Move.WATER_PULSE.id, Move.FLAIL.id],
-      },
-      {
-        pokemonId: Pokemon.PAWMO.id,
-        level: 36,
-        abilityId: Ability.VOLT_ABSORB.id,
-        moveIds: [Move.ARM_THRUST.id, Move.SPARK.id, Move.THUNDER_WAVE.id, Move.QUICK_ATTACK.id],
-      },
-      {
-        pokemonId: Pokemon.SKELEDIRGE.id,
-        level: 37,
-        abilityId: Ability.BLAZE.id,
-        moveIds: [Move.SNARL.id, Move.TORCH_SONG.id, Move.LICK.id],
-      },
-    ],
-  }),
-  NEMONA_5A: createBoss("NEMONA_5A", {
+  NEMONA_5: createBoss("NEMONA_5", {
     name: "Nemona",
     type: BossTypes.RIVAL,
     locationId: Location.ALFORNADA_CITY.id,
@@ -890,70 +1032,124 @@ export const Boss = createBossTable({
         moveIds: [Move.AIR_SLASH.id, Move.AQUA_STEP.id, Move.AQUA_JET.id],
       },
     ],
-  }),
-  NEMONA_5B: createBoss("NEMONA_5B", {
-    name: "Nemona",
-    type: BossTypes.RIVAL,
-    locationId: Location.ALFORNADA_CITY.id,
-    team: [
+    teamVariants: [
       {
-        pokemonId: Pokemon.LYCANROC.id,
-        level: 42,
-        abilityId: Ability.SAND_RUSH.id,
-        moveIds: [Move.ACCELEROCK.id, Move.CRUNCH.id, Move.ROCK_SLIDE.id, Move.SAND_ATTACK.id],
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.SPRIGATITO.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.LYCANROC.id,
+            level: 42,
+            abilityId: Ability.SAND_RUSH.id,
+            moveIds: [Move.ACCELEROCK.id, Move.CRUNCH.id, Move.ROCK_SLIDE.id, Move.SAND_ATTACK.id],
+          },
+          {
+            pokemonId: Pokemon.SLIGGOO.id,
+            level: 42,
+            abilityId: Ability.SAP_SIPPER.id,
+            moveIds: [Move.DRAGON_PULSE.id, Move.WATER_PULSE.id, Move.FLAIL.id],
+          },
+          {
+            pokemonId: Pokemon.PAWMOT.id,
+            level: 42,
+            abilityId: Ability.VOLT_ABSORB.id,
+            moveIds: [
+              Move.ARM_THRUST.id,
+              Move.SPARK.id,
+              Move.THUNDER_WAVE.id,
+              Move.QUICK_ATTACK.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.QUAQUAVAL.id,
+            level: 43,
+            abilityId: Ability.TORRENT.id,
+            moveIds: [Move.AIR_SLASH.id, Move.AQUA_STEP.id, Move.AQUA_JET.id],
+          },
+        ],
       },
       {
-        pokemonId: Pokemon.SLIGGOO.id,
-        level: 42,
-        abilityId: Ability.SAP_SIPPER.id,
-        moveIds: [Move.DRAGON_PULSE.id, Move.WATER_PULSE.id, Move.FLAIL.id],
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.FUECOCO.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.LYCANROC.id,
+            level: 42,
+            abilityId: Ability.SAND_RUSH.id,
+            moveIds: [Move.ACCELEROCK.id, Move.CRUNCH.id, Move.ROCK_SLIDE.id, Move.SAND_ATTACK.id],
+          },
+          {
+            pokemonId: Pokemon.SLIGGOO.id,
+            level: 42,
+            abilityId: Ability.SAP_SIPPER.id,
+            moveIds: [Move.DRAGON_PULSE.id, Move.WATER_PULSE.id, Move.FLAIL.id],
+          },
+          {
+            pokemonId: Pokemon.PAWMOT.id,
+            level: 42,
+            abilityId: Ability.VOLT_ABSORB.id,
+            moveIds: [
+              Move.ARM_THRUST.id,
+              Move.SPARK.id,
+              Move.THUNDER_WAVE.id,
+              Move.QUICK_ATTACK.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.MEOWSCARADA.id,
+            level: 43,
+            abilityId: Ability.OVERGROW.id,
+            moveIds: [Move.SLASH.id, Move.FLOWER_TRICK.id, Move.QUICK_ATTACK.id],
+          },
+        ],
       },
       {
-        pokemonId: Pokemon.PAWMOT.id,
-        level: 42,
-        abilityId: Ability.VOLT_ABSORB.id,
-        moveIds: [Move.ARM_THRUST.id, Move.SPARK.id, Move.THUNDER_WAVE.id, Move.QUICK_ATTACK.id],
-      },
-      {
-        pokemonId: Pokemon.MEOWSCARADA.id,
-        level: 43,
-        abilityId: Ability.OVERGROW.id,
-        moveIds: [Move.SLASH.id, Move.FLOWER_TRICK.id, Move.QUICK_ATTACK.id],
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.QUAXLY.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.LYCANROC.id,
+            level: 42,
+            abilityId: Ability.SAND_RUSH.id,
+            moveIds: [Move.ACCELEROCK.id, Move.CRUNCH.id, Move.ROCK_SLIDE.id, Move.SAND_ATTACK.id],
+          },
+          {
+            pokemonId: Pokemon.SLIGGOO.id,
+            level: 42,
+            abilityId: Ability.SAP_SIPPER.id,
+            moveIds: [Move.DRAGON_PULSE.id, Move.WATER_PULSE.id, Move.FLAIL.id],
+          },
+          {
+            pokemonId: Pokemon.PAWMOT.id,
+            level: 42,
+            abilityId: Ability.VOLT_ABSORB.id,
+            moveIds: [
+              Move.ARM_THRUST.id,
+              Move.SPARK.id,
+              Move.THUNDER_WAVE.id,
+              Move.QUICK_ATTACK.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.SKELEDIRGE.id,
+            level: 43,
+            abilityId: Ability.BLAZE.id,
+            moveIds: [Move.SNARL.id, Move.TORCH_SONG.id, Move.LICK.id],
+          },
+        ],
       },
     ],
   }),
-  NEMONA_5C: createBoss("NEMONA_5C", {
-    name: "Nemona",
-    type: BossTypes.RIVAL,
-    locationId: Location.ALFORNADA_CITY.id,
-    team: [
-      {
-        pokemonId: Pokemon.LYCANROC.id,
-        level: 42,
-        abilityId: Ability.SAND_RUSH.id,
-        moveIds: [Move.ACCELEROCK.id, Move.CRUNCH.id, Move.ROCK_SLIDE.id, Move.SAND_ATTACK.id],
-      },
-      {
-        pokemonId: Pokemon.SLIGGOO.id,
-        level: 42,
-        abilityId: Ability.SAP_SIPPER.id,
-        moveIds: [Move.DRAGON_PULSE.id, Move.WATER_PULSE.id, Move.FLAIL.id],
-      },
-      {
-        pokemonId: Pokemon.PAWMOT.id,
-        level: 42,
-        abilityId: Ability.VOLT_ABSORB.id,
-        moveIds: [Move.ARM_THRUST.id, Move.SPARK.id, Move.THUNDER_WAVE.id, Move.QUICK_ATTACK.id],
-      },
-      {
-        pokemonId: Pokemon.SKELEDIRGE.id,
-        level: 43,
-        abilityId: Ability.BLAZE.id,
-        moveIds: [Move.SNARL.id, Move.TORCH_SONG.id, Move.LICK.id],
-      },
-    ],
-  }),
-  NEMONA_6A: createBoss("NEMONA_6A", {
+  NEMONA_6: createBoss("NEMONA_6", {
     name: "Nemona",
     type: BossTypes.RIVAL,
     locationId: Location.MESAGOZA.id,
@@ -1000,105 +1196,211 @@ export const Boss = createBossTable({
         moveIds: [Move.AQUA_STEP.id, Move.BRICK_BREAK.id, Move.AERIAL_ACE.id, Move.ICE_SPINNER.id],
       },
     ],
-  }),
-  NEMONA_6B: createBoss("NEMONA_6B", {
-    name: "Nemona",
-    type: BossTypes.RIVAL,
-    locationId: Location.MESAGOZA.id,
-    team: [
+    teamVariants: [
       {
-        pokemonId: Pokemon.LYCANROC.id,
-        level: 65,
-        abilityId: Ability.SAND_RUSH.id,
-        moveIds: [Move.ACCELEROCK.id, Move.DRILL_RUN.id, Move.STEALTH_ROCK.id, Move.STONE_EDGE.id],
-      },
-      {
-        pokemonId: Pokemon.GOODRA.id,
-        level: 65,
-        abilityId: Ability.SAP_SIPPER.id,
-        moveIds: [Move.DRAGON_PULSE.id, Move.MUDDY_WATER.id, Move.ICE_BEAM.id, Move.SLUDGE_BOMB.id],
-      },
-      {
-        pokemonId: Pokemon.DUDUNSPARCE.id,
-        level: 65,
-        abilityId: Ability.SERENE_GRACE.id,
-        moveIds: [Move.HYPER_DRILL.id, Move.DRILL_RUN.id, Move.DRAGON_RUSH.id, Move.COIL.id],
-      },
-      {
-        pokemonId: Pokemon.ORTHWORM.id,
-        level: 65,
-        abilityId: Ability.EARTH_EATER.id,
-        moveIds: [Move.IRON_TAIL.id, Move.BODY_PRESS.id, Move.EARTHQUAKE.id, Move.ROCK_BLAST.id],
-      },
-      {
-        pokemonId: Pokemon.PAWMOT.id,
-        level: 65,
-        abilityId: Ability.VOLT_ABSORB.id,
-        moveIds: [
-          Move.DOUBLE_SHOCK.id,
-          Move.CLOSE_COMBAT.id,
-          Move.ICE_PUNCH.id,
-          Move.QUICK_ATTACK.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.SPRIGATITO.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.LYCANROC.id,
+            level: 65,
+            abilityId: Ability.SAND_RUSH.id,
+            moveIds: [
+              Move.ACCELEROCK.id,
+              Move.DRILL_RUN.id,
+              Move.STEALTH_ROCK.id,
+              Move.STONE_EDGE.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.GOODRA.id,
+            level: 65,
+            abilityId: Ability.SAP_SIPPER.id,
+            moveIds: [
+              Move.DRAGON_PULSE.id,
+              Move.MUDDY_WATER.id,
+              Move.ICE_BEAM.id,
+              Move.SLUDGE_BOMB.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.DUDUNSPARCE.id,
+            level: 65,
+            abilityId: Ability.SERENE_GRACE.id,
+            moveIds: [Move.HYPER_DRILL.id, Move.DRILL_RUN.id, Move.DRAGON_RUSH.id, Move.COIL.id],
+          },
+          {
+            pokemonId: Pokemon.ORTHWORM.id,
+            level: 65,
+            abilityId: Ability.EARTH_EATER.id,
+            moveIds: [
+              Move.IRON_TAIL.id,
+              Move.BODY_PRESS.id,
+              Move.EARTHQUAKE.id,
+              Move.ROCK_BLAST.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.PAWMOT.id,
+            level: 65,
+            abilityId: Ability.VOLT_ABSORB.id,
+            moveIds: [
+              Move.DOUBLE_SHOCK.id,
+              Move.CLOSE_COMBAT.id,
+              Move.ICE_PUNCH.id,
+              Move.QUICK_ATTACK.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.QUAQUAVAL.id,
+            level: 66,
+            abilityId: Ability.TORRENT.id,
+            moveIds: [
+              Move.AQUA_STEP.id,
+              Move.BRICK_BREAK.id,
+              Move.AERIAL_ACE.id,
+              Move.ICE_SPINNER.id,
+            ],
+          },
         ],
       },
       {
-        pokemonId: Pokemon.MEOWSCARADA.id,
-        level: 66,
-        abilityId: Ability.OVERGROW.id,
-        moveIds: [
-          Move.THUNDER_PUNCH.id,
-          Move.FLOWER_TRICK.id,
-          Move.SHADOW_CLAW.id,
-          Move.PLAY_ROUGH.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.FUECOCO.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.LYCANROC.id,
+            level: 65,
+            abilityId: Ability.SAND_RUSH.id,
+            moveIds: [
+              Move.ACCELEROCK.id,
+              Move.DRILL_RUN.id,
+              Move.STEALTH_ROCK.id,
+              Move.STONE_EDGE.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.GOODRA.id,
+            level: 65,
+            abilityId: Ability.SAP_SIPPER.id,
+            moveIds: [
+              Move.DRAGON_PULSE.id,
+              Move.MUDDY_WATER.id,
+              Move.ICE_BEAM.id,
+              Move.SLUDGE_BOMB.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.DUDUNSPARCE.id,
+            level: 65,
+            abilityId: Ability.SERENE_GRACE.id,
+            moveIds: [Move.HYPER_DRILL.id, Move.DRILL_RUN.id, Move.DRAGON_RUSH.id, Move.COIL.id],
+          },
+          {
+            pokemonId: Pokemon.ORTHWORM.id,
+            level: 65,
+            abilityId: Ability.EARTH_EATER.id,
+            moveIds: [
+              Move.IRON_TAIL.id,
+              Move.BODY_PRESS.id,
+              Move.EARTHQUAKE.id,
+              Move.ROCK_BLAST.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.PAWMOT.id,
+            level: 65,
+            abilityId: Ability.VOLT_ABSORB.id,
+            moveIds: [
+              Move.DOUBLE_SHOCK.id,
+              Move.CLOSE_COMBAT.id,
+              Move.ICE_PUNCH.id,
+              Move.QUICK_ATTACK.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.MEOWSCARADA.id,
+            level: 66,
+            abilityId: Ability.OVERGROW.id,
+            moveIds: [
+              Move.THUNDER_PUNCH.id,
+              Move.FLOWER_TRICK.id,
+              Move.SHADOW_CLAW.id,
+              Move.PLAY_ROUGH.id,
+            ],
+          },
         ],
       },
-    ],
-  }),
-  NEMONA_6C: createBoss("NEMONA_6C", {
-    name: "Nemona",
-    type: BossTypes.RIVAL,
-    locationId: Location.MESAGOZA.id,
-    team: [
       {
-        pokemonId: Pokemon.LYCANROC.id,
-        level: 65,
-        abilityId: Ability.SAND_RUSH.id,
-        moveIds: [Move.ACCELEROCK.id, Move.DRILL_RUN.id, Move.STEALTH_ROCK.id, Move.STONE_EDGE.id],
-      },
-      {
-        pokemonId: Pokemon.GOODRA.id,
-        level: 65,
-        abilityId: Ability.SAP_SIPPER.id,
-        moveIds: [Move.DRAGON_PULSE.id, Move.MUDDY_WATER.id, Move.ICE_BEAM.id, Move.SLUDGE_BOMB.id],
-      },
-      {
-        pokemonId: Pokemon.DUDUNSPARCE.id,
-        level: 65,
-        abilityId: Ability.SERENE_GRACE.id,
-        moveIds: [Move.HYPER_DRILL.id, Move.DRILL_RUN.id, Move.DRAGON_RUSH.id, Move.COIL.id],
-      },
-      {
-        pokemonId: Pokemon.ORTHWORM.id,
-        level: 65,
-        abilityId: Ability.EARTH_EATER.id,
-        moveIds: [Move.IRON_TAIL.id, Move.BODY_PRESS.id, Move.EARTHQUAKE.id, Move.ROCK_BLAST.id],
-      },
-      {
-        pokemonId: Pokemon.PAWMOT.id,
-        level: 65,
-        abilityId: Ability.VOLT_ABSORB.id,
-        moveIds: [
-          Move.DOUBLE_SHOCK.id,
-          Move.CLOSE_COMBAT.id,
-          Move.ICE_PUNCH.id,
-          Move.QUICK_ATTACK.id,
+        condition: {
+          type: ConditionType.ENCOUNTER,
+          routeId: Route.STARTER.id,
+          pokemonId: Pokemon.QUAXLY.id,
+        },
+        team: [
+          {
+            pokemonId: Pokemon.LYCANROC.id,
+            level: 65,
+            abilityId: Ability.SAND_RUSH.id,
+            moveIds: [
+              Move.ACCELEROCK.id,
+              Move.DRILL_RUN.id,
+              Move.STEALTH_ROCK.id,
+              Move.STONE_EDGE.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.GOODRA.id,
+            level: 65,
+            abilityId: Ability.SAP_SIPPER.id,
+            moveIds: [
+              Move.DRAGON_PULSE.id,
+              Move.MUDDY_WATER.id,
+              Move.ICE_BEAM.id,
+              Move.SLUDGE_BOMB.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.DUDUNSPARCE.id,
+            level: 65,
+            abilityId: Ability.SERENE_GRACE.id,
+            moveIds: [Move.HYPER_DRILL.id, Move.DRILL_RUN.id, Move.DRAGON_RUSH.id, Move.COIL.id],
+          },
+          {
+            pokemonId: Pokemon.ORTHWORM.id,
+            level: 65,
+            abilityId: Ability.EARTH_EATER.id,
+            moveIds: [
+              Move.IRON_TAIL.id,
+              Move.BODY_PRESS.id,
+              Move.EARTHQUAKE.id,
+              Move.ROCK_BLAST.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.PAWMOT.id,
+            level: 65,
+            abilityId: Ability.VOLT_ABSORB.id,
+            moveIds: [
+              Move.DOUBLE_SHOCK.id,
+              Move.CLOSE_COMBAT.id,
+              Move.ICE_PUNCH.id,
+              Move.QUICK_ATTACK.id,
+            ],
+          },
+          {
+            pokemonId: Pokemon.SKELEDIRGE.id,
+            level: 66,
+            abilityId: Ability.BLAZE.id,
+            moveIds: [Move.TORCH_SONG.id, Move.EARTH_POWER.id, Move.SHADOW_BALL.id, Move.SNARL.id],
+          },
         ],
-      },
-      {
-        pokemonId: Pokemon.SKELEDIRGE.id,
-        level: 66,
-        abilityId: Ability.BLAZE.id,
-        moveIds: [Move.TORCH_SONG.id, Move.EARTH_POWER.id, Move.SHADOW_BALL.id, Move.SNARL.id],
       },
     ],
   }),
